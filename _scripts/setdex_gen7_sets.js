@@ -17,7 +17,7 @@ var SETDEX_GEN7_SETS = {
 "evs": {"sa": 252, "sp": 252}, 
 "moves": ["Sludge Bomb", "Giga Drain", "Earth Power", "Weather Ball"], 
 "nature": "Timid", 
-"item": "Life Orb"}}
+"item": "Life Orb"}},
 
 "Charizard": {
 "Charizard-1": {
@@ -58,4 +58,4 @@ var SETDEX_GEN7_SETS = {
 "item": "Choice Scarf"}
 }
 
-}
+};
