@@ -23,13 +23,13 @@ var SETDEX_GEN7_SETS = {
 "Charizard-1": {
 "level": 50, 
 "evs": {"sa": 252, "sp": 252}, 
-"moves": ["Heat Wave", "Air Slash", "Focus Blast", "Taiwind"], 
+"moves": ["Heat Wave", "Air Slash", "Focus Blast", "Tailwind"], 
 "nature": "Timid", 
 "item": "Charizardite Y"}, 
 "Charizard-1b": {
 "level": 50, 
 "evs": {"sa": 252, "sp": 252}, 
-"moves": ["Heat Wave", "Air Slash", "Scorching Sands", "Taiwind"], 
+"moves": ["Heat Wave", "Air Slash", "Scorching Sands", "Tailwind"], 
 "nature": "Timid", 
 "item": "Charizardite Y"}, 
 "Charizard-2": {
@@ -55,7 +55,32 @@ var SETDEX_GEN7_SETS = {
 "evs": {"sa": 252, "sp": 252}, 
 "moves": ["Heat Wave", "Hurricane", "Scorching Sands", "Focus Blast"], 
 "nature": "Modest", 
-"item": "Choice Scarf"}
-}
+"item": "Choice Scarf"}},
 
-};
+"Blastoise": {
+"Blastoise-1": {
+"level": 50, 
+"evs": {"sa": 252, "sp": 252}, 
+"moves": ["Water Pulse", "Aura Sphere", "Dark Pulse", "Fake Out"], 
+"nature": "Modest", 
+"item": "Blastoisinite"}, 
+"Blastoise-1b": {
+"level": 50, 
+"evs": {"sa": 252, "sp": 252}, 
+"moves": ["Water Pulse", "Aura Sphere", "Dark Pulse", "Ice Beam"], 
+"nature": "Modest", 
+"item": "Blastoisinite"}, 
+"Blastoise-2": {
+"level": 50, 
+"evs": {"sa": 252, "sp": 252}, 
+"moves": ["Water Spout", "Ice Beam", "Focus Blast", "Shell Smash"], 
+"nature": "Timid", 
+"item": "White Herb"},
+"Blastoise-3": {
+"level": 50, 
+"evs": {"hp": 252, "de": 252}, 
+"moves": ["Fake Out", "Scald", "Yawn", "Follow Me"], 
+"nature": "Bold", 
+"item": "Sitrus Berry"}}
+
+}
