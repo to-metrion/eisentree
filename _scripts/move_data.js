@@ -3688,6 +3688,13 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	},
 	"Blue Flare": {"zp": 195},
 	"Brave Bird": {"zp": 190},
+	"Breaking Swipe": {
+		"bp": 60,
+		"type": "Dragon",
+		"category": "Physical",
+		"isSpread": true,
+		"zp": 120
+	},
 	"Breakneck Blitz": {
 		"bp": 1,
 		"type": "Normal",
@@ -3755,6 +3762,10 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	},
 	"Clear Smog": {"zp": 100},
 	"Close Combat": {"zp": 190},
+	"Coaching": {
+		"bp": 0,
+		"type": "Fighting"
+	},
 	"Continental Crush": {
 		"bp": 1,
 		"type": "Rock",
@@ -3825,6 +3836,14 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Dream Eater": {"zp": 180},
 	"Drill Run": {"zp": 160},
 	"Dual Chop": {"zp": 100},
+	"Dual Wingbeat": {
+		"bp": 40,
+		"type": "Flying",
+		"category": "Physical",
+		"acc": 90,
+		"isTwoHit": true,
+		"zp": 100
+	},
 	"Dynamic Punch": {"zp": 180},
 	"Earth Power": {"zp": 175},
 	"Earthquake": {"zp": 180},
@@ -4254,6 +4273,14 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"isZ": true
 	},
 	"Scald": {"zp": 160},
+	"Scorching Sands": {
+		"bp": 70,
+		"type": "Ground",
+		"category": "Special",
+		"hasSecondaryEffect": true,
+		"acc": 100,
+		"zp": 140
+	},
 	"Searing Shot": {"zp": 180},
 	"Searing Sunraze Smash": {
 		"bp": 200,
@@ -4324,6 +4351,14 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"type": "Ghost",
 		"category": "Physical",
 		"isZ": true
+	},
+	"Skitter Smack": {
+		"bp": 70,
+		"type": "Bug",
+		"category": "Physical",
+		"hasSecondaryEffect": true,
+		"acc": 90,
+		"zp": 140
 	},
 	"Skull Bash": {"zp": 195},
 	"Sky Attack": {"zp": 200},
@@ -4751,12 +4786,6 @@ var MOVES_SS = $.extend(true, {}, MOVES_SM, {
 		"type": "Dark",
 		"category": "Physical",
 	},
-	"Breaking Swipe": {
-		"bp": 60,
-		"type": "Dragon",
-		"category": "Physical",
-		"isSpread": true,
-	},
 	"Branch Poke": {
 		"bp": 40,
 		"type": "Grass",
@@ -4963,32 +4992,11 @@ var MOVES_SS = $.extend(true, {}, MOVES_SM, {
 		"isMultiHit": true,
 		"acc": 90,
 	},
-	"Scorching Sands": {
-		"bp": 70,
-		"type": "Ground",
-		"category": "Special",
-		"hasSecondaryEffect": true,
-		"acc": 100
-	},
-	"Dual Wingbeat": {
-		"bp": 40,
-		"type": "Flying",
-		"category": "Physical",
-		"acc": 90,
-		"isTwoHit": true
-	},
 	"Expanding Force": {
 		"bp": 80,
 		"type": "Psychic",
 		"category": "Special",
 		"acc": 100,
-	},
-	"Skitter Smack": {
-		"bp": 70,
-		"type": "Bug",
-		"category": "Physical",
-		"hasSecondaryEffect": true,
-		"acc": 90
 	},
 	"Meteor Beam": {
 		"bp": 120,
@@ -5047,10 +5055,6 @@ var MOVES_SS = $.extend(true, {}, MOVES_SM, {
 		"category": "Physical",
 		"acc": 100,
 		"alwaysCrit": true
-	},
-	"Coaching": {
-		"bp": 0,
-		"type": "Fighting"
 	},
 	"Corrosive Gas": {
 		"bp": 0,
