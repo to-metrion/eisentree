@@ -14255,8 +14255,10 @@ var SETDEX_GEN7_SETS = {
         "Tailwind"
       ],
       "nature": "Jolly",
-      "item": "King\u0027s Rock"
-    },
+      "item": "King's Rock"
+    }
+  },
+  "Tornadus-T": {
     "Tornadus-T-1": {
       "level": 50,
       "evs": {
@@ -14334,7 +14336,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Jolly",
       "item": "Assault Vest"
-    },
+    }
+  },
+  "Thundurus-T": {
     "Thundurus-T-1": {
       "level": 50,
       "evs": {
@@ -14396,7 +14400,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Mild",
       "item": "Choice Scarf"
-    },
+    }
+  },
+  "Landorus-T": {
     "Landorus-T-1": {
       "level": 50,
       "evs": {
@@ -14506,7 +14512,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Timid",
       "item": "Never-Melt Ice"
-    },
+    }
+  },
+  "Kyurem-B": { 
     "Kyurem-B-1": {
       "level": 50,
       "evs": {
