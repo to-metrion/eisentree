@@ -1834,7 +1834,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Calm",
       "item": "Starf Berry"
-    },
+    }
+  },
+  "Exeggutor-Alola": {
     "Exeggutor-A-1": {
       "level": 50,
       "evs": {
@@ -1927,7 +1929,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Impish",
       "item": "Thick Club"
-    },
+    }
+  },
+  "Marowak-Alola": {
     "Marowak-A-1": {
       "level": 50,
       "evs": {
