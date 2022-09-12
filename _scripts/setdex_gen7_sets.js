@@ -1961,36 +1961,6 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Jolly",
       "item": "Thick Club"
-    },
-    "Marowak-T-1": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Shadow Bone",
-        "Flare Blitz",
-        "Stomping Tantrum",
-        "Low Kick"
-      ],
-      "nature": "Brave",
-      "item": "Thick Club"
-    },
-    "Marowak-T-2": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Shadow Bone",
-        "Flame Charge",
-        "Bonemerang",
-        "Ally Switch"
-      ],
-      "nature": "Jolly",
-      "item": "Thick Club"
     }
   },
   "Hitmonlee": {
@@ -2228,7 +2198,7 @@ var SETDEX_GEN7_SETS = {
         "Headbutt",
         "Bite"
       ],
-      "nature": "Calm",
+      "nature": "Careful",
       "item": "Kangaskhanite"
     },
     "Kangaskhan-3": {
@@ -2855,7 +2825,7 @@ var SETDEX_GEN7_SETS = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "sp": 252
+        "at": 252
       },
       "moves": [
         "Flare Blitz",
