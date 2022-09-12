@@ -6811,7 +6811,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
 		},
 		"w": 6.5
 	},
-	"Wormadam-G": {
+	"Wormadam-Sand": {
 		"t1": "Bug",
 		"t2": "Ground",
 		"bs": {
@@ -6824,7 +6824,7 @@ var POKEDEX_DPP = $.extend(true, {}, POKEDEX_ADV, {
 		},
 		"w": 6.5
 	},
-	"Wormadam-S": {
+	"Wormadam-Trash": {
 		"t1": "Bug",
 		"t2": "Steel",
 		"bs": {
