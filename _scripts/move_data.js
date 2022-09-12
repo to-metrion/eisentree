@@ -655,6 +655,10 @@ var MOVES_RBY = {
 		"bp": 0,
 		"type": "Poison"
 	},
+	"Transform": {
+		"bp": 0,
+		"type": "Normal",
+	},
 	"Tri Attack": {
 		"bp": 80,
 		"type": "Normal",
