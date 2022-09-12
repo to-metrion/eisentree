@@ -676,7 +676,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Timid",
       "item": "Shuca Berry"
-    },
+    }
+  },
+  "Ninetales-Alola": {
     "Ninetales-A-1": {
       "level": 50,
       "evs": {
