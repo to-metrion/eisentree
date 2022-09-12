@@ -1275,7 +1275,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Brave",
       "item": "Custap Berry"
-    },
+    }
+  },
+  "Golem-Alola": {
     "Golem-A-1": {
       "level": 50,
       "evs": {
