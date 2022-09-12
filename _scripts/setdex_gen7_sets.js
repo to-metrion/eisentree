@@ -8177,7 +8177,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Rash",
       "item": "Focus Sash"
-    },
+    }
+  },
+  "Deoxys-A": {
     "Deoxys-A-1": {
       "level": 50,
       "evs": {
@@ -8207,7 +8209,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Hasty",
       "item": "Focus Sash"
-    },
+    }
+  },
+  "Deoxys-D": {
     "Deoxys-D-1": {
       "level": 50,
       "evs": {
@@ -8222,7 +8226,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Relaxed",
       "item": "Leftovers"
-    },
+    }
+  },
+  "Deoxys-S": {
     "Deoxys-S-1": {
       "level": 50,
       "evs": {
