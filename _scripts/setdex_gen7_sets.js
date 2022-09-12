@@ -8658,7 +8658,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Quiet",
       "item": "Aguav Berry"
-    },
+    }
+  },
+  "Wormadam-Trash": {
     "Wormadam-T-1": {
       "level": 50,
       "evs": {
@@ -8673,7 +8675,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Brave",
       "item": "Focus Sash"
-    },
+    }
+  },
+  "Wormadam-Sand": {
     "Wormadam-S-1": {
       "level": 50,
       "evs": {
