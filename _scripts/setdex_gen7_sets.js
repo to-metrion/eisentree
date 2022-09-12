@@ -330,7 +330,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Jolly",
       "item": "Flame Orb"
+    }
     },
+    "Raticate-Alola": {
     "Raticate-A-1": {
       "level": 50,
       "evs": {
