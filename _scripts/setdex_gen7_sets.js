@@ -10554,7 +10554,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Timid",
       "item": "Spell Tag"
-    },
+    }
+  },
+  "Rotom-Wash": {
     "Rotom-Wash-1": {
       "level": 50,
       "evs": {
@@ -10569,7 +10571,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Calm",
       "item": "Mago Berry"
-    },
+    }
+  },
+  "Rotom-Fan": {
     "Rotom-Fan-1": {
       "level": 50,
       "evs": {
@@ -10584,7 +10588,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Timid",
       "item": "Sitrus Berry"
-    },
+    }
+  },
+  "Rotom-Frost": {
     "Rotom-Frost-1": {
       "level": 50,
       "evs": {
@@ -10599,7 +10605,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Modest",
       "item": "Life Orb"
-    },
+    }
+  },
+  "Rotom-Heat": {
     "Rotom-Heat-1": {
       "level": 50,
       "evs": {
@@ -10630,7 +10638,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Modest",
       "item": "Firium Z"
-    },
+    }
+  },
+  "Rotom-Mow": {
     "Rotom-Mow-1": {
       "level": 50,
       "evs": {
