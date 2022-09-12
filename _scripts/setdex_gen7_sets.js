@@ -16351,7 +16351,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Timid",
       "item": "Ghostium Z"
-    },
+    }
+  },
+  "Hoopa-Unbound": {
     "Hoopa-U-1": {
       "level": 50,
       "evs": {
