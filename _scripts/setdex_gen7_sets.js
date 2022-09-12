@@ -432,7 +432,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Timid",
       "item": "Focus Sash"
-    },
+    }
+  },
+  "Raichu-Alola": {
     "Raichu-A-1": {
       "level": 50,
       "evs": {
@@ -479,7 +481,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Adamant",
       "item": "Groundium Z"
-    },
+    }
+  },
+  "Sandslash-Alola": {
     "Sandslash-A-1": {
       "level": 50,
       "evs": {
