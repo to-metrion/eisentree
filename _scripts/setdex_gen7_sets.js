@@ -871,7 +871,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Jolly",
       "item": "Focus Sash"
-    },
+    }
+  },
+  "Dugtrio-Alola": {
     "Dugtrio-A-1": {
       "level": 50,
       "evs": {
