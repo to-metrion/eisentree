@@ -920,7 +920,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Jolly",
       "item": "Normal Gem"
-    },
+    }
+  },
+  "Persian-Alola": {
     "Persian-A-1": {
       "level": 50,
       "evs": {
