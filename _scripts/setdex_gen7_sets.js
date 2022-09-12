@@ -11148,7 +11148,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Timid",
       "item": "Life Orb"
-    },
+    }
+  },
+  "Shaymin-S": {
     "Shaymin-S-1": {
       "level": 50,
       "evs": {
