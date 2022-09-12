@@ -1518,7 +1518,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Impish",
       "item": "Normalium Z"
-    },
+    }
+  },
+  "Muk-Alola": {
     "Muk-A-1": {
       "level": 50,
       "evs": {
