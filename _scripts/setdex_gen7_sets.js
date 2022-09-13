@@ -16213,6 +16213,7 @@ var SETDEX_GEN7_SETS = {
         "at": 252,
         "sp": 252
       },
+          "formeName": "Zygarde-10%",
       "moves": [
         "Thousand Arrows",
         "Outrage",
