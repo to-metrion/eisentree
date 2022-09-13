@@ -16209,7 +16209,6 @@ var SETDEX_GEN7_SETS = {
   "Zygarde": {
         "Zygarde-10%-1": {
       "level": 50,
-      "forme": Zygarde-10%,
       "evs": {
         "at": 252,
         "sp": 252
