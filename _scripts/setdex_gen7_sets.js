@@ -1609,7 +1609,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Shadow Ball",
         "Sludge Bomb",
-        "Karate Chop",
+        "Hidden Power Ground",
         "Energy Ball"
       ],
       "nature": "Timid",
@@ -2768,7 +2768,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Thunderbolt",
         "Discharge",
-        "Mirror Shot",
+        "Hidden Power Ice",
         "Shadow Ball"
       ],
       "nature": "Timid",
@@ -2783,7 +2783,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Thunderbolt",
         "Discharge",
-        "Mirror Shot",
+        "Hidden Power Ice",
         "Baton Pass"
       ],
       "nature": "Timid",
@@ -3287,13 +3287,13 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Smog",
+        "Psychic",
         "Blizzard",
         "Fire Blast",
         "Earth Power"
       ],
       "nature": "Timid",
-      "item": "Psychium Z"
+      "item": "Mewnium Z"
     }
   },
   "Mewtwo": {
@@ -3401,7 +3401,7 @@ var SETDEX_GEN7_SETS = {
         "Eruption",
         "Flamethrower",
         "Focus Blast",
-        "Mirror Shot"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Charcoal"
@@ -3416,7 +3416,7 @@ var SETDEX_GEN7_SETS = {
         "Eruption",
         "Heat Wave",
         "Focus Blast",
-        "Silver Wind"
+        "Hidden Power Grass"
       ],
       "nature": "Modest",
       "item": "Choice Scarf"
@@ -3722,7 +3722,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Thunderbolt",
-        "Mirror Shot",
+        "Hidden Power Ice",
         "Electric Terrain",
         "Cotton Spore"
       ],
@@ -3982,7 +3982,7 @@ var SETDEX_GEN7_SETS = {
         "Psychic",
         "Dazzling Gleam",
         "Shadow Ball",
-        "Comet Punch"
+        "Hidden Power Fire"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -4552,7 +4552,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Stone Edge",
-        "Double Slap",
+        "Skitter Smack",
         "Power Trick",
         "Substitute"
       ],
@@ -4715,7 +4715,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Liquidation",
         "Gunk Shot",
-        "Double Slap",
+        "Skitter Smack",
         "Seed Bomb"
       ],
       "nature": "Adamant",
@@ -5599,7 +5599,7 @@ var SETDEX_GEN7_SETS = {
         "Close Combat",
         "Overheat",
         "Scorching Sands",
-        "Mirror Shot"
+        "Hidden Power Ice"
       ],
       "nature": "Naive",
       "item": "Focus Sash"
@@ -5828,7 +5828,7 @@ var SETDEX_GEN7_SETS = {
         "Boomburst",
         "Hurricane",
         "Heat Wave",
-        "Silver Wind"
+        "Hidden Power Grass"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -6114,7 +6114,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Phantom Force",
-        "Double Slap",
+        "Skitter Smack",
         "Will-O-Wisp",
         "Ally Switch"
       ],
@@ -6478,7 +6478,7 @@ var SETDEX_GEN7_SETS = {
         "Volt Switch",
         "Overheat",
         "Snarl",
-        "Mirror Shot"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Manectite"
@@ -6493,7 +6493,7 @@ var SETDEX_GEN7_SETS = {
         "Thunder",
         "Flamethrower",
         "Snarl",
-        "Mirror Shot"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -6540,7 +6540,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Thunderbolt",
-        "Mirror Shot",
+        "Hidden Power Ice",
         "Nasty Plot",
         "Baton Pass"
       ],
@@ -8528,7 +8528,7 @@ var SETDEX_GEN7_SETS = {
         "Giga Drain",
         "Sludge Bomb",
         "Extrasensory",
-        "Comet Punch"
+        "Hidden Power Fire"
       ],
       "nature": "Timid",
       "item": "Life Orb"
@@ -9744,7 +9744,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Thunderbolt",
         "Flash Cannon",
-        "Karate Chop",
+        "Hidden Power Ground",
         "Ally Switch"
       ],
       "nature": "Quiet",
@@ -9759,7 +9759,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Thunderbolt",
         "Flash Cannon",
-        "Karate Chop",
+        "Hidden Power Ground",
         "Mirror Coat"
       ],
       "nature": "Quiet",
@@ -9775,7 +9775,7 @@ var SETDEX_GEN7_SETS = {
         "Volt Switch",
         "Flash Cannon",
         "Electroweb",
-        "Karate Chop"
+        "Hidden Power Ground"
       ],
       "nature": "Modest",
       "item": "Choice Scarf"
@@ -10618,7 +10618,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Overheat",
         "Thunderbolt",
-        "Mirror Shot",
+        "Hidden Power Ice",
         "Nasty Plot"
       ],
       "nature": "Modest",
@@ -10667,7 +10667,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Leaf Storm",
         "Thunderbolt",
-        "Comet Punch",
+        "Hidden Power Fire",
         "Nasty Plot"
       ],
       "nature": "Modest",
@@ -11256,7 +11256,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Leaf Storm",
         "Dragon Pulse",
-        "Comet Punch",
+        "Hidden Power Fire",
         "Substitute"
       ],
       "nature": "Timid",
@@ -11271,7 +11271,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Leaf Storm",
         "Dragon Pulse",
-        "Karate Chop",
+        "Hidden Power Ground",
         "Substitute"
       ],
       "nature": "Timid",
@@ -12065,7 +12065,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Double Slap",
+        "Skitter Smack",
         "Swords Dance",
         "Iron Defense",
         "Baton Pass"
@@ -12321,7 +12321,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Rock Wrecker",
-        "Double Slap",
+        "Skitter Smack",
         "Stomping Tantrum",
         "Wide Guard"
       ],
@@ -12336,7 +12336,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Rock Wrecker",
-        "Double Slap",
+        "Skitter Smack",
         "Stomping Tantrum",
         "Heavy Slam"
       ],
@@ -14315,7 +14315,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Thunderbolt",
-        "Mirror Shot",
+        "Hidden Power Ice",
         "Eerie Impulse",
         "Taunt"
       ],
@@ -14364,7 +14364,7 @@ var SETDEX_GEN7_SETS = {
         "Thunderbolt",
         "Grass Knot",
         "Sludge Bomb",
-        "Mirror Shot"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -14460,7 +14460,7 @@ var SETDEX_GEN7_SETS = {
         "Earth Power",
         "Sludge Bomb",
         "Rock Slide",
-        "Mirror Shot"
+        "Hidden Power Ice"
       ],
       "nature": "Modest",
       "item": "Assault Vest"
@@ -14574,7 +14574,7 @@ var SETDEX_GEN7_SETS = {
         "Hydro Pump",
         "Secret Sword",
         "Icy Wind",
-        "Silver Wind"
+        "Hidden Power Grass"
       ],
       "nature": "Timid",
       "item": "Assault Vest"
@@ -14766,7 +14766,7 @@ var SETDEX_GEN7_SETS = {
         "Fire Blast",
         "Psychic",
         "Dazzling Gleam",
-        "Mirror Shot"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Life Orb"
@@ -14827,7 +14827,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Dark Pulse",
         "Grass Knot",
-        "Karate Chop",
+        "Hidden Power Ground",
         "Mat Block"
       ],
       "nature": "Timid",
@@ -15016,7 +15016,7 @@ var SETDEX_GEN7_SETS = {
         "Hyper Voice",
         "Heat Wave",
         "Dark Pulse",
-        "Mirror Shot"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -15777,7 +15777,7 @@ var SETDEX_GEN7_SETS = {
         "Hyper Beam",
         "Mystical Fire",
         "Psyshock",
-        "Karate Chop"
+        "Hidden Power Ground"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -16507,7 +16507,7 @@ var SETDEX_GEN7_SETS = {
         "Tailwind"
       ],
       "nature": "Adamant",
-      "item": "Ghostium Z"
+      "item": "Decidium Z"
     },
     "Decidueye-2": {
       "level": 50,
@@ -16651,7 +16651,7 @@ var SETDEX_GEN7_SETS = {
         "Aqua Jet"
       ],
       "nature": "Modest",
-      "item": "Waterium Z"
+      "item": "Primarium Z"
     },
     "Primarina-4": {
       "level": 50,
@@ -16757,7 +16757,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Wild Charge",
-        "Double Slap",
+        "Skitter Smack",
         "Sticky Web",
         "String Shot"
       ],
@@ -17100,7 +17100,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Hydro Pump",
         "Ice Beam",
-        "Silver Wind",
+        "Hidden Power Grass",
         "U-turn"
       ],
       "nature": "Quiet",
@@ -17115,7 +17115,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Hydro Pump",
         "Ice Beam",
-        "Silver Wind",
+        "Hidden Power Grass",
         "U-turn"
       ],
       "nature": "Quiet",
@@ -17130,7 +17130,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Hydro Pump",
         "Ice Beam",
-        "Silver Wind",
+        "Hidden Power Grass",
         "U-turn"
       ],
       "nature": "Quiet",
@@ -17474,7 +17474,7 @@ var SETDEX_GEN7_SETS = {
         "Fake Out",
         "Fire Blast",
         "Sludge Bomb",
-        "Mirror Shot"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Firium Z"
@@ -18036,7 +18036,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Power Gem",
         "Acrobatics",
-        "Karate Chop",
+        "Hidden Power Ground",
         "Shell Smash"
       ],
       "nature": "Mild",
@@ -18207,7 +18207,7 @@ var SETDEX_GEN7_SETS = {
         "at": 252
       },
       "moves": [
-        "Smelling Salts",
+        "Play Rough",
         "Shadow Sneak",
         "Curse",
         "Trick Room"
@@ -18222,7 +18222,7 @@ var SETDEX_GEN7_SETS = {
         "at": 252
       },
       "moves": [
-        "Smelling Salts",
+        "Play Rough",
         "Wood Hammer",
         "Shadow Sneak",
         "Trick Room"
@@ -18252,7 +18252,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Smelling Salts",
+        "Play Rough",
         "Shadow Sneak",
         "Swords Dance",
         "Taunt"
@@ -18267,7 +18267,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Smelling Salts",
+        "Play Rough",
         "Shadow Claw",
         "Shadow Sneak",
         "Hone Claws"
@@ -18416,7 +18416,7 @@ var SETDEX_GEN7_SETS = {
         "Flash Cannon"
       ],
       "nature": "Modest",
-      "item": "Dragonium Z"
+      "item": "Kommonium Z"
     },
     "Kommo-o-1b": {
       "level": 50,
@@ -18431,7 +18431,7 @@ var SETDEX_GEN7_SETS = {
         "Flamethrower"
       ],
       "nature": "Naive",
-      "item": "Dragonium Z"
+      "item": "Kommonium Z"
     },
     "Kommo-o-2": {
       "level": 50,
@@ -18505,7 +18505,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Thunderbolt",
         "Dazzling Gleam",
-        "Comet Punch",
+        "Hidden Power Fire",
         "Grass Knot"
       ],
       "nature": "Timid",
@@ -18849,7 +18849,7 @@ var SETDEX_GEN7_SETS = {
         "Power Gem",
         "Sludge Bomb",
         "Dazzling Gleam",
-        "Mirror Shot"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Focus Sash"
@@ -18864,7 +18864,7 @@ var SETDEX_GEN7_SETS = {
         "Power Gem",
         "Sludge Bomb",
         "Dazzling Gleam",
-        "Comet Punch"
+        "Hidden Power Fire"
       ],
       "nature": "Timid",
       "item": "Focus Sash"
@@ -18894,7 +18894,7 @@ var SETDEX_GEN7_SETS = {
         "Power Gem",
         "Sludge Bomb",
         "Psyshock",
-        "Mirror Shot"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Life Orb"
@@ -19035,7 +19035,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Thunderbolt",
         "Dazzling Gleam",
-        "Comet Punch",
+        "Hidden Power Fire",
         "Hypnosis"
       ],
       "nature": "Timid",
@@ -19050,7 +19050,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Thunder",
         "Dazzling Gleam",
-        "Needle Arm",
+        "Hidden Power Water",
         "Rain Dance"
       ],
       "nature": "Timid",
@@ -19080,7 +19080,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Thunder",
         "Dazzling Gleam",
-        "Mirror Shot",
+        "Hidden Power Ice",
         "Tail Glow"
       ],
       "nature": "Timid",
@@ -19366,7 +19366,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Close Combat",
         "Spectral Thief",
-        "Mirror Shot",
+        "Hidden Power Ice",
         "Shadow Sneak"
       ],
       "nature": "Naive",
@@ -19385,7 +19385,7 @@ var SETDEX_GEN7_SETS = {
         "Feint"
       ],
       "nature": "Jolly",
-      "item": "Ghostium Z"
+      "item": "Marshadium Z"
     }
   },
   "Naganadel": {
