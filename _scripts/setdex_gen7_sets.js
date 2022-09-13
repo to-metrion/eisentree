@@ -18167,36 +18167,6 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Jolly",
       "item": "Red Card"
-    },
-    "Togedemaru-T-1": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Fake Out",
-        "Zing Zap",
-        "Iron Head",
-        "Spiky Shield"
-      ],
-      "nature": "Jolly",
-      "item": "Focus Sash"
-    },
-    "Togedemaru-T-2": {
-      "level": 50,
-      "evs": {
-        "sd": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Fake Out",
-        "Zing Zap",
-        "Super Fang",
-        "U-turn"
-      ],
-      "nature": "Jolly",
-      "item": "Red Card"
     }
   },
   "Mimikyu": {
