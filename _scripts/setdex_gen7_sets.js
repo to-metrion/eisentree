@@ -18213,7 +18213,7 @@ var SETDEX_GEN7_SETS = {
         "Trick Room"
       ],
       "nature": "Adamant",
-      "item": "Fairium Z"
+      "item": "Mimikium Z"
     },
     "Mimikyu-3b": {
       "level": 50,
@@ -18228,7 +18228,7 @@ var SETDEX_GEN7_SETS = {
         "Trick Room"
       ],
       "nature": "Adamant",
-      "item": "Fairium Z"
+      "item": "Mimikium Z"
     },
     "Mimikyu-4": {
       "level": 50,
@@ -18258,7 +18258,7 @@ var SETDEX_GEN7_SETS = {
         "Taunt"
       ],
       "nature": "Jolly",
-      "item": "Fairium Z"
+      "item": "Mimikium Z"
     },
     "Mimikyu-6": {
       "level": 50,
@@ -18273,7 +18273,7 @@ var SETDEX_GEN7_SETS = {
         "Hone Claws"
       ],
       "nature": "Jolly",
-      "item": "Fairium Z"
+      "item": "Mimikium Z"
     }
   },
   "Bruxish": {
