@@ -16796,22 +16796,7 @@ var SETDEX_GEN7_SETS = {
       "nature": "Quiet",
       "item": "Assault Vest"
     },
-    "Vikavolt-2": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Thunderbolt",
-        "Bug Buzz",
-        "Mud Shot",
-        "Sticky Web"
-      ],
-      "nature": "Modest",
-      "item": "Groundium Z"
-    },
-    "Vikavolt-T-1": {
+    "Vikavolt-1c": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -16826,7 +16811,7 @@ var SETDEX_GEN7_SETS = {
       "nature": "Modest",
       "item": "Life Orb"
     },
-    "Vikavolt-T-1b": {
+    "Vikavolt-1d": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -16841,7 +16826,7 @@ var SETDEX_GEN7_SETS = {
       "nature": "Modest",
       "item": "Assault Vest"
     },
-    "Vikavolt-T-2": {
+    "Vikavolt-2": {
       "level": 50,
       "evs": {
         "hp": 252,
