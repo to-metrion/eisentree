@@ -17369,51 +17369,6 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Timid",
       "item": "Firium Z"
-    },
-    "Lurantis-T-1": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Superpower",
-        "Leaf Blade",
-        "Knock Off",
-        "Leaf Storm"
-      ],
-      "nature": "Brave",
-      "item": "Aguav Berry"
-    },
-    "Lurantis-T-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Superpower",
-        "Leaf Blade",
-        "Knock Off",
-        "Leaf Storm"
-      ],
-      "nature": "Brave",
-      "item": "Assault Vest"
-    },
-    "Lurantis-T-2": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Leaf Storm",
-        "Weather Ball",
-        "Superpower",
-        "Sunny Day"
-      ],
-      "nature": "Timid",
-      "item": "Firium Z"
     }
   },
   "Shiinotic": {
