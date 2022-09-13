@@ -17278,6 +17278,21 @@ var SETDEX_GEN7_SETS = {
       "nature": "Brave",
       "item": "Waterium Z"
     },
+        "Araquanid-2b": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Liquidation",
+        "Leech Life",
+        "Toxic",
+        "Wide Guard"
+      ],
+      "nature": "Brave",
+      "item": "Waterium Z"
+    },
     "Araquanid-3": {
       "level": 50,
       "evs": {
@@ -17307,51 +17322,6 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Brave",
       "item": "Waterium Z"
-    },
-    "Araquanid-T-1": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Liquidation",
-        "Leech Life",
-        "Toxic",
-        "Wide Guard"
-      ],
-      "nature": "Brave",
-      "item": "Waterium Z"
-    },
-    "Araquanid-T-2": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Liquidation",
-        "Leech Life",
-        "Toxic",
-        "Sticky Web"
-      ],
-      "nature": "Brave",
-      "item": "Waterium Z"
-    },
-    "Araquanid-T-3": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Liquidation",
-        "Lunge",
-        "Poison Jab",
-        "Mirror Coat"
-      ],
-      "nature": "Brave",
-      "item": "Assault Vest"
     }
   },
   "Lurantis": {
