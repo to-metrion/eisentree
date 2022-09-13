@@ -17037,7 +17037,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Jolly",
       "item": "Focus Sash"
-    },
+    }
+  },
+  "Lycanroc-Midnight": {
     "Lycanroc-M-1": {
       "level": 50,
       "evs": {
@@ -17069,7 +17071,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Adamant",
       "item": "Assault Vest"
-    },
+    }
+  },
+  "Lycanroc-Dusk": {
     "Lycanroc-D-1": {
       "level": 50,
       "evs": {
