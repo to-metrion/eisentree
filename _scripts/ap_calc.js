@@ -449,6 +449,8 @@ function showFormes(formeObj, setName, pokemonName, pokemon) {
 		var set = setdex[pokemonName][setName];
 
 		if (set.isGmax) defaultForme = 1;
+		
+		if (setName === "Zygarde-10%-1") defaultForme = 2;
 
 		if (set.item) {
 		// Repurpose the previous filtering code to provide the "different default" logic
@@ -458,8 +460,7 @@ function showFormes(formeObj, setName, pokemonName, pokemon) {
         pokemonName === "Meloetta" && set.moves.includes("Relic Song") ||
         pokemonName === "Rayquaza" && set.moves.includes("Dragon Ascent") ||
         pokemonName === "Necrozma-Dusk Mane" && set.item.includes("Ultranecrozium Z") ||
-        pokemonName === "Necrozma-Dawn Wings" && set.item.includes("Ultranecrozium Z") ||
-	setName === "Zygarde-10%-1") {
+        pokemonName === "Necrozma-Dawn Wings" && set.item.includes("Ultranecrozium Z")) {
 				defaultForme = 1;
 			} else if (set.item.includes("ite Y")) {
 				defaultForme = 2;
