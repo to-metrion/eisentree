@@ -17478,51 +17478,6 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Timid",
       "item": "Firium Z"
-    },
-    "Salazzle-T-1": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Fake Out",
-        "Fire Blast",
-        "Sludge Bomb",
-        "Encore"
-      ],
-      "nature": "Timid",
-      "item": "Focus Sash"
-    },
-    "Salazzle-T-2": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Fake Out",
-        "Heat Wave",
-        "Sludge Bomb",
-        "Fling"
-      ],
-      "nature": "Timid",
-      "item": "King\u0027s Rock"
-    },
-    "Salazzle-T-3": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Fake Out",
-        "Fire Blast",
-        "Sludge Bomb",
-        "Mirror Shot"
-      ],
-      "nature": "Timid",
-      "item": "Firium Z"
     }
   },
   "Bewear": {
