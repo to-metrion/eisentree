@@ -16206,9 +16206,10 @@ var SETDEX_GEN7_SETS = {
       "item": "Sitrus Berry"
     }
   },
-  "Zygarde-10%": {
-    "Zygarde-10%-1": {
+  "Zygarde": {
+        "Zygarde-10%-1": {
       "level": 50,
+      "forme": Zygarde-10%,
       "evs": {
         "at": 252,
         "sp": 252
@@ -16221,9 +16222,7 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Jolly",
       "item": "Choice Band"
-    }
-  },
-  "Zygarde": {
+    },
     "Zygarde-1": {
       "level": 50,
       "evs": {
