@@ -16890,7 +16890,7 @@ var SETDEX_GEN7_SETS = {
       "item": "Iron Ball"
     }
   },
-  "Oricorio": {
+  "Oricorio-Pom-Pom": {
     "Oricorio-Pom-Pom-1": {
       "level": 50,
       "evs": {
@@ -16906,7 +16906,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Modest",
       "item": "Sitrus Berry"
-    },
+    }
+  },
+  "Oricorio-Baile": {
     "Oricorio-Baile-1": {
       "level": 50,
       "evs": {
@@ -16921,7 +16923,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Timid",
       "item": "Flyinium Z"
-    },
+    }
+  },
+  "Oricorio-Pau": {
     "Oricorio-Pau-1": {
       "level": 50,
       "evs": {
@@ -16937,7 +16941,9 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Timid",
       "item": "Colbur Berry"
-    },
+    }
+  },
+  "Oricorio-Sensu": {
     "Oricorio-Sensu-1": {
       "level": 50,
       "evs": {
