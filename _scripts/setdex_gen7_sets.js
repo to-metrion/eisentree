@@ -16925,8 +16925,8 @@ var SETDEX_GEN7_SETS = {
       "item": "Flyinium Z"
     }
   },
-  "Oricorio-Pau": {
-    "Oricorio-Pau-1": {
+  "Oricorio-Pa'u": {
+    "Oricorio-Pa'u-1": {
       "level": 50,
       "evs": {
         "hp": 168,
