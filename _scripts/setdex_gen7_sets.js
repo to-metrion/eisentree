@@ -16091,21 +16091,6 @@ var SETDEX_GEN7_SETS = {
     }
   },
   "Gourgeist": {
-    "Gourgeist-Small-1": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Phantom Force",
-        "Shadow Sneak",
-        "Will-O-Wisp",
-        "Curse"
-      ],
-      "nature": "Jolly",
-      "item": "Sitrus Berry"
-    },
     "Gourgeist-1": {
       "level": 50,
       "evs": {
@@ -16120,7 +16105,26 @@ var SETDEX_GEN7_SETS = {
       ],
       "nature": "Jolly",
       "item": "Ghostium Z"
-    },
+    }
+  },
+  "Gourgeist-Small": {
+    "Gourgeist-Small-1": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Phantom Force",
+        "Shadow Sneak",
+        "Will-O-Wisp",
+        "Curse"
+      ],
+      "nature": "Jolly",
+      "item": "Sitrus Berry"
+    }
+  },
+  "Gourgeist-Super": {
     "Gourgeist-Super-1": {
       "level": 50,
       "evs": {
