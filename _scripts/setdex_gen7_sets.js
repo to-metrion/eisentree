@@ -16213,7 +16213,7 @@ var SETDEX_GEN7_SETS = {
         "at": 252,
         "sp": 252
       },
-          "forme": "Zygarde-10%",
+      "ability": "Aura Break",
       "moves": [
         "Thousand Arrows",
         "Outrage",
