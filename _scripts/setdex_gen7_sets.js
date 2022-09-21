@@ -9635,7 +9635,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Blizzard",
         "Wood Hammer",
-        "Focus Blast",
+        "Earth Power",
         "Ice Shard"
       ],
       "nature": "Quiet",
