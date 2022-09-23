@@ -4126,7 +4126,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Mud Bomb": {"zp": 120},
 	"Mud Shot": {"zp": 100},
 	"Multi-Attack": {
-		"bp": 90,
+		"bp": 120,
 		"type": "Normal",
 		"category": "Physical",
 		"makesContact": true,
