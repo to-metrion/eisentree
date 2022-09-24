@@ -16491,7 +16491,7 @@ var SETDEX_GEN7_SETS = {
         "Tailwind"
       ],
       "nature": "Adamant",
-      "item": "Ghostium Z"
+      "item": "Decidium Z"
     },
     "Decidueye-1b": {
       "level": 50,
