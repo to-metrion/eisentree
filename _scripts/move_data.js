@@ -1084,7 +1084,7 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		"type": "Water"
 	},
 	"Rapid Spin": {
-		"bp": 20,
+		"bp": 50,
 		"type": "Normal",
 		"category": "Physical",
 		"makesContact": true,
