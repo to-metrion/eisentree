@@ -1108,7 +1108,18 @@ function Side(format, terrain, weather, isGravity, isSR, spikes, isReflect, isLi
 	this.isBusted16 = isBusted16;
 }
 
-var gen, pokedex, setdex, typeChart, moves, abilities, items, STATS, calculateAllMoves, calcHP, calcStat;
+var gen = 7;
+var pokedex = POKEDEX_SM;
+var setdex = SETDEX_GEN7;
+var typeChart = TYPE_CHART_XY;
+var moves = MOVES_SM;
+var items = ITEMS_SM;
+var abilities = ABILITIES_SM;
+var STATS = STATS_GSC;
+var calculateAllMoves = CALCULATE_ALL_MOVES_BW;
+var calcHP = CALC_HP_ADV;
+var calcStat = CALC_STAT_ADV;
+localStorage.setItem("selectedGen", 7);
 
 $(".gen").change(function () {
 	gen = ~~$(this).val();
