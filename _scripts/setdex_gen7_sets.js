@@ -591,7 +591,7 @@ var SETDEX_GEN7_SETS = {
         "Moonblast",
         "Follow Me",
         "Helping Hand",
-        "Heal Pulse"
+        "Life Dew"
       ],
       "nature": "Relaxed",
       "item": "Eviolite"
@@ -800,7 +800,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Pollen Puff",
         "Toxic",
-        "Leech Seed",
+        "Substitute",
         "Strength Sap"
       ],
       "nature": "Bold",
@@ -2385,8 +2385,8 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Dual Wingbeat",
         "Bug Bite",
-        "Swords Dance",
-        "Roost"
+        "Trailblaze",
+        "Swords Dance"
       ],
       "nature": "Jolly",
       "item": "Eviolite"
@@ -2721,7 +2721,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Scald",
         "Ice Beam",
-        "Weather Ball",
+        "Fake Tears",
         "Helping Hand"
       ],
       "nature": "Modest",
@@ -2799,7 +2799,7 @@ var SETDEX_GEN7_SETS = {
         "Thunder",
         "Weather Ball",
         "Rain Dance",
-        "Substitute"
+        "Eerie Impulse"
       ],
       "nature": "Timid",
       "item": "Electrium Z"
@@ -3218,6 +3218,21 @@ var SETDEX_GEN7_SETS = {
       "item": "Choice Band"
     },
     "Dragonite-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Dragon Claw",
+        "Stomping Tantrum",
+        "Ice Spinner",
+        "Extreme Speed"
+      ],
+      "nature": "Adamant",
+      "item": "Assault Vest"
+    },
+    "Dragonite-4": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -3659,7 +3674,7 @@ var SETDEX_GEN7_SETS = {
         "Follow Me",
         "Dazzling Gleam",
         "Mystical Fire",
-        "Roost"
+        "Life Dew"
       ],
       "nature": "Calm",
       "item": "Eviolite"
@@ -3773,7 +3788,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Belly Drum",
         "Aqua Jet",
-        "Ice Punch",
+        "Ice Spinner",
         "Knock Off"
       ],
       "nature": "Adamant",
@@ -3869,7 +3884,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Acrobatics",
         "Rage Powder",
-        "Cotton Spore",
+        "Tailwind",
         "Strength Sap"
       ],
       "nature": "Jolly",
@@ -3901,7 +3916,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Giga Drain",
         "Earth Power",
-        "Growth",
+        "Dazzling Gleam",
         "Sunny Day"
       ],
       "nature": "Modest",
@@ -3995,7 +4010,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Stored Power",
-        "Dazzling Gleam",
+        "Draining Kiss",
         "Calm Mind",
         "Morning Sun"
       ],
@@ -4426,7 +4441,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Liquidation",
-        "Poison Jab",
+        "Gunk Shot",
         "Aqua Jet",
         "Rain Dance"
       ],
@@ -4732,8 +4747,8 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Fake Out",
         "Freeze-Dry",
-        "Icy Wind",
-        "Destiny Bond"
+        "Tailwind",
+        "Memento"
       ],
       "nature": "Timid",
       "item": "Focus Sash"
@@ -4746,7 +4761,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Brave Bird",
-        "Ice Punch",
+        "Ice Spinner",
         "Drill Run",
         "Brick Break"
       ],
@@ -5207,7 +5222,7 @@ var SETDEX_GEN7_SETS = {
         "Seismic Toss",
         "Toxic",
         "Ally Switch",
-        "Soft-Boiled"
+        "Life Dew"
       ],
       "nature": "Bold",
       "item": "Leftovers"
@@ -5954,7 +5969,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Bug Buzz",
-        "Air Slash",
+        "Hurricane",
         "Hydro Pump",
         "Tailwind"
       ],
@@ -6050,7 +6065,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Body Slam",
-        "Stomping Tantrum",
+        "Drain Punch",
         "Ice Punch",
         "Sucker Punch"
       ],
@@ -6195,7 +6210,7 @@ var SETDEX_GEN7_SETS = {
         "Fake Out",
         "Close Combat",
         "Knock Off",
-        "Heavy Slam"
+        "Headlong Rush"
       ],
       "nature": "Brave",
       "item": "Assault Vest"
@@ -6208,7 +6223,7 @@ var SETDEX_GEN7_SETS = {
         "sd": 168
       },
       "moves": [
-        "Force Palm",
+        "Drain Punch",
         "Throat Chop",
         "Ice Punch",
         "Wide Guard"
@@ -6443,7 +6458,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "High Jump Kick",
+        "Close Combat",
         "Zen Headbutt",
         "Thunder Punch",
         "Poison Jab"
@@ -7296,7 +7311,7 @@ var SETDEX_GEN7_SETS = {
         "Muddy Water",
         "Icy Wind",
         "Hypnosis",
-        "Recover"
+        "Life Dew"
       ],
       "nature": "Calm",
       "item": "Leftovers"
@@ -8155,7 +8170,7 @@ var SETDEX_GEN7_SETS = {
         "Doom Desire",
         "Aura Sphere",
         "Calm Mind",
-        "Wish"
+        "Life Dew"
       ],
       "nature": "Bold",
       "item": "Leftovers"
@@ -8271,7 +8286,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Wood Hammer",
-        "Stomping Tantrum",
+        "Headlong Rush",
         "Heavy Slam",
         "Wide Guard"
       ],
@@ -8286,7 +8301,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Wood Hammer",
-        "Earthquake",
+        "Headlong Rush",
         "Rock Slide",
         "Rock Polish"
       ],
@@ -8754,7 +8769,7 @@ var SETDEX_GEN7_SETS = {
         "Follow Me",
         "Super Fang",
         "Nuzzle",
-        "Helping Hand"
+        "Encore"
       ],
       "nature": "Impish",
       "item": "Sitrus Berry"
@@ -8783,8 +8798,8 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Liquidation",
-        "Ice Punch",
+        "Wave Crash",
+        "Ice Spinner",
         "Crunch",
         "Rain Dance"
       ],
@@ -8799,7 +8814,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Liquidation",
-        "Ice Punch",
+        "Ice Spinner",
         "Crunch",
         "Rain Dance"
       ],
@@ -9198,7 +9213,7 @@ var SETDEX_GEN7_SETS = {
         "at": 252
       },
       "moves": [
-        "Poison Jab",
+        "Gunk Shot",
         "Throat Chop",
         "Sucker Punch",
         "Explosion"
@@ -9283,7 +9298,7 @@ var SETDEX_GEN7_SETS = {
         "Foul Play",
         "Taunt",
         "Disable",
-        "Ally Switch"
+        "Trick Room"
       ],
       "nature": "Relaxed",
       "item": "Aguav Berry"
@@ -9711,7 +9726,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Fake Out",
-        "Icicle Crash",
+        "Ice Spinner",
         "Knock Off",
         "Ice Shard"
       ],
@@ -10232,7 +10247,7 @@ var SETDEX_GEN7_SETS = {
         "Ice Beam",
         "Freeze-Dry",
         "Icy Wind",
-        "Mirror Coat"
+        "Mud Shot"
       ],
       "nature": "Modest",
       "item": "Focus Sash"
@@ -10389,7 +10404,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Close Combat",
+        "Sacred Sword",
         "Psycho Cut",
         "Knock Off",
         "Ice Punch"
@@ -10826,7 +10841,7 @@ var SETDEX_GEN7_SETS = {
         "Heat Wave",
         "Flash Cannon",
         "Earth Power",
-        "Ancient Power"
+        "Power Gem"
       ],
       "nature": "Modest",
       "item": "Shuca Berry"
@@ -10841,7 +10856,7 @@ var SETDEX_GEN7_SETS = {
         "Heat Wave",
         "Flash Cannon",
         "Earth Power",
-        "Ancient Power"
+        "Power Gem"
       ],
       "nature": "Modest",
       "item": "Chople Berry"
@@ -10856,7 +10871,7 @@ var SETDEX_GEN7_SETS = {
         "Heat Wave",
         "Flash Cannon",
         "Earth Power",
-        "Ancient Power"
+        "Power Gem"
       ],
       "nature": "Modest",
       "item": "Passho Berry"
@@ -11334,7 +11349,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Liquidation",
+        "Aqua Cutter",
         "Sacred Sword",
         "Megahorn",
         "Aqua Jet"
@@ -12161,7 +12176,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Aqua Tail",
+        "Wave Crash",
         "Psychic Fangs",
         "Superpower",
         "Aqua Jet"
@@ -12177,7 +12192,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 168
       },
       "moves": [
-        "Liquidation",
+        "Wave Crash",
         "Ice Beam",
         "Head Smash",
         "Final Gambit"
@@ -12212,7 +12227,7 @@ var SETDEX_GEN7_SETS = {
         "High Horsepower",
         "Knock Off",
         "Close Combat",
-        "Dragon Tail"
+        "Gunk Shot"
       ],
       "nature": "Jolly",
       "item": "Figy Berry"
@@ -12875,7 +12890,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Double-Edge",
         "Seed Bomb",
-        "Wild Charge",
+        "Play Rough",
         "Stomping Tantrum"
       ],
       "nature": "Adamant",
@@ -12984,7 +12999,7 @@ var SETDEX_GEN7_SETS = {
         "df": 252
       },
       "moves": [
-        "Energy Ball",
+        "Leaf Storm",
         "Pollen Puff",
         "Rage Powder",
         "Spore"
@@ -13253,8 +13268,8 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Wild Charge",
         "Knock Off",
-        "Aqua Tail",
-        "Coil"
+        "Liquidation",
+        "Close Combat"
       ],
       "nature": "Brave",
       "item": "Aguav Berry"
@@ -13440,7 +13455,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Icicle Crash",
-        "Superpower",
+        "Close Combat",
         "Liquidation",
         "Rain Dance"
       ],
@@ -14266,7 +14281,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Hurricane",
+        "Bleakwind Storm",
         "Focus Blast",
         "Weather Ball",
         "Tailwind"
@@ -14282,7 +14297,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 168
       },
       "moves": [
-        "Air Slash",
+        "Bleakwind Storm",
         "Heat Wave",
         "Knock Off",
         "Superpower"
@@ -14299,7 +14314,7 @@ var SETDEX_GEN7_SETS = {
         "df": 252
       },
       "moves": [
-        "Thunderbolt",
+        "Wildbolt Storm",
         "Eerie Impulse",
         "Scary Face",
         "Taunt"
@@ -14346,7 +14361,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Thunderbolt",
+        "Wildbolt Storm",
         "Sludge Bomb",
         "Grass Knot",
         "Nasty Plot"
@@ -14361,7 +14376,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Thunderbolt",
+        "Wildbolt Storm",
         "Grass Knot",
         "Sludge Bomb",
         "Hidden Power Ice"
@@ -14378,7 +14393,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Earth Power",
+        "Sandsear Storm",
         "Sludge Bomb",
         "Psychic",
         "Grass Knot"
@@ -14425,7 +14440,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Earthquake",
+        "Stomping Tantrum",
         "Fly",
         "Rock Slide",
         "Knock Off"
@@ -14441,7 +14456,7 @@ var SETDEX_GEN7_SETS = {
         "sd": 168
       },
       "moves": [
-        "Earth Power",
+        "Sandsear Storm",
         "Sludge Bomb",
         "Rock Tomb",
         "Self-Destruct"
@@ -14457,7 +14472,7 @@ var SETDEX_GEN7_SETS = {
         "sd": 168
       },
       "moves": [
-        "Earth Power",
+        "Sandsear Storm",
         "Sludge Bomb",
         "Rock Slide",
         "Hidden Power Ice"
@@ -14473,7 +14488,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 168
       },
       "moves": [
-        "Earth Power",
+        "Sandsear Storm",
         "Sludge Bomb",
         "Rock Slide",
         "Knock Off"
@@ -14637,7 +14652,7 @@ var SETDEX_GEN7_SETS = {
         "Relic Song",
         "Drain Punch",
         "Knock Off",
-        "Ice Punch"
+        "Play Rough"
       ],
       "nature": "Naive",
       "item": "Assault Vest"
@@ -14732,7 +14747,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Wood Hammer",
-        "Drain Punch",
+        "Close Combat",
         "Stomping Tantrum",
         "Thunder Punch"
       ],
@@ -14780,7 +14795,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Heat Wave",
         "Solar Beam",
-        "Dazzling Gleam",
+        "Focus Blast",
         "Sunny Day"
       ],
       "nature": "Timid",
@@ -14827,7 +14842,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Dark Pulse",
         "Grass Knot",
-        "Hidden Power Ground",
+        "Mud Shot",
         "Mat Block"
       ],
       "nature": "Timid",
@@ -15047,7 +15062,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Moonblast",
         "Light Screen",
-        "Helping Hand",
+        "Pollen Puff",
         "Ally Switch"
       ],
       "nature": "Bold",
@@ -15081,7 +15096,7 @@ var SETDEX_GEN7_SETS = {
         "Horn Leech",
         "Wild Charge",
         "Stomping Tantrum",
-        "Aerial Ace"
+        "Play Rough"
       ],
       "nature": "Adamant",
       "item": "Choice Band"
@@ -15776,7 +15791,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Hyper Beam",
         "Mystical Fire",
-        "Psyshock",
+        "Psychic",
         "Hidden Power Ground"
       ],
       "nature": "Timid",
@@ -16004,7 +16019,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Flash Cannon",
-        "Metal Sound",
+        "Trick Room",
         "Light Screen",
         "Reflect"
       ],
@@ -16019,7 +16034,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Dazzling Gleam",
-        "Metal Sound",
+        "Trick Room",
         "Light Screen",
         "Reflect"
       ],
@@ -16035,7 +16050,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Play Rough",
         "Foul Play",
-        "Rain Dance",
+        "Trick Room",
         "Switcheroo"
       ],
       "nature": "Careful",
@@ -16149,7 +16164,7 @@ var SETDEX_GEN7_SETS = {
         "at": 252
       },
       "moves": [
-        "Avalanche",
+        "Ice Spinner",
         "High Horsepower",
         "Heavy Slam",
         "Mirror Coat"
@@ -16165,7 +16180,7 @@ var SETDEX_GEN7_SETS = {
         "df": 168
       },
       "moves": [
-        "Icicle Spear",
+        "Icicle Crash",
         "High Horsepower",
         "Iron Defense",
         "Recover"
@@ -16740,7 +16755,7 @@ var SETDEX_GEN7_SETS = {
       },
       "moves": [
         "Hyper Fang",
-        "Crunch",
+        "Psychic Fangs",
         "Thunder Fang",
         "Fire Fang"
       ],
@@ -16853,7 +16868,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Drain Punch",
         "Ice Hammer",
-        "Thunder Punch",
+        "Gunk Shot",
         "Crabhammer"
       ],
       "nature": "Brave",
@@ -16919,7 +16934,7 @@ var SETDEX_GEN7_SETS = {
         "Hurricane",
         "Revelation Dance",
         "Icy Wind",
-        "Helping Hand"
+        "Quiver Dance"
       ],
       "nature": "Timid",
       "item": "Flyinium Z"
@@ -16936,7 +16951,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Air Slash",
         "Revelation Dance",
-        "Calm Mind",
+        "Quiver Dance",
         "Roost"
       ],
       "nature": "Timid",
@@ -18299,7 +18314,7 @@ var SETDEX_GEN7_SETS = {
         "sp": 252
       },
       "moves": [
-        "Liquidation",
+        "Wave Crash",
         "Psychic Fangs",
         "Crunch",
         "Aqua Jet"
