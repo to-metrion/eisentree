@@ -3648,6 +3648,14 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"acc": 100
 	},
 	"Ancient Power": {"zp": 120},
+	"Aqua Cutter": {
+		"bp": 70,
+		"type": "Water",
+		"category": "Physical",
+		"isSlicing": true,
+		"acc": 100,
+		"zp": 140
+	},
 	"Aqua Jet": {"zp": 100},
 	"Aqua Tail": {"zp": 175},
 	"Arm Thrust": {"zp": 100},
@@ -3683,6 +3691,16 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	},
 	"Blast Burn": {"zp": 200},
 	"Blaze Kick": {"zp": 160},
+	"Bleakwind Storm": {
+		"bp": 100,
+		"type": "Flying",
+		"category": "Special",
+		"isSpread": true,
+		"isWind": true,
+		"hasSecondaryEffect": true,
+		"acc": 80,
+		"zp": 180
+	},
 	"Blizzard": {"zp": 185},
 	"Bloom Doom": {
 		"bp": 1,
@@ -3745,6 +3763,14 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	},
 	"Charge Beam": {"zp": 100},
 	"Chatter": {"zp": 120},
+	"Chilling Water": {
+		"bp": 50,
+		"type": "Water",
+		"category": "Special",
+		"hasSecondaryEffect": true,
+		"acc": 100,
+		"zp": 100
+	},
 	"Chip Away": {"zp": 140},
 	"Circle Throw": {"zp": 120},
 	"Clanging Scales": {
@@ -3953,6 +3979,14 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Gyro Ball": {"zp": 160},
 	"Hammer Arm": {"zp": 180},
 	"Headbutt": {"zp": 140},
+	"Headlong Rush": {
+		"bp": 120,
+		"type": "Ground",
+		"category": "Physical",
+		"makesContact": true,
+		"acc": 100,
+		"zp": 190
+	},
 	"Head Charge": {"zp": 190},
 	"Head Smash": {"zp": 200},
 	"Heart Stamp": {"zp": 120},
@@ -4012,6 +4046,14 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	},
 	"Ice Punch": {"zp": 140},
 	"Ice Shard": {"zp": 100},
+	"Ice Spinner": {
+		"bp": 80,
+		"type": "Ice",
+		"category": "Physical",
+		"makesContact": true,
+		"acc": 100,
+		"zp": 160
+	},
 	"Icicle Crash": {"zp": 160},
 	"Icicle Spear": {"zp": 140},
 	"Icy Wind": {"zp": 100},
@@ -4053,6 +4095,10 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"category": "Physical",
 		"makesContact": true,
 		"isZ": true
+	},
+	"Life Dew": {
+		"bp": 0,
+		"type": "Water"
 	},
 	"Light of Ruin": {"zp": 200},
 	"Light That Burns the Sky": {
@@ -4335,6 +4381,16 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"zp": 180,
 		"isMLG": true
 	},
+	"Sandsear Storm": {
+		"bp": 100,
+		"type": "Ground",
+		"category": "Special",
+		"isSpread": true,
+		"isWind": true,
+		"hasSecondaryEffect": true,
+		"acc": 80,
+		"zp": 180
+	},
 	"Shell Trap": {
 		"bp": 150,
 		"type": "Fire",
@@ -4514,6 +4570,15 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Thunderbolt": {"zp": 175},
 	"Thunder Fang": {"zp": 120},
 	"Thunder Punch": {"zp": 140},
+	"Trailblaze": {
+		"bp": 50,
+		"type": "Grass",
+		"category": "Physical",
+		"makesContact": true,
+		"hasSecondaryEffect": true,
+		"acc": 100,
+		"zp": 100
+	},
 	"Tri Attack": {"zp": 160},
 	"Trop Kick": {
 		"bp": 70,
@@ -4547,8 +4612,27 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"zp": 100
 	},
 	"Water Spout": {"zp": 200},
+	"Wave Crash": {
+		"bp": 120,
+		"type": "Water",
+		"category": "Physical",
+		"makesContact": true,
+		"hasRecoil": 33,
+		"acc": 100,
+		"zp": 190
+	},
 	"Weather Ball": {"zp": 160},
 	"Whirlpool": {"zp": 100},
+	"Wildbolt Storm": {
+		"bp": 100,
+		"type": "Electric",
+		"category": "Special",
+		"isSpread": true,
+		"isWind": true,
+		"hasSecondaryEffect": true,
+		"acc": 80,
+		"zp": 180
+	},
 	"Wild Charge": {"zp": 175},
 	"Wing Attack": {"zp": 120},
 	"Wood Hammer": {"zp": 190},
