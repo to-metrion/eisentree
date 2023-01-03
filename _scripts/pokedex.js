@@ -10939,6 +10939,7 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 	"Qwilfish": {"bs": {"df": 85}},
 	"Volbeat": {"bs": {"df": 75, "sd": 85}},
 	"Illumise": {"bs": {"df": 75, "sd": 85}},
+	"Cresselia": {"bs": {"df": 110, "sd": 120}},
 
 	//special attack buffs
 	"Noctowl": {"bs": {"sa": 86}},
