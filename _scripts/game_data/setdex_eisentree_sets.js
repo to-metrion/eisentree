@@ -1,4 +1,4 @@
-var SETDEX_GEN7_SETS = {
+var SETDEX_EISENTREE = {
   "Venusaur": {
     "Venusaur-1": {
       "level": 50,
@@ -6383,7 +6383,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Heavy Slam",
         "High Horsepower",
-        "Avalanche",
+        "Avalanche (Doubled)",
         "Curse"
       ],
       "nature": "Brave",
@@ -6398,7 +6398,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Heavy Slam",
         "High Horsepower",
-        "Avalanche",
+        "Avalanche (Doubled)",
         "Fire Punch"
       ],
       "nature": "Brave",
@@ -6718,7 +6718,7 @@ var SETDEX_GEN7_SETS = {
       "moves": [
         "Liquidation",
         "Heavy Slam",
-        "Avalanche",
+        "Avalanche (Doubled)",
         "Fissure"
       ],
       "nature": "Adamant",
@@ -13190,7 +13190,7 @@ var SETDEX_GEN7_SETS = {
         "Gyro Ball",
         "Power Whip",
         "Knock Off",
-        "Revenge"
+        "Revenge (Doubled)"
       ],
       "nature": "Brave",
       "item": "Iron Ball"
