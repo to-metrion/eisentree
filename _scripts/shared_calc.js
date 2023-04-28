@@ -1054,10 +1054,10 @@ const IVS_OTHER = [31, 27, 23, 19];
 
 var gen = 7;
 var pokedex = POKEDEX_SM;
-var setdex = SETDEX_EISENTREE
+var setdex = SETDEX_EISENTREE;
 var setdexAll = joinDexes([setdex, SETDEX_CUSTOM]);
 var typeChart = TYPE_CHART_XY;
-var moves = MOVES_SM;
+var moves = MOVES_SV;
 var items = ITEMS_SM;
 var abilities = ABILITIES_SM;
 var calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
