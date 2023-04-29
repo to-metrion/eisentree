@@ -4609,6 +4609,132 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	}
 });
 
+var MOVES_EISENTREE = $.extend(true, {}, MOVES_SM, {
+	"Rapid Spin": {"bp": 50},
+	"Multi-Attack": {"bp": 120},
+
+	"Breaking Swipe": {
+		"bp": 60,
+		"type": "Dragon",
+		"category": "Physical",
+		"isSpread": true,
+		"zp": 120
+	},
+	"Coaching": {
+		"bp": 0,
+		"type": "Fighting"
+	},
+	"Dual Wingbeat": {
+		"bp": 40,
+		"type": "Flying",
+		"category": "Physical",
+		"acc": 90,
+		"isTwoHit": true,
+		"zp": 100
+	},
+	"Life Dew": {
+		"bp": 0,
+		"type": "Water"
+	},
+	"Scorching Sands": {
+		"bp": 70,
+		"type": "Ground",
+		"category": "Special",
+		"hasSecondaryEffect": true,
+		"acc": 100,
+		"zp": 140
+	},
+	"Skitter Smack": {
+		"bp": 70,
+		"type": "Bug",
+		"category": "Physical",
+		"hasSecondaryEffect": true,
+		"acc": 90,
+		"zp": 140
+	},
+
+	"Aqua Cutter": {
+		"bp": 70,
+		"type": "Water",
+		"category": "Physical",
+		"isSlicing": true,
+		"acc": 100,
+		"zp": 140
+	},
+	"Bleakwind Storm": {
+		"bp": 100,
+		"type": "Flying",
+		"category": "Special",
+		"isSpread": true,
+		"isWind": true,
+		"hasSecondaryEffect": true,
+		"acc": 80,
+		"zp": 180
+	},
+	"Chilling Water": {
+		"bp": 50,
+		"type": "Water",
+		"category": "Special",
+		"hasSecondaryEffect": true,
+		"acc": 100,
+		"zp": 100
+	},
+	"Headlong Rush": {
+		"bp": 120,
+		"type": "Ground",
+		"category": "Physical",
+		"makesContact": true,
+		"acc": 100,
+		"zp": 190
+	},
+	"Ice Spinner": {
+		"bp": 80,
+		"type": "Ice",
+		"category": "Physical",
+		"makesContact": true,
+		"acc": 100,
+		"zp": 160
+	},
+	"Sandsear Storm": {
+		"bp": 100,
+		"type": "Ground",
+		"category": "Special",
+		"isSpread": true,
+		"isWind": true,
+		"hasSecondaryEffect": true,
+		"acc": 80,
+		"zp": 180
+	},
+	"Trailblaze": {
+		"bp": 50,
+		"type": "Grass",
+		"category": "Physical",
+		"makesContact": true,
+		"hasSecondaryEffect": true,
+		"acc": 100,
+		"zp": 100
+	},
+	"Wave Crash": {
+		"bp": 120,
+		"type": "Water",
+		"category": "Physical",
+		"makesContact": true,
+		"hasRecoil": 1/3,
+		"acc": 100,
+		"zp": 190
+	},
+	"Wildbolt Storm": {
+		"bp": 100,
+		"type": "Electric",
+		"category": "Special",
+		"isSpread": true,
+		"isWind": true,
+		"hasSecondaryEffect": true,
+		"acc": 80,
+		"zp": 180
+	}
+});
+
 var MOVES_SS = $.extend(true, {}, MOVES_SM, {
 	"Double Iron Bash": {
 		"bp": 60,
