@@ -29,20 +29,38 @@ var ITEMS_GSC = [
 ];
 
 var ITEMS_ADV = ITEMS_GSC.concat([
-	"Bright Powder",
+	"Apicot Berry",
+	"Aspear Berry",
+	"BrightPowder",
+	"Cheri Berry",
+	"Chesto Berry",
 	"Choice Band",
 	"DeepSeaScale",
 	"DeepSeaTooth",
+	"Enigma Berry",
 	"Focus Band",
+	"Ganlon Berry",
+	"Lansat Berry",
 	"Lax Incense",
+	"Leppa Berry",
+	"Liechi Berry",
+	"Lum Berry",
+	"Macho Brace",
 	"Mental Herb",
 	"Quick Claw",
 	"Oran Berry",
+	"Pecha Berry",
 	"Persim Berry",
+	"Petaya Berry",
+	"Rawst Berry",
+	"Salac Berry",
+	"Sea Incense",
 	"Scope Lens",
+	"Shell Bell",
 	"Silk Scarf",
 	"Sitrus Berry",
 	"Soul Dew",
+	"Starf Berry",
 	"White Herb"
 ]);
 
@@ -53,13 +71,11 @@ ITEMS_ADV.splice(ITEMS_ADV.indexOf("Polkadot Bow"), 1);
 
 var ITEMS_DPP = ITEMS_ADV.concat([
 	"Adamant Orb",
-	"Apicot Berry",
 	"Babiri Berry",
 	"Belue Berry",
 	"Big Root",
 	"Black Sludge",
 	"Charti Berry",
-	"Chesto Berry",
 	"Chilan Berry",
 	"Choice Scarf",
 	"Choice Specs",
@@ -72,13 +88,11 @@ var ITEMS_DPP = ITEMS_ADV.concat([
 	"Dread Plate",
 	"Durin Berry",
 	"Earth Plate",
-	"Enigma Berry",
 	"Expert Belt",
 	"Fist Plate",
 	"Flame Orb",
 	"Flame Plate",
 	"Focus Sash",
-	"Ganlon Berry",
 	"Grip Claw",
 	"Griseous Orb",
 	"Haban Berry",
@@ -92,14 +106,9 @@ var ITEMS_DPP = ITEMS_ADV.concat([
 	"Kasib Berry",
 	"Kebia Berry",
 	"Lagging Tail",
-	"Lansat Berry",
-	"Leppa Berry",
-	"Liechi Berry",
 	"Life Orb",
 	"Light Clay",
-	"Lum Berry",
 	"Lustrous Orb",
-	"Macho Brace",
 	"Meadow Plate",
 	"Metronome",
 	"Micle Berry",
@@ -109,21 +118,19 @@ var ITEMS_DPP = ITEMS_ADV.concat([
 	"Odd Incense",
 	"Passho Berry",
 	"Payapa Berry",
-	"Petaya Berry",
-	"Rawst Berry",
+	"Razor Claw",
 	"Razor Fang",
 	"Rindo Berry",
 	"Rock Incense",
 	"Rose Incense",
 	"Rowap Berry",
-	"Salac Berry",
-	"Sea Incense",
+	"Shed Shell",
 	"Shuca Berry",
 	"Sky Plate",
 	"Smooth Rock",
 	"Splash Plate",
 	"Spooky Plate",
-	"Starf Berry",
+	"Sticky Barb",
 	"Stone Plate",
 	"Tanga Berry",
 	"Toxic Orb",
@@ -192,6 +199,7 @@ ITEMS_XY.splice(ITEMS_XY.indexOf("DeepSeaTooth"), 1, "Deep Sea Tooth");
 ITEMS_XY.splice(ITEMS_XY.indexOf("NeverMeltIce"), 1, "Never-Melt Ice");
 ITEMS_XY.splice(ITEMS_XY.indexOf("SilverPowder"), 1, "Silver Powder");
 ITEMS_XY.splice(ITEMS_XY.indexOf("TwistedSpoon"), 1, "Twisted Spoon");
+ITEMS_XY.splice(ITEMS_XY.indexOf("BrightPowder"), 1, "Bright Powder");
 ITEMS_XY.splice(ITEMS_XY.indexOf("Bug Gem"), 1);
 ITEMS_XY.splice(ITEMS_XY.indexOf("Dark Gem"), 1);
 ITEMS_XY.splice(ITEMS_XY.indexOf("Dragon Gem"), 1);
@@ -211,6 +219,8 @@ ITEMS_XY.splice(ITEMS_XY.indexOf("Water Gem"), 1);
 ITEMS_XY.splice(ITEMS_XY.indexOf("Soul Dew"), 1);
 
 var ITEMS_SM = ITEMS_XY.concat([
+	"Adrenaline Orb",
+	"Protective Pads",
 	"Terrain Extender",
 	"Figy Berry",
 	"Iapapa Berry",
@@ -280,6 +290,16 @@ var ITEMS_SS = ITEMS_SM.concat([
 	"Rusted Sword",
 	"Throat Spray",
 	"Utility Umbrella"
+]);
+
+var ITEMS_SV = ITEMS_SS.concat([
+	"Booster Energy",
+	"Ability Shield",
+	"Clear Amulet",
+	"Mirror Herb",
+	"Punching Glove",
+	"Covert Cloak",
+	"Loaded Dice"
 ]);
 
 function getTechnoBlast(item) {
