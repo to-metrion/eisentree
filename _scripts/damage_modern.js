@@ -14,20 +14,21 @@ function CALCULATE_ALL_MOVES_MODERN(p1, p2, field) {
 	checkAngerShell(p2);
 	p1.stats[DF] = getModifiedStat(p1.rawStats[DF], p1.boosts[DF]);
 	p1.stats[SD] = getModifiedStat(p1.rawStats[SD], p1.boosts[SD]);
-	p1.stats[SP] = getFinalSpeed(p1, field.getWeather(), field.getTerrain());
 	p2.stats[DF] = getModifiedStat(p2.rawStats[DF], p2.boosts[DF]);
 	p2.stats[SD] = getModifiedStat(p2.rawStats[SD], p2.boosts[SD]);
-	p2.stats[SP] = getFinalSpeed(p2, field.getWeather(), field.getTerrain());
 	checkIntimidate(p1, p2);
 	checkIntimidate(p2, p1);
 	//checkDownload(p1, p2);
 	//checkDownload(p2, p1);
 	checkZacianZamazaenta(p1);
 	checkZacianZamazaenta(p2);
+	// So that ProtoQuark is correctly calculated, all stats must be calculated, and getFinalSpeed must be called last.
 	p1.stats[AT] = getModifiedStat(p1.rawStats[AT], p1.boosts[AT]);
 	p1.stats[SA] = getModifiedStat(p1.rawStats[SA], p1.boosts[SA]);
+	p1.stats[SP] = getFinalSpeed(p1, field.getWeather(), field.getTerrain());
 	p2.stats[AT] = getModifiedStat(p2.rawStats[AT], p2.boosts[AT]);
 	p2.stats[SA] = getModifiedStat(p2.rawStats[SA], p2.boosts[SA]);
+	p2.stats[SP] = getFinalSpeed(p2, field.getWeather(), field.getTerrain());
 	var side1 = field.getSide(1);
 	var side2 = field.getSide(0);
 	var results = [[], []];
@@ -52,18 +53,22 @@ function CALCULATE_MOVES_OF_ATTACKER_MODERN(attacker, defender, field) {
 	checkSeedsHonk(defender, field.getTerrain());
 	checkAngerShell(attacker);
 	checkAngerShell(defender);
-	attacker.stats[SP] = getFinalSpeed(attacker, field.getWeather(), field.getTerrain());
+	attacker.stats[DF] = getModifiedStat(attacker.rawStats[DF], attacker.boosts[DF]);
+	attacker.stats[SD] = getModifiedStat(attacker.rawStats[SD], attacker.boosts[SD]);
 	defender.stats[DF] = getModifiedStat(defender.rawStats[DF], defender.boosts[DF]);
 	defender.stats[SD] = getModifiedStat(defender.rawStats[SD], defender.boosts[SD]);
-	defender.stats[SP] = getFinalSpeed(defender, field.getWeather(), field.getTerrain());
 	checkIntimidate(attacker, defender);
 	checkIntimidate(defender, attacker);
 	checkDownload(attacker, defender);
 	checkZacianZamazaenta(attacker);
 	checkZacianZamazaenta(defender);
+	// So that ProtoQuark is correctly calculated, all stats must be calculated, and getFinalSpeed must be called last.
 	attacker.stats[AT] = getModifiedStat(attacker.rawStats[AT], attacker.boosts[AT]);
 	attacker.stats[SA] = getModifiedStat(attacker.rawStats[SA], attacker.boosts[SA]);
+	attacker.stats[SP] = getFinalSpeed(attacker, field.getWeather(), field.getTerrain());
 	defender.stats[AT] = getModifiedStat(defender.rawStats[AT], defender.boosts[AT]);
+	defender.stats[SA] = getModifiedStat(defender.rawStats[SA], defender.boosts[SA]);
+	defender.stats[SP] = getFinalSpeed(defender, field.getWeather(), field.getTerrain());
 	var defenderSide = field.getSide(~~(mode === "one-vs-all"));
 	var results = [];
 	for (var i = 0; i < 4; i++) {
@@ -84,32 +89,39 @@ function getDamageResult(attacker, defender, move, field) {
 		"defenderName": defender.name,
 		"isDynamax": defender.isDynamax
 	};
-	if (defender.isTerastal) {
-		description.defenderTera = defender.type1;
-	}
-	if (move.bp === 0) {
-		return {"damage": [0], "description": buildDescription(description)};
-	}
-
-	let moveType = move.type;
 
 	let defAbility = defender.ability;
 	if (defAbility !== "Shadow Shield") {
 		if (["Mold Breaker", "Teravolt", "Turboblaze"].includes(attacker.ability)) {
-			description.attackerAbility = attacker.ability;
+			// since Mold Breaker and Ability Shield don't actually change damage, I would prefer that they don't print in the description
+			// a reason to revert this change and  print Mold Breaker would be to better highlight to users when an ability is being negated
+			//description.attackerAbility = attacker.ability;
 			if (defender.item === "Ability Shield") {
-				description.defenderItem = defender.item;
+				//description.defenderItem = defender.item;
 			} else {
 				defAbility = "";
 			}
 		} else if (["Moongeist Beam", "Sunsteel Strike", "Searing Sunraze Smash", "Menacing Moonraze Maelstrom", "Light That Burns the Sky", "G-Max Drum Solo", "G-Max Hydrosnipe", "G-Max Fireball"].includes(move.name)) {
 			if (defender.item === "Ability Shield") {
-				description.defenderItem = defender.item;
+				//description.defenderItem = defender.item;
 			} else {
 				defAbility = "";
 			}
 		}
 	}
+
+	if (killsShedinja(attacker, defender, move)) {
+		return {"damage": [1], "description": buildDescription(description)};
+	}
+	if (move.bp === 0) {
+		return {"damage": [0], "description": buildDescription(description)};
+	}
+	
+	if (defender.isTerastal) {
+		description.defenderTera = defender.type1;
+	}
+
+	let moveType = move.type;
 
 	var isCritical = move.isCrit && ["Battle Armor", "Shell Armor"].indexOf(defAbility) === -1;
 
@@ -174,7 +186,8 @@ function getDamageResult(attacker, defender, move, field) {
 		break;
 
 	case "Meteor Beam":
-		attacker.boosts[SA] = attacker.ability === "Simple" ? Math.min(6, attacker.boosts[SA] + 2) : (attacker.ability === "Contrary" ? Math.max(-6, attacker.boosts[SA] - 1) : Math.min(6, attacker.boosts[SA] + 1));
+		var originalSABoost = attacker.boosts[SA];
+		attacker.boosts[SA] = attacker.ability === "Simple" ? Math.min(6, attacker.boosts[SA] + 2) : (attacker.ability === "Contrary" && attacker.item !== "White Herb" ? Math.max(-6, attacker.boosts[SA] - 1) : Math.min(6, attacker.boosts[SA] + 1));
 		attacker.stats[SA] = getModifiedStat(attacker.rawStats[SA], attacker.boosts[SA]);
 		// this boost gets reset after attack mods are calc'd
 		break;
@@ -251,7 +264,7 @@ function getDamageResult(attacker, defender, move, field) {
 	if (typeEffectiveness === 0) {
 		return {"damage": [0], "description": buildDescription(description)};
 	}
-	if (defAbility === "Wonder Guard" && typeEffectiveness <= 1 ||
+	if (defAbility === "Wonder Guard" && typeEffectiveness <= 1 && move.name !== "Struggle" ||
 		moveType === "Grass" && defAbility === "Sap Sipper" ||
 		moveType === "Fire" && ["Flash Fire", "Flash Fire (activated)", "Well-Baked Body"].indexOf(defAbility) !== -1 ||
 		moveType === "Water" && ["Dry Skin", "Storm Drain", "Water Absorb"].indexOf(defAbility) !== -1 ||
@@ -529,7 +542,7 @@ function getDamageResult(attacker, defender, move, field) {
 	}
 
 	// The location of Technician changed betweens gens 7 and 8 https://www.smogon.com/forums/threads/sword-shield-battle-mechanics-research.3655528/post-8433978
-	if (gen < 8 && attacker.ability === "Technician" && pokeRound((basePower * chainMods(bpMods)) / 4096) <= 60) {
+	if (gen <= 7 && attacker.ability === "Technician" && pokeRound((basePower * chainMods(bpMods)) / 4096) <= 60) {
 		bpMods.push(0x1800);
 		description.attackerAbility = attacker.ability;
 	}
@@ -553,14 +566,17 @@ function getDamageResult(attacker, defender, move, field) {
 		bpMods.push(0x1199); // confirmed to be 0x1199 from gens 5-9 by https://www.smogon.com/bw/articles/bw_complete_damage_formula and OZY's Twitter
 		description.attackerItem = attacker.item;
 	} else if (attacker.item === "Punching Glove" && move.isPunch) {
-		// It seems to be an ever-so-slightly-different multiplier from Band/Glasses https://twitter.com/OZY_Project97/status/1604385021439094784
-		bpMods.push(0x119A);
+		bpMods.push(0x119A); // it seems to be an ever-so-slightly-different multiplier from Band/Glasses https://twitter.com/OZY_Project97/status/1604385021439094784
 		description.attackerItem = attacker.item;
-	} else if ((getItemBoostType(attacker.item) === moveType) ||
-		(attacker.hasType(moveType) && ( // this probably no longer works correctly under Terastallization; can check dex types instead
+	} else if (getItemBoostType(attacker.item) === moveType ||
+		((attacker.dexType1 === moveType || attacker.dexType2 === moveType) && (
 		attacker.item === "Adamant Orb" && attacker.name === "Dialga" ||
+		attacker.item === "Adamant Crystal" && attacker.name === "Dialga-O" ||
 		attacker.item === "Lustrous Orb" && attacker.name === "Palkia" ||
-		attacker.item === "Griseous Orb" && attacker.name === "Giratina-O" ||
+		attacker.item === "Lustrous Globe" && attacker.name === "Palkia-O" ||
+		(gen <= 8 || gen == 80) && attacker.item === "Griseous Orb" && attacker.name === "Giratina-O" || // thanks GF, this is horrible
+		gen >= 9 && gen != 80 && attacker.item === "Griseous Orb" && attacker.name === "Giratina" ||
+		attacker.item === "Griseous Core" && attacker.name === "Giratina-O" ||
 		attacker.item === "Soul Dew" && gen >= 7 && (attacker.name === "Latios" || attacker.name === "Latias")))) {
 		bpMods.push(0x1333);
 		description.attackerItem = attacker.item;
@@ -569,23 +585,24 @@ function getDamageResult(attacker, defender, move, field) {
 		description.attackerItem = attacker.item;
 	}
 
-	if ((move.name === "Solar Beam" || move.name == "SolarBeam") && ["Rain", "Sand", "Hail", "Heavy Rain", "Snow"].includes(field.weather) && attacker.item !== "Utility Umbrella") {
+	if (["Solar Beam", "SolarBeam", "Solar Blade"].includes(move.name) &&
+		(["Sand", "Hail", "Snow"].includes(field.weather) || (field.weather.endsWith("Rain") && attacker.item !== "Utility Umbrella"))) {
+		// Solar B power is still halved in non-rain bad weather regardless of Utility Umbrella https://github.com/smogon/pokemon-showdown/pull/6180
 		bpMods.push(0x800);
 		description.moveBP = move.bp / 2;
 		description.weather = field.weather;
 	}
 
-	if (gen >= 6 && gen != 8 && move.name === "Knock Off" && !((defender.item === "") ||
-		(defender.name === "Giratina-O" && defender.item === "Griseous Orb") ||
-		(defender.item.includes("Memory")) ||
-		(defender.name.includes("Arceus") && defender.item.includes("Plate")) ||
-		(defender.item.includes(" Z")))) {
-		bpMods.push(0x1800);
-		description.moveBP = move.bp * 1.5;
-	} else if (gen === 8 && move.name === "Knock Off" && !((defender.item === "") ||
-		(defender.name === "Giratina-O" && defender.item === "Griseous Orb") ||
-		(defender.item.includes("Memory")) ||
-		(defender.item.includes(" Z")))) {
+	if (move.name === "Knock Off" && !(defender.item === "" ||
+		attacker.item === "Lustrous Globe" && attacker.name === "Palkia-O" ||
+		attacker.item === "Adamant Crystal" && attacker.name === "Dialga-O" ||
+		defender.item === "Griseous Orb" && (gen <= 8 || gen == 80) && defender.name === "Giratina-O" ||
+		defender.item === "Griseous Core" && defender.name === "Giratina-O" ||
+		defender.item.endsWith("Plate") && defender.name.startsWith("Arceus") ||
+		defender.item.endsWith("Memory") && defender.name.startsWith("Silvally") ||
+		defender.item.endsWith(" Z") ||
+		defender.item === "Booster Energy" && (defender.ability === "Protosynthesis" || defender.ability === "Quark Drive"))) {
+		// Mega Stones, Red/Blue Orbs, and Rusted items are already accounted for by the fact that they don't exist as items
 		bpMods.push(0x1800);
 		description.moveBP = move.bp * 1.5;
 	}
@@ -593,6 +610,15 @@ function getDamageResult(attacker, defender, move, field) {
 	if (field.isHelpingHand) {
 		bpMods.push(0x1800);
 		description.isHelpingHand = true;
+	}
+
+	if (field.isCharge && moveType === "Electric") {
+		bpMods.push(0x2000);
+		if (["Electromorphosis", "Wind Power"].includes(attacker.ability)) {
+			description.attackerAbility = attacker.ability;
+		} else {
+			description.isCharge = true;
+		}
 	}
 
 	if (move.name === "Facade" && ["Burned", "Paralyzed", "Poisoned", "Badly Poisoned"].includes(attacker.status) ||
@@ -672,7 +698,7 @@ function getDamageResult(attacker, defender, move, field) {
 		attacker.ability === "Swarm" && attacker.curHP <= attacker.maxHP / 3 && moveType === "Bug" ||
 		attacker.ability === "Steelworker" && moveType === "Steel" ||
 		attacker.ability === "Gorilla Tactics" && moveCategory === "Physical" && !attacker.isDynamax ||
-		attacker.ability === "Transistor" && moveType === "Electric" ||
+		attacker.ability === "Transistor" && gen <= 8 && moveType === "Electric" ||
 		attacker.ability === "Dragon's Maw" && moveType === "Dragon" ||
 		attacker.ability === "Rocky Payload" && moveType === "Rock" ||
 		attacker.ability === "Sharpness" && move.isSlicing) {
@@ -694,10 +720,11 @@ function getDamageResult(attacker, defender, move, field) {
 		atMods.push(0x1555); // https://www.smogon.com/forums/threads/scarlet-violet-battle-mechanics-research.3709545/post-9423025
 		description.attackerAbility = attacker.ability;
 	}
-	var attackerProtoQuark = checkProtoQuarkHighest(attacker, field.weather, field.terrain);
-	if ((attackerProtoQuark === "Atk" && moveCategory === "Physical") ||
-		(attackerProtoQuark === "SpA" && moveCategory === "Special")) {
-		atMods.push(0x14CD); // https://www.smogon.com/forums/threads/scarlet-violet-battle-mechanics-research.3709545/post-9423025
+	let attackerProtoQuark = checkProtoQuarkHighest(attacker, field.weather, field.terrain);
+	if ((attackerProtoQuark === AT && moveCategory === "Physical") ||
+		(attackerProtoQuark === SA && moveCategory === "Special") || // https://www.smogon.com/forums/threads/scarlet-violet-battle-mechanics-research.3709545/post-9423025
+		attacker.ability === "Transistor" && gen >= 9 && moveType === "Electric") { // https://www.smogon.com/forums/threads/scarlet-violet-battle-mechanics-research.3709545/post-9647211
+		atMods.push(0x14CD);
 		description.attackerAbility = attacker.ability;
 	}
 
@@ -714,7 +741,7 @@ function getDamageResult(attacker, defender, move, field) {
 		description.defenderAbility = defAbility;
 	}
 
-	if (attacker.item === "Soul Dew" && gen < 7 && (attacker.name === "Latios" || attacker.name === "Latias") && moveCategory === "Special" ||
+	if (attacker.item === "Soul Dew" && gen <= 6 && (attacker.name === "Latios" || attacker.name === "Latias") && moveCategory === "Special" ||
 		attacker.item === "Choice Band" && (moveCategory === "Physical" || move.name === "Body Press") && !move.isZ && !attacker.isDynamax ||
 		attacker.item === "Choice Specs" && moveCategory === "Special" && !move.isZ && !attacker.isDynamax) {
 		atMods.push(0x1800);
@@ -728,8 +755,9 @@ function getDamageResult(attacker, defender, move, field) {
 
 	attack = Math.max(1, pokeRound(attack * chainMods(atMods) / 0x1000));
 
+	// reset the SpA boost from Meteor Beam so it doesn't affect other moves
 	if (move.name === "Meteor Beam") {
-		attacker.boosts[SA] = attacker.ability === "Simple" ? (attacker.boosts[SA] - 2) : (attacker.ability === "Contrary" ? (attacker.boosts[SA] + 1) : (attacker.boosts[SA] - 1));
+		attacker.boosts[SA] = originalSABoost;
 		attacker.stats[SA] = getModifiedStat(attacker.rawStats[SA], attacker.boosts[SA]);
 	}
 
@@ -776,8 +804,8 @@ function getDamageResult(attacker, defender, move, field) {
 		description.defenderAbility = defAbility;
 	}
 
-	var defenderProtoQuark = checkProtoQuarkHighest(defender, field.weather, field.terrain);
-	if ((defenderProtoQuark === "Def" && hitsPhysical) || (defenderProtoQuark === "SpD" && !hitsPhysical)) {
+	let defenderProtoQuark = checkProtoQuarkHighest(defender, field.weather, field.terrain);
+	if ((defenderProtoQuark === DF && hitsPhysical) || (defenderProtoQuark === SD && !hitsPhysical)) {
 		dfMods.push(0x14CD);
 		description.defenderAbility = defAbility;
 	}
@@ -788,7 +816,7 @@ function getDamageResult(attacker, defender, move, field) {
 		description.isRuinDef = true;
 	}
 
-	if (defender.item === "Soul Dew" && gen < 7 && (defender.name === "Latios" || defender.name === "Latias") && !hitsPhysical ||
+	if (defender.item === "Soul Dew" && gen <= 6 && (defender.name === "Latios" || defender.name === "Latias") && !hitsPhysical ||
 		defender.item === "Assault Vest" && !hitsPhysical ||
 		defender.item === "Eviolite") {
 		dfMods.push(0x1800);
@@ -961,6 +989,7 @@ function getDamageResult(attacker, defender, move, field) {
 		child.stats = attacker.stats;
 		child.ability = "";
 		child.isChild = true;
+		child.hasType = attacker.hasType;
 		if (move.name === "Power-Up Punch") {
 			child.boosts[AT] = Math.min(6, child.boosts[AT] + 1);
 			child.stats[AT] = getModifiedStat(child.rawStats[AT], child.boosts[AT]);
@@ -1047,6 +1076,9 @@ function buildDescription(description) {
 	output += description.attackerName + " ";
 	if (description.isHelpingHand) {
 		output += "Helping Hand ";
+	}
+	if (description.isCharge) {
+		output += "Charge ";
 	}
 	if (description.isPowerSpot) {
 		output += "Power Spot ";
@@ -1186,7 +1218,8 @@ function getModifiedStat(stat, mod) {
 }
 
 function getFinalSpeed(pokemon, weather, terrain) {
-	var speed = getModifiedStat(pokemon.rawStats[SP], pokemon.boosts[SP]);
+	let speed = getModifiedStat(pokemon.rawStats[SP], pokemon.boosts[SP]);
+	pokemon.stats[SP] = speed; // this is for ProtoQuark calculation. it should not include item
 	if (pokemon.item === "Choice Scarf" && !pokemon.isDynamax) {
 		speed = Math.floor(speed * 1.5);
 	} else if (pokemon.item === "Macho Brace" || pokemon.item === "Iron Ball") {
@@ -1199,17 +1232,17 @@ function getFinalSpeed(pokemon, weather, terrain) {
 		pokemon.ability === "Slush Rush" && (weather.indexOf("Hail") > -1 || weather === "Snow") ||
 		pokemon.ability === "Surge Surfer" && terrain === "Electric") {
 		speed *= 2;
-	} else if (checkProtoQuarkHighest(pokemon, weather, terrain) === "Spe") {
+	} else if (checkProtoQuarkHighest(pokemon, weather, terrain) === SP) {
 		speed = Math.floor(speed * 1.5);
 	}
 	return speed;
 }
 
 function isGrounded(pokemon, isGravity, isLevitate) {
-	if (pokemon.hasType("Flying") || pokemon.item === "Air Balloon" || isLevitate) {
-		return (isGravity || pokemon.item === "Iron Ball");
+	if (isGravity || pokemon.item === "Iron Ball") {
+		return true;
 	}
-	return true;
+	return !(pokemon.hasType("Flying") || pokemon.item === "Air Balloon" || isLevitate);
 }
 
 function getModdedWeight(pokemon, ability) {
@@ -1223,6 +1256,27 @@ function getModdedWeight(pokemon, ability) {
 		weight = Math.floor(weight * 5) / 10;
 	}
 	return weight < 0.1 ? 0.1 : weight;
+}
+
+function killsShedinja(attacker, defender, move) {
+	// This is meant to at-a-glance highlight moves that are fatal to Shedinja and allow the mass calc to better capture Shedinja's defensive profile.
+	// sorry for the mess of conditionals
+	if (defender.ability === "Wonder Guard" && defender.curHP == 1) {
+		let poisonable = defender.status === "Healthy" && !defender.hasType("Poison") && !defender.hasType("Steel");
+		let burnable = defender.status === "Healthy" && !defender.hasType("Fire");
+
+		let weather = defender.item !== "Safety Goggles" &&
+		((move.name === "Sandstorm" && (!defender.hasType("Rock") && !defender.hasType("Steel") && !defender.hasType("Ground"))) || (move.name === "Hail" && !defender.hasType("Ice")));
+		// akin to Sash, status berries should not be accounted for
+		let poison = ["Toxic", "Poison Gas", "Poison Powder", "Toxic Thread"].includes(move.name) && (poisonable || (attacker.ability === "Corrosion" && defender.status === "Healthy"));
+		let burn = move.name === "Will-O-Wisp" && burnable;
+		let dangerItem = (["Trick", "Switcheroo"].includes(move.name) || (move.name === "Bestow" && defender.item === "")) &&
+		(attacker.item === "Sticky Barb" || (attacker.item === "Toxic Orb" && poisonable) || (attacker.item === "Flame Orb" && burnable));
+		let confusion = ["Confuse Ray", "Flatter", "Supersonic", "Swagger", "Sweet Kiss", "Teeter Dance"].includes(move.name);
+		let otherPassive = (move.name === "Leech Seed" && !defender.hasType("Grass")) || (move.name === "Curse" && attacker.hasType("Ghost"));
+		return weather || poison || burn || dangerItem || confusion || otherPassive;
+	}
+	return false;
 }
 
 function checkAirLock(pokemon, field) {
@@ -1315,23 +1369,23 @@ function isShellSideArmPhysical(attacker, defender, move) {
 function checkProtoQuarkHighest(pokemon, weather, terrain) {
 	if ((pokemon.ability === "Protosynthesis" && (pokemon.item === "Booster Energy" || weather.indexOf("Sun") > -1)) ||
 		(pokemon.ability === "Quark Drive" && (pokemon.item === "Booster Energy" || terrain === "Electric"))) {
-		var stats = pokemon.stats;
-		var highestStat = "Atk";
-		var highestValue = stats.at;
+		let stats = pokemon.stats;
+		let highestStat = AT;
+		let highestValue = stats[AT];
 		if (stats.df > highestValue) {
-			highestStat = "Def";
-			highestValue = stats.df;
+			highestStat = DF;
+			highestValue = stats[DF];
 		}
 		if (stats.sa > highestValue) {
-			highestStat = "SpA";
-			highestValue = stats.sa;
+			highestStat = SA;
+			highestValue = stats[SA];
 		}
 		if (stats.sd > highestValue) {
-			highestStat = "SpD";
-			highestValue = stats.sd;
+			highestStat = SD;
+			highestValue = stats[SD];
 		}
 		if (stats.sp > highestValue) {
-			return "Spe";
+			return SP;
 		}
 		return highestStat;
 	}
@@ -1351,15 +1405,17 @@ function checkAngerShell(pokemon) {
 function checkIntimidate(source, target) {
 	if (source.ability === "Intimidate") {
 		if (target.ability === "Contrary" || target.ability === "Defiant" || target.ability === "Guard Dog") {
+			// the net result will still be +1 for something Defiant with White Herb
 			target.boosts[AT] = Math.min(6, target.boosts[AT] + 1);
 		} else if (target.ability === "Competitive") {
 			target.boosts[SA] = Math.min(6, target.boosts[SA] + 2);
-		} else if (["Clear Body", "White Smoke", "Hyper Cutter", "Full Metal Body"].includes(target.ability) || (gen > 7 && ["Inner Focus", "Oblivious", "Scrappy", "Own Tempo"].includes(target.ability)) || target.item === "Clear Amulet") {
+		} else if (["Clear Body", "White Smoke", "Hyper Cutter", "Full Metal Body", "Mirror Armor"].includes(target.ability) ||
+			(gen >= 8 && ["Inner Focus", "Oblivious", "Scrappy", "Own Tempo"].includes(target.ability)) ||
+			["Clear Amulet", "White Herb"].includes(target.item)) {
 			// no effect (going by how Adrenaline Orb and Defiant work, checking these should come second)
+			// Mirror Armor does not reflect the stat drop to the source to simplify things for the calc user
 		} else if (target.ability === "Simple") {
 			target.boosts[AT] = Math.max(-6, target.boosts[AT] - 2);
-		} else if (target.ability === "Mirror Armor" && source.item !== "Clear Amulet") {
-			source.boosts[AT] = Math.max(-6, source.boosts[AT] - 1);
 		} else {
 			target.boosts[AT] = Math.max(-6, target.boosts[AT] - 1);
 		}
