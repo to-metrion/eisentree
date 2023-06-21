@@ -585,21 +585,17 @@ function prependSpeciesAbilities(abilityList, pokeObjID, abilityObj) {
 }
 
 function showFormes(formeObj, setName, pokemonName, pokemon) {
-	var defaultForme = 0;
+	let defaultForme = 0;
 
 	if (setName !== "Blank Set") {
-		var set = setdexAll[pokemonName][setName];
-
+		let set = setdexAll[pokemonName][setName];
 		if (set.forme) {
 			defaultForme = pokedex[pokemonName].formes.indexOf(set.forme);
-		}
-
-		if (set.isGmax) {
+		} else if (set.isGmax) {
 			defaultForme = 1;
 		}
-
-		// This code needs to stay intact for old saved Mega sets that don't have the forme field
-		if (set.item) {
+		else if (set.item) {
+			// This code needs to stay intact for old saved Mega sets that don't have the forme field
 			if (set.item !== "Eviolite" && (set.item.endsWith("ite") || set.item.endsWith("ite X"))) {
 				defaultForme = 1;
 			} else if (set.item.endsWith("ite Y")) {
@@ -608,7 +604,7 @@ function showFormes(formeObj, setName, pokemonName, pokemon) {
 		}
 	}
 
-	var formeOptions = getSelectOptions(pokemon.formes, false, defaultForme);
+	let formeOptions = getSelectOptions(pokemon.formes, false, defaultForme);
 	formeObj.children("select").find("option").remove().end().append(formeOptions).change();
 	formeObj.show();
 }
@@ -983,6 +979,7 @@ function Field() {
 	var isLightScreen = [$("#lightScreenL").prop("checked"), $("#lightScreenR").prop("checked")];
 	var isSeeded = [$("#leechSeedR").prop("checked"), $("#leechSeedL").prop("checked")]; // affects attacks against opposite side
 	var isHelpingHand = [$("#helpingHandR").prop("checked"), $("#helpingHandL").prop("checked")]; // affects attacks against opposite side
+	var isCharge = [$("#chargeR").prop("checked"), $("#chargeL").prop("checked")]; // affects attacks against opposite side
 	var isPowerSpot = [$("#powerSpotR").prop("checked"), $("#powerSpotL").prop("checked")]; // affects attacks against opposite side
 	var isFriendGuard = [$("#friendGuardL").prop("checked"), $("#friendGuardR").prop("checked")];
 	var isBattery = [$("#batteryR").prop("checked"), $("#batteryL").prop("checked")]; // affects attacks against opposite side
@@ -1010,7 +1007,7 @@ function Field() {
 		return terrain;
 	};
 	this.getSide = function (i) {
-		return new Side(format, terrain, weather, isGravity, isSR[i], spikes[i], isReflect[i], isLightScreen[i], isSeeded[i], isHelpingHand[i], isMinimized[i],
+		return new Side(format, terrain, weather, isGravity, isSR[i], spikes[i], isReflect[i], isLightScreen[i], isSeeded[i], isHelpingHand[i], isCharge[i], isMinimized[i],
 			isVictoryStar[i], isFriendGuard[i],
 			isBattery[i], isProtect[i],
 			isPowerSpot[i], isBusted8[i], isBusted16[i], isSteelySpirit[i],
@@ -1018,7 +1015,7 @@ function Field() {
 	};
 }
 
-function Side(format, terrain, weather, isGravity, isSR, spikes, isReflect, isLightScreen, isSeeded, isHelpingHand, isMinimized,
+function Side(format, terrain, weather, isGravity, isSR, spikes, isReflect, isLightScreen, isSeeded, isHelpingHand, isCharge, isMinimized,
 	isVictoryStar, isFriendGuard,
 	isBattery, isProtect,
 	isPowerSpot, isBusted8, isBusted16, isSteelySpirit,
@@ -1033,6 +1030,7 @@ function Side(format, terrain, weather, isGravity, isSR, spikes, isReflect, isLi
 	this.isLightScreen = isLightScreen;
 	this.isSeeded = isSeeded;
 	this.isHelpingHand = isHelpingHand;
+	this.isCharge = isCharge;
 	this.isMinimized = isMinimized;
 	this.isVictoryStar = isVictoryStar;
 	this.isFriendGuard = isFriendGuard;
@@ -1237,6 +1235,8 @@ function clearField() {
 	$("#leechSeedR").prop("checked", false);
 	$("#helpingHandL").prop("checked", false);
 	$("#helpingHandR").prop("checked", false);
+	$("#chargeL").prop("checked", false);
+	$("#chargeR").prop("checked", false);
 	$("#powerSpotL").prop("checked", false);
 	$("#powerSpotR").prop("checked", false);
 	$("#friendGuardL").prop("checked", false);
