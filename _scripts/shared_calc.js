@@ -1176,6 +1176,17 @@ var calcStat = CALC_STAT_ADV;
 	$(".set-selector").change();
 });*/
 
+function isFacilitySet(speciesName, setName) {
+	let setdexMaps = [SETDEX_EISENTREE];
+	for (let setdexMap of setdexMaps) {
+		let speciesSets = setdexMap[speciesName];
+		if (speciesSets && (setName in speciesSets)) {
+			return true;
+		}
+	}
+	return false;
+}
+
 function joinDexes(components) {
 	var joinedDex = {};
 	for (var i = 0; i < components.length; i++) {
