@@ -372,7 +372,7 @@ function placeBsBtn() {
 
 $(".mode").change(function () {
 	if ($("#one-vs-one").prop("checked")) {
-		window.location.href = "/";
+		window.location.href = "/eisentree/";
 	} else {
 		window.location.replace('honkalculate' + linkExtension + '?mode=' + $(this).attr("id"));
 	}
