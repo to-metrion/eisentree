@@ -10113,7 +10113,8 @@ POKEDEX_BW["Dialga"].abilities.push("Telepathy");
 POKEDEX_BW["Drifblim"].abilities.push("Flare Boost");
 POKEDEX_BW["Drifloon"].abilities.push("Flare Boost");
 //POKEDEX_BW["Electivire"].abilities.push("Vital Spirit");eisentree
-POKEDEX_BW["Empoleon"].abilities.push("Defiant");
+//POKEDEX_BW["Empoleon"].abilities.push("Defiant");
+POKEDEX_BW["Empoleon"].abilities.push("Competitive");//eisentree
 POKEDEX_BW["Finneon"].abilities.push("Water Veil");
 POKEDEX_BW["Floatzel"].abilities.push("Water Veil");
 POKEDEX_BW["Froslass"].abilities.push("Cursed Body");
@@ -10251,8 +10252,6 @@ var POKEDEX_XY = $.extend(true, {}, POKEDEX_BW, {
 	"Metagross": {"formes": ["Metagross", "Mega Metagross"]},
 	"Latias": {"formes": ["Latias", "Mega Latias"]},
 	"Latios": {"formes": ["Latios", "Mega Latios"]},
-	"Kyogre": {"formes": ["Kyogre", "Primal Kyogre"]},
-	"Groudon": {"formes": ["Groudon", "Primal Groudon"]},
 	"Rayquaza": {"formes": ["Rayquaza", "Mega Rayquaza"]},
 	"Staraptor": {"bs": {"sd": 60}},
 	"Roserade": {"bs": {"df": 65}},
@@ -11870,7 +11869,7 @@ var POKEDEX_XY = $.extend(true, {}, POKEDEX_BW, {
 		"w": 7.0,
 		"abilities": ["Natural Cure", "Frisk", "Harvest"]
 	},
-	"Primal Groudon": {
+	"Groudon-Primal": {
 		"t1": "Ground",
 		"t2": "Fire",
 		"bs": {
@@ -11883,10 +11882,9 @@ var POKEDEX_XY = $.extend(true, {}, POKEDEX_BW, {
 		},
 		"w": 999.7,
 		"ab": "Desolate Land",
-		"abilities": ["Desolate Land"],
-		"hasBaseForme": "Groudon"
+		"abilities": ["Desolate Land"]
 	},
-	"Primal Kyogre": {
+	"Kyogre-Primal": {
 		"t1": "Water",
 		"bs": {
 			"hp": 100,
@@ -11898,8 +11896,7 @@ var POKEDEX_XY = $.extend(true, {}, POKEDEX_BW, {
 		},
 		"w": 430.0,
 		"ab": "Primordial Sea",
-		"abilities": ["Primordial Sea"],
-		"hasBaseForme": "Kyogre"
+		"abilities": ["Primordial Sea"]
 	},
 	"Pumpkaboo-Average": {
 		"t1": "Ghost",

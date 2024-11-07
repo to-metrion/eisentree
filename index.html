@@ -26,14 +26,14 @@ title: EisenTree Calculator
 		</script></div> -->
 	<div class="move-result-group" title="Select a move to show detailed results.">
 		<div class="move-result-subgroup">
-			<div class="result-move-header"><span id="resultHeaderL">Pokemon 1's Moves (select one to show detailed results)</span></div>
+			<!--div class="result-move-header"><span id="resultHeaderL">Pokemon 1's Moves (select one to show detailed results)</span></div-->
 			<div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveL1" checked="checked" /><label class="btn btn-xxxwide btn-top" for="resultMoveL1">Hi Jump Kick</label> <span id="resultDamageL1">??? - ???%</span></div>
 			<div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveL2" /><label class="btn btn-xxxwide btn-mid" for="resultMoveL2">Falcon Punch</label> <span id="resultDamageL2">??? - ???%</span></div>
 			<div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveL3" /><label class="btn btn-xxxwide btn-mid" for="resultMoveL3">Suspicious Odor</label> <span id="resultDamageL3">??? - ???%</span></div>
 			<div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveL4" /><label class="btn btn-xxxwide btn-bottom" for="resultMoveL4">Tombstoner</label> <span id="resultDamageL4">??? - ???%</span></div>
 		</div>
 		<div class="move-result-subgroup">
-			<div class="result-move-header"><span id="resultHeaderR">Pokemon 2's Moves (select one to show detailed results)</span></div>
+			<!--div class="result-move-header"><span id="resultHeaderR">Pokemon 2's Moves (select one to show detailed results)</span></div-->
 			<div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveR1" /><label class="btn btn-xxxwide btn-top" for="resultMoveR1">Hi Jump Kick</label> <span id="resultDamageR1">??? - ???%</span></div>
 			<div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveR2" /><label class="btn btn-xxxwide btn-mid" for="resultMoveR2">Falcon Punch</label> <span id="resultDamageR2">??? - ???%</span></div>
 			<div><input class="result-move btn-input" type="radio" name="resultMove" id="resultMoveR3" /><label class="btn btn-xxxwide btn-mid" for="resultMoveR3">Suspicious Odor</label> <span id="resultDamageR3">??? - ???%</span></div>
@@ -41,11 +41,11 @@ title: EisenTree Calculator
 		</div>
 	</div>
 	<div class="main-result-group">
-		<div class="big-text" title="Click to copy result">
-			<span id="mainResult">Loading...</span>
+		<div class="big-text">
+			<span id="mainResult" title="Click to copy result">Loading...</span>
 			<span id="afterAcc"></span>
 		</div>
-		<div class="small-text"><span id="damageValues">(If you see this message for more than a few seconds, try enabling JavaScript. If you have that enabled, try deleting your cookies. Otherwise, I won't be able to help you unless you send a screenshot of your browser console.)</span></div>
+		<div class="small-text"><span id="damageValues">(If you see this message for more than a few seconds, try enabling JavaScript. If you have that enabled, please send a screenshot of your browser console.)</span></div>
 	</div>
 
 	<div class="panel poke-info" id="p1">
@@ -294,6 +294,7 @@ title: EisenTree Calculator
 				<div>
 					<label>Ability</label>
 					<select class="ability terrain-trigger calc-trigger"></select>
+					<input class="isActivated hide" type="checkbox" title="Is this ability currently applying?"></label>
 				</div>
 				<div>
 					<label>Item</label>
@@ -423,11 +424,11 @@ title: EisenTree Calculator
 						<input class="btn-input calc-trigger" type="radio" name="autolevel-btn" value="100" id="autolevel100" /><label class="btn btn-right format-btn" for="autolevel100">100</label>
 					</span>
 				</div>
-				<div class="calc-trigger gen-specific g3 g4 g5 g6 g7" id="autoivs">
+				<!--eisentree div class="autoivs calc-trigger gen-specific g5 g6 g7" id="autoivs-center">
 					AI IVs:
 					<input class="autoivs-box gen-specific g4" id="autoivs-box" style="width:2.5em" value=31 />
 					<select class="gen-specific g3 g5 g6 g7" id="autoivs-select"></select>
-				</div>
+				</div-->
 			</h4>
 		</div>
 		<div class="panel-body">
@@ -453,8 +454,8 @@ title: EisenTree Calculator
 				<input class="btn-input calc-trigger" type="radio" name="weather" value="Sun" id="sun" /><label class="btn btn-small btn-mid" for="sun">Sun</label>
 				<input class="btn-input calc-trigger" type="radio" name="weather" value="Rain" id="rain" /><label class="btn btn-small btn-mid" for="rain">Rain</label>
 				<input class="btn-input calc-trigger" type="radio" name="weather" value="Sand" id="sand" /><label class="btn btn-small btn-mid" for="sand">Sand</label>
-				<input class="btn-input calc-trigger" type="radio" name="weather" value="Hail" id="hail" /><label class="btn btn-small btn-right gen-specific g3 g4 g5 g6 g7 g8 g80" for="hail">Hail</label>
-				<input class="btn-input calc-trigger" type="radio" name="weather" value="Snow" id="snow" /><label class="btn btn-small btn-right gen-specific g9" for="snow">Snow</label>
+				<!--input class="btn-input calc-trigger" type="radio" name="weather" value="Hail" id="hail" /><label class="btn btn-small btn-right gen-specific g3 g4 g5 g6 g7 g8 g80" for="hail">Hail</label-->
+				<input class="btn-input calc-trigger" type="radio" name="weather" value="Snow" id="snow" /><label class="btn btn-small btn-right" for="snow">Snow</label>
 			</div>
 			<div class="gen-specific g6 g7" style="width: 21.1em; margin: 5px auto;" title="Select the current weather condition.">
 				<input class="btn-input calc-trigger" type="radio" name="weather" value="Harsh Sun" id="harsh-sun" /><label class="btn btn-wide btn-left" for="harsh-sun">Harsh Sun</label>
@@ -462,9 +463,9 @@ title: EisenTree Calculator
 				<input class="btn-input calc-trigger" type="radio" name="weather" value="Strong Winds" id="strong-winds" /><label class="btn btn-xwide btn-right" for="strong-winds">Strong Winds</label>
 			</div>
 			<div class="gen-specific g6 g7 g8" style="width: 21.1em; margin: 5px auto;" title="Select the current radiating aura.">
-				<input class="btn-input calc-trigger" type="checkbox" name="aura" value="Aura Break" id="aura-break" /><label class="btn btn-wide btn-left" for="aura-break">Aura Break</label>
-				<input class="btn-input calc-trigger" type="checkbox" name="aura" value="Fairy Aura" id="fairy-aura" /><label class="btn btn-wide btn-mid" for="fairy-aura">Fairy Aura</label>
-				<input class="btn-input calc-trigger" type="checkbox" name="aura" value="Dark Aura" id="dark-aura" /><label class="btn btn-wide btn-right" for="dark-aura">Dark Aura</label>
+				<input class="btn-input calc-trigger" type="checkbox" name="aura" value="Fairy Aura" id="fairy-aura" /><label class="btn btn-wide btn-left" for="fairy-aura">Fairy Aura</label>
+				<input class="btn-input calc-trigger" type="checkbox" name="aura" value="Dark Aura" id="dark-aura" /><label class="btn btn-wide btn-mid" for="dark-aura">Dark Aura</label>
+				<input class="btn-input calc-trigger" type="checkbox" name="aura" value="Aura Break" id="aura-break" /><label class="btn btn-wide btn-right" for="aura-break">Aura Break</label>
 			</div>
 			<div class="gen-specific g4 g5 g6 g7 g8 g80 g9" style="width: 5.3em; margin: 5px auto;" title="Is gravity in effect?">
 				<input class="btn-input calc-trigger" type="checkbox" id="gravity" /><label class="btn" for="gravity">Gravity</label>
@@ -563,7 +564,8 @@ title: EisenTree Calculator
 					<input class="btn-input calc-trigger" type="checkbox" id="foresightR" /><label class="btn btn-wide" for="foresightR">Foresight</label>
 				</div>
 			</div>-->
-			<div class="btn-group gen-specific g6 g7 g8 g80 g9">
+			<div class="btn-group hide">
+			<!--div class="btn-group gen-specific g6 g7 g8 g80 g9"-->
 				<div class="left" title="Has this Pokemon used Minimize?">
 					<input class="btn-input calc-trigger" type="checkbox" id="minimL" /><label class="btn btn-xwide" for="minimL">Minimize</label>
 				</div>
@@ -635,6 +637,14 @@ title: EisenTree Calculator
 					<input class="btn-input calc-trigger" type="checkbox" id="wpR" /><label class="btn btn-xxwide" for="wpR"><img src="../_images/wp.png"><br>Weakness Policy</label>
 				</div>
 			</div>
+			<div class="btn-group gen-specific g7 g9">
+				<div class="left" title="Has this Pokemon had all its stats sharply raised? (gen 9 sprites by @ezerart_/Ezerart)">
+					<input class="btn-input calc-trigger" type="checkbox" id="evoL" /><label class="btn btn-xxwide" for="evoL"><img class="evo_img1" src="../_images/eevee.png"><img class="evo_img2" src="../_images/eevium.png"><br>+2 All</label>
+				</div>
+				<div class="right" title="Has this Pokemon had all its stats sharply raised? (gen 9 sprites by @ezerart_/Ezerart)">
+					<input class="btn-input calc-trigger" type="checkbox" id="evoR" /><label class="btn btn-xxwide" for="evoR"><img class="evo_img1" src="../_images/eevee.png"><img class="evo_img2" src="../_images/eevium.png"><br>+2 All</label>
+				</div>
+			</div>
 			<div class="btn-group gen-specific g8 g9">
 				<div class="left" title="Has this Pokemon's move been boosted by Steely Spirit?">
 					<input class="btn-input calc-trigger" type="checkbox" id="steelySpiritL" /><label class="btn btn-xxwide" for="steelySpiritL">Steely Spirit</label>
@@ -668,14 +678,6 @@ title: EisenTree Calculator
 				</div>
 				<div>&nbsp;</div>
 			</div>
-			<div class="btn-group gen-specific g7">
-				<div class="left" title="Has this Pokemon used Extreme Evoboost?">
-					<input class="btn-input calc-trigger" type="checkbox" id="evoL" /><label class="btn btn-xwide" for="evoL"><img src="../_images/eevee.png"><br>Extreme Evoboost</label>
-				</div>
-				<div class="right" title="Has this Pokemon used Extreme Evoboost?">
-					<input class="btn-input calc-trigger" type="checkbox" id="evoR" /><label class="btn btn-xwide" for="evoR"><img src="../_images/eevee.png"><br>Extreme Evoboost</label>
-				</div>
-			</div>
 			<div>&nbsp;</div>
 			<div class="btn-group">
 				<button class="left" type="button" id="exportL" onclick="exportToPsFormat($('#p1'))">Export Set</button>
@@ -694,7 +696,7 @@ title: EisenTree Calculator
 					<input class="right gen-specific g8 g9" type="checkbox" id="startGimmick"><label class="right gen-specific g8 g9" for="startGimmick" id="startGimmick-label">Start</label>
 				</div>
 
-				<p>You may need to refresh the page after deleting your custom sets. If you encounter a bug, please try deleting your cookies or reporting it!</p>
+				<p>You may need to refresh the page after deleting your custom sets. If you encounter a bug, please report it!</p>
 			</span>
 		</div>
 	</div><!--End Field panel-->
@@ -944,6 +946,7 @@ title: EisenTree Calculator
 				<div>
 					<label>Ability</label>
 					<select class="ability terrain-trigger calc-trigger"></select>
+					<input class="isActivated hide" type="checkbox" title="Is this ability currently applying?"></label>
 				</div>
 				<div>
 					<label>Item</label>
