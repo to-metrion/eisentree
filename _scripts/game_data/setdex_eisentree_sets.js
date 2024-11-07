@@ -1593,7 +1593,7 @@ var SETDEX_EISENTREE =
       "moves": [
         "Shadow Ball",
         "Sludge Wave",
-        "Hidden Power",
+        "Hidden Power Ground",
         "Energy Ball"
       ],
       "nature": "Timid",
@@ -2737,7 +2737,7 @@ var SETDEX_EISENTREE =
       "moves": [
         "Thunderbolt",
         "Alluring Voice",
-        "Hidden Power",
+        "Hidden Power Ice",
         "Baton Pass"
       ],
       "nature": "Timid",
@@ -2751,7 +2751,7 @@ var SETDEX_EISENTREE =
       },
       "moves": [
         "Thunderbolt",
-        "Hidden Power",
+        "Hidden Power Ice",
         "Calm Mind",
         "Baton Pass"
       ],
@@ -3338,7 +3338,7 @@ var SETDEX_EISENTREE =
         "Eruption",
         "Flamethrower",
         "Focus Blast",
-        "Hidden Power"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Charcoal"
@@ -3353,7 +3353,7 @@ var SETDEX_EISENTREE =
         "Eruption",
         "Heat Wave",
         "Focus Blast",
-        "Hidden Power"
+        "Hidden Power Grass"
       ],
       "nature": "Modest",
       "item": "Choice Scarf"
@@ -3721,7 +3721,7 @@ var SETDEX_EISENTREE =
       },
       "moves": [
         "Thunder",
-        "Hidden Power",
+        "Hidden Power Ice",
         "Electric Terrain",
         "Cotton Spore"
       ],
@@ -3981,7 +3981,7 @@ var SETDEX_EISENTREE =
         "Psychic",
         "Dazzling Gleam",
         "Shadow Ball",
-        "Hidden Power"
+        "Hidden Power Fire"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -5476,7 +5476,7 @@ var SETDEX_EISENTREE =
         "Close Combat",
         "Overheat",
         "Scorching Sands",
-        "Hidden Power"
+        "Hidden Power Ice"
       ],
       "nature": "Naive",
       "item": "Covert Cloak"
@@ -5720,7 +5720,7 @@ var SETDEX_EISENTREE =
         "Boomburst",
         "Hurricane",
         "Heat Wave",
-        "Hidden Power"
+        "Hidden Power Grass"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -6369,7 +6369,7 @@ var SETDEX_EISENTREE =
         "Volt Switch",
         "Overheat",
         "Snarl",
-        "Hidden Power"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Manectite"
@@ -6384,7 +6384,7 @@ var SETDEX_EISENTREE =
         "Thunder",
         "Flamethrower",
         "Snarl",
-        "Hidden Power"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -7553,7 +7553,7 @@ var SETDEX_EISENTREE =
         "Scald",
         "Muddy Water",
         "Ice Beam",
-        "Hidden Power"
+        "Hidden Power Grass"
       ],
       "nature": "Quiet",
       "item": "Deep Sea Tooth"
@@ -8607,7 +8607,7 @@ var SETDEX_EISENTREE =
         "Giga Drain",
         "Sludge Bomb",
         "Extrasensory",
-        "Hidden Power"
+        "Hidden Power Fire"
       ],
       "nature": "Timid",
       "item": "Life Orb"
@@ -9884,7 +9884,7 @@ var SETDEX_EISENTREE =
         "Volt Switch",
         "Steel Beam",
         "Electroweb",
-        "Hidden Power"
+        "Hidden Power Ground"
       ],
       "nature": "Modest",
       "item": "Choice Scarf"
@@ -10704,7 +10704,7 @@ var SETDEX_EISENTREE =
       "moves": [
         "Shadow Ball",
         "Rising Voltage",
-        "Hidden Power",
+        "Hidden Power Fighting",
         "Electric Terrain"
       ],
       "nature": "Modest",
@@ -10819,7 +10819,7 @@ var SETDEX_EISENTREE =
       "moves": [
         "Overheat",
         "Thunderbolt",
-        "Hidden Power",
+        "Hidden Power Ice",
         "Nasty Plot"
       ],
       "nature": "Modest",
@@ -10882,7 +10882,7 @@ var SETDEX_EISENTREE =
       "moves": [
         "Leaf Storm",
         "Thunder",
-        "Hidden Power",
+        "Hidden Power Fire",
         "Nasty Plot"
       ],
       "nature": "Timid",
@@ -11462,7 +11462,7 @@ var SETDEX_EISENTREE =
       "moves": [
         "Leaf Storm",
         "Dragon Pulse",
-        "Hidden Power",
+        "Hidden Power Fire",
         "Gastro Acid"
       ],
       "nature": "Timid",
@@ -11477,7 +11477,7 @@ var SETDEX_EISENTREE =
       "moves": [
         "Leaf Storm",
         "Dragon Pulse",
-        "Hidden Power",
+        "Hidden Power Ground",
         "Gastro Acid"
       ],
       "nature": "Timid",
@@ -14430,7 +14430,7 @@ var SETDEX_EISENTREE =
       },
       "moves": [
         "Thunderbolt",
-        "Hidden Power",
+        "Hidden Power Ice",
         "Eerie Impulse",
         "Taunt"
       ],
@@ -14479,7 +14479,7 @@ var SETDEX_EISENTREE =
         "Wildbolt Storm",
         "Grass Knot",
         "Sludge Bomb",
-        "Hidden Power"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -15105,7 +15105,7 @@ var SETDEX_EISENTREE =
         "Hyper Voice",
         "Heat Wave",
         "Dark Pulse",
-        "Hidden Power"
+        "Hidden Power Ice"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -15821,7 +15821,7 @@ var SETDEX_EISENTREE =
         "Hyper Beam",
         "Mystical Fire",
         "Psychic",
-        "Hidden Power"
+        "Hidden Power Ground"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -17147,7 +17147,7 @@ var SETDEX_EISENTREE =
       "moves": [
         "Hydro Pump",
         "Ice Beam",
-        "Hidden Power",
+        "Hidden Power Grass",
         "U-turn"
       ],
       "nature": "Quiet",
@@ -18811,7 +18811,7 @@ var SETDEX_EISENTREE =
         "Meteor Beam",
         "Sludge Bomb",
         "Dazzling Gleam",
-        "Hidden Power"
+        "Hidden Power Fire"
       ],
       "nature": "Timid",
       "item": "Power Herb"
@@ -18840,7 +18840,7 @@ var SETDEX_EISENTREE =
       "moves": [
         "Power Gem",
         "Sludge Bomb",
-        "Hidden Power",
+        "Hidden Power Ice",
         "Toxic Spikes"
       ],
       "nature": "Timid",
@@ -18952,7 +18952,7 @@ var SETDEX_EISENTREE =
       "moves": [
         "Thunderbolt",
         "Dazzling Gleam",
-        "Hidden Power",
+        "Hidden Power Fire",
         "Tail Glow"
       ],
       "nature": "Modest",
@@ -18982,7 +18982,7 @@ var SETDEX_EISENTREE =
       },
       "moves": [
         "Thunder",
-        "Hidden Power",
+        "Hidden Power Water",
         "Tail Glow",
         "Rain Dance"
       ],
@@ -19222,7 +19222,7 @@ var SETDEX_EISENTREE =
       "moves": [
         "Poltergeist",
         "Close Combat",
-        "Hidden Power",
+        "Hidden Power Ice",
         "Shadow Sneak"
       ],
       "nature": "Naive",
