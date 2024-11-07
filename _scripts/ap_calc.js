@@ -1,26 +1,26 @@
 $("#p1 .ability").bind("keyup change", function () {
-	autoSetCrits($("#p1"), 1);
+	abilityAPCalcChange(1);
 });
 
 $("#p1 .status").bind("keyup change", function () {
-	autoSetCrits($("#p2"), 2);
+	statusAPCalcChange(1);
 });
 
-$("#p2 .ability").bind("keyup change", function () {
-	autosetWeather($(this).val(), 1);
-	autoSetVicStar(2, "R");
-	autoSetSteely(2, "R");
-	autoSetRuin(2, "R");
-	autoSetCrits($("#p2"), 2);
+$("#p2 .ability").bind("change", function () {
+	abilityChange($(this), 2);
+	abilityAPCalcChange(2);
 });
 
 $("#p2 .item").bind("keyup change", function () {
-	autosetStatus("#p2", $(this).val());
-	autoSetMultiHits($("#p2"));
+	itemChange($(this).val(), 2);
 });
 
 $("#p2 .status").bind("keyup change", function () {
-	autoSetCrits($("#p1"), 1);
+	statusAPCalcChange(2);
+});
+
+$("#p2 .isActivated").bind("change", function () {
+	isActivatedChange($(this), 2);
 });
 
 $("#maxR").change(function () {
@@ -35,8 +35,41 @@ $("#maxR").change(function () {
 	}
 });
 
-function autoSetCrits(pokeInfo, i) {
-	let merciless = pokeInfo.find(".ability").val() === "Merciless" && $("#p" + (i === 1 ? "2" : "1")).find(".status").val().includes("Poisoned");
+$("#autoivsR").change(function () {
+	if (gen != 3 && gen != 4) {
+		return;
+	}
+	setIVSelectors($("#p2"), "R");
+});
+
+$("#wpR").change(function () {
+	applyWeaknessPolicy(2, !this.checked);
+});
+
+$("#clangR").change(function () {
+	applyOmniboost(2, 1, !this.checked);
+});
+
+$("#evoR").change(function () {
+	applyOmniboost(2, 2, !this.checked);
+});
+
+function abilityAPCalcChange(pokeNum) {
+	autoSetCrits(pokeNum);
+}
+
+function statusAPCalcChange(pokeNum) {
+	let opponentPokeNum = pokeNum === 1 ? 2 : 1;
+
+	// since pokeNum mon's status is changing, check the autocrit status of the opponent, since it may have activated Merciless
+	autoSetCrits(opponentPokeNum);
+}
+
+function autoSetCrits(pokeNum) {
+	let pokeInfo = $("#p" + pokeNum);
+	let opponentIndex = pokeNum === 1 ? 1 : 0;
+
+	let merciless = pokeInfo.find(".ability").val() === "Merciless" && $(".status")[opponentIndex].value.includes("Poisoned");
 	for (let i = 1; i <= 4; i++) {
 		let moveInfo = pokeInfo.find(".move" + i);
 		let moveName = moveInfo.find("select.move-selector").val();
@@ -84,8 +117,8 @@ function calculate() {
 	}
 	bestResult.prop("checked", true);
 	bestResult.change();*/
-	$("#resultHeaderL").text(p1.name + "'s Moves (select one to show detailed results)");
-	$("#resultHeaderR").text(p2.name + "'s Moves (select one to show detailed results)");
+	//$("#resultHeaderL").text(p1.name + "'s Moves (select one to show detailed results)");
+	//$("#resultHeaderR").text(p2.name + "'s Moves (select one to show detailed results)");
 	updateDamageText($("input:radio[name='resultMove']:checked"));
 }
 
@@ -93,20 +126,109 @@ $(".result-move").change(function () {
 	updateDamageText($(this));
 });
 
+var MAX_GROUP_COUNT = 14;
+var MAX_UNGROUPED_COUNT = MAX_GROUP_COUNT + 4;
+function damageMapAsGroups(damageInfo) {
+	// This takes in a damage map and puts its damage values into groups with the probability of that group occuring.
+	// This is to display something smaller and simpler for the complete calculation of multi-hit moves.
+	let valuesCount = damageInfo.sortedDamageValues.length;
+	let groupCount = Math.min(valuesCount, MAX_GROUP_COUNT);
+	// make an array that stores how many damage values are in each group, evenly distributed
+	let groupSizes = new Array(groupCount);
+	groupSizes.fill(Math.floor(valuesCount / groupCount));
+	// if the number of damage values doesn't evenly divide, add 1 to the highest and lowest group(s)
+	let extra = valuesCount % groupCount;
+	let upperExtra = Math.ceil(extra / 2);
+	extra -= upperExtra;
+	for ( ; upperExtra > 0; upperExtra--) {
+		groupSizes[groupCount - upperExtra]++;
+	}
+	for (extra--; extra >= 0; extra--) {
+		groupSizes[extra]++;
+	}
+	// contruct the groups and generate the string
+	let valueIndex = 0;
+	let groupDamageResult = "[";
+	for (let i = 0; i < groupCount; i++) {
+		let groupSize = groupSizes[i];
+		let group = damageInfo.sortedDamageValues[valueIndex]
+		if (groupSize > 1) {
+			group += "-" + damageInfo.sortedDamageValues[valueIndex + groupSize - 1];
+		}
+		let groupCountTotal = 0;
+		// get the total number of combinations the group has
+		for (let j = valueIndex; j < valueIndex + groupSize; j++) {
+			groupCountTotal += damageInfo.damageMap.get(damageInfo.sortedDamageValues[j]);
+		}
+		let percent = Math.round(groupCountTotal / damageInfo.mapCombinations * 1000) / 10;
+		if (percent == 0) {
+			percent = "~0";
+		}
+		if (i != 0) {
+			groupDamageResult += ", ";
+		}
+		groupDamageResult += group + ": " + percent + "%";
+		valueIndex += groupSize;
+	}
+	return groupDamageResult + "]";
+}
+
 function setDamageText(result, attacker, defender, move, fieldSide, resultLocation) {
-	let minDamage = result.damage[0] * (move.name === "Triple Axel" ? 1 : move.hits);
-	let maxDamage = result.damage[result.damage.length - 1] * (move.name === "Triple Axel" ? 1 : move.hits);
-	let minPercent = Math.round(minDamage * 1000 / defender.maxHP) / 10;
-	let maxPercent = Math.round(maxDamage * 1000 / defender.maxHP) / 10;
-	result.damageText = minDamage + "-" + maxDamage + " (" + minPercent + " - " + maxPercent + "%)";
+	if (!result.damage) {
+		result.damageText = "Error: uninitialized damage array.";
+		console.log(result.damageText);
+		console.log(move.name + " from " + attacker.name + " (" + attacker.ability + ") vs. " + defender.name + " (" + defender.ability + ")");
+		return;
+	}
+	let moveHits = 1;
+	if (move.isThreeHit) {
+		moveHits = 3;
+	} else if (move.isTwoHit || result.childDamage) {
+		moveHits = 2;
+	} else if (move.hits) {
+		moveHits = move.hits;
+	}
+
+	// assembledDamageMap is the damage map of all moveHits number of hits. Resist berry is not applied
+	// firstHitMap is the same as assembledDamageMap, but with resist berry applied if applicable. On multi hit moves the berry only applies to the first strike of the multihit.
+	// firstHitMap is the basis for the ranges and percentages displayed for the user, and is the same as assembledDamageMap if there is no resist berry.
+	let mainDamageInfo = DamageInfo(result, moveHits);
+	let firstHitDamageInfo = result.firstHitDamage ? DamageInfo(result, moveHits, true) : mainDamageInfo;
+
+	// put together the primary hit information based on the first hit map
+	if (mainDamageInfo.damageMap) {
+		if (firstHitDamageInfo.mapCombinations > MAX_UNGROUPED_COUNT) {
+			result.multiHitPercents = moveHits + " hits: " + damageMapAsGroups(firstHitDamageInfo);
+		}
+
+		if (result.childDamage) {
+			result.hitDamageValues = "(First hit: " + (result.firstHitDamage ? result.firstHitDamage : result.damage).join(", ") +
+			"; Second hit: " + result.childDamage.join(", ") + ")";
+			if (result.firstHitDamage) {
+				result.hitDamageValues += "; Other parent hits: (" + result.damage.join(", ") + ")";
+			}
+		} else if (result.tripleAxelDamage) {
+			result.hitDamageValues = "(First hit: " + (result.firstHitDamage ? result.firstHitDamage : result.tripleAxelDamage[0]).join(", ") +
+			"; Second hit: " + result.tripleAxelDamage[1].join(", ") +
+			(moveHits > 2 ? "; Third hit: " + result.tripleAxelDamage[2].join(", ") : "") + ")";
+		} else if (result.firstHitDamage) {
+			result.hitDamageValues = "(First hit: " + result.firstHitDamage.join(", ") + "; Other hits: " + result.damage.join(", ") + ")";
+		} else {
+			result.hitDamageValues = "(" + result.damage.join(", ") + ")";
+		}
+	}
+
+	let minPercent = Math.round(firstHitDamageInfo.min * 1000 / defender.maxHP) / 10;
+	let maxPercent = Math.round(firstHitDamageInfo.max * 1000 / defender.maxHP) / 10;
+	result.damageText = firstHitDamageInfo.min + "-" + firstHitDamageInfo.max + " (" + minPercent + " - " + maxPercent + "%)";
 	if (move.bp === 0) {
 		result.koChanceText = "nice move";
 	} else if (move.isMLG) {
 		result.koChanceText = "<a href = 'https://www.youtube.com/watch?v=iD92h-M474g'>it's a one-hit KO!</a>";
 	} else {
-		setKOChanceText(result, move, attacker, defender, fieldSide);
+		setKOChanceText(result, move, moveHits, attacker, defender, fieldSide, mainDamageInfo, firstHitDamageInfo);
 	}
-	setUpRecoilRecoveryText(result, attacker, defender, move, minDamage, maxDamage);
+	setUpRecoilRecoveryText(result, attacker, defender, move, firstHitDamageInfo.min, firstHitDamageInfo.max);
 	let recoilRecovery = "";
 	// intentionally does not display both recoil and recovery text on the same line
 	if (result.recoilPercent) {
@@ -129,7 +251,9 @@ function setUpRecoilRecoveryText(result, attacker, defender, move, minDamage, ma
 	let defMaxHP = defender.maxHP;
 	// percentage-based recoil and healing use normal rounding for their final value in gens 5+.
 	let roundFunc = gen <= 4 ? x => Math.floor(x) : x => Math.round(x);
-	if (typeof move.hasRecoil === "number" && minDamage > 0) {
+	if (attacker.ability === "Magic Guard" && !isNeutralizingGas) {
+		// no recoil
+	} else if (typeof move.hasRecoil === "number" && minDamage > 0 && (attacker.ability !== "Rock Head" || isNeutralizingGas)) {
 		result.recoilType = "recoil";
 		// Parental Bond adds the damage values into a total and then applies the recoil value, so this is fine
 		minRecoilDamage = Math.max(roundFunc(Math.min(minDamage, defCurHP) * move.hasRecoil), 1);
@@ -161,7 +285,7 @@ function setUpRecoilRecoveryText(result, attacker, defender, move, minDamage, ma
 		result.recoilRange = Math.max(roundFunc(atkMaxHP / 4), 1);
 		result.recoilPercent = Math.round(result.recoilRange * 1000 / atkMaxHP) / 10;
 	} else if (move.hasRecoil === true) { // checking for strict equality to true is necessary here
-		 // currently if a move has its hasRecoil property simply set to true instead of a string or a number, it means it damages the user for 50% max HP
+		// currently if a move has its hasRecoil property simply set to true instead of a string or a number, it means it damages the user for 50% max HP
 		result.recoilType = "recoil";
 		result.recoilRange = Math.ceil(atkMaxHP / 2);
 		result.recoilPercent = Math.round(result.recoilRange * 1000 / atkMaxHP) / 10;
@@ -173,8 +297,8 @@ function setUpRecoilRecoveryText(result, attacker, defender, move, minDamage, ma
 		let healingMultiplier = move.percentHealed * (attacker.item === "Big Root" ? 1.3 : 1);
 		if (result.childDamage) {
 			// unnecessarily messy solution just to account for Parental Bond healing after each hit
-			let minParentDamage = result.parentDamage[0];
-			let maxParentDamage = result.parentDamage[result.parentDamage.length - 1];
+			let minParentDamage = result.damage[0];
+			let maxParentDamage = result.damage[result.damage.length - 1];
 			let minChildDamage = result.childDamage[0];
 			let maxChildDamage = result.childDamage[result.childDamage.length - 1];
 			// get min recovery
@@ -193,8 +317,8 @@ function setUpRecoilRecoveryText(result, attacker, defender, move, minDamage, ma
 			} else {
 				// edge case where hitting optimal damage rolls to KO an even-HP defender maximizes recovery due to recovery values using normal rounding
 				let highestOddParent = maxParentDamage;
-				for (let i = result.parentDamage.length - 2; highestOddParent % 2 == 1 && i >= 0; i--) {
-					highestOddParent = result.parentDamage[i];
+				for (let i = result.damage.length - 2; highestOddParent % 2 == 1 && i >= 0; i--) {
+					highestOddParent = result.damage[i];
 				}
 				if (highestOddParent % 2 == 1 && highestOddParent + maxChildDamage >= defCurHP) {
 					maxHealthRecovered = Math.round(defCurHP * healingMultiplier) + 1;
@@ -213,7 +337,7 @@ function setUpRecoilRecoveryText(result, attacker, defender, move, minDamage, ma
 			maxHealthRecovered = Math.max(maxHealthRecovered, 1);
 		}
 
-		if (defender.ability === "Liquid Ooze") {
+		if (defender.ability === "Liquid Ooze" && !isNeutralizingGas && attacker.ability !== "Magic Guard") {
 			result.recoilType = defender.ability;
 			result.recoilRange = minHealthRecovered;
 			result.recoilPercent = Math.round(minHealthRecovered * 1000 / atkMaxHP) / 10;
@@ -252,12 +376,7 @@ function updateDamageText(resultMoveObj) {
 			mainResult = result.description + ": " + result.damageText + recoilText + recoveryText + " -- " + koChanceText;
 			$("#mainResult").html(mainResult);
 			$("#afterAcc").html(result.afterAccText ? result.afterAccText : "");
-			if (result.parentDamage) {
-				$("#damageValues").text("(First hit: " + result.parentDamage.join(", ") +
-                    "; Second hit: " + result.childDamage.join(", ") + ")");
-			} else {
-				$("#damageValues").text("(" + result.damage.join(", ") + ")");
-			}
+			$("#damageValues").html(result.hitDamageValues + (result.multiHitPercents ? "<br />" + result.multiHitPercents : ""));
 		} else {
 			mainResult = "problem with mainResult";
 		}

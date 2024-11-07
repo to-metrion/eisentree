@@ -177,7 +177,7 @@ th {
 .move-result-group {
   max-width: 80em;
   min-width: 50em;
-  margin: 1em 0 11.5em;
+  margin: 1em 0 10em;
 }
 
 .move-result-subgroup {
@@ -316,7 +316,7 @@ select.toxic-counter {
 }
 
 /* Auto IVs Box */
-#autoivs {
+.autoivs {
   float: right;
   text-decoration: none;
   display: inline;

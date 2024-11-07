@@ -1,4 +1,5 @@
-var SETDEX_EISENTREE = {
+var SETDEX_EISENTREE =
+{
   "Venusaur": {
     "Venusaur-1": {
       "level": 50,
@@ -42,7 +43,7 @@ var SETDEX_EISENTREE = {
         "Sludge Bomb",
         "Giga Drain",
         "Earth Power",
-        "Weather Ball"
+        "Sunny Day"
       ],
       "nature": "Timid",
       "item": "Life Orb"
@@ -64,38 +65,7 @@ var SETDEX_EISENTREE = {
       "nature": "Timid",
       "item": "Charizardite Y"
     },
-    "Charizard-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Heat Wave",
-        "Air Slash",
-        "Scorching Sands",
-        "Tailwind"
-      ],
-      "nature": "Timid",
-      "item": "Charizardite Y"
-    },
     "Charizard-2": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "at": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Outrage",
-        "Flare Blitz",
-        "Roost",
-        "Tailwind"
-      ],
-      "nature": "Adamant",
-      "item": "Charizardite X"
-    },
-    "Charizard-2b": {
       "level": 50,
       "evs": {
         "hp": 168,
@@ -119,21 +89,6 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Heat Wave",
-        "Air Slash",
-        "Scorching Sands",
-        "Focus Blast"
-      ],
-      "nature": "Modest",
-      "item": "Choice Scarf"
-    },
-    "Charizard-3b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Heat Wave",
         "Hurricane",
         "Scorching Sands",
         "Focus Blast"
@@ -144,21 +99,6 @@ var SETDEX_EISENTREE = {
   },
   "Blastoise": {
     "Blastoise-1": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Water Pulse",
-        "Aura Sphere",
-        "Dark Pulse",
-        "Fake Out"
-      ],
-      "nature": "Modest",
-      "item": "Blastoisinite"
-    },
-    "Blastoise-1b": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -196,7 +136,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Fake Out",
-        "Scald",
+        "Flip Turn",
         "Yawn",
         "Follow Me"
       ],
@@ -252,22 +192,22 @@ var SETDEX_EISENTREE = {
       "nature": "Jolly",
       "item": "Beedrillite"
     },
-    "Beedrill-1b": {
+    "Beedrill-2": {
       "level": 50,
       "evs": {
-        "at": 252,
-        "sp": 252
+        "hp": 252,
+        "df": 252
       },
       "moves": [
-        "U-turn",
+        "Fell Stinger",
         "Poison Jab",
-        "Drill Run",
-        "Brick Break"
+        "Pursuit",
+        "Iron Defense"
       ],
-      "nature": "Jolly",
+      "nature": "Impish",
       "item": "Beedrillite"
     },
-    "Beedrill-2": {
+    "Beedrill-3": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -331,9 +271,9 @@ var SETDEX_EISENTREE = {
       "nature": "Jolly",
       "item": "Flame Orb"
     }
-    },
-    "Raticate-Alola": {
-    "Raticate-A-1": {
+  },
+  "Raticate-Alola": {
+    "Raticate-Alola-1": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -435,7 +375,7 @@ var SETDEX_EISENTREE = {
     }
   },
   "Raichu-Alola": {
-    "Raichu-A-1": {
+    "Raichu-Alola-1": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -450,20 +390,35 @@ var SETDEX_EISENTREE = {
       "nature": "Timid",
       "item": "Life Orb"
     },
-    "Raichu-A-2": {
+    "Raichu-Alola-2": {
       "level": 50,
       "evs": {
-        "at": 252,
-        "sa": 252
+        "sa": 252,
+        "sp": 252
       },
       "moves": [
-        "Fake Out",
-        "Volt Tackle",
-        "Psychic",
-        "Feint"
+        "Rising Voltage",
+        "Expanding Force",
+        "Encore",
+        "Electric Terrain"
       ],
-      "nature": "Lonely",
+      "nature": "Modest",
       "item": "Electrium Z"
+    },
+    "Raichu-Alola-b": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Rising Voltage",
+        "Expanding Force",
+        "Encore",
+        "Psychic Terrain"
+      ],
+      "nature": "Modest",
+      "item": "Psychium Z"
     }
   },
   "Sandslash": {
@@ -481,38 +436,53 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Adamant",
       "item": "Groundium Z"
+    },
+    "Sandslash-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "df": 252
+      },
+      "moves": [
+        "High Horsepower",
+        "Knock Off",
+        "Stealth Rock",
+        "Spikes"
+      ],
+      "nature": "Impish",
+      "item": "Passho Berry"
     }
   },
   "Sandslash-Alola": {
-    "Sandslash-A-1": {
+    "Sandslash-Alola-1": {
       "level": 50,
       "evs": {
         "at": 252,
         "sp": 252
       },
       "moves": [
-        "Icicle Crash",
+        "Icicle Spear",
         "Iron Head",
         "Drill Run",
-        "Hail"
+        "Snowscape"
       ],
       "nature": "Adamant",
-      "item": "Groundium Z"
+      "item": "Loaded Dice"
     },
-    "Sandslash-A-1b": {
+    "Sandslash-Alola-2": {
       "level": 50,
       "evs": {
-        "at": 252,
-        "sp": 252
+        "hp": 252,
+        "at": 252
       },
       "moves": [
-        "Icicle Crash",
-        "Iron Head",
-        "Drill Run",
-        "Hail"
+        "Ice Spinner",
+        "Gyro Ball",
+        "Knock Off",
+        "Curse"
       ],
-      "nature": "Adamant",
-      "item": "Life Orb"
+      "nature": "Brave",
+      "item": "Macho Brace"
     }
   },
   "Nidoqueen": {
@@ -541,7 +511,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Earth Power",
         "Sludge Bomb",
-        "Helping Hand",
+        "Toxic Spikes",
         "Stealth Rock"
       ],
       "nature": "Modest",
@@ -591,7 +561,7 @@ var SETDEX_EISENTREE = {
         "Moonblast",
         "Follow Me",
         "Helping Hand",
-        "Life Dew"
+        "Stealth Rock"
       ],
       "nature": "Relaxed",
       "item": "Eviolite"
@@ -679,22 +649,22 @@ var SETDEX_EISENTREE = {
     }
   },
   "Ninetales-Alola": {
-    "Ninetales-A-1": {
+    "Ninetales-Alola-1": {
       "level": 50,
       "evs": {
         "hp": 252,
         "sp": 252
       },
       "moves": [
-        "Blizzard",
         "Freeze-Dry",
         "Sheer Cold",
-        "Aurora Veil"
+        "Aurora Veil",
+        "Encore"
       ],
       "nature": "Timid",
       "item": "Light Clay"
     },
-    "Ninetales-A-2": {
+    "Ninetales-Alola-2": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -718,13 +688,13 @@ var SETDEX_EISENTREE = {
         "sa": 252
       },
       "moves": [
-        "Dazzling Gleam",
+        "Alluring Voice",
         "Hyper Voice",
         "Flamethrower",
-        "Ally Switch"
+        "Sing"
       ],
       "nature": "Quiet",
-      "item": "Fairium Z"
+      "item": "Throat Spray"
     },
     "Wigglytuff-1b": {
       "level": 50,
@@ -739,7 +709,7 @@ var SETDEX_EISENTREE = {
         "Ice Beam"
       ],
       "nature": "Quiet",
-      "item": "Assault Vest"
+      "item": "Fairium Z"
     },
     "Wigglytuff-2": {
       "level": 50,
@@ -867,14 +837,14 @@ var SETDEX_EISENTREE = {
         "High Horsepower",
         "Stone Edge",
         "Fissure",
-        "Memento"
+        "Endeavor"
       ],
       "nature": "Jolly",
       "item": "Focus Sash"
     }
   },
   "Dugtrio-Alola": {
-    "Dugtrio-A-1": {
+    "Dugtrio-Alola-1": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -887,22 +857,7 @@ var SETDEX_EISENTREE = {
         "Earthquake"
       ],
       "nature": "Jolly",
-      "item": "Life Orb"
-    },
-    "Dugtrio-A-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "High Horsepower",
-        "Iron Head",
-        "Rock Slide",
-        "Earthquake"
-      ],
-      "nature": "Jolly",
-      "item": "Focus Sash"
+      "item": "Choice Band"
     }
   },
   "Persian": {
@@ -923,7 +878,7 @@ var SETDEX_EISENTREE = {
     }
   },
   "Persian-Alola": {
-    "Persian-A-1": {
+    "Persian-Alola-1": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -1012,7 +967,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Flare Blitz",
+        "Raging Fury",
         "Close Combat",
         "Wild Charge",
         "Extreme Speed"
@@ -1136,6 +1091,21 @@ var SETDEX_EISENTREE = {
     "Alakazam-3": {
       "level": 50,
       "evs": {
+        "hp": 252,
+        "df": 252
+      },
+      "moves": [
+        "Expanding Force",
+        "Psycho Shift",
+        "Psychic Terrain",
+        "Ally Switch"
+      ],
+      "nature": "Bold",
+      "item": "Flame Orb"
+    },
+    "Alakazam-4": {
+      "level": 50,
+      "evs": {
         "sa": 252,
         "sp": 252
       },
@@ -1210,7 +1180,7 @@ var SETDEX_EISENTREE = {
         "Sleep Powder"
       ],
       "nature": "Jolly",
-      "item": "Wide Lens"
+      "item": "Micle Berry"
     }
   },
   "Tentacruel": {
@@ -1239,7 +1209,7 @@ var SETDEX_EISENTREE = {
         "Muddy Water",
         "Icy Wind",
         "Acupressure",
-        "Toxic"
+        "Toxic Spikes"
       ],
       "nature": "Bold",
       "item": "Black Sludge"
@@ -1278,32 +1248,32 @@ var SETDEX_EISENTREE = {
     }
   },
   "Golem-Alola": {
-    "Golem-A-1": {
+    "Golem-Alola-1": {
       "level": 50,
       "evs": {
         "hp": 252,
         "at": 252
       },
       "moves": [
-        "Return",
-        "Thunder Punch",
+        "Supercell Slam",
         "Stone Edge",
+        "High Horsepower",
         "Wide Guard"
       ],
       "nature": "Brave",
       "item": "Figy Berry"
     },
-    "Golem-A-1b": {
+    "Golem-Alola-b": {
       "level": 50,
       "evs": {
         "hp": 252,
         "at": 252
       },
       "moves": [
-        "Return",
-        "Thunder Punch",
+        "Supercell Slam",
         "Stone Edge",
-        "Explosion"
+        "Explosion",
+        "Ally Switch"
       ],
       "nature": "Brave",
       "item": "Figy Berry"
@@ -1366,7 +1336,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Scald",
         "Psychic",
-        "Flamethrower",
+        "Body Press",
         "Trick Room"
       ],
       "nature": "Quiet",
@@ -1420,8 +1390,8 @@ var SETDEX_EISENTREE = {
       "item": "Eviolite"
     }
   },
-  "Farfetch'd": {
-    "Farfetch'd-1": {
+  "Farfetch\u0027d": {
+    "Farfetch\u0027d-1": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -1450,8 +1420,23 @@ var SETDEX_EISENTREE = {
         "Jump Kick",
         "Quick Attack"
       ],
+      "nature": "Adamant",
+      "item": "Fightinium Z"
+    },
+    "Dodrio-2": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Sky Attack",
+        "Drill Run",
+        "Acupressure",
+        "Baton Pass"
+      ],
       "nature": "Jolly",
-      "item": "Flyinium Z"
+      "item": "Power Herb"
     }
   },
   "Dewgong": {
@@ -1474,18 +1459,32 @@ var SETDEX_EISENTREE = {
     "Dewgong-2": {
       "level": 50,
       "evs": {
-        "hp": 168,
-        "sa": 168,
-        "sd": 168
+        "hp": 252,
+        "df": 252
       },
       "moves": [
         "Fake Out",
-        "Icy Wind",
-        "Brine",
-        "Perish Song"
+        "Whirlpool",
+        "Perish Song",
+        "Snowscape"
       ],
-      "nature": "Quiet",
+      "nature": "Relaxed",
       "item": "Wiki Berry"
+    },
+    "Dewgong-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Flip Turn",
+        "Triple Axel",
+        "Drill Run",
+        "Play Rough"
+      ],
+      "nature": "Adamant",
+      "item": "Choice Band"
     }
   },
   "Muk": {
@@ -1512,7 +1511,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Dig",
-        "Power-Up Punch",
+        "Lunge",
         "Poison Gas",
         "Stockpile"
       ],
@@ -1521,7 +1520,7 @@ var SETDEX_EISENTREE = {
     }
   },
   "Muk-Alola": {
-    "Muk-A-1": {
+    "Muk-Alola-1": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -1536,22 +1535,7 @@ var SETDEX_EISENTREE = {
       "nature": "Brave",
       "item": "Iapapa Berry"
     },
-    "Muk-A-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Poison Jab",
-        "Assurance",
-        "Shadow Sneak",
-        "Recycle"
-      ],
-      "nature": "Brave",
-      "item": "Iapapa Berry"
-    },
-    "Muk-A-2": {
+    "Muk-Alola-2": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -1576,8 +1560,8 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Icicle Spear",
+        "Liquidation",
         "Rock Blast",
-        "Pin Missile",
         "Shell Smash"
       ],
       "nature": "Jolly",
@@ -1586,17 +1570,17 @@ var SETDEX_EISENTREE = {
     "Cloyster-2": {
       "level": 50,
       "evs": {
-        "sa": 252,
-        "sp": 252
+        "hp": 252,
+        "df": 252
       },
       "moves": [
-        "Hydro Pump",
-        "Ice Beam",
-        "Weather Ball",
-        "Shell Smash"
+        "Ice Spinner",
+        "Spikes",
+        "Toxic Spikes",
+        "Helping Hand"
       ],
-      "nature": "Modest",
-      "item": "White Herb"
+      "nature": "Impish",
+      "item": "Rocky Helmet"
     }
   },
   "Haunter": {
@@ -1608,8 +1592,8 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Shadow Ball",
-        "Sludge Bomb",
-        "Hidden Power Ground",
+        "Sludge Wave",
+        "Hidden Power",
         "Energy Ball"
       ],
       "nature": "Timid",
@@ -1676,6 +1660,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Timid",
       "item": "Focus Sash"
+    },
+    "Gengar-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Sludge Bomb",
+        "Substitute",
+        "Perish Song",
+        "Protect"
+      ],
+      "nature": "Calm",
+      "item": "Gengarite"
     }
   },
   "Hypno": {
@@ -1688,26 +1687,26 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Future Sight",
         "Focus Blast",
-        "Hypnosis",
-        "Trick Room"
-      ],
-      "nature": "Modest",
-      "item": "Mental Herb"
-    },
-    "Hypno-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Future Sight",
-        "Focus Blast",
-        "Hypnosis",
-        "Trick Room"
+        "Nasty Plot",
+        "Ally Switch"
       ],
       "nature": "Modest",
       "item": "Psychium Z"
+    },
+    "Hypno-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Psychic Noise",
+        "Hypnosis",
+        "Trick Room",
+        "Teleport"
+      ],
+      "nature": "Sassy",
+      "item": "Mental Herb"
     }
   },
   "Kingler": {
@@ -1771,7 +1770,7 @@ var SETDEX_EISENTREE = {
         "Light Screen"
       ],
       "nature": "Timid",
-      "item": "Focus Sash"
+      "item": "Shuca Berry"
     },
     "Electrode-1b": {
       "level": 50,
@@ -1813,8 +1812,8 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Leaf Storm",
-        "Psychic",
-        "Weather Ball",
+        "Expanding Force",
+        "Psychic Terrain",
         "Trick Room"
       ],
       "nature": "Modest",
@@ -1837,7 +1836,7 @@ var SETDEX_EISENTREE = {
     }
   },
   "Exeggutor-Alola": {
-    "Exeggutor-A-1": {
+    "Exeggutor-Alola-1": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -1852,22 +1851,7 @@ var SETDEX_EISENTREE = {
       "nature": "Quiet",
       "item": "Yache Berry"
     },
-    "Exeggutor-A-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Draco Meteor",
-        "Leaf Storm",
-        "Power Swap",
-        "Trick Room"
-      ],
-      "nature": "Quiet",
-      "item": "Roseli Berry"
-    },
-    "Exeggutor-A-2": {
+    "Exeggutor-Alola-2": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -1924,7 +1908,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Bonemerang",
         "Smack Down",
-        "Power-Up Punch",
+        "Stealth Rock",
         "Swords Dance"
       ],
       "nature": "Impish",
@@ -1932,7 +1916,7 @@ var SETDEX_EISENTREE = {
     }
   },
   "Marowak-Alola": {
-    "Marowak-A-1": {
+    "Marowak-Alola-1": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -1947,14 +1931,44 @@ var SETDEX_EISENTREE = {
       "nature": "Brave",
       "item": "Thick Club"
     },
-    "Marowak-A-2": {
+    "Marowak-Alola-2": {
       "level": 50,
       "evs": {
         "at": 252,
         "sp": 252
       },
       "moves": [
+        "Poltergeist",
+        "Flame Charge",
+        "Bonemerang",
+        "Ally Switch"
+      ],
+      "nature": "Jolly",
+      "item": "Thick Club"
+    },
+    "Marowak-Totem-1": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
         "Shadow Bone",
+        "Flare Blitz",
+        "Stomping Tantrum",
+        "Low Kick"
+      ],
+      "nature": "Brave",
+      "item": "Thick Club"
+    },
+    "Marowak-Totem-2": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Poltergeist",
         "Flame Charge",
         "Bonemerang",
         "Ally Switch"
@@ -1978,21 +1992,6 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Adamant",
       "item": "White Herb"
-    },
-    "Hitmonlee-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Fake Out",
-        "Close Combat",
-        "Knock Off",
-        "Poison Jab"
-      ],
-      "nature": "Adamant",
-      "item": "Focus Sash"
     },
     "Hitmonlee-2": {
       "level": 50,
@@ -2035,21 +2034,6 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Fake Out",
         "Drain Punch",
-        "Ice Punch",
-        "Bullet Punch"
-      ],
-      "nature": "Adamant",
-      "item": "Assault Vest"
-    },
-    "Hitmonchan-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Fake Out",
-        "Drain Punch",
         "Thunder Punch",
         "Bullet Punch"
       ],
@@ -2081,7 +2065,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Sludge Bomb",
-        "Flamethrower",
+        "Heat Wave",
         "Stockpile",
         "Poison Gas"
       ],
@@ -2096,7 +2080,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Sludge Bomb",
-        "Incinerate",
+        "Toxic Spikes",
         "Will-O-Wisp",
         "Taunt"
       ],
@@ -2134,10 +2118,10 @@ var SETDEX_EISENTREE = {
         "Heal Pulse",
         "Soft-Boiled"
       ],
-      "nature": "Bold",
+      "nature": "Relaxed",
       "item": "Eviolite"
     },
-    "Chansey-1b": {
+    "Chansey-2": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -2146,8 +2130,8 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Seismic Toss",
         "Ally Switch",
-        "Heal Pulse",
-        "Soft-Boiled"
+        "Stealth Rock",
+        "Life Dew"
       ],
       "nature": "Bold",
       "item": "Eviolite"
@@ -2304,13 +2288,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Scald",
+        "Hydro Pump",
         "Psychic",
         "Ice Beam",
-        "Thunderbolt"
+        "Meteor Beam"
       ],
       "nature": "Timid",
-      "item": "Life Orb"
+      "item": "Power Herb"
     },
     "Starmie-2": {
       "level": 50,
@@ -2366,10 +2350,10 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Psychic",
+        "Psychic Noise",
         "Reflect",
         "Light Screen",
-        "Trick Room"
+        "Wide Guard"
       ],
       "nature": "Bold",
       "item": "Light Clay"
@@ -2399,7 +2383,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Dual Wingbeat",
-        "Bug Bite",
+        "Pounce",
         "Tailwind",
         "Roost"
       ],
@@ -2415,7 +2399,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Acrobatics",
         "U-turn",
-        "Knock Off",
+        "Close Combat",
         "Tailwind"
       ],
       "nature": "Jolly",
@@ -2503,6 +2487,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Jolly",
       "item": "Pinsirite"
+    },
+    "Pinsir-2": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "X-Scissor",
+        "Reversal",
+        "Guillotine",
+        "Endure"
+      ],
+      "nature": "Jolly",
+      "item": "Salac Berry"
     }
   },
   "Tauros": {
@@ -2544,7 +2543,7 @@ var SETDEX_EISENTREE = {
         "sp": 168
       },
       "moves": [
-        "Double-Edge",
+        "Raging Bull",
         "High Horsepower",
         "Wild Charge",
         "Helping Hand"
@@ -2576,7 +2575,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Aqua Tail",
+        "Waterfall",
         "Bounce",
         "Earthquake",
         "Dragon Dance"
@@ -2592,9 +2591,9 @@ var SETDEX_EISENTREE = {
         "sp": 168
       },
       "moves": [
-        "Waterfall",
+        "Aqua Tail",
         "Ice Fang",
-        "Power Whip",
+        "Temper Flare",
         "Bulldoze"
       ],
       "nature": "Adamant",
@@ -2609,13 +2608,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Hydro Pump",
+        "Sparkling Aria",
         "Freeze-Dry",
         "Thunder",
-        "Weather Ball"
+        "Sing"
       ],
       "nature": "Modest",
-      "item": "Expert Belt"
+      "item": "Throat Spray"
     },
     "Lapras-2": {
       "level": 50,
@@ -2624,13 +2623,13 @@ var SETDEX_EISENTREE = {
         "sd": 252
       },
       "moves": [
-        "Sheer Cold",
-        "Fissure",
+        "Icicle Spear",
+        "Liquidation",
         "Horn Drill",
-        "Rest"
+        "Curse"
       ],
-      "nature": "Calm",
-      "item": "Chesto Berry"
+      "nature": "Brave",
+      "item": "Loaded Dice"
     },
     "Lapras-3": {
       "level": 50,
@@ -2693,21 +2692,6 @@ var SETDEX_EISENTREE = {
         ""
       ],
       "nature": "Relaxed",
-      "item": "Focus Sash"
-    },
-    "Ditto-4": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "df": 252
-      },
-      "moves": [
-        "Transform",
-        "",
-        "",
-        ""
-      ],
-      "nature": "Relaxed",
       "item": "Iron Ball"
     }
   },
@@ -2726,21 +2710,6 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Modest",
       "item": "Wiki Berry"
-    },
-    "Vaporeon-1b": {
-      "level": 50,
-      "evs": {
-        "df": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Scald",
-        "Ice Beam",
-        "Weather Ball",
-        "Helping Hand"
-      ],
-      "nature": "Modest",
-      "item": "Rindo Berry"
     },
     "Vaporeon-2": {
       "level": 50,
@@ -2767,12 +2736,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Thunderbolt",
-        "Discharge",
-        "Hidden Power Ice",
-        "Shadow Ball"
+        "Alluring Voice",
+        "Hidden Power",
+        "Baton Pass"
       ],
       "nature": "Timid",
-      "item": "Magnet"
+      "item": "Throat Spray"
     },
     "Jolteon-1b": {
       "level": 50,
@@ -2782,12 +2751,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Thunderbolt",
-        "Discharge",
-        "Hidden Power Ice",
+        "Hidden Power",
+        "Calm Mind",
         "Baton Pass"
       ],
       "nature": "Timid",
-      "item": "Magnet"
+      "item": "Covert Cloak"
     },
     "Jolteon-2": {
       "level": 50,
@@ -2815,7 +2784,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Flare Blitz",
         "Facade",
-        "Superpower",
+        "Trailblaze",
         "Detect"
       ],
       "nature": "Adamant",
@@ -2862,11 +2831,26 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Hydro Pump",
         "Earth Power",
-        "Ancient Power",
+        "Meteor Beam",
         "Shell Smash"
       ],
       "nature": "Modest",
-      "item": "White Herb"
+      "item": "Power Herb"
+    },
+    "Omastar-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Scald",
+        "Ancient Power",
+        "Stealth Rock",
+        "Spikes"
+      ],
+      "nature": "Bold",
+      "item": "Rockium Z"
     }
   },
   "Kabutops": {
@@ -2877,13 +2861,28 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Stone Edge",
+        "Rock Slide",
         "Liquidation",
-        "Leech Life",
+        "Cross Poison",
         "Rain Dance"
       ],
       "nature": "Jolly",
-      "item": "Rockium Z"
+      "item": "Razor Claw"
+    },
+    "Kabutops-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Flip Turn",
+        "Stone Edge",
+        "Knock Off",
+        "Aerial Ace"
+      ],
+      "nature": "Adamant",
+      "item": "Clear Amulet"
     }
   },
   "Aerodactyl": {
@@ -2896,21 +2895,6 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Rock Slide",
         "Sky Drop",
-        "Psychic Fangs",
-        "Tailwind"
-      ],
-      "nature": "Jolly",
-      "item": "Aerodactylite"
-    },
-    "Aerodactyl-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Rock Slide",
-        "Fire Fang",
         "Psychic Fangs",
         "Tailwind"
       ],
@@ -2930,7 +2914,7 @@ var SETDEX_EISENTREE = {
         "Wide Guard"
       ],
       "nature": "Adamant",
-      "item": "Focus Sash"
+      "item": "Covert Cloak"
     }
   },
   "Snorlax": {
@@ -2942,7 +2926,7 @@ var SETDEX_EISENTREE = {
         "sd": 168
       },
       "moves": [
-        "Body Slam",
+        "Return",
         "High Horsepower",
         "Belly Drum",
         "Recycle"
@@ -2975,22 +2959,22 @@ var SETDEX_EISENTREE = {
         "Self-Destruct",
         "Heat Crash",
         "High Horsepower",
-        "Darkest Lariat"
+        "Crunch"
       ],
       "nature": "Brave",
       "item": "Choice Band"
     },
-    "Snorlax-3b": {
+    "Snorlax-4": {
       "level": 50,
       "evs": {
-        "hp": 252,
-        "at": 252
+        "at": 252,
+        "sd": 252
       },
       "moves": [
-        "Return",
+        "Body Slam",
         "Heat Crash",
         "High Horsepower",
-        "Darkest Lariat"
+        "Supercell Slam"
       ],
       "nature": "Brave",
       "item": "Assault Vest"
@@ -3020,12 +3004,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Sheer Cold",
-        "Freeze-Dry",
-        "Reflect",
+        "Blizzard",
+        "Snowscape",
         "Roost"
       ],
       "nature": "Calm",
-      "item": "Wiki Berry"
+      "item": "Occa Berry"
     },
     "Articuno-3": {
       "level": 50,
@@ -3045,22 +3029,6 @@ var SETDEX_EISENTREE = {
   },
   "Zapdos": {
     "Zapdos-1": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "sa": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Thunderbolt",
-        "Heat Wave",
-        "Roost",
-        "Tailwind"
-      ],
-      "nature": "Modest",
-      "item": "Aguav Berry"
-    },
-    "Zapdos-1b": {
       "level": 50,
       "evs": {
         "hp": 168,
@@ -3089,25 +3057,9 @@ var SETDEX_EISENTREE = {
         "Rain Dance"
       ],
       "nature": "Timid",
-      "item": "Magnet"
+      "item": "Wise Glasses"
     },
     "Zapdos-3": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "df": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Thunderbolt",
-        "Hurricane",
-        "Roost",
-        "Tailwind"
-      ],
-      "nature": "Modest",
-      "item": "Misty Seed"
-    },
-    "Zapdos-3b": {
       "level": 50,
       "evs": {
         "hp": 168,
@@ -3138,22 +3090,7 @@ var SETDEX_EISENTREE = {
         "Tailwind"
       ],
       "nature": "Timid",
-      "item": "Passho Berry"
-    },
-    "Moltres-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Heat Wave",
-        "Hurricane",
-        "Scorching Sands",
-        "Tailwind"
-      ],
-      "nature": "Timid",
-      "item": "Expert Belt"
+      "item": "Covert Cloak"
     },
     "Moltres-2": {
       "level": 50,
@@ -3187,21 +3124,6 @@ var SETDEX_EISENTREE = {
       "nature": "Jolly",
       "item": "Flyinium Z"
     },
-    "Dragonite-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Dragon Claw",
-        "Earthquake",
-        "Extreme Speed",
-        "Dragon Dance"
-      ],
-      "nature": "Jolly",
-      "item": "Weakness Policy"
-    },
     "Dragonite-2": {
       "level": 50,
       "evs": {
@@ -3224,7 +3146,7 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "Dragon Claw",
+        "Scale Shot",
         "Stomping Tantrum",
         "Ice Spinner",
         "Extreme Speed"
@@ -3258,7 +3180,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Stored Power",
-        "Aura Sphere",
+        "Body Press",
         "Cosmic Power",
         "Roost"
       ],
@@ -3308,7 +3230,7 @@ var SETDEX_EISENTREE = {
         "Earth Power"
       ],
       "nature": "Timid",
-      "item": "Mewnium Z"
+      "item": "Psychium Z"
     }
   },
   "Mewtwo": {
@@ -3366,15 +3288,15 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Giga Drain",
-        "Counter",
-        "Heal Pulse",
-        "Reflect"
+        "Leaf Storm",
+        "Body Press",
+        "Encore",
+        "Heal Pulse"
       ],
       "nature": "Bold",
       "item": "Aguav Berry"
     },
-    "Meganium-1b": {
+    "Meganium-2": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -3389,7 +3311,7 @@ var SETDEX_EISENTREE = {
       "nature": "Bold",
       "item": "Light Clay"
     },
-    "Meganium-2": {
+    "Meganium-3": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -3398,11 +3320,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Seed Bomb",
         "Stomping Tantrum",
-        "Natural Gift",
+        "Knock Off",
         "Swords Dance"
       ],
       "nature": "Adamant",
-      "item": "Occa Berry"
+      "item": "Muscle Band"
     }
   },
   "Typhlosion": {
@@ -3416,7 +3338,7 @@ var SETDEX_EISENTREE = {
         "Eruption",
         "Flamethrower",
         "Focus Blast",
-        "Hidden Power Ice"
+        "Hidden Power"
       ],
       "nature": "Timid",
       "item": "Charcoal"
@@ -3431,10 +3353,25 @@ var SETDEX_EISENTREE = {
         "Eruption",
         "Heat Wave",
         "Focus Blast",
-        "Hidden Power Grass"
+        "Hidden Power"
       ],
       "nature": "Modest",
       "item": "Choice Scarf"
+    },
+    "Typhlosion-3": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Temper Flare",
+        "Rock Slide",
+        "Play Rough",
+        "Howl"
+      ],
+      "nature": "Jolly",
+      "item": "Liechi Berry"
     }
   },
   "Feraligatr": {
@@ -3462,11 +3399,43 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Liquidation",
         "Ice Punch",
-        "Aqua Jet",
+        "Scale Shot",
         "Swords Dance"
       ],
       "nature": "Adamant",
+      "item": "Clear Amulet"
+    },
+    "Feraligatr-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Flip Turn",
+        "Breaking Swipe",
+        "Stomping Tantrum",
+        "Helping Hand"
+      ],
+      "nature": "Adamant",
       "item": "Wacan Berry"
+    }
+  },
+  "Sentret": {
+    "Sentret-1": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Endeavor",
+        "Knock Off",
+        "Quick Attack",
+        "Follow Me"
+      ],
+      "nature": "Brave",
+      "item": "Focus Sash"
     }
   },
   "Furret": {
@@ -3483,7 +3452,7 @@ var SETDEX_EISENTREE = {
         "Helping Hand"
       ],
       "nature": "Jolly",
-      "item": "Focus Sash"
+      "item": "Sitrus Berry"
     }
   },
   "Noctowl": {
@@ -3512,10 +3481,10 @@ var SETDEX_EISENTREE = {
         "Hyper Voice",
         "Hurricane",
         "Moonblast",
-        "Nasty Plot"
+        "Psychic Noise"
       ],
       "nature": "Modest",
-      "item": "Life Orb"
+      "item": "Throat Spray"
     }
   },
   "Ledian": {
@@ -3685,7 +3654,7 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "df": 252
+        "sa": 252
       },
       "moves": [
         "Air Slash",
@@ -3731,13 +3700,28 @@ var SETDEX_EISENTREE = {
     "Ampharos-2": {
       "level": 50,
       "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Thunderbolt",
+        "Dazzling Gleam",
+        "Meteor Beam",
+        "Cotton Guard"
+      ],
+      "nature": "Modest",
+      "item": "Power Herb"
+    },
+    "Ampharos-3": {
+      "level": 50,
+      "evs": {
         "hp": 168,
         "sa": 168,
         "sp": 168
       },
       "moves": [
-        "Thunderbolt",
-        "Hidden Power Ice",
+        "Thunder",
+        "Hidden Power",
         "Electric Terrain",
         "Cotton Spore"
       ],
@@ -3756,7 +3740,7 @@ var SETDEX_EISENTREE = {
         "Giga Drain",
         "Moonblast",
         "Quiver Dance",
-        "Strength Sap"
+        "Encore"
       ],
       "nature": "Timid",
       "item": "Life Orb"
@@ -3768,13 +3752,13 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "Leaf Blade",
-        "Drain Punch",
+        "Bullet Seed",
+        "Triple Axel",
         "Swords Dance",
         "Strength Sap"
       ],
       "nature": "Brave",
-      "item": "Aguav Berry"
+      "item": "Loaded Dice"
     }
   },
   "Azumarill": {
@@ -3825,6 +3809,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Brave",
       "item": "Zoom Lens"
+    },
+    "Sudowoodo-2": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "df": 252
+      },
+      "moves": [
+        "Rock Slide",
+        "Body Press",
+        "Endeavor",
+        "Stealth Rock"
+      ],
+      "nature": "Impish",
+      "item": "Custap Berry"
     }
   },
   "Politoed": {
@@ -3838,25 +3837,10 @@ var SETDEX_EISENTREE = {
         "Scald",
         "Icy Wind",
         "Encore",
-        "Perish Song"
+        "Helping Hand"
       ],
       "nature": "Calm",
       "item": "Eject Button"
-    },
-    "Politoed-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sd": 252
-      },
-      "moves": [
-        "Scald",
-        "Icy Wind",
-        "Encore",
-        "Perish Song"
-      ],
-      "nature": "Calm",
-      "item": "Sitrus Berry"
     },
     "Politoed-2": {
       "level": 50,
@@ -3872,6 +3856,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Timid",
       "item": "Choice Scarf"
+    },
+    "Politoed-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Whirlpool",
+        "Perish Song",
+        "Encore",
+        "Hypnosis"
+      ],
+      "nature": "Calm",
+      "item": "Binding Band"
     }
   },
   "Jumpluff": {
@@ -3897,13 +3896,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "U-turn",
+        "Leaf Storm",
         "Encore",
         "Sleep Powder",
-        "Strength Sap"
+        "U-turn"
       ],
-      "nature": "Jolly",
-      "item": "Occa Berry"
+      "nature": "Timid",
+      "item": "White Herb"
     }
   },
   "Sunflora": {
@@ -3931,7 +3930,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Solar Beam",
         "Earth Power",
-        "Sludge Bomb",
+        "Weather Ball",
         "Sunny Day"
       ],
       "nature": "Modest",
@@ -3982,22 +3981,7 @@ var SETDEX_EISENTREE = {
         "Psychic",
         "Dazzling Gleam",
         "Shadow Ball",
-        "Weather Ball"
-      ],
-      "nature": "Timid",
-      "item": "Choice Specs"
-    },
-    "Espeon-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Psychic",
-        "Dazzling Gleam",
-        "Shadow Ball",
-        "Hidden Power Fire"
+        "Hidden Power"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -4024,7 +4008,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Psychic",
+        "Psychic Noise",
         "Reflect",
         "Light Screen",
         "Yawn"
@@ -4096,7 +4080,7 @@ var SETDEX_EISENTREE = {
       "nature": "Calm",
       "item": "Eviolite"
     },
-    "Murkrow-2": {
+    "Murkrow-1b": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -4128,21 +4112,6 @@ var SETDEX_EISENTREE = {
       "nature": "Relaxed",
       "item": "Colbur Berry"
     },
-    "Slowking-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "df": 252
-      },
-      "moves": [
-        "Scald",
-        "Flamethrower",
-        "Disable",
-        "Trick Room"
-      ],
-      "nature": "Relaxed",
-      "item": "Wacan Berry"
-    },
     "Slowking-2": {
       "level": 50,
       "evs": {
@@ -4153,7 +4122,7 @@ var SETDEX_EISENTREE = {
         "Future Sight",
         "Hydro Pump",
         "Blizzard",
-        "Nasty Plot"
+        "Chilly Reception"
       ],
       "nature": "Quiet",
       "item": "Psychium Z"
@@ -4218,12 +4187,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Hyper Voice",
-        "Psyshock",
-        "Calm Mind",
-        "Substitute"
+        "Psychic Noise",
+        "Dazzling Gleam",
+        "Ally Switch"
       ],
       "nature": "Timid",
-      "item": "Mago Berry"
+      "item": "Throat Spray"
     },
     "Girafarig-2": {
       "level": 50,
@@ -4234,7 +4203,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Return",
         "Psychic Fangs",
-        "Stomping Tantrum",
+        "High Horsepower",
         "Crunch"
       ],
       "nature": "Jolly",
@@ -4257,35 +4226,20 @@ var SETDEX_EISENTREE = {
       "nature": "Brave",
       "item": "Custap Berry"
     },
-    "Forretress-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Gyro Ball",
-        "Drill Run",
-        "Volt Switch",
-        "Stealth Rock"
-      ],
-      "nature": "Brave",
-      "item": "Custap Berry"
-    },
     "Forretress-2": {
       "level": 50,
       "evs": {
-        "hp": 252,
-        "at": 252
+        "at": 252,
+        "df": 252
       },
       "moves": [
         "Gyro Ball",
-        "Bug Bite",
-        "Drill Run",
-        "Counter"
+        "Body Press",
+        "Iron Defense",
+        "Toxic Spikes"
       ],
-      "nature": "Brave",
-      "item": "Iron Ball"
+      "nature": "Impish",
+      "item": "Leftovers"
     }
   },
   "Dunsparce": {
@@ -4296,7 +4250,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Body Slam",
+        "Secret Power",
         "Rock Slide",
         "Coil",
         "Roost"
@@ -4348,23 +4302,8 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Heavy Slam",
         "High Horsepower",
-        "Rock Slide",
+        "Body Press",
         "Sandstorm"
-      ],
-      "nature": "Brave",
-      "item": "Steelixite"
-    },
-    "Steelix-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Heavy Slam",
-        "High Horsepower",
-        "Rock Slide",
-        "Earthquake"
       ],
       "nature": "Brave",
       "item": "Steelixite"
@@ -4391,9 +4330,9 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "High Horsepower",
-        "Earthquake",
         "Heavy Slam",
+        "Earthquake",
+        "Body Press",
         "Explosion"
       ],
       "nature": "Adamant",
@@ -4425,7 +4364,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Play Rough",
         "Stomping Tantrum",
-        "Fire Punch",
+        "Temper Flare",
         "Fling"
       ],
       "nature": "Brave",
@@ -4440,8 +4379,8 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Liquidation",
-        "Gunk Shot",
+        "Flip Turn",
+        "Barb Barrage",
         "Aqua Jet",
         "Rain Dance"
       ],
@@ -4476,22 +4415,6 @@ var SETDEX_EISENTREE = {
         "Bullet Punch",
         "Bug Bite",
         "Swords Dance",
-        "Roost"
-      ],
-      "nature": "Adamant",
-      "item": "Scizorite"
-    },
-    "Scizor-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "at": 168,
-        "sd": 168
-      },
-      "moves": [
-        "Bullet Punch",
-        "Bug Bite",
-        "Tailwind",
         "Roost"
       ],
       "nature": "Adamant",
@@ -4568,8 +4491,8 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Stone Edge",
         "Skitter Smack",
-        "Power Trick",
-        "Substitute"
+        "Iron Defense",
+        "Power Trick"
       ],
       "nature": "Brave",
       "item": "Hard Stone"
@@ -4577,21 +4500,6 @@ var SETDEX_EISENTREE = {
   },
   "Heracross": {
     "Heracross-1": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Close Combat",
-        "Megahorn",
-        "Rock Slide",
-        "Earthquake"
-      ],
-      "nature": "Jolly",
-      "item": "Choice Scarf"
-    },
-    "Heracross-2": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -4605,6 +4513,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Adamant",
       "item": "Heracronite"
+    },
+    "Heracross-2": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Close Combat",
+        "Megahorn",
+        "Rock Slide",
+        "Earthquake"
+      ],
+      "nature": "Jolly",
+      "item": "Choice Scarf"
     }
   },
   "Ursaring": {
@@ -4644,31 +4567,31 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Power Gem",
+        "Heat Wave",
+        "Solar Beam",
+        "Earth Power"
+      ],
+      "nature": "Quiet",
+      "item": "Power Herb"
+    },
+    "Magcargo-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
         "df": 252
       },
       "moves": [
         "Lava Plume",
         "Clear Smog",
-        "Will-O-Wisp",
+        "Stealth Rock",
         "Sunny Day"
       ],
       "nature": "Relaxed",
       "item": "Rocky Helmet"
-    },
-    "Magcargo-2": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Heat Wave",
-        "Ancient Power",
-        "Earth Power",
-        "Shell Smash"
-      ],
-      "nature": "Timid",
-      "item": "Focus Sash"
     }
   },
   "Piloswine": {
@@ -4680,7 +4603,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Fissure",
-        "Icicle Crash",
+        "Avalanche",
         "High Horsepower",
         "Ice Shard"
       ],
@@ -4703,6 +4626,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Brave",
       "item": "Choice Band"
+    },
+    "Corsola-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Meteor Beam",
+        "Scald",
+        "Earth Power",
+        "Mirror Coat"
+      ],
+      "nature": "Quiet",
+      "item": "Power Herb"
     }
   },
   "Octillery": {
@@ -4763,7 +4701,7 @@ var SETDEX_EISENTREE = {
         "Brave Bird",
         "Ice Spinner",
         "Drill Run",
-        "Brick Break"
+        "Ice Shard"
       ],
       "nature": "Adamant",
       "item": "Choice Band"
@@ -4771,22 +4709,6 @@ var SETDEX_EISENTREE = {
   },
   "Mantine": {
     "Mantine-1": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "df": 168,
-        "sa": 168
-      },
-      "moves": [
-        "Scald",
-        "Air Slash",
-        "Tailwind",
-        "Wide Guard"
-      ],
-      "nature": "Bold",
-      "item": "Wacan Berry"
-    },
-    "Mantine-1b": {
       "level": 50,
       "evs": {
         "hp": 168,
@@ -4815,7 +4737,7 @@ var SETDEX_EISENTREE = {
         "Rain Dance"
       ],
       "nature": "Timid",
-      "item": "Mystic Water"
+      "item": "Wave Incense"
     }
   },
   "Skarmory": {
@@ -4842,12 +4764,27 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Sky Drop",
-        "Leer",
-        "Toxic",
+        "Body Press",
+        "Iron Defense",
         "Roost"
       ],
       "nature": "Careful",
       "item": "Leftovers"
+    },
+    "Skarmory-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "df": 252
+      },
+      "moves": [
+        "Thief",
+        "Stealth Rock",
+        "Spikes",
+        "Whirlwind"
+      ],
+      "nature": "Bold",
+      "item": "Red Card"
     }
   },
   "Houndoom": {
@@ -4897,21 +4834,6 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Modest",
       "item": "Choice Specs"
-    },
-    "Kingdra-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Hydro Pump",
-        "Dragon Pulse",
-        "Hurricane",
-        "Ice Beam"
-      ],
-      "nature": "Modest",
-      "item": "Life Orb"
     },
     "Kingdra-2": {
       "level": 50,
@@ -4999,7 +4921,7 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Return",
+        "Tri Attack",
         "Ice Beam",
         "Recover",
         "Trick Room"
@@ -5015,21 +4937,6 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Thunderbolt",
-        "Ice Beam",
-        "Recover",
-        "Trick Room"
-      ],
-      "nature": "Sassy",
-      "item": "Eviolite"
-    },
-    "Porygon2-1c": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "df": 252
-      },
-      "moves": [
-        "Tri Attack",
         "Ice Beam",
         "Recover",
         "Trick Room"
@@ -5096,7 +5003,7 @@ var SETDEX_EISENTREE = {
         "Fake Out",
         "Follow Me",
         "Spore",
-        "Baneful Bunker"
+        "Spiky Shield"
       ],
       "nature": "Jolly",
       "item": "Focus Sash"
@@ -5142,26 +5049,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Fake Out",
         "Close Combat",
-        "Stone Edge",
-        "Coaching"
+        "Triple Axel",
+        "Wide Guard"
       ],
       "nature": "Adamant",
       "item": "Fightinium Z"
-    },
-    "Hitmontop-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Fake Out",
-        "Close Combat",
-        "Stone Edge",
-        "Coaching"
-      ],
-      "nature": "Adamant",
-      "item": "Figy Berry"
     },
     "Hitmontop-2": {
       "level": 50,
@@ -5172,10 +5064,10 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Fake Out",
         "Mach Punch",
-        "Bullet Punch",
-        "Feint"
+        "Sucker Punch",
+        "Coaching"
       ],
-      "nature": "Adamant",
+      "nature": "Careful",
       "item": "Eject Button"
     }
   },
@@ -5187,9 +5079,9 @@ var SETDEX_EISENTREE = {
         "sd": 252
       },
       "moves": [
-        "Seismic Toss",
-        "Icy Wind",
-        "Helping Hand",
+        "Secret Power",
+        "Body Press",
+        "Curse",
         "Milk Drink"
       ],
       "nature": "Careful",
@@ -5216,27 +5108,12 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "df": 252,
-        "sp": 252
+        "sa": 252
       },
       "moves": [
-        "Seismic Toss",
-        "Toxic",
-        "Ally Switch",
-        "Life Dew"
-      ],
-      "nature": "Bold",
-      "item": "Leftovers"
-    },
-    "Blissey-1b": {
-      "level": 50,
-      "evs": {
-        "df": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Seismic Toss",
-        "Toxic",
-        "Heal Pulse",
+        "Tri Attack",
+        "Shadow Ball",
+        "Calm Mind",
         "Soft-Boiled"
       ],
       "nature": "Bold",
@@ -5249,10 +5126,10 @@ var SETDEX_EISENTREE = {
         "sa": 252
       },
       "moves": [
-        "Tri Attack",
-        "Flamethrower",
-        "Thunderbolt",
-        "Soft-Boiled"
+        "Metronome",
+        "Fire Blast",
+        "Thunder",
+        "Blizzard"
       ],
       "nature": "Modest",
       "item": "Chople Berry"
@@ -5284,7 +5161,7 @@ var SETDEX_EISENTREE = {
         "Volt Switch",
         "Scald",
         "Aura Sphere",
-        "Weather Ball"
+        "Rising Voltage"
       ],
       "nature": "Modest",
       "item": "Choice Specs"
@@ -5352,20 +5229,20 @@ var SETDEX_EISENTREE = {
       "nature": "Jolly",
       "item": "Choice Band"
     },
-    "Entei-3b": {
+    "Entei-4": {
       "level": 50,
       "evs": {
-        "at": 252,
+        "sa": 252,
         "sp": 252
       },
       "moves": [
-        "Sacred Fire",
-        "Stomping Tantrum",
-        "Stone Edge",
-        "Extreme Speed"
+        "Eruption",
+        "Fire Blast",
+        "Scorching Sands",
+        "Extrasensory"
       ],
-      "nature": "Jolly",
-      "item": "Assault Vest"
+      "nature": "Modest",
+      "item": "Choice Scarf"
     }
   },
   "Suicune": {
@@ -5409,12 +5286,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Scald",
-        "Ice Beam",
+        "Blizzard",
         "Calm Mind",
         "Rest"
       ],
       "nature": "Bold",
-      "item": "Leftovers"
+      "item": "Chesto Berry"
     },
     "Suicune-4": {
       "level": 50,
@@ -5473,7 +5350,7 @@ var SETDEX_EISENTREE = {
         "Rock Slide",
         "Fling",
         "High Horsepower",
-        "Curse"
+        "Stealth Rock"
       ],
       "nature": "Brave",
       "item": "Iron Ball"
@@ -5486,7 +5363,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Stone Edge",
-        "Foul Play",
+        "Knock Off",
         "Ice Punch",
         "Fire Punch"
       ],
@@ -5574,21 +5451,6 @@ var SETDEX_EISENTREE = {
       "nature": "Adamant",
       "item": "Blazikenite"
     },
-    "Blaziken-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Flare Blitz",
-        "Close Combat",
-        "Thunder Punch",
-        "Detect"
-      ],
-      "nature": "Adamant",
-      "item": "Blazikenite"
-    },
     "Blaziken-2": {
       "level": 50,
       "evs": {
@@ -5614,9 +5476,24 @@ var SETDEX_EISENTREE = {
         "Close Combat",
         "Overheat",
         "Scorching Sands",
-        "Hidden Power Ice"
+        "Hidden Power"
       ],
       "nature": "Naive",
+      "item": "Covert Cloak"
+    },
+    "Blaziken-4": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Close Combat",
+        "Overheat",
+        "Brave Bird",
+        "Protect"
+      ],
+      "nature": "Hasty",
       "item": "Focus Sash"
     }
   },
@@ -5640,31 +5517,31 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "sd": 252
+        "df": 252
       },
       "moves": [
-        "Scald",
+        "Flip Turn",
         "Earthquake",
-        "Mirror Coat",
-        "Yawn"
+        "Yawn",
+        "Stealth Rock"
       ],
-      "nature": "Sassy",
+      "nature": "Relaxed",
       "item": "Wiki Berry"
     },
     "Swampert-2b": {
       "level": 50,
       "evs": {
         "hp": 252,
-        "df": 252
+        "sd": 252
       },
       "moves": [
         "Scald",
         "Earthquake",
-        "Counter",
-        "Yawn"
+        "Mirror Coat",
+        "Stealth Rock"
       ],
-      "nature": "Relaxed",
-      "item": "Rindo Berry"
+      "nature": "Sassy",
+      "item": "Wiki Berry"
     }
   },
   "Mightyena": {
@@ -5678,7 +5555,7 @@ var SETDEX_EISENTREE = {
         "Foul Play",
         "Sucker Punch",
         "Super Fang",
-        "Taunt"
+        "Leer"
       ],
       "nature": "Impish",
       "item": "Black Glasses"
@@ -5793,9 +5670,9 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Fake Out",
         "Leaf Storm",
         "Knock Off",
+        "Endeavor",
         "Tailwind"
       ],
       "nature": "Naughty",
@@ -5843,7 +5720,7 @@ var SETDEX_EISENTREE = {
         "Boomburst",
         "Hurricane",
         "Heat Wave",
-        "Hidden Power Grass"
+        "Hidden Power"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -5857,7 +5734,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Weather Ball",
+        "Hydro Pump",
         "Hurricane",
         "Wide Guard",
         "Tailwind"
@@ -5865,22 +5742,22 @@ var SETDEX_EISENTREE = {
       "nature": "Modest",
       "item": "Focus Sash"
     },
-    "Pelipper-1b": {
+    "Pelipper-2": {
       "level": 50,
       "evs": {
-        "sa": 252,
-        "sp": 252
+        "hp": 252,
+        "df": 252
       },
       "moves": [
-        "Weather Ball",
-        "Hurricane",
         "Scald",
+        "Hurricane",
+        "Helping Hand",
         "Tailwind"
       ],
-      "nature": "Modest",
-      "item": "Focus Sash"
+      "nature": "Bold",
+      "item": "Damp Rock"
     },
-    "Pelipper-2": {
+    "Pelipper-3": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -5908,23 +5785,7 @@ var SETDEX_EISENTREE = {
         "Hyper Voice",
         "Moonblast",
         "Psyshock",
-        "Focus Blast"
-      ],
-      "nature": "Modest",
-      "item": "Gardevoirite"
-    },
-    "Gardevoir-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "sa": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Hyper Voice",
-        "Psyshock",
-        "Mystical Fire",
-        "Trick Room"
+        "Vacuum Wave"
       ],
       "nature": "Modest",
       "item": "Gardevoirite"
@@ -5937,7 +5798,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Dazzling Gleam",
-        "Psychic",
+        "Expanding Force",
         "Mystical Fire",
         "Thunderbolt"
       ],
@@ -5974,7 +5835,7 @@ var SETDEX_EISENTREE = {
         "Tailwind"
       ],
       "nature": "Modest",
-      "item": "Mago Berry"
+      "item": "Charti Berry"
     },
     "Masquerain-2": {
       "level": 50,
@@ -6000,13 +5861,28 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Mach Punch",
         "Bullet Seed",
-        "Feint",
+        "Mach Punch",
+        "Rock Tomb",
         "Spore"
       ],
       "nature": "Jolly",
       "item": "Focus Sash"
+    },
+    "Breloom-1b": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Bullet Seed",
+        "Mach Punch",
+        "Feint",
+        "Spore"
+      ],
+      "nature": "Jolly",
+      "item": "Loaded Dice"
     },
     "Breloom-2": {
       "level": 50,
@@ -6072,20 +5948,20 @@ var SETDEX_EISENTREE = {
       "nature": "Adamant",
       "item": "Assault Vest"
     },
-    "Slaking-2b": {
+    "Slaking-3": {
       "level": 50,
       "evs": {
-        "sd": 252,
+        "at": 252,
         "sp": 252
       },
       "moves": [
-        "Body Slam",
-        "Stomping Tantrum",
-        "Fire Punch",
-        "Sucker Punch"
+        "Giga Impact",
+        "High Horsepower",
+        "Knock Off",
+        "Substitute"
       ],
       "nature": "Adamant",
-      "item": "Assault Vest"
+      "item": "Clear Amulet"
     }
   },
   "Ninjask": {
@@ -6102,7 +5978,7 @@ var SETDEX_EISENTREE = {
         "Swords Dance"
       ],
       "nature": "Jolly",
-      "item": "Focus Sash"
+      "item": "Covert Cloak"
     },
     "Ninjask-2": {
       "level": 50,
@@ -6203,33 +6079,33 @@ var SETDEX_EISENTREE = {
     "Hariyama-1": {
       "level": 50,
       "evs": {
-        "at": 252,
-        "sd": 252
-      },
-      "moves": [
-        "Fake Out",
-        "Close Combat",
-        "Knock Off",
-        "Headlong Rush"
-      ],
-      "nature": "Brave",
-      "item": "Assault Vest"
-    },
-    "Hariyama-2": {
-      "level": 50,
-      "evs": {
         "at": 168,
         "df": 168,
         "sd": 168
       },
       "moves": [
-        "Drain Punch",
-        "Throat Chop",
-        "Ice Punch",
+        "Fake Out",
+        "Close Combat",
+        "Headlong Rush",
         "Wide Guard"
       ],
+      "nature": "Brave",
+      "item": "Clear Amulet"
+    },
+    "Hariyama-2": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Drain Punch",
+        "Knock Off",
+        "Ice Punch",
+        "Bullet Punch"
+      ],
       "nature": "Adamant",
-      "item": "Figy Berry"
+      "item": "Assault Vest"
     }
   },
   "Delcatty": {
@@ -6247,6 +6123,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Jolly",
       "item": "Eject Button"
+    },
+    "Delcatty-2": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Fake Out",
+        "Fury Swipes",
+        "Play Rough",
+        "Laser Focus"
+      ],
+      "nature": "Adamant",
+      "item": "Loaded Dice"
     }
   },
   "Sableye": {
@@ -6293,7 +6184,7 @@ var SETDEX_EISENTREE = {
         "Trick"
       ],
       "nature": "Sassy",
-      "item": "Lagging Tail"
+      "item": "Full Incense"
     },
     "Sableye-4": {
       "level": 50,
@@ -6304,7 +6195,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Fake Out",
         "Quash",
-        "Taunt",
+        "Encore",
         "Disable"
       ],
       "nature": "Relaxed",
@@ -6330,21 +6221,6 @@ var SETDEX_EISENTREE = {
     "Mawile-2": {
       "level": 50,
       "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Iron Head",
-        "Play Rough",
-        "Thunder Punch",
-        "Fire Fang"
-      ],
-      "nature": "Brave",
-      "item": "Mawilite"
-    },
-    "Mawile-3": {
-      "level": 50,
-      "evs": {
         "at": 252,
         "sp": 252
       },
@@ -6357,7 +6233,7 @@ var SETDEX_EISENTREE = {
       "nature": "Adamant",
       "item": "Life Orb"
     },
-    "Mawile-4": {
+    "Mawile-3": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -6383,7 +6259,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Heavy Slam",
         "High Horsepower",
-        "Avalanche (Doubled)",
+        "Body Press",
         "Curse"
       ],
       "nature": "Brave",
@@ -6398,7 +6274,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Heavy Slam",
         "High Horsepower",
-        "Avalanche (Doubled)",
+        "Avalanche",
         "Fire Punch"
       ],
       "nature": "Brave",
@@ -6412,9 +6288,9 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Head Smash",
-        "Heavy Slam",
-        "Roar",
-        "Metal Burst"
+        "Body Press",
+        "Metal Burst",
+        "Roar"
       ],
       "nature": "Brave",
       "item": "Figy Berry"
@@ -6493,7 +6369,7 @@ var SETDEX_EISENTREE = {
         "Volt Switch",
         "Overheat",
         "Snarl",
-        "Hidden Power Ice"
+        "Hidden Power"
       ],
       "nature": "Timid",
       "item": "Manectite"
@@ -6508,7 +6384,7 @@ var SETDEX_EISENTREE = {
         "Thunder",
         "Flamethrower",
         "Snarl",
-        "Hidden Power Ice"
+        "Hidden Power"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -6537,10 +6413,10 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Thunder",
-        "Electroweb",
+        "Nuzzle",
+        "Endeavor",
         "Encore",
-        "Sing"
+        "Helping Hand"
       ],
       "nature": "Timid",
       "item": "Focus Sash"
@@ -6555,7 +6431,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Thunderbolt",
-        "Hidden Power Ice",
+        "Alluring Voice",
         "Nasty Plot",
         "Baton Pass"
       ],
@@ -6577,7 +6453,7 @@ var SETDEX_EISENTREE = {
         "Baton Pass"
       ],
       "nature": "Modest",
-      "item": "Silver Powder"
+      "item": "Throat Spray"
     }
   },
   "Illumise": {
@@ -6594,7 +6470,7 @@ var SETDEX_EISENTREE = {
         "Tailwind"
       ],
       "nature": "Calm",
-      "item": "Wiki Berry"
+      "item": "Covert Cloak"
     }
   },
   "Roselia": {
@@ -6629,6 +6505,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Brave",
       "item": "Wiki Berry"
+    },
+    "Swalot-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Venoshock",
+        "Knock Off",
+        "Gastro Acid",
+        "Toxic Spikes"
+      ],
+      "nature": "Sassy",
+      "item": "Rowap Berry"
     }
   },
   "Sharpedo": {
@@ -6703,26 +6594,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Liquidation",
         "Heavy Slam",
-        "Self-Destruct",
-        "Fissure"
+        "Avalanche",
+        "Self-Destruct"
       ],
       "nature": "Adamant",
-      "item": "Assault Vest"
-    },
-    "Wailord-2b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sd": 252
-      },
-      "moves": [
-        "Liquidation",
-        "Heavy Slam",
-        "Avalanche (Doubled)",
-        "Fissure"
-      ],
-      "nature": "Adamant",
-      "item": "Assault Vest"
+      "item": "Normalium Z"
     },
     "Wailord-3": {
       "level": 50,
@@ -6778,12 +6654,12 @@ var SETDEX_EISENTREE = {
         "sa": 252
       },
       "moves": [
-        "Fire Blast",
-        "Earth Power",
-        "Ancient Power",
-        "Sunny Day"
+        "Flare Blitz",
+        "High Horsepower",
+        "Rock Slide",
+        "Curse"
       ],
-      "nature": "Quiet",
+      "nature": "Brave",
       "item": "Cameruptite"
     }
   },
@@ -6796,7 +6672,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Eruption",
-        "Weather Ball",
+        "Heat Wave",
         "Solar Beam",
         "Earth Power"
       ],
@@ -6807,15 +6683,15 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "sa": 252
+        "df": 252
       },
       "moves": [
-        "Eruption",
-        "Heat Wave",
-        "Scorching Sands",
-        "Yawn"
+        "Overheat",
+        "Body Press",
+        "Yawn",
+        "Stealth Rock"
       ],
-      "nature": "Quiet",
+      "nature": "Relaxed",
       "item": "Firium Z"
     },
     "Torkoal-3": {
@@ -6839,15 +6715,15 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "df": 252
+        "sa": 252
       },
       "moves": [
-        "Calm Mind",
-        "Psyshock",
+        "Expanding Force",
         "Focus Blast",
-        "Recycle"
+        "Power Gem",
+        "Psychic Terrain"
       ],
-      "nature": "Bold",
+      "nature": "Modest",
       "item": "Mago Berry"
     },
     "Grumpig-2": {
@@ -6880,7 +6756,7 @@ var SETDEX_EISENTREE = {
         "Trick Room"
       ],
       "nature": "Brave",
-      "item": "Sitrus Berry"
+      "item": "Covert Cloak"
     }
   },
   "Flygon": {
@@ -6964,22 +6840,6 @@ var SETDEX_EISENTREE = {
       "nature": "Modest",
       "item": "Altarianite"
     },
-    "Altaria-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "sa": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Hyper Voice",
-        "Fire Blast",
-        "Roost",
-        "Tailwind"
-      ],
-      "nature": "Modest",
-      "item": "Altarianite"
-    },
     "Altaria-2": {
       "level": 50,
       "evs": {
@@ -6994,6 +6854,22 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Jolly",
       "item": "Altarianite"
+    },
+    "Altaria-3": {
+      "level": 50,
+      "evs": {
+        "hp": 168,
+        "df": 168,
+        "sd": 168
+      },
+      "moves": [
+        "Fire Spin",
+        "Perish Song",
+        "Cotton Guard",
+        "Roost"
+      ],
+      "nature": "Sassy",
+      "item": "Grip Claw"
     }
   },
   "Zangoose": {
@@ -7011,10 +6887,40 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Adamant",
       "item": "Toxic Orb"
+    },
+    "Zangoose-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Final Gambit",
+        "",
+        "",
+        ""
+      ],
+      "nature": "Jolly",
+      "item": "Choice Scarf"
     }
   },
   "Seviper": {
     "Seviper-1": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Gunk Shot",
+        "Flamethrower",
+        "Coil",
+        "Rest"
+      ],
+      "nature": "Relaxed",
+      "item": "Black Sludge"
+    },
+    "Seviper-2": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -7038,13 +6944,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Power Gem",
+        "Meteor Beam",
         "Moonblast",
         "Earth Power",
         "Grass Knot"
       ],
       "nature": "Modest",
-      "item": "Expert Belt"
+      "item": "Power Herb"
     },
     "Lunatone-2": {
       "level": 50,
@@ -7103,7 +7009,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Liquidation",
-        "Earthquake",
+        "High Horsepower",
         "Bounce",
         "Dragon Dance"
       ],
@@ -7113,18 +7019,17 @@ var SETDEX_EISENTREE = {
     "Whiscash-2": {
       "level": 50,
       "evs": {
-        "df": 168,
-        "sa": 168,
-        "sd": 168
+        "hp": 252,
+        "sd": 252
       },
       "moves": [
         "Fissure",
         "Muddy Water",
-        "Ice Beam",
-        "Amnesia"
+        "Amnesia",
+        "Rest"
       ],
       "nature": "Bold",
-      "item": "Wiki Berry"
+      "item": "Chesto Berry"
     }
   },
   "Crawdaunt": {
@@ -7169,8 +7074,8 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Scorching Sands",
         "Ice Beam",
-        "Eerie Impulse",
-        "Trick Room"
+        "Body Press",
+        "Stealth Rock"
       ],
       "nature": "Sassy",
       "item": "Figy Berry"
@@ -7229,10 +7134,10 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Giga Drain",
-        "Toxic",
+        "Meteor Beam",
         "Leech Seed",
-        "Stockpile"
+        "Stockpile",
+        "Recover"
       ],
       "nature": "Relaxed",
       "item": "Leftovers"
@@ -7277,12 +7182,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Stone Edge",
-        "X-Scissor",
+        "Cross Poison",
         "Knock Off",
         "Aqua Jet"
       ],
       "nature": "Brave",
-      "item": "Life Orb"
+      "item": "Razor Claw"
     }
   },
   "Milotic": {
@@ -7320,8 +7225,8 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 168,
-        "df": 168,
-        "sa": 168
+        "sa": 168,
+        "sp": 168
       },
       "moves": [
         "Hydro Pump",
@@ -7341,7 +7246,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Weather Ball",
+        "Hydro Pump",
         "Hurricane",
         "Rain Dance",
         "Tailwind"
@@ -7356,13 +7261,28 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Weather Ball",
+        "Fire Blast",
         "Solar Beam",
         "Sunny Day",
         "Tailwind"
       ],
       "nature": "Timid",
       "item": "Heat Rock"
+    },
+    "Castform-3": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Blizzard",
+        "Scald",
+        "Snowscape",
+        "Tailwind"
+      ],
+      "nature": "Timid",
+      "item": "Icy Rock"
     }
   },
   "Kecleon": {
@@ -7379,7 +7299,7 @@ var SETDEX_EISENTREE = {
         "Shadow Sneak"
       ],
       "nature": "Adamant",
-      "item": "Assault Vest"
+      "item": "Eject Button"
     },
     "Kecleon-2": {
       "level": 50,
@@ -7394,7 +7314,7 @@ var SETDEX_EISENTREE = {
         "Trick Room"
       ],
       "nature": "Relaxed",
-      "item": "Eject Button"
+      "item": "Covert Cloak"
     }
   },
   "Banette": {
@@ -7405,7 +7325,7 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "Phantom Force",
+        "Poltergeist",
         "Gunk Shot",
         "Shadow Sneak",
         "Will-O-Wisp"
@@ -7422,7 +7342,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Phantom Force",
         "Metronome",
-        "Disable",
+        "Encore",
         "Trick Room"
       ],
       "nature": "Relaxed",
@@ -7465,17 +7385,17 @@ var SETDEX_EISENTREE = {
     "Tropius-1": {
       "level": 50,
       "evs": {
-        "hp": 252,
+        "df": 252,
         "sd": 252
       },
       "moves": [
-        "Leaf Blade",
-        "Stomping Tantrum",
-        "Curse",
-        "Leech Seed"
+        "Fly",
+        "Leech Seed",
+        "Substitute",
+        "Protect"
       ],
-      "nature": "Sassy",
-      "item": "Aguav Berry"
+      "nature": "Impish",
+      "item": "Sitrus Berry"
     },
     "Tropius-2": {
       "level": 50,
@@ -7501,13 +7421,28 @@ var SETDEX_EISENTREE = {
         "sa": 252
       },
       "moves": [
-        "Future Sight",
+        "Psychic Noise",
         "Dazzling Gleam",
-        "Ally Switch",
+        "Imprison",
         "Trick Room"
       ],
       "nature": "Quiet",
       "item": "Colbur Berry"
+    },
+    "Chimecho-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "df": 252
+      },
+      "moves": [
+        "Wrap",
+        "Snarl",
+        "Yawn",
+        "Recover"
+      ],
+      "nature": "Careful",
+      "item": "Binding Band"
     }
   },
   "Absol": {
@@ -7567,8 +7502,8 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Frost Breath",
         "Sheer Cold",
-        "Disable",
-        "Substitute"
+        "Substitute",
+        "Snowscape"
       ],
       "nature": "Timid",
       "item": "Leftovers"
@@ -7618,24 +7553,9 @@ var SETDEX_EISENTREE = {
         "Scald",
         "Muddy Water",
         "Ice Beam",
-        "Brine"
+        "Hidden Power"
       ],
       "nature": "Quiet",
-      "item": "Deep Sea Tooth"
-    },
-    "Clamperl-2": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Scald",
-        "Muddy Water",
-        "Ice Beam",
-        "Shell Smash"
-      ],
-      "nature": "Timid",
       "item": "Deep Sea Tooth"
     }
   },
@@ -7709,17 +7629,17 @@ var SETDEX_EISENTREE = {
     "Luvdisc-1": {
       "level": 50,
       "evs": {
-        "hp": 252,
+        "at": 252,
         "sp": 252
       },
       "moves": [
-        "Scald",
-        "Icy Wind",
+        "Flip Turn",
+        "Scale Shot",
         "Tearful Look",
-        "Soak"
+        "Rain Dance"
       ],
-      "nature": "Timid",
-      "item": "Wacan Berry"
+      "nature": "Jolly",
+      "item": "Covert Cloak"
     }
   },
   "Salamence": {
@@ -7834,16 +7754,17 @@ var SETDEX_EISENTREE = {
     "Metagross-2": {
       "level": 50,
       "evs": {
-        "at": 252,
-        "sp": 252
+        "at": 168,
+        "df": 168,
+        "sp": 168
       },
       "moves": [
         "Meteor Mash",
-        "Hammer Arm",
+        "Body Press",
         "Ice Punch",
         "Light Screen"
       ],
-      "nature": "Jolly",
+      "nature": "Adamant",
       "item": "Metagrossite"
     },
     "Metagross-3": {
@@ -7853,45 +7774,45 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "Meteor Mash",
-        "Zen Headbutt",
+        "Heavy Slam",
+        "Psychic Fangs",
         "Earthquake",
-        "Explosion"
-      ],
-      "nature": "Adamant",
-      "item": "Assault Vest"
-    },
-    "Metagross-3b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Meteor Mash",
-        "Zen Headbutt",
-        "Earthquake",
-        "Bullet Punch"
-      ],
-      "nature": "Adamant",
-      "item": "Assault Vest"
-    },
-    "Metagross-3c": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Meteor Mash",
-        "Zen Headbutt",
-        "Earthquake",
-        "Bullet Punch"
+        "Stealth Rock"
       ],
       "nature": "Adamant",
       "item": "Groundium Z"
     },
     "Metagross-4": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Expanding Force",
+        "Steel Beam",
+        "Meteor Beam",
+        "Grass Knot"
+      ],
+      "nature": "Modest",
+      "item": "Power Herb"
+    },
+    "Metagross-5": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Stored Power",
+        "Body Press",
+        "Iron Defense",
+        "Cosmic Power"
+      ],
+      "nature": "Bold",
+      "item": "Leftovers"
+    },
+    "Metagross-6": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -7930,10 +7851,10 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "Rock Slide",
-        "Hammer Arm",
-        "Stomping Tantrum",
-        "Curse"
+        "Stone Edge",
+        "Body Press",
+        "Curse",
+        "Stealth Rock"
       ],
       "nature": "Brave",
       "item": "Figy Berry"
@@ -7943,32 +7864,32 @@ var SETDEX_EISENTREE = {
     "Regice-1": {
       "level": 50,
       "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Ice Beam",
-        "Focus Blast",
-        "Thunderbolt",
-        "Icy Wind"
-      ],
-      "nature": "Modest",
-      "item": "Fightinium Z"
-    },
-    "Regice-2": {
-      "level": 50,
-      "evs": {
         "hp": 252,
         "sa": 252
       },
       "moves": [
         "Blizzard",
         "Focus Blast",
-        "Thunder",
+        "Zap Cannon",
         "Ancient Power"
       ],
       "nature": "Quiet",
       "item": "Zoom Lens"
+    },
+    "Regice-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "df": 252
+      },
+      "moves": [
+        "Blizzard",
+        "Charge Beam",
+        "Body Press",
+        "Snowscape"
+      ],
+      "nature": "Bold",
+      "item": "Leftovers"
     }
   },
   "Registeel": {
@@ -7979,7 +7900,7 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Seismic Toss",
+        "Body Press",
         "Iron Defense",
         "Amnesia",
         "Rest"
@@ -7991,16 +7912,16 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "at": 252
+        "sa": 252
       },
       "moves": [
-        "Heavy Slam",
-        "Earthquake",
-        "Explosion",
-        "Curse"
+        "Flash Cannon",
+        "Meteor Beam",
+        "Focus Blast",
+        "Thunder"
       ],
-      "nature": "Brave",
-      "item": "Wiki Berry"
+      "nature": "Modest",
+      "item": "Power Herb"
     }
   },
   "Latias": {
@@ -8035,22 +7956,6 @@ var SETDEX_EISENTREE = {
       "nature": "Timid",
       "item": "Latiasite"
     },
-    "Latias-2b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "sa": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Psyshock",
-        "Dragon Pulse",
-        "Substitute",
-        "Recover"
-      ],
-      "nature": "Timid",
-      "item": "Latiasite"
-    },
     "Latias-3": {
       "level": 50,
       "evs": {
@@ -8059,7 +7964,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Stored Power",
-        "Aura Sphere",
+        "Draining Kiss",
         "Calm Mind",
         "Recover"
       ],
@@ -8090,7 +7995,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Psychic",
+        "Luster Purge",
         "Ice Beam",
         "Tailwind",
         "Roost"
@@ -8122,11 +8027,80 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Draco Meteor",
         "Psychic",
-        "Surf",
-        "Mystical Fire"
+        "Mystical Fire",
+        "Flip Turn"
       ],
       "nature": "Timid",
       "item": "Dragonium Z"
+    }
+  },
+  "Kyogre": {
+    "Kyogre-1": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Water Spout",
+        "Origin Pulse",
+        "Ice Beam",
+        "Thunder"
+      ],
+      "nature": "Modest",
+      "item": "Choice Scarf"
+    }
+  },
+  "Kyogre-Primal": {
+    "Kyogre-Primal-1": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Origin Pulse",
+        "Ice Beam",
+        "Thunder",
+        "Calm Mind"
+      ],
+      "nature": "Timid",
+      //"item": "Blue Orb"
+    }
+  },
+  "Groudon": {
+    "Groudon-1": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Precipice Blades",
+        "Fire Punch",
+        "Rock Slide",
+        "Swords Dance"
+      ],
+      "nature": "Jolly",
+      "item": "Clear Amulet"
+    }
+  },
+  "Groudon-Primal": {
+    "Groudon-Primal-1": {
+      "level": 50,
+      "evs": {
+        "hp": 168,
+        "at": 168,
+        "sa": 168
+      },
+      "moves": [
+        "Precipice Blades",
+        "Overheat",
+        "Solar Beam",
+        "Stealth Rock"
+      ],
+      "nature": "Brave",
+      //"item": "Red Orb"
     }
   },
   "Jirachi": {
@@ -8180,6 +8154,21 @@ var SETDEX_EISENTREE = {
     "Deoxys-1": {
       "level": 50,
       "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Psycho Boost",
+        "Focus Blast",
+        "Icy Wind",
+        "Stealth Rock"
+      ],
+      "nature": "Modest",
+      "item": "Focus Sash"
+    },
+    "Deoxys-2": {
+      "level": 50,
+      "evs": {
         "at": 168,
         "sa": 168,
         "sp": 168
@@ -8190,8 +8179,8 @@ var SETDEX_EISENTREE = {
         "Knock Off",
         "Extreme Speed"
       ],
-      "nature": "Rash",
-      "item": "Focus Sash"
+      "nature": "Naive",
+      "item": "White Herb"
     }
   },
   "Deoxys-A": {
@@ -8219,11 +8208,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Psycho Boost",
         "Superpower",
-        "Shadow Ball",
-        "Ice Beam"
+        "Ice Beam",
+        "Shadow Ball"
       ],
       "nature": "Hasty",
-      "item": "Focus Sash"
+      "item": "Covert Cloak"
     }
   },
   "Deoxys-D": {
@@ -8234,13 +8223,28 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Seismic Toss",
+        "Night Shade",
         "Toxic",
         "Recover",
         "Trick Room"
       ],
       "nature": "Relaxed",
       "item": "Leftovers"
+    },
+    "Deoxys-D-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Expanding Force",
+        "Psychic Terrain",
+        "Stealth Rock",
+        "Teleport"
+      ],
+      "nature": "Calm",
+      "item": "Terrain Extender"
     }
   },
   "Deoxys-S": {
@@ -8251,13 +8255,28 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Psycho Boost",
-        "Knock Off",
-        "Ice Beam",
-        "Reflect"
+        "Future Sight",
+        "Meteor Beam",
+        "Focus Blast",
+        "Knock Off"
       ],
       "nature": "Naive",
-      "item": "White Herb"
+      "item": "Power Herb"
+    },
+    "Deoxys-S-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Psychic Noise",
+        "Seismic Toss",
+        "Reflect",
+        "Light Screen"
+      ],
+      "nature": "Timid",
+      "item": "Light Clay"
     }
   },
   "Grotle": {
@@ -8268,7 +8287,7 @@ var SETDEX_EISENTREE = {
         "sd": 252
       },
       "moves": [
-        "Seed Bomb",
+        "Trailblaze",
         "Leech Seed",
         "Curse",
         "Synthesis"
@@ -8281,19 +8300,19 @@ var SETDEX_EISENTREE = {
     "Torterra-1": {
       "level": 50,
       "evs": {
-        "hp": 252,
-        "at": 252
+        "at": 252,
+        "sp": 252
       },
       "moves": [
         "Wood Hammer",
         "Headlong Rush",
         "Heavy Slam",
-        "Wide Guard"
+        "Shell Smash"
       ],
-      "nature": "Brave",
-      "item": "Figy Berry"
+      "nature": "Jolly",
+      "item": "Grassium Z"
     },
-    "Torterra-2": {
+    "Torterra-1b": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -8303,14 +8322,74 @@ var SETDEX_EISENTREE = {
         "Wood Hammer",
         "Headlong Rush",
         "Rock Slide",
-        "Rock Polish"
+        "Shell Smash"
       ],
       "nature": "Jolly",
-      "item": "Grassium Z"
+      "item": "White Herb"
+    },
+    "Torterra-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Bullet Seed",
+        "High Horsepower",
+        "Rock Blast",
+        "Wide Guard"
+      ],
+      "nature": "Adamant",
+      "item": "Loaded Dice"
+    },
+    "Torterra-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Body Press",
+        "Iron Defense",
+        "Amnesia",
+        "Synthesis"
+      ],
+      "nature": "Impish",
+      "item": "Yache Berry"
     }
   },
   "Infernape": {
     "Infernape-1": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Fake Out",
+        "Flare Blitz",
+        "Drain Punch",
+        "Thunder Punch"
+      ],
+      "nature": "Jolly",
+      "item": "Life Orb"
+    },
+    "Infernape-1b": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Fake Out",
+        "Flare Blitz",
+        "Drain Punch",
+        "Encore"
+      ],
+      "nature": "Jolly",
+      "item": "Covert Cloak"
+    },
+    "Infernape-2": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -8320,59 +8399,14 @@ var SETDEX_EISENTREE = {
         "Fake Out",
         "Heat Wave",
         "Close Combat",
-        "Encore"
+        "Vacuum Wave"
       ],
       "nature": "Naive",
       "item": "Focus Sash"
-    },
-    "Infernape-2": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Fake Out",
-        "Flare Blitz",
-        "Close Combat",
-        "Thunder Punch"
-      ],
-      "nature": "Jolly",
-      "item": "Life Orb"
     }
   },
   "Empoleon": {
     "Empoleon-1": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Hydro Pump",
-        "Flash Cannon",
-        "Ice Beam",
-        "Aqua Jet"
-      ],
-      "nature": "Modest",
-      "item": "Waterium Z"
-    },
-    "Empoleon-2": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Hydro Pump",
-        "Flash Cannon",
-        "Icy Wind",
-        "Grass Knot"
-      ],
-      "nature": "Timid",
-      "item": "Assault Vest"
-    },
-    "Empoleon-2b": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -8386,6 +8420,36 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Timid",
       "item": "Assault Vest"
+    },
+    "Empoleon-1b": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Scald",
+        "Icy Wind",
+        "Grass Knot",
+        "Stealth Rock"
+      ],
+      "nature": "Timid",
+      "item": "Adrenaline Orb"
+    },
+    "Empoleon-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Hydro Pump",
+        "Steel Beam",
+        "Ice Beam",
+        "Vacuum Wave"
+      ],
+      "nature": "Modest",
+      "item": "Sitrus Berry"
     }
   },
   "Staraptor": {
@@ -8399,7 +8463,7 @@ var SETDEX_EISENTREE = {
         "Final Gambit",
         "Brave Bird",
         "Close Combat",
-        "Quick Attack"
+        "U-turn"
       ],
       "nature": "Jolly",
       "item": "Choice Scarf"
@@ -8460,13 +8524,28 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Leech Life",
+        "Lunge",
         "Knock Off",
         "Sing",
         "Sticky Web"
       ],
       "nature": "Jolly",
       "item": "Focus Sash"
+    },
+    "Kricketune-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Fury Cutter",
+        "",
+        "",
+        ""
+      ],
+      "nature": "Adamant",
+      "item": "Metronome"
     }
   },
   "Luxray": {
@@ -8478,9 +8557,9 @@ var SETDEX_EISENTREE = {
         "sp": 168
       },
       "moves": [
-        "Wild Charge",
+        "Supercell Slam",
         "Ice Fang",
-        "Fire Fang",
+        "Throat Chop",
         "Howl"
       ],
       "nature": "Adamant",
@@ -8496,7 +8575,7 @@ var SETDEX_EISENTREE = {
         "Volt Switch",
         "Snarl",
         "Light Screen",
-        "Baby-Doll Eyes"
+        "Helping Hand"
       ],
       "nature": "Timid",
       "item": "Shuca Berry"
@@ -8518,21 +8597,6 @@ var SETDEX_EISENTREE = {
       "nature": "Timid",
       "item": "Wide Lens"
     },
-    "Roserade-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Energy Ball",
-        "Sludge Bomb",
-        "Cotton Spore",
-        "Sleep Powder"
-      ],
-      "nature": "Timid",
-      "item": "Focus Sash"
-    },
     "Roserade-2": {
       "level": 50,
       "evs": {
@@ -8543,7 +8607,7 @@ var SETDEX_EISENTREE = {
         "Giga Drain",
         "Sludge Bomb",
         "Extrasensory",
-        "Hidden Power Fire"
+        "Hidden Power"
       ],
       "nature": "Timid",
       "item": "Life Orb"
@@ -8587,21 +8651,6 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "Head Smash",
-        "Fire Punch",
-        "Crunch",
-        "Zen Headbutt"
-      ],
-      "nature": "Brave",
-      "item": "Life Orb"
-    },
-    "Rampardos-2b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
         "Rock Slide",
         "Fire Punch",
         "Crunch",
@@ -8627,35 +8676,35 @@ var SETDEX_EISENTREE = {
       "nature": "Sassy",
       "item": "Figy Berry"
     },
-    "Bastiodon-1b": {
+    "Bastiodon-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Meteor Beam",
+        "Blizzard",
+        "Thunder",
+        "Fire Blast"
+      ],
+      "nature": "Modest",
+      "item": "Power Herb"
+    },
+    "Bastiodon-3": {
       "level": 50,
       "evs": {
         "hp": 252,
         "sd": 252
       },
       "moves": [
-        "Fissure",
-        "Metal Burst",
-        "Taunt",
-        "Toxic"
+        "Body Press",
+        "Foul Play",
+        "Iron Defense",
+        "Rest"
       ],
       "nature": "Sassy",
-      "item": "Figy Berry"
-    },
-    "Bastiodon-2": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Rock Slide",
-        "Iron Head",
-        "Stomping Tantrum",
-        "Curse"
-      ],
-      "nature": "Brave",
-      "item": "Rocky Helmet"
+      "item": "Leftovers"
     }
   },
   "Wormadam": {
@@ -8676,7 +8725,7 @@ var SETDEX_EISENTREE = {
     }
   },
   "Wormadam-Trash": {
-    "Wormadam-T-1": {
+    "Wormadam-Trash-1": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -8686,14 +8735,14 @@ var SETDEX_EISENTREE = {
         "Gyro Ball",
         "Endeavor",
         "Metal Burst",
-        "Ally Switch"
+        "Stealth Rock"
       ],
       "nature": "Brave",
       "item": "Focus Sash"
     }
   },
   "Wormadam-Sand": {
-    "Wormadam-S-1": {
+    "Wormadam-Sand-1": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -8717,7 +8766,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Lunge",
+        "U-turn",
         "Acrobatics",
         "Natural Gift",
         "Tailwind"
@@ -8731,31 +8780,31 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "df": 252
+        "at": 252
       },
       "moves": [
-        "Fell Stinger",
         "Acrobatics",
+        "Attack Order",
         "Defend Order",
-        "Roost"
+        "Heal Order"
       ],
       "nature": "Relaxed",
-      "item": "Aguav Berry"
+      "item": "Sitrus Berry"
     },
     "Vespiquen-2": {
       "level": 50,
       "evs": {
-        "at": 252,
+        "sa": 252,
         "sp": 252
       },
       "moves": [
-        "Attack Order",
-        "Defend Order",
-        "Heal Order",
+        "Pollen Puff",
+        "Hurricane",
+        "Power Gem",
         "Tailwind"
       ],
-      "nature": "Jolly",
-      "item": "Insect Plate"
+      "nature": "Timid",
+      "item": "Wise Glasses"
     }
   },
   "Pachirisu": {
@@ -8772,7 +8821,7 @@ var SETDEX_EISENTREE = {
         "Encore"
       ],
       "nature": "Impish",
-      "item": "Sitrus Berry"
+      "item": "Rocky Helmet"
     },
     "Pachirisu-2": {
       "level": 50,
@@ -8784,10 +8833,10 @@ var SETDEX_EISENTREE = {
         "Follow Me",
         "Super Fang",
         "Electroweb",
-        "Charm"
+        "Eerie Impulse"
       ],
       "nature": "Timid",
-      "item": "Aguav Berry"
+      "item": "Sitrus Berry"
     }
   },
   "Floatzel": {
@@ -8813,7 +8862,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Liquidation",
+        "Flip Turn",
         "Ice Spinner",
         "Crunch",
         "Rain Dance"
@@ -8885,7 +8934,7 @@ var SETDEX_EISENTREE = {
         "Recover"
       ],
       "nature": "Quiet",
-      "item": "Figy Berry"
+      "item": "Leftovers"
     },
     "Gastrodon-2": {
       "level": 50,
@@ -8894,8 +8943,8 @@ var SETDEX_EISENTREE = {
         "sa": 252
       },
       "moves": [
+        "Hydro Pump",
         "Earth Power",
-        "Muddy Water",
         "Ice Beam",
         "Sludge Bomb"
       ],
@@ -8910,29 +8959,28 @@ var SETDEX_EISENTREE = {
         "sd": 168
       },
       "moves": [
-        "Earth Power",
+        "Muddy Water",
         "Ice Beam",
         "Yawn",
-        "Recover"
+        "Stealth Rock"
       ],
       "nature": "Sassy",
       "item": "Rindo Berry"
     },
-    "Gastrodon-3b": {
+    "Gastrodon-4": {
       "level": 50,
       "evs": {
-        "hp": 168,
-        "df": 168,
-        "sd": 168
+        "hp": 252,
+        "sa": 252
       },
       "moves": [
+        "Scald",
         "Earth Power",
-        "Ice Beam",
-        "Yawn",
-        "Recover"
+        "Icy Wind",
+        "Clear Smog"
       ],
-      "nature": "Sassy",
-      "item": "Leftovers"
+      "nature": "Quiet",
+      "item": "Assault Vest"
     }
   },
   "Ambipom": {
@@ -8945,7 +8993,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Fake Out",
         "Tail Slap",
-        "Low Sweep",
+        "Triple Axel",
         "Fling"
       ],
       "nature": "Jolly",
@@ -9008,9 +9056,25 @@ var SETDEX_EISENTREE = {
         "sd": 168
       },
       "moves": [
+        "Shadow Ball",
+        "Air Slash",
+        "Imprison",
+        "Trick Room"
+      ],
+      "nature": "Quiet",
+      "item": "Flame Orb"
+    },
+    "Drifblim-4": {
+      "level": 50,
+      "evs": {
+        "df": 168,
+        "sa": 168,
+        "sd": 168
+      },
+      "moves": [
         "Tailwind",
         "Shadow Ball",
-        "Will-O-Wisp",
+        "Hypnosis",
         "Strength Sap"
       ],
       "nature": "Modest",
@@ -9120,7 +9184,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Drill Peck",
-        "Night Slash",
+        "Sucker Punch",
         "Taunt",
         "Tailwind"
       ],
@@ -9136,10 +9200,10 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Brave Bird",
         "Night Slash",
-        "Steel Wing",
-        "Sucker Punch"
+        "Sucker Punch",
+        "Comeuppance"
       ],
-      "nature": "Adamant",
+      "nature": "Brave",
       "item": "Scope Lens"
     }
   },
@@ -9162,17 +9226,17 @@ var SETDEX_EISENTREE = {
     "Purugly-2": {
       "level": 50,
       "evs": {
-        "at": 252,
+        "hp": 252,
         "sp": 252
       },
       "moves": [
         "Fake Out",
-        "Return",
+        "Secret Power",
         "Knock Off",
         "Taunt"
       ],
       "nature": "Jolly",
-      "item": "Figy Berry"
+      "item": "Covert Cloak"
     }
   },
   "Skuntank": {
@@ -9184,27 +9248,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Foul Play",
-        "Fire Blast",
+        "Fire Spin",
         "Poison Gas",
         "Haze"
       ],
       "nature": "Timid",
       "item": "Shuca Berry"
-    },
-    "Skuntank-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Foul Play",
-        "Fire Blast",
-        "Poison Gas",
-        "Haze"
-      ],
-      "nature": "Timid",
-      "item": "Sitrus Berry"
     },
     "Skuntank-2": {
       "level": 50,
@@ -9214,7 +9263,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Gunk Shot",
-        "Throat Chop",
+        "Temper Flare",
         "Sucker Punch",
         "Explosion"
       ],
@@ -9227,15 +9276,15 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "at": 252
+        "df": 252
       },
       "moves": [
         "Gyro Ball",
-        "Rock Slide",
-        "Ally Switch",
+        "Body Press",
+        "Iron Defense",
         "Trick Room"
       ],
-      "nature": "Brave",
+      "nature": "Relaxed",
       "item": "Sitrus Berry"
     },
     "Bronzong-2": {
@@ -9267,15 +9316,15 @@ var SETDEX_EISENTREE = {
         "Trick Room"
       ],
       "nature": "Relaxed",
-      "item": "Occa Berry"
+      "item": "Macho Brace"
     }
   },
   "Chatot": {
     "Chatot-1": {
       "level": 50,
       "evs": {
-        "sa": 252,
-        "sp": 252
+        "hp": 252,
+        "sa": 252
       },
       "moves": [
         "Boomburst",
@@ -9283,8 +9332,23 @@ var SETDEX_EISENTREE = {
         "Heat Wave",
         "Parting Shot"
       ],
-      "nature": "Timid",
+      "nature": "Modest",
       "item": "Choice Specs"
+    },
+    "Chatot-2": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Boomburst",
+        "Hyper Voice",
+        "Chatter",
+        "Sing"
+      ],
+      "nature": "Timid",
+      "item": "Throat Spray"
     }
   },
   "Spiritomb": {
@@ -9297,7 +9361,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Foul Play",
         "Taunt",
-        "Disable",
+        "Imprison",
         "Trick Room"
       ],
       "nature": "Relaxed",
@@ -9317,6 +9381,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Quiet",
       "item": "Custap Berry"
+    },
+    "Spiritomb-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Poltergeist",
+        "Payback",
+        "Shadow Sneak",
+        "Disable"
+      ],
+      "nature": "Brave",
+      "item": "Spooky Plate"
     }
   },
   "Garchomp": {
@@ -9373,7 +9452,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Earthquake",
-        "Dragon Claw",
+        "Scale Shot",
         "Rock Slide",
         "Poison Jab"
       ],
@@ -9404,7 +9483,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Breaking Swipe",
         "Scorching Sands",
-        "Fire Fang",
+        "Stealth Rock",
         "Endure"
       ],
       "nature": "Relaxed",
@@ -9449,16 +9528,16 @@ var SETDEX_EISENTREE = {
     "Lucario-1": {
       "level": 50,
       "evs": {
-        "at": 252,
+        "sa": 252,
         "sp": 252
       },
       "moves": [
-        "Close Combat",
-        "Meteor Mash",
+        "Aura Sphere",
+        "Flash Cannon",
         "Ice Punch",
         "Extreme Speed"
       ],
-      "nature": "Jolly",
+      "nature": "Hasty",
       "item": "Lucarionite"
     },
     "Lucario-2": {
@@ -9479,16 +9558,16 @@ var SETDEX_EISENTREE = {
     "Lucario-3": {
       "level": 50,
       "evs": {
-        "sa": 252,
-        "sp": 252
+        "at": 252,
+        "sa": 252
       },
       "moves": [
-        "Aura Sphere",
-        "Flash Cannon",
         "Vacuum Wave",
-        "Nasty Plot"
+        "Bullet Punch",
+        "Extreme Speed",
+        "Feint"
       ],
-      "nature": "Timid",
+      "nature": "Brave",
       "item": "Lucarionite"
     }
   },
@@ -9501,12 +9580,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "High Horsepower",
-        "Heavy Slam",
+        "Rock Slide",
         "Ice Fang",
-        "Slack Off"
+        "Curse"
       ],
       "nature": "Brave",
-      "item": "Figy Berry"
+      "item": "Rocky Helmet"
     },
     "Hippowdon-2": {
       "level": 50,
@@ -9516,12 +9595,27 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Fissure",
-        "Rock Slide",
-        "Yawn",
+        "Body Press",
+        "Stealth Rock",
         "Whirlwind"
       ],
-      "nature": "Careful",
-      "item": "Rocky Helmet"
+      "nature": "Impish",
+      "item": "Figy Berry"
+    },
+    "Hippowdon-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Sand Tomb",
+        "Heavy Slam",
+        "Yawn",
+        "Slack Off"
+      ],
+      "nature": "Impish",
+      "item": "Grip Claw"
     }
   },
   "Drapion": {
@@ -9573,22 +9667,6 @@ var SETDEX_EISENTREE = {
       "nature": "Adamant",
       "item": "Assault Vest"
     },
-    "Toxicroak-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "at": 168,
-        "sd": 168
-      },
-      "moves": [
-        "Fake Out",
-        "Gunk Shot",
-        "Drain Punch",
-        "Sucker Punch"
-      ],
-      "nature": "Adamant",
-      "item": "Focus Sash"
-    },
     "Toxicroak-2": {
       "level": 50,
       "evs": {
@@ -9596,9 +9674,9 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Fake Out",
         "Focus Blast",
         "Sludge Bomb",
+        "Vacuum Wave",
         "Taunt"
       ],
       "nature": "Timid",
@@ -9613,12 +9691,27 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "Power Whip",
+        "Bullet Seed",
         "Knock Off",
         "Leech Life",
         "Rage Powder"
       ],
       "nature": "Brave",
+      "item": "Loaded Dice"
+    },
+    "Carnivine-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Leaf Tornado",
+        "Acid Spray",
+        "Nature Power",
+        "Sleep Powder"
+      ],
+      "nature": "Calm",
       "item": "Aguav Berry"
     }
   },
@@ -9630,13 +9723,28 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Scald",
+        "Hydro Pump",
         "Ice Beam",
-        "Rain Dance",
+        "Dazzling Gleam",
         "Tailwind"
       ],
       "nature": "Timid",
       "item": "Waterium Z"
+    },
+    "Lumineon-2": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Flip Turn",
+        "Bounce",
+        "Encore",
+        "Rain Dance"
+      ],
+      "nature": "Adamant",
+      "item": "Covert Cloak"
     }
   },
   "Abomasnow": {
@@ -9674,51 +9782,37 @@ var SETDEX_EISENTREE = {
     "Abomasnow-2": {
       "level": 50,
       "evs": {
-        "sa": 252,
-        "sp": 252
+        "hp": 168,
+        "sa": 168,
+        "sd": 168
       },
       "moves": [
         "Blizzard",
         "Energy Ball",
         "Focus Blast",
-        "Sheer Cold"
+        "Aurora Veil"
       ],
-      "nature": "Timid",
-      "item": "Choice Scarf"
+      "nature": "Modest",
+      "item": "Light Clay"
     },
     "Abomasnow-3": {
       "level": 50,
       "evs": {
-        "sa": 252,
-        "sp": 252
+        "hp": 252,
+        "at": 252
       },
       "moves": [
-        "Blizzard",
-        "Giga Drain",
-        "Icy Wind",
-        "Aurora Veil"
+        "Icicle Spear",
+        "Bullet Seed",
+        "Aurora Veil",
+        "Snowscape"
       ],
-      "nature": "Modest",
-      "item": "Focus Sash"
+      "nature": "Adamant",
+      "item": "Loaded Dice"
     }
   },
   "Weavile": {
     "Weavile-1": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Fake Out",
-        "Icicle Crash",
-        "Knock Off",
-        "Low Kick"
-      ],
-      "nature": "Jolly",
-      "item": "Focus Sash"
-    },
-    "Weavile-1b": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -9736,12 +9830,27 @@ var SETDEX_EISENTREE = {
     "Weavile-2": {
       "level": 50,
       "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Icicle Crash",
+        "Fling",
+        "Thief",
+        "Low Kick"
+      ],
+      "nature": "Jolly",
+      "item": "Big Nugget"
+    },
+    "Weavile-3": {
+      "level": 50,
+      "evs": {
         "hp": 252,
         "sp": 252
       },
       "moves": [
         "Fake Out",
-        "Icicle Crash",
+        "Triple Axel",
         "Throat Chop",
         "Fling"
       ],
@@ -9759,23 +9868,8 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Thunderbolt",
         "Flash Cannon",
-        "Hidden Power Ground",
-        "Ally Switch"
-      ],
-      "nature": "Quiet",
-      "item": "Air Balloon"
-    },
-    "Magnezone-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Thunderbolt",
-        "Flash Cannon",
-        "Hidden Power Ground",
-        "Mirror Coat"
+        "Body Press",
+        "Iron Defense"
       ],
       "nature": "Quiet",
       "item": "Air Balloon"
@@ -9788,9 +9882,9 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Volt Switch",
-        "Flash Cannon",
+        "Steel Beam",
         "Electroweb",
-        "Hidden Power Ground"
+        "Hidden Power"
       ],
       "nature": "Modest",
       "item": "Choice Scarf"
@@ -9802,10 +9896,10 @@ var SETDEX_EISENTREE = {
         "sa": 252
       },
       "moves": [
-        "Thunderbolt",
+        "Rising Voltage",
         "Flash Cannon",
-        "Volt Switch",
-        "Magnet Rise"
+        "Metal Sound",
+        "Electric Terrain"
       ],
       "nature": "Modest",
       "item": "Leftovers"
@@ -9869,7 +9963,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Rock Wrecker",
         "High Horsepower",
-        "Heat Crash",
+        "Supercell Slam",
         "Hammer Arm"
       ],
       "nature": "Brave",
@@ -9914,7 +10008,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Rock Slide",
         "High Horsepower",
-        "Heat Crash",
+        "Temper Flare",
         "Horn Drill"
       ],
       "nature": "Brave",
@@ -9961,7 +10055,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Wild Charge",
+        "Supercell Slam",
         "Ice Punch",
         "Stomping Tantrum",
         "Cross Chop"
@@ -9976,7 +10070,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Wild Charge",
+        "Supercell Slam",
         "Ice Punch",
         "Stomping Tantrum",
         "Cross Chop"
@@ -9991,9 +10085,9 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "Wild Charge",
+        "Supercell Slam",
         "Ice Punch",
-        "Stomping Tantrum",
+        "Knock Off",
         "Follow Me"
       ],
       "nature": "Adamant",
@@ -10055,8 +10149,8 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Dazzling Gleam",
         "Air Slash",
+        "Dazzling Gleam",
         "Heat Wave",
         "Grass Knot"
       ],
@@ -10077,21 +10171,6 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Bold",
       "item": "Babiri Berry"
-    },
-    "Togekiss-2b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "df": 252
-      },
-      "moves": [
-        "Air Slash",
-        "Yawn",
-        "Follow Me",
-        "Tailwind"
-      ],
-      "nature": "Bold",
-      "item": "Wacan Berry"
     },
     "Togekiss-3": {
       "level": 50,
@@ -10139,7 +10218,7 @@ var SETDEX_EISENTREE = {
         "Substitute"
       ],
       "nature": "Modest",
-      "item": "Silver Powder"
+      "item": "Throat Spray"
     },
     "Yanmega-1b": {
       "level": 50,
@@ -10154,7 +10233,7 @@ var SETDEX_EISENTREE = {
         "Substitute"
       ],
       "nature": "Modest",
-      "item": "Focus Sash"
+      "item": "Covert Cloak"
     },
     "Yanmega-2": {
       "level": 50,
@@ -10202,6 +10281,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Careful",
       "item": "Scope Lens"
+    },
+    "Leafeon-2b": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Bullet Seed",
+        "Knock Off",
+        "Swords Dance",
+        "Yawn"
+      ],
+      "nature": "Adamant",
+      "item": "Loaded Dice"
     }
   },
   "Glaceon": {
@@ -10213,9 +10307,9 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Blizzard",
-        "Weather Ball",
         "Freeze-Dry",
-        "Hail"
+        "Aurora Veil",
+        "Snowscape"
       ],
       "nature": "Timid",
       "item": "Icium Z"
@@ -10244,13 +10338,13 @@ var SETDEX_EISENTREE = {
         "sp": 168
       },
       "moves": [
-        "Ice Beam",
+        "Blizzard",
         "Freeze-Dry",
         "Icy Wind",
         "Mud Shot"
       ],
       "nature": "Modest",
-      "item": "Focus Sash"
+      "item": "Choice Specs"
     }
   },
   "Gliscor": {
@@ -10261,9 +10355,9 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Earthquake",
+        "High Horsepower",
         "Acrobatics",
-        "Quick Attack",
+        "Spikes",
         "Tailwind"
       ],
       "nature": "Jolly",
@@ -10283,6 +10377,37 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Careful",
       "item": "Toxic Orb"
+    },
+    "Gliscor-3": {
+      "level": 50,
+      "evs": {
+        "hp": 168,
+        "df": 168,
+        "sp": 168
+      },
+      "moves": [
+        "Breaking Swipe",
+        "Stealth Rock",
+        "Spikes",
+        "Toxic Spikes"
+      ],
+      "nature": "Impish",
+      "item": "Red Card"
+    },
+    "Gliscor-4": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Bulldoze",
+        "Toxic",
+        "Substitute",
+        "Protect"
+      ],
+      "nature": "Careful",
+      "item": "Toxic Orb"
     }
   },
   "Mamoswine": {
@@ -10296,10 +10421,10 @@ var SETDEX_EISENTREE = {
         "High Horsepower",
         "Icicle Crash",
         "Freeze-Dry",
-        "Superpower"
+        "Snowscape"
       ],
       "nature": "Naive",
-      "item": "Life Orb"
+      "item": "Soft Sand"
     },
     "Mamoswine-2": {
       "level": 50,
@@ -10308,13 +10433,28 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "High Horsepower",
+        "Earthquake",
         "Icicle Crash",
         "Knock Off",
         "Ice Shard"
       ],
       "nature": "Adamant",
       "item": "Assault Vest"
+    },
+    "Mamoswine-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sd": 252
+      },
+      "moves": [
+        "High Horsepower",
+        "Icicle Spear",
+        "Rock Blast",
+        "Stealth Rock"
+      ],
+      "nature": "Adamant",
+      "item": "Loaded Dice"
     }
   },
   "Porygon-Z": {
@@ -10360,44 +10500,14 @@ var SETDEX_EISENTREE = {
         "Tri Attack",
         "Ice Beam",
         "Thunderbolt",
-        "Shadow Ball"
+        "Psychic"
       ],
       "nature": "Timid",
-      "item": "Choice Scarf"
-    },
-    "Porygon-Z-2b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Tri Attack",
-        "Ice Beam",
-        "Thunderbolt",
-        "Shadow Ball"
-      ],
-      "nature": "Timid",
-      "item": "Life Orb"
+      "item": "Chople Berry"
     }
   },
   "Gallade": {
     "Gallade-1": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Close Combat",
-        "Psycho Cut",
-        "Knock Off",
-        "Wide Guard"
-      ],
-      "nature": "Jolly",
-      "item": "Galladite"
-    },
-    "Gallade-1b": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -10425,9 +10535,24 @@ var SETDEX_EISENTREE = {
         "Swords Dance"
       ],
       "nature": "Adamant",
-      "item": "Life Orb"
+      "item": "Galladite"
     },
     "Gallade-3": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Psycho Cut",
+        "Aqua Cutter",
+        "Leaf Blade",
+        "Night Slash"
+      ],
+      "nature": "Jolly",
+      "item": "Scope Lens"
+    },
+    "Gallade-4": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -10436,7 +10561,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Zen Headbutt",
         "Heal Pulse",
-        "Memento",
+        "Wide Guard",
         "Trick Room"
       ],
       "nature": "Relaxed",
@@ -10451,27 +10576,27 @@ var SETDEX_EISENTREE = {
         "sa": 252
       },
       "moves": [
-        "Power Gem",
+        "Meteor Beam",
         "Flash Cannon",
         "Earth Power",
         "Sandstorm"
       ],
       "nature": "Quiet",
-      "item": "Hard Stone"
+      "item": "Power Herb"
     },
     "Probopass-2": {
       "level": 50,
       "evs": {
         "hp": 252,
-        "sa": 252
+        "df": 252
       },
       "moves": [
         "Ancient Power",
-        "Dazzling Gleam",
-        "Taunt",
-        "Ally Switch"
+        "Body Press",
+        "Iron Defense",
+        "Stealth Rock"
       ],
-      "nature": "Modest",
+      "nature": "Sassy",
       "item": "Rocky Helmet"
     }
   },
@@ -10498,7 +10623,7 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "Shadow Punch",
+        "Poltergeist",
         "Brick Break",
         "Destiny Bond",
         "Trick Room"
@@ -10523,22 +10648,22 @@ var SETDEX_EISENTREE = {
       "nature": "Timid",
       "item": "Ghostium Z"
     },
-    "Froslass-1b": {
+    "Froslass-2": {
       "level": 50,
       "evs": {
-        "sa": 252,
+        "at": 252,
         "sp": 252
       },
       "moves": [
-        "Shadow Ball",
-        "Frost Breath",
-        "Icy Wind",
-        "Destiny Bond"
+        "Poltergeist",
+        "Triple Axel",
+        "Aurora Veil",
+        "Snowscape"
       ],
-      "nature": "Timid",
-      "item": "Focus Sash"
+      "nature": "Jolly",
+      "item": "Light Clay"
     },
-    "Froslass-2": {
+    "Froslass-3": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -10558,17 +10683,32 @@ var SETDEX_EISENTREE = {
     "Rotom-1": {
       "level": 50,
       "evs": {
-        "sa": 252,
+        "hp": 252,
         "sp": 252
       },
       "moves": [
-        "Shadow Ball",
-        "Thunderbolt",
+        "Hex",
+        "Discharge",
         "Nasty Plot",
         "Will-O-Wisp"
       ],
       "nature": "Timid",
       "item": "Spell Tag"
+    },
+    "Rotom-2": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Shadow Ball",
+        "Rising Voltage",
+        "Hidden Power",
+        "Electric Terrain"
+      ],
+      "nature": "Modest",
+      "item": "Terrain Extender"
     }
   },
   "Rotom-Wash": {
@@ -10586,6 +10726,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Calm",
       "item": "Mago Berry"
+    },
+    "Rotom-Wash-2": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Hydro Pump",
+        "Thunder",
+        "Signal Beam",
+        "Rain Dance"
+      ],
+      "nature": "Modest",
+      "item": "Damp Rock"
     }
   },
   "Rotom-Fan": {
@@ -10603,6 +10758,22 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Timid",
       "item": "Sitrus Berry"
+    },
+    "Rotom-Fan-2": {
+      "level": 50,
+      "evs": {
+        "hp": 168,
+        "sa": 168,
+        "sp": 168
+      },
+      "moves": [
+        "Air Slash",
+        "Rising Voltage",
+        "Night Shade",
+        "Electric Terrain"
+      ],
+      "nature": "Modest",
+      "item": "Electric Seed"
     }
   },
   "Rotom-Frost": {
@@ -10620,6 +10791,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Modest",
       "item": "Life Orb"
+    },
+    "Rotom-Frost-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Blizzard",
+        "Volt Switch",
+        "Foul Play",
+        "Trick"
+      ],
+      "nature": "Timid",
+      "item": "Choice Scarf"
     }
   },
   "Rotom-Heat": {
@@ -10633,13 +10819,28 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Overheat",
         "Thunderbolt",
-        "Hidden Power Ice",
+        "Hidden Power",
         "Nasty Plot"
       ],
       "nature": "Modest",
       "item": "Firium Z"
     },
     "Rotom-Heat-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Overheat",
+        "Night Shade",
+        "Ally Switch",
+        "Helping Hand"
+      ],
+      "nature": "Bold",
+      "item": "Leftovers"
+    },
+    "Rotom-Heat-3": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -10672,20 +10873,19 @@ var SETDEX_EISENTREE = {
       "nature": "Modest",
       "item": "White Herb"
     },
-    "Rotom-Mow-1b": {
+    "Rotom-Mow-2": {
       "level": 50,
       "evs": {
-        "hp": 168,
-        "sa": 168,
-        "sp": 168
+        "hp": 252,
+        "sa": 252
       },
       "moves": [
         "Leaf Storm",
-        "Thunderbolt",
-        "Hidden Power Fire",
+        "Thunder",
+        "Hidden Power",
         "Nasty Plot"
       ],
-      "nature": "Modest",
+      "nature": "Timid",
       "item": "Grassium Z"
     }
   },
@@ -10697,7 +10897,7 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Psychic",
+        "Mystical Power",
         "U-turn",
         "Yawn",
         "Trick Room"
@@ -10714,7 +10914,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Stored Power",
         "Draining Kiss",
-        "Giga Drain",
+        "Reflect",
         "Calm Mind"
       ],
       "nature": "Timid",
@@ -10729,13 +10929,13 @@ var SETDEX_EISENTREE = {
         "sa": 252
       },
       "moves": [
-        "Psychic",
+        "Mystical Power",
         "Dazzling Gleam",
-        "Encore",
+        "Imprison",
         "Trick Room"
       ],
       "nature": "Quiet",
-      "item": "Wiki Berry"
+      "item": "Covert Cloak"
     },
     "Mesprit-2": {
       "level": 50,
@@ -10762,27 +10962,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Psychic",
-        "Fire Blast",
         "Ice Beam",
+        "U-turn",
         "Explosion"
       ],
       "nature": "Naive",
       "item": "Normal Gem"
-    },
-    "Azelf-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Psychic",
-        "Fire Blast",
-        "Ice Beam",
-        "Thunder"
-      ],
-      "nature": "Timid",
-      "item": "Expert Belt"
     },
     "Azelf-2": {
       "level": 50,
@@ -10791,13 +10976,78 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Psyshock",
-        "Ice Beam",
+        "Mystical Power",
+        "Flamethrower",
         "Light Screen",
         "Reflect"
       ],
       "nature": "Timid",
       "item": "Light Clay"
+    }
+  },
+  "Dialga": {
+    "Dialga-1": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Dragon Pulse",
+        "Flash Cannon",
+        "Earth Power",
+        "Trick Room"
+      ],
+      "nature": "Modest",
+      "item": "Adamant Orb"
+    },
+    "Dialga-2": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Roar of Time",
+        "Steel Beam",
+        "Focus Blast",
+        "Overheat"
+      ],
+      "nature": "Timid",
+      "item": "Choice Specs"
+    }
+  },
+  "Palkia": {
+    "Palkia-1": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Spacial Rend",
+        "Hydro Pump",
+        "Flamethrower",
+        "Substitute"
+      ],
+      "nature": "Timid",
+      "item": "Lustrous Orb"
+    },
+    "Palkia-2": {
+      "level": 50,
+      "evs": {
+        "hp": 168,
+        "sa": 168,
+        "sd": 168
+      },
+      "moves": [
+        "Spacial Rend",
+        "Surf",
+        "Earth Power",
+        "Trick Room"
+      ],
+      "nature": "Quiet",
+      "item": "Waterium Z"
     }
   },
   "Heatran": {
@@ -10844,37 +11094,7 @@ var SETDEX_EISENTREE = {
         "Power Gem"
       ],
       "nature": "Modest",
-      "item": "Shuca Berry"
-    },
-    "Heatran-3b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Heat Wave",
-        "Flash Cannon",
-        "Earth Power",
-        "Power Gem"
-      ],
-      "nature": "Modest",
       "item": "Chople Berry"
-    },
-    "Heatran-3c": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Heat Wave",
-        "Flash Cannon",
-        "Earth Power",
-        "Power Gem"
-      ],
-      "nature": "Modest",
-      "item": "Passho Berry"
     },
     "Heatran-4": {
       "level": 50,
@@ -10982,9 +11202,9 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Stored Power",
-        "Moonblast",
+        "Dazzling Gleam",
         "Calm Mind",
-        "Moonlight"
+        "Lunar Blessing"
       ],
       "nature": "Bold",
       "item": "Kee Berry"
@@ -11015,7 +11235,7 @@ var SETDEX_EISENTREE = {
         "Stored Power",
         "Moonblast",
         "Calm Mind",
-        "Moonlight"
+        "Lunar Blessing"
       ],
       "nature": "Bold",
       "item": "Electric Seed"
@@ -11029,32 +11249,32 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Scald",
-        "Icy Wind",
+        "Flip Turn",
+        "U-turn",
         "Rain Dance",
         "Rest"
       ],
-      "nature": "Timid",
-      "item": "Mystic Water"
-    }
-  },
-  "Manaphy": {
-    "Manaphy-1": {
+      "nature": "Jolly",
+      "item": "Damp Rock"
+    },
+    "Phione-2": {
       "level": 50,
       "evs": {
         "sa": 252,
         "sp": 252
       },
       "moves": [
-        "Scald",
-        "Ice Beam",
-        "Energy Ball",
-        "Tail Glow"
+        "Hydro Pump",
+        "Blizzard",
+        "Alluring Voice",
+        "Take Heart"
       ],
       "nature": "Timid",
       "item": "Waterium Z"
-    },
-    "Manaphy-1b": {
+    }
+  },
+  "Manaphy": {
+    "Manaphy-1": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -11073,17 +11293,17 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 168,
-        "sa": 168,
+        "sd": 168,
         "sp": 168
       },
       "moves": [
         "Scald",
-        "Ice Beam",
-        "Energy Ball",
-        "Tail Glow"
+        "Stored Power",
+        "Acid Armor",
+        "Take Heart"
       ],
-      "nature": "Modest",
-      "item": "Aguav Berry"
+      "nature": "Bold",
+      "item": "Leftovers"
     }
   },
   "Darkrai": {
@@ -11100,22 +11320,7 @@ var SETDEX_EISENTREE = {
         "Dark Void"
       ],
       "nature": "Timid",
-      "item": "Wide Lens"
-    },
-    "Darkrai-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Dark Pulse",
-        "Focus Blast",
-        "Disable",
-        "Hypnosis"
-      ],
-      "nature": "Timid",
-      "item": "Wide Lens"
+      "item": "Covert Cloak"
     },
     "Darkrai-2": {
       "level": 50,
@@ -11142,9 +11347,9 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Seed Flare",
-        "Earth Power",
         "Leech Seed",
-        "Substitute"
+        "Substitute",
+        "Grassy Terrain"
       ],
       "nature": "Timid",
       "item": "Leftovers"
@@ -11179,19 +11384,20 @@ var SETDEX_EISENTREE = {
         "Tailwind"
       ],
       "nature": "Timid",
-      "item": "Focus Sash"
+      "item": "Covert Cloak"
     },
     "Shaymin-S-2": {
       "level": 50,
       "evs": {
-        "sa": 252,
-        "sp": 252
+        "hp": 168,
+        "sa": 168,
+        "sp": 168
       },
       "moves": [
         "Seed Flare",
         "Air Slash",
         "Earth Power",
-        "Tailwind"
+        "Substitute"
       ],
       "nature": "Timid",
       "item": "Groundium Z"
@@ -11256,8 +11462,8 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Leaf Storm",
         "Dragon Pulse",
-        "Taunt",
-        "Substitute"
+        "Hidden Power",
+        "Gastro Acid"
       ],
       "nature": "Timid",
       "item": "Miracle Seed"
@@ -11271,23 +11477,8 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Leaf Storm",
         "Dragon Pulse",
-        "Hidden Power Fire",
-        "Substitute"
-      ],
-      "nature": "Timid",
-      "item": "Miracle Seed"
-    },
-    "Serperior-1c": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Leaf Storm",
-        "Dragon Pulse",
-        "Hidden Power Ground",
-        "Substitute"
+        "Hidden Power",
+        "Gastro Acid"
       ],
       "nature": "Timid",
       "item": "Miracle Seed"
@@ -11333,9 +11524,9 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Heat Crash",
-        "Low Kick",
+        "Close Combat",
         "Wild Charge",
-        "Stomping Tantrum"
+        "High Horsepower"
       ],
       "nature": "Jolly",
       "item": "Choice Scarf"
@@ -11351,11 +11542,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Aqua Cutter",
         "Sacred Sword",
-        "Megahorn",
+        "Drill Run",
         "Aqua Jet"
       ],
       "nature": "Adamant",
-      "item": "Life Orb"
+      "item": "Razor Claw"
     },
     "Samurott-2": {
       "level": 50,
@@ -11383,11 +11574,26 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Return",
         "Zen Headbutt",
-        "Baton Pass",
-        "Hypnosis"
+        "Hypnosis",
+        "Baton Pass"
       ],
       "nature": "Adamant",
       "item": "Psychium Z"
+    },
+    "Watchog-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Covet",
+        "Assurance",
+        "Power-Up Punch",
+        "Focus Energy"
+      ],
+      "nature": "Brave",
+      "item": "Normal Gem"
     }
   },
   "Stoutland": {
@@ -11441,17 +11647,17 @@ var SETDEX_EISENTREE = {
     "Liepard-1": {
       "level": 50,
       "evs": {
-        "hp": 252,
+        "at": 252,
         "sp": 252
       },
       "moves": [
         "Fake Out",
-        "Foul Play",
-        "Encore",
-        "Taunt"
+        "Fling",
+        "U-turn",
+        "Encore"
       ],
-      "nature": "Timid",
-      "item": "Focus Sash"
+      "nature": "Jolly",
+      "item": "Big Nugget"
     },
     "Liepard-2": {
       "level": 50,
@@ -11462,11 +11668,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Fake Out",
         "Foul Play",
-        "Yawn",
+        "Screech",
         "Sunny Day"
       ],
       "nature": "Calm",
-      "item": "Red Card"
+      "item": "Heat Rock"
     }
   },
   "Simisage": {
@@ -11484,6 +11690,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Timid",
       "item": "Life Orb"
+    },
+    "Simisage-2": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Bullet Seed",
+        "Rock Slide",
+        "Gunk Shot",
+        "Hone Claws"
+      ],
+      "nature": "Jolly",
+      "item": "Loaded Dice"
     }
   },
   "Simisear": {
@@ -11501,6 +11722,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Jolly",
       "item": "Iapapa Berry"
+    },
+    "Simisear-2": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Heat Wave",
+        "Grass Knot",
+        "Substitute",
+        "Nasty Plot"
+      ],
+      "nature": "Timid",
+      "item": "Petaya Berry"
     }
   },
   "Simipour": {
@@ -11513,11 +11749,26 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Hydro Pump",
         "Icy Wind",
-        "Focus Blast",
+        "Belch",
         "Helping Hand"
       ],
       "nature": "Timid",
       "item": "Wiki Berry"
+    },
+    "Simipour-2": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Aqua Tail",
+        "Low Kick",
+        "Acrobatics",
+        "Rain Dance"
+      ],
+      "nature": "Jolly",
+      "item": "Liechi Berry"
     }
   },
   "Musharna": {
@@ -11528,9 +11779,9 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Psyshock",
+        "Expanding Force",
         "Yawn",
-        "Helping Hand",
+        "Psychic Terrain",
         "Trick Room"
       ],
       "nature": "Relaxed",
@@ -11575,10 +11826,10 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Brave Bird",
-        "Return",
+        "Sky Attack",
         "Hypnosis",
-        "Tailwind"
+        "Tailwind",
+        "Defog"
       ],
       "nature": "Jolly",
       "item": "Flyinium Z"
@@ -11592,7 +11843,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Wild Charge",
+        "Supercell Slam",
         "Low Kick",
         "Overheat",
         "Me First"
@@ -11608,7 +11859,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Wild Charge",
-        "Low Kick",
+        "High Horsepower",
         "Substitute",
         "Ally Switch"
       ],
@@ -11627,7 +11878,7 @@ var SETDEX_EISENTREE = {
         "Rock Slide",
         "Stomping Tantrum",
         "Heavy Slam",
-        "Superpower"
+        "Throat Chop"
       ],
       "nature": "Brave",
       "item": "Assault Vest"
@@ -11640,27 +11891,27 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Stone Edge",
-        "Heavy Slam",
+        "Superpower",
         "Explosion",
         "Wide Guard"
       ],
       "nature": "Brave",
       "item": "Weakness Policy"
     },
-    "Gigalith-2b": {
+    "Gigalith-3": {
       "level": 50,
       "evs": {
         "hp": 252,
-        "sd": 252
+        "df": 252
       },
       "moves": [
-        "Stone Edge",
-        "Heavy Slam",
-        "Stomping Tantrum",
-        "Throat Chop"
+        "Rock Blast",
+        "Body Press",
+        "Stealth Rock",
+        "Sandstorm"
       ],
-      "nature": "Brave",
-      "item": "Weakness Policy"
+      "nature": "Impish",
+      "item": "Loaded Dice"
     }
   },
   "Swoobat": {
@@ -11677,7 +11928,7 @@ var SETDEX_EISENTREE = {
         "Tailwind"
       ],
       "nature": "Timid",
-      "item": "Focus Sash"
+      "item": "Covert Cloak"
     },
     "Swoobat-2": {
       "level": 50,
@@ -11709,22 +11960,7 @@ var SETDEX_EISENTREE = {
         "Sandstorm"
       ],
       "nature": "Jolly",
-      "item": "Life Orb"
-    },
-    "Excadrill-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "High Horsepower",
-        "Iron Head",
-        "Rock Slide",
-        "Sandstorm"
-      ],
-      "nature": "Jolly",
-      "item": "Soft Sand"
+      "item": "Clear Amulet"
     },
     "Excadrill-2": {
       "level": 50,
@@ -11733,7 +11969,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "High Horsepower",
+        "Drill Run",
         "Earthquake",
         "Iron Head",
         "Rock Slide"
@@ -11748,7 +11984,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "High Horsepower",
+        "Drill Run",
         "Earthquake",
         "Iron Head",
         "Rock Slide"
@@ -11791,18 +12027,18 @@ var SETDEX_EISENTREE = {
     "Audino-2": {
       "level": 50,
       "evs": {
-        "df": 168,
+        "at": 168,
         "sa": 168,
         "sd": 168
       },
       "moves": [
-        "Hyper Voice",
+        "Body Slam",
         "Incinerate",
         "Encore",
         "Trick Room"
       ],
       "nature": "Sassy",
-      "item": "Wiki Berry"
+      "item": "Custap Berry"
     }
   },
   "Gurdurr": {
@@ -11816,7 +12052,7 @@ var SETDEX_EISENTREE = {
         "Drain Punch",
         "Knock Off",
         "Mach Punch",
-        "Bulk Up"
+        "Curse"
       ],
       "nature": "Brave",
       "item": "Eviolite"
@@ -11846,7 +12082,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Hammer Arm",
-        "Rock Slide",
+        "Poison Jab",
         "Thunder Punch",
         "Mach Punch"
       ],
@@ -11868,22 +12104,7 @@ var SETDEX_EISENTREE = {
         "Rain Dance"
       ],
       "nature": "Modest",
-      "item": "Life Orb"
-    },
-    "Seismitoad-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Hydro Pump",
-        "Earth Power",
-        "Sludge Bomb",
-        "Rain Dance"
-      ],
-      "nature": "Modest",
-      "item": "Focus Sash"
+      "item": "Rindo Berry"
     },
     "Seismitoad-2": {
       "level": 50,
@@ -11899,21 +12120,6 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Adamant",
       "item": "Life Orb"
-    },
-    "Seismitoad-2b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Liquidation",
-        "Stomping Tantrum",
-        "Power Whip",
-        "Ice Punch"
-      ],
-      "nature": "Adamant",
-      "item": "Assault Vest"
     }
   },
   "Throh": {
@@ -12004,7 +12210,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Leaf Blade",
-        "X-Scissor",
+        "Skitter Smack",
         "String Shot",
         "Sticky Web"
       ],
@@ -12018,13 +12224,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Leaf Blade",
-        "Fell Stinger",
-        "Knock Off",
+        "Bullet Seed",
+        "Low Kick",
+        "Triple Axel",
         "Sunny Day"
       ],
       "nature": "Adamant",
-      "item": "Life Orb"
+      "item": "Loaded Dice"
     }
   },
   "Scolipede": {
@@ -12041,24 +12247,9 @@ var SETDEX_EISENTREE = {
         "Stomping Tantrum"
       ],
       "nature": "Adamant",
-      "item": "Life Orb"
-    },
-    "Scolipede-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Poison Jab",
-        "Megahorn",
-        "Rock Slide",
-        "Stomping Tantrum"
-      ],
-      "nature": "Adamant",
       "item": "Buginium Z"
     },
-    "Scolipede-1c": {
+    "Scolipede-1b": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -12102,14 +12293,14 @@ var SETDEX_EISENTREE = {
         "Encore",
         "Tailwind"
       ],
-      "nature": "Timid",
-      "item": "Focus Sash"
+      "nature": "Modest",
+      "item": "Covert Cloak"
     },
     "Whimsicott-2": {
       "level": 50,
       "evs": {
         "hp": 252,
-        "sa": 252
+        "df": 252
       },
       "moves": [
         "Moonblast",
@@ -12117,8 +12308,24 @@ var SETDEX_EISENTREE = {
         "Taunt",
         "Tailwind"
       ],
-      "nature": "Modest",
+      "nature": "Bold",
       "item": "Eject Button"
+    },
+    "Whimsicott-3": {
+      "level": 50,
+      "evs": {
+        "hp": 168,
+        "df": 168,
+        "sd": 168
+      },
+      "moves": [
+        "Giga Drain",
+        "Substitute",
+        "Leech Seed",
+        "Cotton Guard"
+      ],
+      "nature": "Calm",
+      "item": "Big Root"
     }
   },
   "Lilligant": {
@@ -12144,32 +12351,17 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Giga Drain",
+        "Petal Dance",
         "Pollen Puff",
         "Quiver Dance",
         "Sleep Powder"
       ],
       "nature": "Timid",
-      "item": "Miracle Seed"
-    },
-    "Lilligant-2b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Giga Drain",
-        "Pollen Puff",
-        "Quiver Dance",
-        "Sleep Powder"
-      ],
-      "nature": "Timid",
-      "item": "Focus Sash"
+      "item": "Persim Berry"
     }
   },
   "Basculin": {
-    "Basculin-1": {
+    "Basculin-Red-1": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -12184,7 +12376,7 @@ var SETDEX_EISENTREE = {
       "nature": "Jolly",
       "item": "Waterium Z"
     },
-    "Basculin-B-1": {
+    "Basculin-Blue-1": {
       "level": 50,
       "evs": {
         "hp": 168,
@@ -12192,7 +12384,7 @@ var SETDEX_EISENTREE = {
         "sp": 168
       },
       "moves": [
-        "Wave Crash",
+        "Flip Turn",
         "Ice Beam",
         "Head Smash",
         "Final Gambit"
@@ -12230,7 +12422,7 @@ var SETDEX_EISENTREE = {
         "Gunk Shot"
       ],
       "nature": "Jolly",
-      "item": "Figy Berry"
+      "item": "Clear Amulet"
     },
     "Krookodile-2b": {
       "level": 50,
@@ -12310,6 +12502,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Modest",
       "item": "Yache Berry"
+    },
+    "Maractus-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Bullet Seed",
+        "Sucker Punch",
+        "Acupressure",
+        "Spikes"
+      ],
+      "nature": "Adamant",
+      "item": "Loaded Dice"
     }
   },
   "Crustle": {
@@ -12336,27 +12543,27 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Rock Wrecker",
-        "Skitter Smack",
-        "Stomping Tantrum",
+        "X-Scissor",
+        "Earthquake",
         "Wide Guard"
       ],
       "nature": "Brave",
       "item": "Rockium Z"
     },
-    "Crustle-2b": {
+    "Crustle-3": {
       "level": 50,
       "evs": {
         "hp": 252,
-        "at": 252
+        "df": 252
       },
       "moves": [
-        "Rock Wrecker",
         "Skitter Smack",
-        "Stomping Tantrum",
-        "Heavy Slam"
+        "Body Press",
+        "Stealth Rock",
+        "Spikes"
       ],
-      "nature": "Brave",
-      "item": "Rockium Z"
+      "nature": "Impish",
+      "item": "Rocky Helmet"
     }
   },
   "Scrafty": {
@@ -12383,8 +12590,8 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Fake Out",
-        "Close Combat",
-        "Knock Off",
+        "Super Fang",
+        "Snarl",
         "Taunt"
       ],
       "nature": "Careful",
@@ -12428,12 +12635,12 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "sd": 252
+        "df": 252
       },
       "moves": [
         "Shadow Ball",
+        "Body Press",
         "Will-O-Wisp",
-        "Ally Switch",
         "Trick Room"
       ],
       "nature": "Sassy",
@@ -12464,12 +12671,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Liquidation",
-        "Rock Slide",
+        "Rock Blast",
         "Low Kick",
         "Shell Smash"
       ],
       "nature": "Jolly",
-      "item": "Mystic Water"
+      "item": "Loaded Dice"
     },
     "Carracosta-2": {
       "level": 50,
@@ -12506,19 +12713,19 @@ var SETDEX_EISENTREE = {
     "Archeops-2": {
       "level": 50,
       "evs": {
-        "at": 252,
+        "sa": 252,
         "sp": 252
       },
       "moves": [
-        "Rock Slide",
-        "Dual Wingbeat",
+        "Meteor Beam",
+        "Air Slash",
         "Earth Power",
-        "Heat Wave"
+        "Focus Blast"
       ],
-      "nature": "Naive",
-      "item": "Sitrus Berry"
+      "nature": "Timid",
+      "item": "Power Herb"
     },
-    "Archeops-2b": {
+    "Archeops-3": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -12527,11 +12734,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Rock Slide",
         "Dual Wingbeat",
-        "Earth Power",
-        "Heat Wave"
+        "Heat Wave",
+        "Stealth Rock"
       ],
       "nature": "Naive",
-      "item": "Life Orb"
+      "item": "Covert Cloak"
     }
   },
   "Garbodor": {
@@ -12545,7 +12752,7 @@ var SETDEX_EISENTREE = {
         "Gunk Shot",
         "Stomping Tantrum",
         "Seed Bomb",
-        "Explosion"
+        "Spikes"
       ],
       "nature": "Adamant",
       "item": "Poison Barb"
@@ -12624,7 +12831,7 @@ var SETDEX_EISENTREE = {
         "Tail Slap",
         "Rock Blast",
         "Bullet Seed",
-        "Sleep Talk"
+        "Triple Axel"
       ],
       "nature": "Jolly",
       "item": "Choice Band"
@@ -12642,9 +12849,9 @@ var SETDEX_EISENTREE = {
         "Sing"
       ],
       "nature": "Jolly",
-      "item": "Choice Band"
+      "item": "Loaded Dice"
     },
-    "Cinccino-2": {
+    "Cinccino-1c": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -12665,31 +12872,16 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "df": 252
+        "sa": 252
       },
       "moves": [
-        "Fake Out",
-        "Psychic",
-        "Helping Hand",
+        "Psychic Noise",
+        "Shadow Ball",
+        "Thunderbolt",
         "Trick Room"
       ],
-      "nature": "Sassy",
-      "item": "Wiki Berry"
-    },
-    "Gothitelle-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "df": 252
-      },
-      "moves": [
-        "Fake Out",
-        "Psychic",
-        "Heal Pulse",
-        "Trick Room"
-      ],
-      "nature": "Sassy",
-      "item": "Wiki Berry"
+      "nature": "Quiet",
+      "item": "Throat Spray"
     },
     "Gothitelle-2": {
       "level": 50,
@@ -12737,22 +12929,6 @@ var SETDEX_EISENTREE = {
         "Trick Room"
       ],
       "nature": "Quiet",
-      "item": "Psychium Z"
-    },
-    "Reuniclus-1b": {
-      "level": 50,
-      "evs": {
-        "df": 168,
-        "sa": 168,
-        "sd": 168
-      },
-      "moves": [
-        "Psyshock",
-        "Thunder",
-        "Focus Blast",
-        "Trick Room"
-      ],
-      "nature": "Quiet",
       "item": "Life Orb"
     },
     "Reuniclus-2": {
@@ -12780,7 +12956,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Hurricane",
-        "Scald",
+        "Hydro Pump",
         "Rain Dance",
         "Tailwind"
       ],
@@ -12795,7 +12971,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Brave Bird",
-        "Liquidation",
+        "Flip Turn",
         "Steel Wing",
         "Aqua Jet"
       ],
@@ -12861,7 +13037,7 @@ var SETDEX_EISENTREE = {
         "Headbutt",
         "Horn Leech",
         "Jump Kick",
-        "Stomping Tantrum"
+        "Zen Headbutt"
       ],
       "nature": "Jolly",
       "item": "Life Orb"
@@ -12876,7 +13052,7 @@ var SETDEX_EISENTREE = {
         "Double-Edge",
         "Horn Leech",
         "Jump Kick",
-        "Wild Charge"
+        "Charm"
       ],
       "nature": "Adamant",
       "item": "Normalium Z"
@@ -12888,10 +13064,10 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Double-Edge",
+        "Body Slam",
         "Seed Bomb",
         "Play Rough",
-        "Stomping Tantrum"
+        "High Horsepower"
       ],
       "nature": "Adamant",
       "item": "Choice Band"
@@ -12926,7 +13102,7 @@ var SETDEX_EISENTREE = {
         "Taunt"
       ],
       "nature": "Timid",
-      "item": "Aguav Berry"
+      "item": "Covert Cloak"
     }
   },
   "Escavalier": {
@@ -12958,7 +13134,7 @@ var SETDEX_EISENTREE = {
         "Razor Shell"
       ],
       "nature": "Brave",
-      "item": "Life Orb"
+      "item": "Clear Amulet"
     },
     "Escavalier-2b": {
       "level": 50,
@@ -12984,13 +13160,13 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Energy Ball",
+        "Leaf Storm",
         "Pollen Puff",
         "Rage Powder",
         "Spore"
       ],
       "nature": "Relaxed",
-      "item": "Coba Berry"
+      "item": "Rocky Helmet"
     },
     "Amoonguss-1b": {
       "level": 50,
@@ -12999,7 +13175,7 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Leaf Storm",
+        "Foul Play",
         "Pollen Puff",
         "Rage Powder",
         "Spore"
@@ -13020,7 +13196,7 @@ var SETDEX_EISENTREE = {
         "Spore"
       ],
       "nature": "Sassy",
-      "item": "Occa Berry"
+      "item": "Sitrus Berry"
     },
     "Amoonguss-2b": {
       "level": 50,
@@ -13029,7 +13205,7 @@ var SETDEX_EISENTREE = {
         "sd": 252
       },
       "moves": [
-        "Sludge Bomb",
+        "Clear Smog",
         "Pollen Puff",
         "Rage Powder",
         "Spore"
@@ -13053,36 +13229,6 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Sassy",
       "item": "Rindo Berry"
-    },
-    "Jellicent-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "df": 252
-      },
-      "moves": [
-        "Hex",
-        "Will-O-Wisp",
-        "Strength Sap",
-        "Trick Room"
-      ],
-      "nature": "Sassy",
-      "item": "Wacan Berry"
-    },
-    "Jellicent-1c": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "df": 252
-      },
-      "moves": [
-        "Hex",
-        "Will-O-Wisp",
-        "Strength Sap",
-        "Trick Room"
-      ],
-      "nature": "Sassy",
-      "item": "Colbur Berry"
     },
     "Jellicent-2": {
       "level": 50,
@@ -13108,13 +13254,28 @@ var SETDEX_EISENTREE = {
         "sd": 252
       },
       "moves": [
-        "Liquidation",
+        "Flip Turn",
         "Mirror Coat",
-        "Helping Hand",
+        "Wish",
         "Wide Guard"
       ],
       "nature": "Careful",
       "item": "Wacan Berry"
+    },
+    "Alomomola-2": {
+      "level": 50,
+      "evs": {
+        "df": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Whirlpool",
+        "Icy Wind",
+        "Aqua Ring",
+        "Rest"
+      ],
+      "nature": "Bold",
+      "item": "Leftovers"
     }
   },
   "Galvantula": {
@@ -13146,7 +13307,7 @@ var SETDEX_EISENTREE = {
         "String Shot"
       ],
       "nature": "Timid",
-      "item": "Sitrus Berry"
+      "item": "Covert Cloak"
     }
   },
   "Ferrothorn": {
@@ -13172,10 +13333,10 @@ var SETDEX_EISENTREE = {
         "sd": 252
       },
       "moves": [
-        "Gyro Ball",
+        "Body Press",
         "Leech Seed",
-        "Toxic",
-        "Iron Defense"
+        "Iron Defense",
+        "Stealth Rock"
       ],
       "nature": "Sassy",
       "item": "Leftovers"
@@ -13190,7 +13351,7 @@ var SETDEX_EISENTREE = {
         "Gyro Ball",
         "Power Whip",
         "Knock Off",
-        "Revenge (Doubled)"
+        "Revenge"
       ],
       "nature": "Brave",
       "item": "Iron Ball"
@@ -13220,7 +13381,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Gear Grind",
-        "Wild Charge",
+        "Rock Smash",
         "Shift Gear",
         "Substitute"
       ],
@@ -13231,15 +13392,15 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "at": 252
+        "sa": 252
       },
       "moves": [
-        "Gear Grind",
-        "Screech",
+        "Steel Beam",
+        "Metal Sound",
         "Trick Room",
         "Ally Switch"
       ],
-      "nature": "Brave",
+      "nature": "Quiet",
       "item": "Metal Coat"
     }
   },
@@ -13266,13 +13427,13 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "Wild Charge",
+        "Supercell Slam",
         "Knock Off",
         "Liquidation",
-        "Close Combat"
+        "Drain Punch"
       ],
       "nature": "Brave",
-      "item": "Aguav Berry"
+      "item": "Clear Amulet"
     }
   },
   "Beheeyem": {
@@ -13285,41 +13446,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Psychic",
         "Thunderbolt",
-        "Signal Beam",
+        "Meteor Beam",
         "Trick Room"
       ],
       "nature": "Quiet",
-      "item": "Colbur Berry"
-    },
-    "Beheeyem-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Psychic",
-        "Thunderbolt",
-        "Signal Beam",
-        "Trick Room"
-      ],
-      "nature": "Relaxed",
-      "item": "Tanga Berry"
-    },
-    "Beheeyem-1c": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Psychic",
-        "Thunderbolt",
-        "Signal Beam",
-        "Trick Room"
-      ],
-      "nature": "Quiet",
-      "item": "Iron Ball"
+      "item": "Power Herb"
     },
     "Beheeyem-2": {
       "level": 50,
@@ -13380,21 +13511,6 @@ var SETDEX_EISENTREE = {
         "Outrage",
         "Close Combat",
         "Rock Slide",
-        "Dragon Dance"
-      ],
-      "nature": "Jolly",
-      "item": "Dragon Fang"
-    },
-    "Haxorus-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Outrage",
-        "Close Combat",
-        "Rock Slide",
         "Swords Dance"
       ],
       "nature": "Jolly",
@@ -13422,12 +13538,27 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Outrage",
+        "Scale Shot",
         "Stomping Tantrum",
         "Poison Jab",
         "First Impression"
       ],
       "nature": "Adamant",
+      "item": "Loaded Dice"
+    },
+    "Haxorus-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Breaking Swipe",
+        "Rock Slide",
+        "Guillotine",
+        "Laser Focus"
+      ],
+      "nature": "Jolly",
       "item": "Roseli Berry"
     }
   },
@@ -13440,9 +13571,9 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Icicle Crash",
-        "Low Kick",
+        "Earthquake",
         "Encore",
-        "Hail"
+        "Snowscape"
       ],
       "nature": "Jolly",
       "item": "Icium Z"
@@ -13469,28 +13600,13 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "Icicle Crash",
-        "Rock Slide",
-        "Play Rough",
-        "Aqua Jet"
+        "Icicle Spear",
+        "Low Kick",
+        "Aqua Jet",
+        "Snowscape"
       ],
-      "nature": "Brave",
-      "item": "Expert Belt"
-    },
-    "Beartic-3b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Icicle Crash",
-        "Rock Slide",
-        "Play Rough",
-        "Aqua Jet"
-      ],
-      "nature": "Brave",
-      "item": "Iron Ball"
+      "nature": "Adamant",
+      "item": "Loaded Dice"
     }
   },
   "Cryogonal": {
@@ -13509,32 +13625,17 @@ var SETDEX_EISENTREE = {
       "nature": "Timid",
       "item": "Never-Melt Ice"
     },
-    "Cryogonal-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Freeze-Dry",
-        "Icy Wind",
-        "Ancient Power",
-        "Ice Shard"
-      ],
-      "nature": "Timid",
-      "item": "Focus Sash"
-    },
     "Cryogonal-2": {
       "level": 50,
       "evs": {
-        "sa": 252,
+        "df": 252,
         "sp": 252
       },
       "moves": [
         "Freeze-Dry",
         "Sheer Cold",
-        "Reflect",
-        "Light Screen"
+        "Aurora Veil",
+        "Snowscape"
       ],
       "nature": "Timid",
       "item": "Light Clay"
@@ -13554,7 +13655,7 @@ var SETDEX_EISENTREE = {
         "Encore"
       ],
       "nature": "Modest",
-      "item": "Focus Sash"
+      "item": "Covert Cloak"
     },
     "Accelgor-2": {
       "level": 50,
@@ -13571,7 +13672,7 @@ var SETDEX_EISENTREE = {
       "nature": "Timid",
       "item": "Red Card"
     },
-    "Accelgor-3": {
+    "Accelgor-2b": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -13632,21 +13733,6 @@ var SETDEX_EISENTREE = {
         "Fake Out",
         "High Jump Kick",
         "Knock Off",
-        "U-turn"
-      ],
-      "nature": "Jolly",
-      "item": "Black Belt"
-    },
-    "Mienshao-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Fake Out",
-        "High Jump Kick",
-        "Knock Off",
         "Wide Guard"
       ],
       "nature": "Jolly",
@@ -13659,13 +13745,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Fake Out",
-        "Close Combat",
-        "Stone Edge",
-        "Coaching"
+        "Drain Punch",
+        "Ice Spinner",
+        "Bounce",
+        "U-turn"
       ],
       "nature": "Jolly",
-      "item": "Eject Button"
+      "item": "Expert Belt"
     }
   },
   "Druddigon": {
@@ -13693,8 +13779,8 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Dragon Tail",
         "Snarl",
-        "Toxic",
-        "Taunt"
+        "Taunt",
+        "Stealth Rock"
       ],
       "nature": "Impish",
       "item": "Rocky Helmet"
@@ -13708,10 +13794,10 @@ var SETDEX_EISENTREE = {
         "sd": 252
       },
       "moves": [
-        "Shadow Punch",
+        "Poltergeist",
         "High Horsepower",
-        "Drain Punch",
-        "Ice Punch"
+        "Dynamic Punch",
+        "Heavy Slam"
       ],
       "nature": "Brave",
       "item": "Assault Vest"
@@ -13723,13 +13809,13 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
+        "Poltergeist",
         "High Horsepower",
-        "Close Combat",
-        "Heavy Slam",
+        "Hammer Arm",
         "Thunder Punch"
       ],
       "nature": "Brave",
-      "item": "Figy Berry"
+      "item": "Macho Brace"
     },
     "Golurk-2b": {
       "level": 50,
@@ -13738,13 +13824,13 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
+        "Poltergeist",
         "High Horsepower",
-        "Heat Crash",
-        "Heavy Slam",
-        "Thunder Punch"
+        "Hammer Arm",
+        "Ice Punch"
       ],
       "nature": "Brave",
-      "item": "Figy Berry"
+      "item": "Macho Brace"
     }
   },
   "Bisharp": {
@@ -13837,28 +13923,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Brave Bird",
+        "Thrash",
         "Close Combat",
-        "Whirlwind",
-        "Tailwind"
+        "Whirlwind"
       ],
       "nature": "Adamant",
-      "item": "Flyinium Z"
-    },
-    "Braviary-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "at": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Brave Bird",
-        "Close Combat",
-        "Return",
-        "Tailwind"
-      ],
-      "nature": "Adamant",
-      "item": "Flyinium Z"
+      "item": "Lum Berry"
     },
     "Braviary-2": {
       "level": 50,
@@ -13868,12 +13938,27 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Brave Bird",
-        "Return",
-        "Close Combat",
-        "Rock Slide"
+        "Body Slam",
+        "Rock Slide",
+        "Tailwind"
       ],
       "nature": "Jolly",
       "item": "Adrenaline Orb"
+    },
+    "Braviary-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Sky Drop",
+        "Retaliate",
+        "U-turn",
+        "Roost"
+      ],
+      "nature": "Jolly",
+      "item": "King\u0027s Rock"
     }
   },
   "Mandibuzz": {
@@ -13900,13 +13985,28 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
+        "Hurricane",
         "Dark Pulse",
-        "Air Slash",
         "Heat Wave",
         "Nasty Plot"
       ],
-      "nature": "Timid",
+      "nature": "Modest",
       "item": "Sitrus Berry"
+    },
+    "Mandibuzz-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Brave Bird",
+        "Throat Chop",
+        "Bone Rush",
+        "Substitute"
+      ],
+      "nature": "Adamant",
+      "item": "Weakness Policy"
     }
   },
   "Heatmor": {
@@ -13917,7 +14017,7 @@ var SETDEX_EISENTREE = {
         "sa": 252
       },
       "moves": [
-        "Heat Wave",
+        "Inferno",
         "Giga Drain",
         "Scorching Sands",
         "Belch"
@@ -13933,7 +14033,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Fire Lash",
-        "Stomping Tantrum",
+        "Drain Punch",
         "Thunder Punch",
         "Sucker Punch"
       ],
@@ -13957,21 +14057,6 @@ var SETDEX_EISENTREE = {
       "nature": "Jolly",
       "item": "Life Orb"
     },
-    "Durant-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "First Impression",
-        "Iron Head",
-        "Stomping Tantrum",
-        "Thunder Fang"
-      ],
-      "nature": "Jolly",
-      "item": "Focus Sash"
-    },
     "Durant-2": {
       "level": 50,
       "evs": {
@@ -13980,7 +14065,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Iron Head",
-        "X-Scissor",
+        "Skitter Smack",
         "Rock Slide",
         "Hone Claws"
       ],
@@ -14013,28 +14098,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Dragon Pulse",
         "Dark Pulse",
+        "Dragon Pulse",
         "Flamethrower",
         "Tailwind"
       ],
       "nature": "Modest",
       "item": "Life Orb"
-    },
-    "Hydreigon-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Dragon Pulse",
-        "Dark Pulse",
-        "Flamethrower",
-        "Tailwind"
-      ],
-      "nature": "Modest",
-      "item": "Roseli Berry"
     },
     "Hydreigon-2": {
       "level": 50,
@@ -14044,12 +14114,42 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Dark Pulse",
-        "Dragon Pulse",
-        "Earth Power",
-        "Fire Blast"
+        "Draco Meteor",
+        "Heat Wave",
+        "Focus Energy"
       ],
       "nature": "Timid",
-      "item": "Darkinium Z"
+      "item": "Razor Claw"
+    },
+    "Hydreigon-3": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Dragon Rush",
+        "Iron Tail",
+        "Stomping Tantrum",
+        "Dragon Dance"
+      ],
+      "nature": "Adamant",
+      "item": "Haban Berry"
+    },
+    "Hydreigon-3b": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Dragon Rush",
+        "Iron Tail",
+        "Stomping Tantrum",
+        "Dragon Dance"
+      ],
+      "nature": "Adamant",
+      "item": "Roseli Berry"
     }
   },
   "Volcarona": {
@@ -14082,7 +14182,7 @@ var SETDEX_EISENTREE = {
         "Tailwind"
       ],
       "nature": "Bold",
-      "item": "Iapapa Berry"
+      "item": "Rocky Helmet"
     },
     "Volcarona-2b": {
       "level": 50,
@@ -14114,9 +14214,9 @@ var SETDEX_EISENTREE = {
         "Quick Guard"
       ],
       "nature": "Jolly",
-      "item": "Life Orb"
+      "item": "Clear Amulet"
     },
-    "Cobalion-2": {
+    "Cobalion-1b": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -14124,27 +14224,27 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Iron Head",
-        "Sacred Sword",
-        "Coaching",
-        "Taunt"
+        "Close Combat",
+        "Stone Edge",
+        "Swords Dance"
       ],
       "nature": "Jolly",
-      "item": "Shuca Berry"
+      "item": "Clear Amulet"
     },
-    "Cobalion-3": {
+    "Cobalion-2": {
       "level": 50,
       "evs": {
-        "sa": 252,
-        "sp": 252
+        "df": 252,
+        "sa": 252
       },
       "moves": [
-        "Focus Blast",
-        "Flash Cannon",
-        "Calm Mind",
-        "Substitute"
+        "Steel Beam",
+        "Body Press",
+        "Vacuum Wave",
+        "Coaching"
       ],
-      "nature": "Timid",
-      "item": "Fightinium Z"
+      "nature": "Bold",
+      "item": "Steelium Z"
     }
   },
   "Terrakion": {
@@ -14156,8 +14256,8 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Rock Slide",
-        "Close Combat",
-        "Stomping Tantrum",
+        "Sacred Sword",
+        "High Horsepower",
         "Poison Jab"
       ],
       "nature": "Jolly",
@@ -14171,11 +14271,11 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Rock Slide",
-        "Close Combat",
-        "Stomping Tantrum",
-        "Poison Jab"
+        "Sacred Sword",
+        "High Horsepower",
+        "X-Scissor"
       ],
-      "nature": "Adamant",
+      "nature": "Jolly",
       "item": "Choice Scarf"
     },
     "Terrakion-2": {
@@ -14187,7 +14287,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Stone Edge",
         "Close Combat",
-        "Stomping Tantrum",
+        "High Horsepower",
         "Quick Attack"
       ],
       "nature": "Jolly",
@@ -14233,7 +14333,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Giga Drain",
-        "Focus Blast",
+        "Aura Sphere",
         "Air Slash",
         "Calm Mind"
       ],
@@ -14245,17 +14345,17 @@ var SETDEX_EISENTREE = {
     "Tornadus-1": {
       "level": 50,
       "evs": {
-        "sa": 252,
-        "sp": 252
+        "hp": 252,
+        "sa": 252
       },
       "moves": [
-        "Hurricane",
+        "Bleakwind Storm",
         "Weather Ball",
         "Rain Dance",
         "Tailwind"
       ],
-      "nature": "Timid",
-      "item": "Wacan Berry"
+      "nature": "Modest",
+      "item": "Covert Cloak"
     },
     "Tornadus-2": {
       "level": 50,
@@ -14265,12 +14365,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Acrobatics",
-        "Superpower",
-        "Fling",
-        "Tailwind"
+        "Brick Break",
+        "Knock Off",
+        "Fling"
       ],
       "nature": "Jolly",
-      "item": "King's Rock"
+      "item": "King\u0027s Rock"
     }
   },
   "Tornadus-T": {
@@ -14281,9 +14381,9 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Bleakwind Storm",
+        "Hurricane",
         "Focus Blast",
-        "Weather Ball",
+        "Taunt",
         "Tailwind"
       ],
       "nature": "Timid",
@@ -14303,7 +14403,7 @@ var SETDEX_EISENTREE = {
         "Superpower"
       ],
       "nature": "Naive",
-      "item": "Assault Vest"
+      "item": "Expert Belt"
     }
   },
   "Thundurus": {
@@ -14330,7 +14430,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Thunderbolt",
-        "Hidden Power Ice",
+        "Hidden Power",
         "Eerie Impulse",
         "Taunt"
       ],
@@ -14344,13 +14444,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Wild Charge",
+        "Supercell Slam",
         "Sky Drop",
         "Knock Off",
-        "Superpower"
+        "Iron Tail"
       ],
       "nature": "Jolly",
-      "item": "Assault Vest"
+      "item": "Muscle Band"
     }
   },
   "Thundurus-T": {
@@ -14361,10 +14461,10 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Wildbolt Storm",
+        "Rising Voltage",
         "Sludge Bomb",
         "Grass Knot",
-        "Nasty Plot"
+        "Electric Terrain"
       ],
       "nature": "Timid",
       "item": "Electrium Z"
@@ -14379,10 +14479,76 @@ var SETDEX_EISENTREE = {
         "Wildbolt Storm",
         "Grass Knot",
         "Sludge Bomb",
-        "Hidden Power Ice"
+        "Hidden Power"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
+    }
+  },
+  "Reshiram": {
+    "Reshiram-1": {
+      "level": 50,
+      "evs": {
+        "hp": 168,
+        "sa": 168,
+        "sp": 168
+      },
+      "moves": [
+        "Blue Flare",
+        "Draco Meteor",
+        "Earth Power",
+        "Tailwind"
+      ],
+      "nature": "Modest",
+      "item": "Dragonium Z"
+    },
+    "Reshiram-2": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Fusion Flare",
+        "Dragon Pulse",
+        "Solar Beam",
+        "Sunny Day"
+      ],
+      "nature": "Timid",
+      "item": "Heat Rock"
+    }
+  },
+  "Zekrom": {
+    "Zekrom-1": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Bolt Strike",
+        "Draco Meteor",
+        "Haze",
+        "Tailwind"
+      ],
+      "nature": "Adamant",
+      "item": "Electrium Z"
+    },
+    "Zekrom-2": {
+      "level": 50,
+      "evs": {
+        "hp": 168,
+        "sa": 168,
+        "sp": 168
+      },
+      "moves": [
+        "Rising Voltage",
+        "Breaking Swipe",
+        "Roost",
+        "Electric Terrain"
+      ],
+      "nature": "Timid",
+      "item": "Electric Seed"
     }
   },
   "Landorus": {
@@ -14421,17 +14587,18 @@ var SETDEX_EISENTREE = {
     "Landorus-T-1": {
       "level": 50,
       "evs": {
-        "at": 252,
-        "sp": 252
+        "hp": 168,
+        "at": 168,
+        "sp": 168
       },
       "moves": [
-        "Earthquake",
-        "Rock Slide",
-        "Knock Off",
+        "Stomping Tantrum",
+        "Fly",
+        "Stone Edge",
         "U-turn"
       ],
-      "nature": "Adamant",
-      "item": "Groundium Z"
+      "nature": "Jolly",
+      "item": "Flyinium Z"
     },
     "Landorus-T-2": {
       "level": 50,
@@ -14440,47 +14607,15 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
+        "Earthquake",
         "Stomping Tantrum",
-        "Fly",
         "Rock Slide",
-        "Knock Off"
+        "U-turn"
       ],
-      "nature": "Jolly",
-      "item": "Flyinium Z"
+      "nature": "Adamant",
+      "item": "Choice Scarf"
     },
     "Landorus-T-3": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "sa": 168,
-        "sd": 168
-      },
-      "moves": [
-        "Sandsear Storm",
-        "Sludge Bomb",
-        "Rock Tomb",
-        "Self-Destruct"
-      ],
-      "nature": "Modest",
-      "item": "Assault Vest"
-    },
-    "Landorus-T-3b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "sa": 168,
-        "sd": 168
-      },
-      "moves": [
-        "Sandsear Storm",
-        "Sludge Bomb",
-        "Rock Slide",
-        "Hidden Power Ice"
-      ],
-      "nature": "Modest",
-      "item": "Assault Vest"
-    },
-    "Landorus-T-4": {
       "level": 50,
       "evs": {
         "at": 168,
@@ -14491,7 +14626,7 @@ var SETDEX_EISENTREE = {
         "Sandsear Storm",
         "Sludge Bomb",
         "Rock Slide",
-        "Knock Off"
+        "Stealth Rock"
       ],
       "nature": "Rash",
       "item": "Figy Berry"
@@ -14506,8 +14641,8 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Freeze-Dry",
-        "Earth Power",
         "Dragon Pulse",
+        "Earth Power",
         "Glaciate"
       ],
       "nature": "Modest",
@@ -14523,13 +14658,13 @@ var SETDEX_EISENTREE = {
         "Blizzard",
         "Freeze-Dry",
         "Earth Power",
-        "Roost"
+        "Snowscape"
       ],
       "nature": "Timid",
       "item": "Never-Melt Ice"
     }
   },
-  "Kyurem-B": { 
+  "Kyurem-B": {
     "Kyurem-B-1": {
       "level": 50,
       "evs": {
@@ -14561,10 +14696,25 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Jolly",
       "item": "Icium Z"
+    },
+    "Kyurem-B-3": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Icicle Spear",
+        "Scale Shot",
+        "Fusion Bolt",
+        "Substitute"
+      ],
+      "nature": "Adamant",
+      "item": "Loaded Dice"
     }
   },
   "Keldeo": {
-    "Keldeo-R-1": {
+    "Keldeo-Resolute-1": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -14576,10 +14726,10 @@ var SETDEX_EISENTREE = {
         "Icy Wind",
         "Quick Guard"
       ],
-      "nature": "Timid",
+      "nature": "Modest",
       "item": "Payapa Berry"
     },
-    "Keldeo-R-1b": {
+    "Keldeo-Resolute-1b": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -14589,19 +14739,19 @@ var SETDEX_EISENTREE = {
         "Hydro Pump",
         "Secret Sword",
         "Icy Wind",
-        "Hidden Power Grass"
+        "Vacuum Wave"
       ],
-      "nature": "Timid",
+      "nature": "Modest",
       "item": "Assault Vest"
     },
-    "Keldeo-R-2": {
+    "Keldeo-Resolute-2": {
       "level": 50,
       "evs": {
         "sa": 252,
         "sp": 252
       },
       "moves": [
-        "Scald",
+        "Muddy Water",
         "Secret Sword",
         "Calm Mind",
         "Substitute"
@@ -14621,11 +14771,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Hyper Voice",
         "Psyshock",
-        "Calm Mind",
+        "Alluring Voice",
         "Ally Switch"
       ],
       "nature": "Timid",
-      "item": "Silk Scarf"
+      "item": "Throat Spray"
     },
     "Meloetta-1b": {
       "level": 50,
@@ -14636,11 +14786,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Hyper Voice",
         "Psyshock",
-        "Calm Mind",
+        "Alluring Voice",
         "Trick Room"
       ],
       "nature": "Modest",
-      "item": "Silk Scarf"
+      "item": "Throat Spray"
     },
     "Meloetta-2": {
       "level": 50,
@@ -14698,24 +14848,9 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Flash Cannon",
-        "Bug Buzz",
         "Techno Blast",
+        "Ice Beam",
         "Thunderbolt"
-      ],
-      "nature": "Timid",
-      "item": "Douse Drive"
-    },
-    "Genesect-3b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Flash Cannon",
-        "Bug Buzz",
-        "Techno Blast",
-        "Ice Beam"
       ],
       "nature": "Timid",
       "item": "Douse Drive"
@@ -14732,26 +14867,10 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Wood Hammer",
         "Drain Punch",
-        "Stomping Tantrum",
+        "High Horsepower",
         "Helping Hand"
       ],
-      "nature": "Careful",
-      "item": "Aguav Berry"
-    },
-    "Chesnaught-1b": {
-      "level": 50,
-      "evs": {
-        "at": 168,
-        "sd": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Wood Hammer",
-        "Close Combat",
-        "Stomping Tantrum",
-        "Thunder Punch"
-      ],
-      "nature": "Careful",
+      "nature": "Adamant",
       "item": "Aguav Berry"
     },
     "Chesnaught-2": {
@@ -14761,7 +14880,7 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Drain Punch",
+        "Body Press",
         "Super Fang",
         "Leech Seed",
         "Spiky Shield"
@@ -14781,7 +14900,7 @@ var SETDEX_EISENTREE = {
         "Fire Blast",
         "Psychic",
         "Dazzling Gleam",
-        "Hidden Power Ice"
+        "Focus Blast"
       ],
       "nature": "Timid",
       "item": "Life Orb"
@@ -14789,17 +14908,17 @@ var SETDEX_EISENTREE = {
     "Delphox-2": {
       "level": 50,
       "evs": {
-        "sa": 252,
+        "hp": 252,
         "sp": 252
       },
       "moves": [
-        "Heat Wave",
-        "Solar Beam",
-        "Focus Blast",
-        "Sunny Day"
+        "Expanding Force",
+        "Mystical Fire",
+        "Will-O-Wisp",
+        "Psychic Terrain"
       ],
       "nature": "Timid",
-      "item": "Grassium Z"
+      "item": "Psychic Seed"
     }
   },
   "Greninja": {
@@ -14810,43 +14929,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Dark Pulse",
+        "Scald",
         "Grass Knot",
         "Icy Wind",
         "Mat Block"
       ],
       "nature": "Timid",
-      "item": "Focus Sash"
-    },
-    "Greninja-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Scald",
-        "Grass Knot",
-        "Ice Beam",
-        "Mat Block"
-      ],
-      "nature": "Timid",
-      "item": "Focus Sash"
-    },
-    "Greninja-1c": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Dark Pulse",
-        "Grass Knot",
-        "Mud Shot",
-        "Mat Block"
-      ],
-      "nature": "Timid",
-      "item": "Focus Sash"
+      "item": "Covert Cloak"
     },
     "Greninja-2": {
       "level": 50,
@@ -14863,7 +14952,7 @@ var SETDEX_EISENTREE = {
       "nature": "Timid",
       "item": "Life Orb"
     },
-    "Greninja-A-1": {
+    "Greninja-Ash-1": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -14872,13 +14961,13 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Hydro Pump",
         "Dark Pulse",
-        "Ice Beam",
+        "Blizzard",
         "Water Shuriken"
       ],
       "nature": "Modest",
       "item": "Mystic Water"
     },
-    "Greninja-A-2": {
+    "Greninja-Ash-2": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -14910,21 +14999,6 @@ var SETDEX_EISENTREE = {
       "nature": "Jolly",
       "item": "Silk Scarf"
     },
-    "Diggersby-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Return",
-        "High Horsepower",
-        "Fire Punch",
-        "Quick Attack"
-      ],
-      "nature": "Adamant",
-      "item": "Focus Sash"
-    },
     "Diggersby-2": {
       "level": 50,
       "evs": {
@@ -14939,21 +15013,6 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Adamant",
       "item": "Passho Berry"
-    },
-    "Diggersby-2b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Mega Kick",
-        "High Horsepower",
-        "Thunder Punch",
-        "Gunk Shot"
-      ],
-      "nature": "Adamant",
-      "item": "Assault Vest"
     }
   },
   "Talonflame": {
@@ -14961,16 +15020,16 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "at": 252
+        "sa": 252
       },
       "moves": [
-        "Brave Bird",
-        "Flare Blitz",
-        "Quick Attack",
+        "Hurricane",
+        "Fire Blast",
+        "Taunt",
         "Tailwind"
       ],
-      "nature": "Adamant",
-      "item": "Sharp Beak"
+      "nature": "Modest",
+      "item": "Covert Cloak"
     },
     "Talonflame-2": {
       "level": 50,
@@ -14979,13 +15038,28 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Dual Wingbeat",
-        "Will-O-Wisp",
-        "Taunt",
+        "Brave Bird",
+        "Flare Blitz",
+        "Steel Wing",
+        "U-turn"
+      ],
+      "nature": "Adamant",
+      "item": "Choice Band"
+    },
+    "Talonflame-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Brave Bird",
+        "Flare Blitz",
+        "Feint",
         "Tailwind"
       ],
-      "nature": "Jolly",
-      "item": "Sitrus Berry"
+      "nature": "Adamant",
+      "item": "Life Orb"
     }
   },
   "Vivillon": {
@@ -14997,8 +15071,8 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Hurricane",
+        "Pollen Puff",
         "Rage Powder",
-        "Sleep Powder",
         "Tailwind"
       ],
       "nature": "Timid",
@@ -15031,7 +15105,7 @@ var SETDEX_EISENTREE = {
         "Hyper Voice",
         "Heat Wave",
         "Dark Pulse",
-        "Hidden Power Ice"
+        "Hidden Power"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -15056,21 +15130,6 @@ var SETDEX_EISENTREE = {
     "Florges-1": {
       "level": 50,
       "evs": {
-        "hp": 252,
-        "df": 252
-      },
-      "moves": [
-        "Moonblast",
-        "Light Screen",
-        "Pollen Puff",
-        "Ally Switch"
-      ],
-      "nature": "Bold",
-      "item": "Mago Berry"
-    },
-    "Florges-2": {
-      "level": 50,
-      "evs": {
         "df": 168,
         "sa": 168,
         "sp": 168
@@ -15078,11 +15137,26 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Moonblast",
         "Psychic",
-        "Calm Mind",
-        "Synthesis"
+        "Energy Ball",
+        "Calm Mind"
       ],
       "nature": "Modest",
       "item": "Kebia Berry"
+    },
+    "Florges-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "df": 252
+      },
+      "moves": [
+        "Draining Kiss",
+        "Giga Drain",
+        "Pollen Puff",
+        "Grassy Terrain"
+      ],
+      "nature": "Bold",
+      "item": "Grassy Seed"
     }
   },
   "Gogoat": {
@@ -15095,7 +15169,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Horn Leech",
         "Wild Charge",
-        "Stomping Tantrum",
+        "High Horsepower",
         "Play Rough"
       ],
       "nature": "Adamant",
@@ -15109,9 +15183,9 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Horn Leech",
-        "Rock Slide",
-        "Bulk Up",
-        "Milk Drink"
+        "Dig",
+        "Leech Seed",
+        "Grassy Terrain"
       ],
       "nature": "Careful",
       "item": "Leftovers"
@@ -15131,7 +15205,7 @@ var SETDEX_EISENTREE = {
         "Bullet Punch"
       ],
       "nature": "Adamant",
-      "item": "Life Orb"
+      "item": "Expert Belt"
     },
     "Pangoro-2": {
       "level": 50,
@@ -15158,7 +15232,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Return",
+        "Secret Power",
         "Snarl",
         "Toxic",
         "Cotton Guard"
@@ -15175,11 +15249,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Return",
         "Wild Charge",
-        "Helping Hand",
-        "Sunny Day"
+        "U-turn",
+        "Tail Whip"
       ],
       "nature": "Jolly",
-      "item": "Figy Berry"
+      "item": "Normalium Z"
     }
   },
   "Meowstic": {
@@ -15191,7 +15265,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Fake Out",
-        "Psychic",
+        "Psychic Noise",
         "Light Screen",
         "Reflect"
       ],
@@ -15220,13 +15294,28 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Psyshock",
+        "Psychic Noise",
+        "Alluring Voice",
         "Shadow Ball",
-        "Signal Beam",
         "Nasty Plot"
       ],
       "nature": "Timid",
-      "item": "Colbur Berry"
+      "item": "Throat Spray"
+    },
+    "Meowstic-F-2": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Expanding Force",
+        "Alluring Voice",
+        "Fake Tears",
+        "Psychic Terrain"
+      ],
+      "nature": "Timid",
+      "item": "Terrain Extender"
     }
   },
   "Doublade": {
@@ -15254,21 +15343,6 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Iron Head",
         "Shadow Sneak",
-        "Close Combat",
-        "Swords Dance"
-      ],
-      "nature": "Brave",
-      "item": "Eviolite"
-    },
-    "Doublade-1c": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Iron Head",
-        "Shadow Sneak",
         "Sacred Sword",
         "Swords Dance"
       ],
@@ -15287,7 +15361,7 @@ var SETDEX_EISENTREE = {
         "Shadow Ball",
         "Flash Cannon",
         "Sacred Sword",
-        "King\u0027s Shield"
+        "King\u2019s Shield"
       ],
       "nature": "Quiet",
       "item": "Ghostium Z"
@@ -15302,7 +15376,7 @@ var SETDEX_EISENTREE = {
         "Shadow Ball",
         "Flash Cannon",
         "Wide Guard",
-        "King\u0027s Shield"
+        "King\u2019s Shield"
       ],
       "nature": "Quiet",
       "item": "Ghostium Z"
@@ -15317,7 +15391,7 @@ var SETDEX_EISENTREE = {
         "Shadow Ball",
         "Flash Cannon",
         "Shadow Sneak",
-        "King\u0027s Shield"
+        "King\u2019s Shield"
       ],
       "nature": "Quiet",
       "item": "Weakness Policy"
@@ -15332,7 +15406,7 @@ var SETDEX_EISENTREE = {
         "Shadow Ball",
         "Toxic",
         "Substitute",
-        "King\u0027s Shield"
+        "King\u2019s Shield"
       ],
       "nature": "Calm",
       "item": "Leftovers"
@@ -15369,21 +15443,6 @@ var SETDEX_EISENTREE = {
       "nature": "Sassy",
       "item": "Wiki Berry"
     },
-    "Aromatisse-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "df": 252
-      },
-      "moves": [
-        "Moonblast",
-        "Helping Hand",
-        "Heal Pulse",
-        "Trick Room"
-      ],
-      "nature": "Sassy",
-      "item": "Wiki Berry"
-    },
     "Aromatisse-2": {
       "level": 50,
       "evs": {
@@ -15392,21 +15451,6 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Dazzling Gleam",
-        "Psyshock",
-        "Thunderbolt",
-        "Trick Room"
-      ],
-      "nature": "Quiet",
-      "item": "Weakness Policy"
-    },
-    "Aromatisse-2b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Moonblast",
         "Psyshock",
         "Energy Ball",
         "Trick Room"
@@ -15506,26 +15550,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Liquidation",
         "Rock Slide",
-        "Superpower",
+        "Low Kick",
         "Shell Smash"
       ],
       "nature": "Jolly",
-      "item": "Hard Stone"
-    },
-    "Barbaracle-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Liquidation",
-        "Rock Slide",
-        "Superpower",
-        "Shell Smash"
-      ],
-      "nature": "Jolly",
-      "item": "Focus Sash"
+      "item": "Rock Incense"
     },
     "Barbaracle-2": {
       "level": 50,
@@ -15578,11 +15607,11 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "sa": 252
+        "df": 252
       },
       "moves": [
-        "Draco Meteor",
-        "Sludge Bomb",
+        "Venoshock",
+        "Muddy Water",
         "Dragon Tail",
         "Toxic Spikes"
       ],
@@ -15629,7 +15658,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Water Pulse",
-        "Dark Pulse",
+        "Dragon Pulse",
         "Heal Pulse",
         "Aqua Jet"
       ],
@@ -15661,12 +15690,27 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Volt Switch",
-        "Hyper Voice",
         "Weather Ball",
+        "Hyper Voice",
         "Grass Knot"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
+    },
+    "Heliolisk-3": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Rising Voltage",
+        "Hyper Voice",
+        "Grass Knot",
+        "Electric Terrain"
+      ],
+      "nature": "Timid",
+      "item": "Terrain Extender"
     }
   },
   "Tyrantrum": {
@@ -15677,7 +15721,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Dragon Claw",
+        "Outrage",
         "Head Smash",
         "High Horsepower",
         "Dragon Dance"
@@ -15688,33 +15732,18 @@ var SETDEX_EISENTREE = {
     "Tyrantrum-2": {
       "level": 50,
       "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Head Smash",
-        "Outrage",
-        "Close Combat",
-        "High Horsepower"
-      ],
-      "nature": "Jolly",
-      "item": "Life Orb"
-    },
-    "Tyrantrum-3": {
-      "level": 50,
-      "evs": {
         "hp": 168,
         "at": 168,
         "sp": 168
       },
       "moves": [
-        "Rock Slide",
-        "Breaking Swipe",
+        "Scale Shot",
+        "Rock Blast",
         "Psychic Fangs",
         "Fire Fang"
       ],
       "nature": "Adamant",
-      "item": "Assault Vest"
+      "item": "Loaded Dice"
     }
   },
   "Aurorus": {
@@ -15727,11 +15756,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Hyper Voice",
         "Freeze-Dry",
-        "Ancient Power",
+        "Meteor Beam",
         "Earth Power"
       ],
       "nature": "Quiet",
-      "item": "Assault Vest"
+      "item": "Power Herb"
     },
     "Aurorus-2": {
       "level": 50,
@@ -15742,9 +15771,9 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Blizzard",
-        "Icy Wind",
         "Freeze-Dry",
-        "Hail"
+        "Aurora Veil",
+        "Snowscape"
       ],
       "nature": "Modest",
       "item": "Never-Melt Ice"
@@ -15764,7 +15793,7 @@ var SETDEX_EISENTREE = {
         "Quick Attack"
       ],
       "nature": "Quiet",
-      "item": "Pixie Plate"
+      "item": "Throat Spray"
     },
     "Sylveon-2": {
       "level": 50,
@@ -15775,8 +15804,8 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Hyper Voice",
-        "Mystical Fire",
         "Calm Mind",
+        "Substitute",
         "Yawn"
       ],
       "nature": "Modest",
@@ -15792,7 +15821,7 @@ var SETDEX_EISENTREE = {
         "Hyper Beam",
         "Mystical Fire",
         "Psychic",
-        "Hidden Power Ground"
+        "Hidden Power"
       ],
       "nature": "Timid",
       "item": "Choice Specs"
@@ -15823,9 +15852,9 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Acrobatics",
+        "Flying Press",
         "Taunt",
-        "Fling",
-        "Tailwind"
+        "Fling"
       ],
       "nature": "Jolly",
       "item": "King\u0027s Rock"
@@ -15886,7 +15915,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Thunderbolt",
-        "Dazzling Gleam",
+        "Draining Kiss",
         "Tearful Look",
         "Recycle"
       ],
@@ -15896,22 +15925,6 @@ var SETDEX_EISENTREE = {
   },
   "Carbink": {
     "Carbink-1": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "df": 168,
-        "sa": 168
-      },
-      "moves": [
-        "Moonblast",
-        "Earth Power",
-        "Reflect",
-        "Trick Room"
-      ],
-      "nature": "Relaxed",
-      "item": "Wiki Berry"
-    },
-    "Carbink-2": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -15925,6 +15938,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Quiet",
       "item": "Weakness Policy"
+    },
+    "Carbink-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "df": 252
+      },
+      "moves": [
+        "Body Press",
+        "Iron Defense",
+        "Stealth Rock",
+        "Spikes"
+      ],
+      "nature": "Bold",
+      "item": "Red Card"
     }
   },
   "Sliggoo": {
@@ -15961,22 +15989,6 @@ var SETDEX_EISENTREE = {
       "nature": "Modest",
       "item": "Wiki Berry"
     },
-    "Goodra-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "df": 168,
-        "sa": 168
-      },
-      "moves": [
-        "Dragon Pulse",
-        "Sludge Bomb",
-        "Fire Blast",
-        "Thunder"
-      ],
-      "nature": "Modest",
-      "item": "Assault Vest"
-    },
     "Goodra-2": {
       "level": 50,
       "evs": {
@@ -15991,23 +16003,7 @@ var SETDEX_EISENTREE = {
         "Fire Punch"
       ],
       "nature": "Adamant",
-      "item": "Assault Vest"
-    },
-    "Goodra-2b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "at": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Breaking Swipe",
-        "Power Whip",
-        "Iron Tail",
-        "Fire Punch"
-      ],
-      "nature": "Adamant",
-      "item": "Mago Berry"
+      "item": "Snowball"
     }
   },
   "Klefki": {
@@ -16018,25 +16014,10 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Flash Cannon",
-        "Trick Room",
+        "Steel Beam",
+        "Reflect",
         "Light Screen",
-        "Reflect"
-      ],
-      "nature": "Bold",
-      "item": "Light Clay"
-    },
-    "Klefki-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "df": 252
-      },
-      "moves": [
-        "Dazzling Gleam",
-        "Trick Room",
-        "Light Screen",
-        "Reflect"
+        "Trick Room"
       ],
       "nature": "Bold",
       "item": "Light Clay"
@@ -16048,12 +16029,12 @@ var SETDEX_EISENTREE = {
         "sd": 252
       },
       "moves": [
-        "Play Rough",
+        "Dazzling Gleam",
         "Foul Play",
-        "Trick Room",
+        "Metal Sound",
         "Switcheroo"
       ],
-      "nature": "Careful",
+      "nature": "Calm",
       "item": "Lagging Tail"
     },
     "Klefki-3": {
@@ -16081,7 +16062,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Wood Hammer",
-        "Curse",
+        "Phantom Force",
         "Leech Seed",
         "Trick Room"
       ],
@@ -16091,35 +16072,17 @@ var SETDEX_EISENTREE = {
     "Trevenant-2": {
       "level": 50,
       "evs": {
-        "hp": 168,
-        "at": 168,
-        "sd": 168
+        "hp": 252,
+        "at": 252
       },
       "moves": [
         "Horn Leech",
-        "Phantom Force",
-        "Will-O-Wisp",
-        "Trick Room"
+        "Poltergeist",
+        "Rock Slide",
+        "Drain Punch"
       ],
-      "nature": "Brave",
-      "item": "Figy Berry"
-    }
-  },
-  "Gourgeist": {
-    "Gourgeist-1": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Phantom Force",
-        "Power Whip",
-        "Trick-or-Treat",
-        "Ally Switch"
-      ],
-      "nature": "Jolly",
-      "item": "Ghostium Z"
+      "nature": "Adamant",
+      "item": "Choice Band"
     }
   },
   "Gourgeist-Small": {
@@ -16130,13 +16093,47 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Phantom Force",
+        "Poltergeist",
         "Shadow Sneak",
         "Will-O-Wisp",
         "Curse"
       ],
       "nature": "Jolly",
       "item": "Sitrus Berry"
+    }
+  },
+  "Gourgeist": {
+    "Gourgeist-1": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Poltergeist",
+        "Power Whip",
+        "Trick-or-Treat",
+        "Ally Switch"
+      ],
+      "nature": "Jolly",
+      "item": "Ghostium Z"
+    }
+  },
+  "Gourgeist-Large": {
+    "Gourgeist-Large-1": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Bullet Seed",
+        "Rock Slide",
+        "Imprison",
+        "Trick Room"
+      ],
+      "nature": "Adamant",
+      "item": "Loaded Dice"
     }
   },
   "Gourgeist-Super": {
@@ -16167,10 +16164,10 @@ var SETDEX_EISENTREE = {
         "Ice Spinner",
         "High Horsepower",
         "Heavy Slam",
-        "Mirror Coat"
+        "Body Press"
       ],
       "nature": "Brave",
-      "item": "Wiki Berry"
+      "item": "Custap Berry"
     },
     "Avalugg-2": {
       "level": 50,
@@ -16180,9 +16177,9 @@ var SETDEX_EISENTREE = {
         "df": 168
       },
       "moves": [
-        "Icicle Crash",
-        "High Horsepower",
-        "Iron Defense",
+        "Avalanche",
+        "Body Press",
+        "Curse",
         "Recover"
       ],
       "nature": "Relaxed",
@@ -16198,12 +16195,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Hurricane",
-        "Dragon Pulse",
         "Flamethrower",
-        "Tailwind"
+        "Psychic Noise",
+        "Boomburst"
       ],
-      "nature": "Timid",
-      "item": "Sharp Beak"
+      "nature": "Modest",
+      "item": "Throat Spray"
     },
     "Noivern-2": {
       "level": 50,
@@ -16218,17 +16215,82 @@ var SETDEX_EISENTREE = {
         "Tailwind"
       ],
       "nature": "Timid",
-      "item": "Sitrus Berry"
+      "item": "Razor Fang"
     }
   },
-  "Zygarde": {
-        "Zygarde-10%-1": {
+  "Xerneas": {
+    "Xerneas-1": {
+      "level": 50,
+      "evs": {
+        "hp": 168,
+        "df": 168,
+        "sp": 168
+      },
+      "moves": [
+        "Moonblast",
+        "Dazzling Gleam",
+        "Geomancy",
+        "Misty Terrain"
+      ],
+      "nature": "Modest",
+      "item": "Power Herb"
+    },
+    "Xerneas-2": {
       "level": 50,
       "evs": {
         "at": 252,
         "sp": 252
       },
-      "ability": "Aura Break",
+      "moves": [
+        "Play Rough",
+        "Close Combat",
+        "Megahorn",
+        "Horn Leech"
+      ],
+      "nature": "Jolly",
+      "item": "Choice Band"
+    }
+  },
+  "Yveltal": {
+    "Yveltal-1": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Foul Play",
+        "Oblivion Wing",
+        "Heat Wave",
+        "Tailwind"
+      ],
+      "nature": "Timid",
+      "item": "Covert Cloak"
+    },
+    "Yveltal-2": {
+      "level": 50,
+      "evs": {
+        "hp": 168,
+        "sa": 168,
+        "sd": 168
+      },
+      "moves": [
+        "Snarl",
+        "Sky Drop",
+        "Sucker Punch",
+        "Taunt"
+      ],
+      "nature": "Modest",
+      "item": "Black Glasses"
+    }
+  },
+  "Zygarde-10%": {
+    "Zygarde-10%-1": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
       "moves": [
         "Thousand Arrows",
         "Outrage",
@@ -16238,7 +16300,7 @@ var SETDEX_EISENTREE = {
       "nature": "Jolly",
       "item": "Choice Band"
     },
-    "Zygarde-1": {
+    "Zygarde-10%-1b": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -16246,14 +16308,16 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Thousand Arrows",
-        "Breaking Swipe",
-        "Dragon Dance",
-        "Substitute"
+        "Scale Shot",
+        "Iron Tail",
+        "Extreme Speed"
       ],
-      "nature": "Adamant",
-      "item": "Leftovers"
-    },
-    "Zygarde-1b": {
+      "nature": "Jolly",
+      "item": "Choice Band"
+    }
+  },
+  "Zygarde": {
+    "Zygarde-1": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -16282,40 +16346,10 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Adamant",
       "item": "Choice Band"
-    },
-    "Zygarde-2b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Thousand Arrows",
-        "Thousand Waves",
-        "Iron Tail",
-        "Extreme Speed"
-      ],
-      "nature": "Adamant",
-      "item": "Choice Band"
     }
   },
   "Diancie": {
     "Diancie-1": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Diamond Storm",
-        "Moonblast",
-        "Mystical Fire",
-        "Earth Power"
-      ],
-      "nature": "Hasty",
-      "item": "Diancite"
-    },
-    "Diancie-1b": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -16339,26 +16373,26 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Diamond Storm",
         "Moonblast",
-        "Mystical Fire",
+        "Body Press",
         "Trick Room"
       ],
       "nature": "Brave",
       "item": "Weakness Policy"
     },
-    "Diancie-2b": {
+    "Diancie-3": {
       "level": 50,
       "evs": {
         "hp": 252,
-        "at": 252
+        "sa": 252
       },
       "moves": [
-        "Diamond Storm",
+        "Meteor Beam",
         "Moonblast",
         "Earth Power",
         "Trick Room"
       ],
-      "nature": "Brave",
-      "item": "Sitrus Berry"
+      "nature": "Quiet",
+      "item": "Power Herb"
     }
   },
   "Hoopa": {
@@ -16394,7 +16428,7 @@ var SETDEX_EISENTREE = {
     }
   },
   "Hoopa-Unbound": {
-    "Hoopa-U-1": {
+    "Hoopa-Unbound-1": {
       "level": 50,
       "evs": {
         "hp": 168,
@@ -16403,14 +16437,14 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Hyperspace Fury",
-        "Hyperspace Hole",
-        "Focus Blast",
+        "Psychic",
+        "Drain Punch",
         "Trick Room"
       ],
       "nature": "Brave",
-      "item": "Sitrus Berry"
+      "item": "Iron Ball"
     },
-    "Hoopa-U-2": {
+    "Hoopa-Unbound-2": {
       "level": 50,
       "evs": {
         "at": 168,
@@ -16419,9 +16453,9 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Hyperspace Fury",
-        "Hyperspace Hole",
+        "Psychic",
         "Gunk Shot",
-        "Drain Punch"
+        "Focus Blast"
       ],
       "nature": "Hasty",
       "item": "Life Orb"
@@ -16432,27 +16466,12 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Steam Eruption",
-        "Heat Wave",
-        "Earth Power",
-        "Substitute"
-      ],
-      "nature": "Modest",
-      "item": "Leftovers"
-    },
-    "Volcanion-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
         "sa": 252
       },
       "moves": [
         "Steam Eruption",
         "Heat Wave",
-        "Earth Power",
+        "Sludge Bomb",
         "Substitute"
       ],
       "nature": "Modest",
@@ -16461,34 +16480,17 @@ var SETDEX_EISENTREE = {
     "Volcanion-2": {
       "level": 50,
       "evs": {
-        "hp": 168,
-        "sa": 168,
-        "sp": 168
+        "hp": 252,
+        "sp": 252
       },
       "moves": [
         "Steam Eruption",
         "Heat Wave",
-        "Sludge Bomb",
-        "Roar"
+        "Earth Power",
+        "Haze"
       ],
       "nature": "Modest",
       "item": "Wacan Berry"
-    },
-    "Volcanion-2b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "sa": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Steam Eruption",
-        "Heat Wave",
-        "Sludge Bomb",
-        "Roar"
-      ],
-      "nature": "Modest",
-      "item": "Shuca Berry"
     }
   },
   "Decidueye": {
@@ -16506,7 +16508,7 @@ var SETDEX_EISENTREE = {
         "Tailwind"
       ],
       "nature": "Adamant",
-      "item": "Decidium Z"
+      "item": "Ghostium Z"
     },
     "Decidueye-1b": {
       "level": 50,
@@ -16522,7 +16524,7 @@ var SETDEX_EISENTREE = {
         "Tailwind"
       ],
       "nature": "Adamant",
-      "item": "Decidium Z"
+      "item": "Flyinium Z"
     },
     "Decidueye-2": {
       "level": 50,
@@ -16534,7 +16536,7 @@ var SETDEX_EISENTREE = {
         "Energy Ball",
         "Shadow Ball",
         "Hurricane",
-        "Roost"
+        "Shadow Sneak"
       ],
       "nature": "Modest",
       "item": "Life Orb"
@@ -16587,7 +16589,7 @@ var SETDEX_EISENTREE = {
         "Darkest Lariat",
         "Close Combat"
       ],
-      "nature": "Adamant",
+      "nature": "Brave",
       "item": "Firium Z"
     },
     "Incineroar-3": {
@@ -16631,12 +16633,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Hyper Voice",
-        "Moonblast",
-        "Icy Wind",
-        "Energy Ball"
+        "Dazzling Gleam",
+        "Energy Ball",
+        "Sing"
       ],
       "nature": "Modest",
-      "item": "Wiki Berry"
+      "item": "Throat Spray"
     },
     "Primarina-2": {
       "level": 50,
@@ -16666,7 +16668,7 @@ var SETDEX_EISENTREE = {
         "Aqua Jet"
       ],
       "nature": "Modest",
-      "item": "Primarium Z"
+      "item": "Waterium Z"
     },
     "Primarina-4": {
       "level": 50,
@@ -16708,12 +16710,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Beak Blast",
-        "Return",
-        "Brick Break",
-        "Overheat"
+        "Rock Blast",
+        "Bullet Seed",
+        "Temper Flare"
       ],
       "nature": "Brave",
-      "item": "Flyinium Z"
+      "item": "Scope Lens"
     },
     "Toucannon-2": {
       "level": 50,
@@ -16722,13 +16724,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Fury Attack",
-        "Rock Blast",
-        "Bullet Seed",
-        "Tailwind"
+        "Boomburst",
+        "Hurricane",
+        "Heat Wave",
+        "Flash Cannon"
       ],
-      "nature": "Adamant",
-      "item": "Scope Lens"
+      "nature": "Modest",
+      "item": "Choice Specs"
     }
   },
   "Gumshoos": {
@@ -16760,7 +16762,7 @@ var SETDEX_EISENTREE = {
         "Fire Fang"
       ],
       "nature": "Adamant",
-      "item": "Assault Vest"
+      "item": "Chople Berry"
     }
   },
   "Charjabug": {
@@ -16772,7 +16774,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Wild Charge",
-        "Skitter Smack",
+        "Lunge",
         "Sticky Web",
         "String Shot"
       ],
@@ -16796,7 +16798,7 @@ var SETDEX_EISENTREE = {
       "nature": "Quiet",
       "item": "Life Orb"
     },
-    "Vikavolt-1b": {
+    "Vikavolt-2": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -16805,13 +16807,13 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Thunderbolt",
         "Bug Buzz",
-        "Energy Ball",
-        "Air Slash"
+        "Mud Shot",
+        "Sticky Web"
       ],
-      "nature": "Quiet",
-      "item": "Assault Vest"
+      "nature": "Modest",
+      "item": "Groundium Z"
     },
-    "Vikavolt-1c": {
+    "Vikavolt-Totem-1": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -16826,22 +16828,7 @@ var SETDEX_EISENTREE = {
       "nature": "Modest",
       "item": "Life Orb"
     },
-    "Vikavolt-1d": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Thunderbolt",
-        "Bug Buzz",
-        "Energy Ball",
-        "Air Slash"
-      ],
-      "nature": "Modest",
-      "item": "Assault Vest"
-    },
-    "Vikavolt-2": {
+    "Vikavolt-Totem-2": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -16867,9 +16854,9 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Drain Punch",
-        "Ice Hammer",
+        "Ice Spinner",
         "Gunk Shot",
-        "Crabhammer"
+        "Thunder Punch"
       ],
       "nature": "Brave",
       "item": "Assault Vest"
@@ -16883,11 +16870,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Close Combat",
         "Ice Hammer",
-        "Rock Slide",
+        "Crabhammer",
         "Wide Guard"
       ],
       "nature": "Brave",
-      "item": "Iron Ball"
+      "item": "Protective Pads"
     },
     "Crabominable-2b": {
       "level": 50,
@@ -16898,7 +16885,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Close Combat",
         "Ice Hammer",
-        "Rock Slide",
+        "Crabhammer",
         "Fling"
       ],
       "nature": "Brave",
@@ -16920,7 +16907,7 @@ var SETDEX_EISENTREE = {
         "Tailwind"
       ],
       "nature": "Modest",
-      "item": "Sitrus Berry"
+      "item": "Covert Cloak"
     }
   },
   "Oricorio-Baile": {
@@ -16940,8 +16927,8 @@ var SETDEX_EISENTREE = {
       "item": "Flyinium Z"
     }
   },
-  "Oricorio-Pa'u": {
-    "Oricorio-Pa'u-1": {
+  "Oricorio-Pa\u0027u": {
+    "Oricorio-Pa\u0027u-1": {
       "level": 50,
       "evs": {
         "hp": 168,
@@ -16950,12 +16937,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Air Slash",
-        "Revelation Dance",
+        "Alluring Voice",
         "Quiver Dance",
         "Roost"
       ],
       "nature": "Timid",
-      "item": "Colbur Berry"
+      "item": "Throat Spray"
     }
   },
   "Oricorio-Sensu": {
@@ -16968,8 +16955,8 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Hurricane",
         "Revelation Dance",
-        "Baton Pass",
-        "Tailwind"
+        "Alluring Voice",
+        "Baton Pass"
       ],
       "nature": "Modest",
       "item": "Weakness Policy"
@@ -17004,7 +16991,7 @@ var SETDEX_EISENTREE = {
         "Quiver Dance"
       ],
       "nature": "Modest",
-      "item": "Focus Sash"
+      "item": "Pixie Plate"
     },
     "Ribombee-3": {
       "level": 50,
@@ -17035,6 +17022,51 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Timid",
       "item": "Focus Sash"
+    },
+    "Ribombee-Totem-1": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Moonblast",
+        "Pollen Puff",
+        "Sticky Web",
+        "Tailwind"
+      ],
+      "nature": "Timid",
+      "item": "Focus Sash"
+    },
+    "Ribombee-Totem-2": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Moonblast",
+        "Pollen Puff",
+        "After You",
+        "Quiver Dance"
+      ],
+      "nature": "Modest",
+      "item": "Pixie Plate"
+    },
+    "Ribombee-T-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "df": 252
+      },
+      "moves": [
+        "Draining Kiss",
+        "Pollen Puff",
+        "Reflect",
+        "Quiver Dance"
+      ],
+      "nature": "Bold",
+      "item": "Sitrus Berry"
     }
   },
   "Lycanroc": {
@@ -17055,7 +17087,7 @@ var SETDEX_EISENTREE = {
     }
   },
   "Lycanroc-Midnight": {
-    "Lycanroc-M-1": {
+    "Lycanroc-Midnight-1": {
       "level": 50,
       "evs": {
         "hp": 168,
@@ -17069,9 +17101,9 @@ var SETDEX_EISENTREE = {
         "Sucker Punch"
       ],
       "nature": "Adamant",
-      "item": "Assault Vest"
+      "item": "Clear Amulet"
     },
-    "Lycanroc-M-1b": {
+    "Lycanroc-Midnight-2": {
       "level": 50,
       "evs": {
         "hp": 168,
@@ -17085,18 +17117,18 @@ var SETDEX_EISENTREE = {
         "Sucker Punch"
       ],
       "nature": "Adamant",
-      "item": "Assault Vest"
+      "item": "Liechi Berry"
     }
   },
   "Lycanroc-Dusk": {
-    "Lycanroc-D-1": {
+    "Lycanroc-Dusk-1": {
       "level": 50,
       "evs": {
         "at": 252,
         "sp": 252
       },
       "moves": [
-        "Rock Slide",
+        "Close Combat",
         "Drill Run",
         "Play Rough",
         "Accelerock"
@@ -17115,41 +17147,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Hydro Pump",
         "Ice Beam",
-        "Hidden Power Grass",
+        "Hidden Power",
         "U-turn"
       ],
       "nature": "Quiet",
       "item": "Wiki Berry"
-    },
-    "Wishiwashi-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Hydro Pump",
-        "Ice Beam",
-        "Hidden Power Grass",
-        "U-turn"
-      ],
-      "nature": "Quiet",
-      "item": "Wacan Berry"
-    },
-    "Wishiwashi-1c": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Hydro Pump",
-        "Ice Beam",
-        "Hidden Power Grass",
-        "U-turn"
-      ],
-      "nature": "Quiet",
-      "item": "Rindo Berry"
     },
     "Wishiwashi-2": {
       "level": 50,
@@ -17175,34 +17177,34 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Scald",
-        "Toxic",
+        "Chilling Water",
+        "Toxic Spikes",
         "Wide Guard",
         "Recover"
       ],
       "nature": "Calm",
-      "item": "Black Sludge"
-    },
-    "Toxapex-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "df": 252
-      },
-      "moves": [
-        "Scald",
-        "Toxic",
-        "Stockpile",
-        "Recover"
-      ],
-      "nature": "Calm",
-      "item": "Black Sludge"
+      "item": "Red Card"
     },
     "Toxapex-2": {
       "level": 50,
       "evs": {
         "hp": 252,
-        "df": 252
+        "sd": 252
+      },
+      "moves": [
+        "Infestation",
+        "Toxic",
+        "Stockpile",
+        "Recover"
+      ],
+      "nature": "Calm",
+      "item": "Binding Band"
+    },
+    "Toxapex-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sd": 252
       },
       "moves": [
         "Liquidation",
@@ -17239,12 +17241,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Fissure",
-        "Heavy Slam",
-        "Smack Down",
-        "Roar"
+        "Body Press",
+        "Stealth Rock",
+        "Rest"
       ],
-      "nature": "Impish",
-      "item": "Rocky Helmet"
+      "nature": "Sassy",
+      "item": "Chesto Berry"
     }
   },
   "Araquanid": {
@@ -17263,21 +17265,6 @@ var SETDEX_EISENTREE = {
       "nature": "Brave",
       "item": "Life Orb"
     },
-    "Araquanid-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Liquidation",
-        "Leech Life",
-        "Ice Beam",
-        "Crunch"
-      ],
-      "nature": "Brave",
-      "item": "Life Orb"
-    },
     "Araquanid-2": {
       "level": 50,
       "evs": {
@@ -17289,21 +17276,6 @@ var SETDEX_EISENTREE = {
         "Leech Life",
         "Toxic",
         "Sticky Web"
-      ],
-      "nature": "Brave",
-      "item": "Waterium Z"
-    },
-        "Araquanid-2b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Liquidation",
-        "Leech Life",
-        "Toxic",
-        "Wide Guard"
       ],
       "nature": "Brave",
       "item": "Waterium Z"
@@ -17337,6 +17309,66 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Brave",
       "item": "Waterium Z"
+    },
+    "Araquanid-Totem-1": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Liquidation",
+        "Leech Life",
+        "Ice Beam",
+        "Wide Guard"
+      ],
+      "nature": "Brave",
+      "item": "Life Orb"
+    },
+    "Araquanid-Totem-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Liquidation",
+        "Leech Life",
+        "Toxic",
+        "Sticky Web"
+      ],
+      "nature": "Brave",
+      "item": "Waterium Z"
+    },
+    "Araquanid-Totem-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Liquidation",
+        "Lunge",
+        "Poison Jab",
+        "Mirror Coat"
+      ],
+      "nature": "Brave",
+      "item": "Assault Vest"
+    },
+    "Araquanid-Totem-4": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "at": 252
+      },
+      "moves": [
+        "Liquidation",
+        "Leech Life",
+        "Sticky Web",
+        "Wide Guard"
+      ],
+      "nature": "Brave",
+      "item": "Waterium Z"
     }
   },
   "Lurantis": {
@@ -17355,7 +17387,22 @@ var SETDEX_EISENTREE = {
       "nature": "Brave",
       "item": "Aguav Berry"
     },
-    "Lurantis-1b": {
+    "Lurantis-2": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Leaf Storm",
+        "Weather Ball",
+        "Superpower",
+        "Sunny Day"
+      ],
+      "nature": "Timid",
+      "item": "Firium Z"
+    },
+    "Lurantis-Totem-1": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -17368,9 +17415,9 @@ var SETDEX_EISENTREE = {
         "Leaf Storm"
       ],
       "nature": "Brave",
-      "item": "Assault Vest"
+      "item": "Aguav Berry"
     },
-    "Lurantis-2": {
+    "Lurantis-Totem-2": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -17410,23 +17457,8 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Moonblast",
-        "Giga Drain",
+        "Energy Ball",
         "Pollen Puff",
-        "Strength Sap"
-      ],
-      "nature": "Quiet",
-      "item": "Wiki Berry"
-    },
-    "Shiinotic-2b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Moonblast",
-        "Giga Drain",
-        "Spore",
         "Strength Sap"
       ],
       "nature": "Quiet",
@@ -17479,7 +17511,7 @@ var SETDEX_EISENTREE = {
       "nature": "Timid",
       "item": "Black Sludge"
     },
-    "Salazzle-4": {
+    "Salazzle-Totem-1": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -17489,33 +17521,48 @@ var SETDEX_EISENTREE = {
         "Fake Out",
         "Fire Blast",
         "Sludge Bomb",
-        "Hidden Power Ice"
+        "Encore"
       ],
       "nature": "Timid",
-      "item": "Firium Z"
+      "item": "Focus Sash"
+    },
+    "Salazzle-Totem-2": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Fake Out",
+        "Heat Wave",
+        "Sludge Bomb",
+        "Fling"
+      ],
+      "nature": "Timid",
+      "item": "King\u0027s Rock"
+    },
+    "Salazzle-Totem-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Flamethrower",
+        "Poison Gas",
+        "Venom Drench",
+        "Substitute"
+      ],
+      "nature": "Timid",
+      "item": "Black Sludge"
     }
   },
   "Bewear": {
     "Bewear-1": {
       "level": 50,
       "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Double-Edge",
-        "Hammer Arm",
-        "Darkest Lariat",
-        "Ice Punch"
-      ],
-      "nature": "Brave",
-      "item": "Sitrus Berry"
-    },
-    "Bewear-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
+        "at": 252,
+        "sd": 252
       },
       "moves": [
         "Double-Edge",
@@ -17534,23 +17581,8 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Drain Punch",
-        "Darkest Lariat",
-        "Ice Punch",
-        "Swords Dance"
-      ],
-      "nature": "Adamant",
-      "item": "Black Belt"
-    },
-    "Bewear-2b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sd": 252
-      },
-      "moves": [
-        "Drain Punch",
         "High Horsepower",
-        "Fire Punch",
+        "Ice Punch",
         "Swords Dance"
       ],
       "nature": "Adamant",
@@ -17567,11 +17599,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Power Whip",
         "High Jump Kick",
-        "Knock Off",
-        "U-turn"
+        "Triple Axel",
+        "Play Rough"
       ],
       "nature": "Adamant",
-      "item": "Assault Vest"
+      "item": "Wide Lens"
     },
     "Tsareena-1b": {
       "level": 50,
@@ -17582,28 +17614,28 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Power Whip",
         "High Jump Kick",
-        "Play Rough",
-        "U-turn"
+        "Triple Axel",
+        "Play Rough"
       ],
       "nature": "Adamant",
-      "item": "Assault Vest"
+      "item": "Expert Belt"
     },
-    "Tsareena-1c": {
+    "Tsareena-2": {
       "level": 50,
       "evs": {
-        "hp": 252,
-        "at": 252
+        "at": 252,
+        "sp": 252
       },
       "moves": [
-        "Power Whip",
-        "High Jump Kick",
+        "Trop Kick",
+        "Low Kick",
         "Knock Off",
         "U-turn"
       ],
-      "nature": "Adamant",
+      "nature": "Jolly",
       "item": "Choice Scarf"
     },
-    "Tsareena-2": {
+    "Tsareena-3": {
       "level": 50,
       "evs": {
         "hp": 168,
@@ -17611,13 +17643,13 @@ var SETDEX_EISENTREE = {
         "sp": 168
       },
       "moves": [
-        "Trop Kick",
-        "Low Sweep",
+        "Bullet Seed",
+        "Triple Axel",
         "Helping Hand",
         "Acupressure"
       ],
       "nature": "Careful",
-      "item": "Aguav Berry"
+      "item": "Loaded Dice"
     }
   },
   "Comfey": {
@@ -17640,7 +17672,7 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "sa": 252
+        "df": 252
       },
       "moves": [
         "Draining Kiss",
@@ -17660,7 +17692,7 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Psychic",
+        "Psychic Noise",
         "Foul Play",
         "Instruct",
         "Trick Room"
@@ -17675,13 +17707,13 @@ var SETDEX_EISENTREE = {
         "sa": 252
       },
       "moves": [
-        "Psychic",
-        "Nature Power",
-        "Instruct",
-        "Trick Room"
+        "Expanding Force",
+        "Focus Blast",
+        "Thunder",
+        "Psychic Terrain"
       ],
-      "nature": "Quiet",
-      "item": "Sitrus Berry"
+      "nature": "Modest",
+      "item": "Wise Glasses"
     }
   },
   "Passimian": {
@@ -17707,7 +17739,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Close Combat",
+        "Low Kick",
         "Knock Off",
         "Iron Head",
         "Coaching"
@@ -17745,7 +17777,7 @@ var SETDEX_EISENTREE = {
         "Aqua Jet"
       ],
       "nature": "Adamant",
-      "item": "Assault Vest"
+      "item": "Clear Amulet"
     },
     "Golisopod-2": {
       "level": 50,
@@ -17757,10 +17789,10 @@ var SETDEX_EISENTREE = {
         "First Impression",
         "Leech Life",
         "Liquidation",
-        "Aqua Jet"
+        "Wide Guard"
       ],
       "nature": "Brave",
-      "item": "Life Orb"
+      "item": "Silver Powder"
     }
   },
   "Palossand": {
@@ -17768,31 +17800,46 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "df": 252
+        "sa": 252
       },
       "moves": [
+        "Earth Power",
         "Shadow Ball",
-        "Scorching Sands",
-        "Stockpile",
+        "Energy Ball",
         "Shore Up"
       ],
-      "nature": "Relaxed",
-      "item": "Weakness Policy"
+      "nature": "Quiet",
+      "item": "Ghostium Z"
     },
-    "Palossand-2": {
+    "Palossand-1b": {
       "level": 50,
       "evs": {
         "hp": 252,
         "sa": 252
       },
       "moves": [
-        "Shadow Ball",
         "Earth Power",
-        "Energy Ball",
+        "Shadow Ball",
+        "Giga Drain",
         "Shore Up"
       ],
       "nature": "Quiet",
-      "item": "Ghostium Z"
+      "item": "Weakness Policy"
+    },
+    "Palossand-2": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "df": 252
+      },
+      "moves": [
+        "Scorching Sands",
+        "Hex",
+        "Sandstorm",
+        "Shore Up"
+      ],
+      "nature": "Relaxed",
+      "item": "Rocky Helmet"
     }
   },
   "Pyukumuku": {
@@ -17903,9 +17950,11 @@ var SETDEX_EISENTREE = {
         "Grass Pledge"
       ],
       "nature": "Modest",
-      "item": "Expert Belt"
-    },
-    "Silvally-3": {
+      "item": "Throat Spray"
+    }
+  },
+  "Silvally-Ghost": {
+    "Silvally-Ghost-1": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -17919,8 +17968,10 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Jolly",
       "item": "Ghost Memory"
-    },
-    "Silvally-4": {
+    }
+  },
+  "Silvally-Ground": {
+    "Silvally-Ground-1": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -17934,8 +17985,10 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Jolly",
       "item": "Ground Memory"
-    },
-    "Silvally-5": {
+    }
+  },
+  "Silvally-Fairy": {
+    "Silvally-Fairy-1": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -17949,8 +18002,10 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Naive",
       "item": "Fairy Memory"
-    },
-    "Silvally-6": {
+    }
+  },
+  "Silvally-Steel": {
+    "Silvally-Steel-1": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -17964,8 +18019,10 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Jolly",
       "item": "Steel Memory"
-    },
-    "Silvally-7": {
+    }
+  },
+  "Silvally-Electric": {
+    "Silvally-Electric-1": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -17979,8 +18036,10 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Naive",
       "item": "Electric Memory"
-    },
-    "Silvally-8": {
+    }
+  },
+  "Silvally-Fire": {
+    "Silvally-Fire-1": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -17994,8 +18053,10 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Naive",
       "item": "Fire Memory"
-    },
-    "Silvally-9": {
+    }
+  },
+  "Silvally-Water": {
+    "Silvally-Water-1": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -18011,6 +18072,57 @@ var SETDEX_EISENTREE = {
       "item": "Water Memory"
     }
   },
+  "Silvally-Dragon": {
+    "Silvally-Dragon-1": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Multi-Attack",
+        "Draco Meteor",
+        "Iron Head",
+        "Parting Shot"
+      ],
+      "nature": "Quiet",
+      "item": "Dragon Memory"
+    }
+  },
+  "Silvally-Ice": {
+    "Silvally-Ice-1": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Multi-Attack",
+        "Thunder Fang",
+        "Flamethrower",
+        "Snowscape"
+      ],
+      "nature": "Naive",
+      "item": "Ice Memory"
+    }
+  },
+  "Silvally-Rock": {
+    "Silvally-Rock-1": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Multi-Attack",
+        "Psychic Fangs",
+        "Flamethrower",
+        "Sandstorm"
+      ],
+      "nature": "Hasty",
+      "item": "Rock Memory"
+    }
+  },
   "Minior": {
     "Minior-1": {
       "level": 50,
@@ -18019,8 +18131,8 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Acrobatics",
         "Rock Slide",
+        "Acrobatics",
         "Earthquake",
         "Shell Smash"
       ],
@@ -18034,28 +18146,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Power Gem",
+        "Meteor Beam",
         "Acrobatics",
-        "Dazzling Gleam",
-        "Shell Smash"
+        "Earth Power",
+        "Dazzling Gleam"
       ],
       "nature": "Mild",
-      "item": "Petaya Berry"
-    },
-    "Minior-2b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Power Gem",
-        "Acrobatics",
-        "Hidden Power Ground",
-        "Shell Smash"
-      ],
-      "nature": "Mild",
-      "item": "Petaya Berry"
+      "item": "Power Herb"
     }
   },
   "Komala": {
@@ -18066,7 +18163,7 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "Return",
+        "Double-Edge",
         "Wood Hammer",
         "Play Rough",
         "Sucker Punch"
@@ -18077,49 +18174,35 @@ var SETDEX_EISENTREE = {
     "Komala-2": {
       "level": 50,
       "evs": {
-        "at": 252,
-        "sp": 252
+        "hp": 252,
+        "df": 252
       },
       "moves": [
-        "Thrash",
-        "Superpower",
+        "Rapid Spin",
         "Knock Off",
+        "Bulk Up",
         "Yawn"
       ],
-      "nature": "Jolly",
-      "item": "Normalium Z"
+      "nature": "Careful",
+      "item": "Leftovers"
     }
   },
   "Turtonator": {
     "Turtonator-1": {
       "level": 50,
       "evs": {
-        "sa": 252,
-        "sp": 252
+        "hp": 168,
+        "at": 168,
+        "sa": 168
       },
       "moves": [
-        "Dragon Pulse",
-        "Fire Blast",
-        "Head Smash",
-        "Shell Smash"
+        "Draco Meteor",
+        "Heat Crash",
+        "Body Press",
+        "Iron Defense"
       ],
-      "nature": "Timid",
+      "nature": "Brave",
       "item": "Dragonium Z"
-    },
-    "Turtonator-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Dragon Pulse",
-        "Fire Blast",
-        "Head Smash",
-        "Shell Smash"
-      ],
-      "nature": "Timid",
-      "item": "White Herb"
     },
     "Turtonator-2": {
       "level": 50,
@@ -18132,21 +18215,6 @@ var SETDEX_EISENTREE = {
         "Heat Wave",
         "Scorching Sands",
         "Wide Guard"
-      ],
-      "nature": "Quiet",
-      "item": "Iapapa Berry"
-    },
-    "Turtonator-2b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Dragon Pulse",
-        "Flamethrower",
-        "Scorching Sands",
-        "Focus Blast"
       ],
       "nature": "Quiet",
       "item": "Iapapa Berry"
@@ -18182,6 +18250,36 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Jolly",
       "item": "Red Card"
+    },
+    "Togedemaru-Totem-1": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Fake Out",
+        "Zing Zap",
+        "Iron Head",
+        "Spiky Shield"
+      ],
+      "nature": "Jolly",
+      "item": "Focus Sash"
+    },
+    "Togedemaru-Totem-2": {
+      "level": 50,
+      "evs": {
+        "sd": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Fake Out",
+        "Zing Zap",
+        "Super Fang",
+        "U-turn"
+      ],
+      "nature": "Jolly",
+      "item": "Red Card"
     }
   },
   "Mimikyu": {
@@ -18203,17 +18301,18 @@ var SETDEX_EISENTREE = {
     "Mimikyu-2": {
       "level": 50,
       "evs": {
-        "hp": 252,
-        "df": 252
+        "hp": 168,
+        "at": 168,
+        "df": 168
       },
       "moves": [
         "Play Rough",
-        "Destiny Bond",
+        "Shadow Claw",
         "Will-O-Wisp",
         "Trick Room"
       ],
-      "nature": "Impish",
-      "item": "Mental Herb"
+      "nature": "Brave",
+      "item": "Fairium Z"
     },
     "Mimikyu-3": {
       "level": 50,
@@ -18222,45 +18321,15 @@ var SETDEX_EISENTREE = {
         "at": 252
       },
       "moves": [
-        "Play Rough",
-        "Shadow Sneak",
-        "Curse",
-        "Trick Room"
-      ],
-      "nature": "Adamant",
-      "item": "Mimikium Z"
-    },
-    "Mimikyu-3b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Play Rough",
+        "Phantom Force",
         "Wood Hammer",
-        "Shadow Sneak",
+        "Destiny Bond",
         "Trick Room"
       ],
       "nature": "Adamant",
-      "item": "Mimikium Z"
+      "item": "Ghostium Z"
     },
     "Mimikyu-4": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Phantom Force",
-        "Play Rough",
-        "Curse",
-        "Substitute"
-      ],
-      "nature": "Jolly",
-      "item": "Leftovers"
-    },
-    "Mimikyu-5": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -18273,9 +18342,9 @@ var SETDEX_EISENTREE = {
         "Taunt"
       ],
       "nature": "Jolly",
-      "item": "Mimikium Z"
+      "item": "Wide Lens"
     },
-    "Mimikyu-6": {
+    "Mimikyu-5": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -18283,31 +18352,16 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Play Rough",
-        "Shadow Claw",
         "Shadow Sneak",
-        "Hone Claws"
+        "Curse",
+        "Substitute"
       ],
       "nature": "Jolly",
-      "item": "Mimikium Z"
+      "item": "Fairium Z"
     }
   },
   "Bruxish": {
     "Bruxish-1": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Liquidation",
-        "Psychic Fangs",
-        "Ice Fang",
-        "Crunch"
-      ],
-      "nature": "Jolly",
-      "item": "Focus Sash"
-    },
-    "Bruxish-2": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -18319,8 +18373,24 @@ var SETDEX_EISENTREE = {
         "Crunch",
         "Aqua Jet"
       ],
-      "nature": "Adamant",
+      "nature": "Jolly",
       "item": "Life Orb"
+    },
+    "Bruxish-2": {
+      "level": 50,
+      "evs": {
+        "hp": 168,
+        "df": 168,
+        "sd": 168
+      },
+      "moves": [
+        "Flip Turn",
+        "Psychic Fangs",
+        "Poison Fang",
+        "Trick Room"
+      ],
+      "nature": "Relaxed",
+      "item": "Sitrus Berry"
     }
   },
   "Drampa": {
@@ -18352,22 +18422,7 @@ var SETDEX_EISENTREE = {
         "Thunder"
       ],
       "nature": "Quiet",
-      "item": "Aguav Berry"
-    },
-    "Drampa-2b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Hyper Voice",
-        "Fire Blast",
-        "Focus Blast",
-        "Thunder"
-      ],
-      "nature": "Quiet",
-      "item": "Chople Berry"
+      "item": "Wise Glasses"
     }
   },
   "Dhelmise": {
@@ -18379,42 +18434,27 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Power Whip",
-        "Phantom Force",
+        "Poltergeist",
         "Anchor Shot",
         "Ally Switch"
       ],
       "nature": "Brave",
-      "item": "Grassium Z"
-    },
-    "Dhelmise-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Power Whip",
-        "Phantom Force",
-        "Anchor Shot",
-        "Knock Off"
-      ],
-      "nature": "Brave",
-      "item": "Grassium Z"
+      "item": "Wide Lens"
     },
     "Dhelmise-2": {
       "level": 50,
       "evs": {
         "hp": 252,
-        "at": 252
+        "df": 252
       },
       "moves": [
         "Power Whip",
-        "Shadow Claw",
-        "Anchor Shot",
-        "Liquidation"
+        "Phantom Force",
+        "Body Press",
+        "Iron Defense"
       ],
-      "nature": "Brave",
-      "item": "Kasib Berry"
+      "nature": "Relaxed",
+      "item": "Leftovers"
     }
   },
   "Kommo-o": {
@@ -18431,22 +18471,7 @@ var SETDEX_EISENTREE = {
         "Flash Cannon"
       ],
       "nature": "Modest",
-      "item": "Kommonium Z"
-    },
-    "Kommo-o-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Clanging Scales",
-        "Close Combat",
-        "Poison Jab",
-        "Flamethrower"
-      ],
-      "nature": "Naive",
-      "item": "Kommonium Z"
+      "item": "Dragonium Z"
     },
     "Kommo-o-2": {
       "level": 50,
@@ -18455,13 +18480,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Drain Punch",
-        "Dragon Claw",
-        "Poison Jab",
-        "Belly Drum"
+        "Breaking Swipe",
+        "Body Press",
+        "Iron Defense",
+        "Stealth Rock"
       ],
-      "nature": "Jolly",
-      "item": "Sitrus Berry"
+      "nature": "Impish",
+      "item": "Leftovers"
     },
     "Kommo-o-3": {
       "level": 50,
@@ -18471,13 +18496,13 @@ var SETDEX_EISENTREE = {
         "sp": 168
       },
       "moves": [
-        "Breaking Swipe",
-        "Drain Punch",
-        "Toxic",
-        "Iron Defense"
+        "Clanging Scales",
+        "Focus Blast",
+        "Boomburst",
+        "Flash Cannon"
       ],
-      "nature": "Impish",
-      "item": "Leftovers"
+      "nature": "Timid",
+      "item": "Choice Specs"
     },
     "Kommo-o-4": {
       "level": 50,
@@ -18486,13 +18511,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Clanging Scales",
-        "Focus Blast",
-        "Boomburst",
-        "Flash Cannon"
+        "Drain Punch",
+        "Dragon Claw",
+        "Iron Head",
+        "Belly Drum"
       ],
-      "nature": "Timid",
-      "item": "Choice Specs"
+      "nature": "Jolly",
+      "item": "Sitrus Berry"
     }
   },
   "Tapu Koko": {
@@ -18506,21 +18531,6 @@ var SETDEX_EISENTREE = {
         "Thunderbolt",
         "Dazzling Gleam",
         "Electroweb",
-        "Grass Knot"
-      ],
-      "nature": "Timid",
-      "item": "Choice Specs"
-    },
-    "Tapu Koko-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Thunderbolt",
-        "Dazzling Gleam",
-        "Hidden Power Fire",
         "Grass Knot"
       ],
       "nature": "Timid",
@@ -18548,7 +18558,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Nature\u0027s Madness",
+        "Nature\u2019s Madness",
         "Volt Switch",
         "Sky Drop",
         "Taunt"
@@ -18557,21 +18567,6 @@ var SETDEX_EISENTREE = {
       "item": "Aguav Berry"
     },
     "Tapu Koko-4": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Thunder",
-        "Dazzling Gleam",
-        "Nature Power",
-        "Grass Knot"
-      ],
-      "nature": "Modest",
-      "item": "Choice Specs"
-    },
-    "Tapu Koko-5": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -18612,8 +18607,8 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Psychic",
         "Moonblast",
-        "Substitute",
-        "Taunt"
+        "Taunt",
+        "Calm Mind"
       ],
       "nature": "Timid",
       "item": "Psychium Z"
@@ -18658,7 +18653,7 @@ var SETDEX_EISENTREE = {
         "df": 252
       },
       "moves": [
-        "Nature\u0027s Madness",
+        "Nature\u2019s Madness",
         "Icy Wind",
         "Taunt",
         "Heal Pulse"
@@ -18689,7 +18684,7 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Draining Kiss",
-        "Muddy Water",
+        "Whirlpool",
         "Iron Defense",
         "Calm Mind"
       ],
@@ -18739,22 +18734,6 @@ var SETDEX_EISENTREE = {
         "Horn Leech",
         "High Horsepower",
         "Close Combat",
-        "Rock Tomb"
-      ],
-      "nature": "Adamant",
-      "item": "Assault Vest"
-    },
-    "Tapu Bulu-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "sd": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Horn Leech",
-        "High Horsepower",
-        "Close Combat",
         "Stone Edge"
       ],
       "nature": "Adamant",
@@ -18763,33 +18742,16 @@ var SETDEX_EISENTREE = {
     "Tapu Bulu-2": {
       "level": 50,
       "evs": {
-        "hp": 168,
-        "at": 168,
-        "sp": 168
+        "at": 252,
+        "sp": 252
       },
       "moves": [
         "Wood Hammer",
-        "Stone Edge",
+        "Rock Slide",
         "High Horsepower",
         "Close Combat"
       ],
-      "nature": "Adamant",
-      "item": "Choice Band"
-    },
-    "Tapu Bulu-2b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "at": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Wood Hammer",
-        "Stone Edge",
-        "High Horsepower",
-        "Close Combat"
-      ],
-      "nature": "Adamant",
+      "nature": "Jolly",
       "item": "Choice Scarf"
     },
     "Tapu Bulu-3": {
@@ -18800,12 +18762,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Wood Hammer",
+        "Close Combat",
         "High Horsepower",
-        "Stone Edge",
-        "Substitute"
+        "Swords Dance"
       ],
       "nature": "Adamant",
-      "item": "Figy Berry"
+      "item": "Grassium Z"
     },
     "Tapu Bulu-3b": {
       "level": 50,
@@ -18815,12 +18777,12 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Wood Hammer",
+        "Close Combat",
         "High Horsepower",
-        "Stone Edge",
-        "Substitute"
+        "Swords Dance"
       ],
       "nature": "Adamant",
-      "item": "Grassium Z"
+      "item": "Fightinium Z"
     },
     "Tapu Bulu-4": {
       "level": 50,
@@ -18836,21 +18798,6 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Brave",
       "item": "Grassium Z"
-    },
-    "Tapu Bulu-4b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Wood Hammer",
-        "Horn Leech",
-        "Close Combat",
-        "High Horsepower"
-      ],
-      "nature": "Brave",
-      "item": "Iron Ball"
     }
   },
   "Nihilego": {
@@ -18861,28 +18808,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Power Gem",
+        "Meteor Beam",
         "Sludge Bomb",
         "Dazzling Gleam",
-        "Hidden Power Ice"
+        "Hidden Power"
       ],
       "nature": "Timid",
-      "item": "Focus Sash"
-    },
-    "Nihilego-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Power Gem",
-        "Sludge Bomb",
-        "Dazzling Gleam",
-        "Hidden Power Fire"
-      ],
-      "nature": "Timid",
-      "item": "Focus Sash"
+      "item": "Power Herb"
     },
     "Nihilego-2": {
       "level": 50,
@@ -18908,11 +18840,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Power Gem",
         "Sludge Bomb",
-        "Psyshock",
-        "Hidden Power Ice"
+        "Hidden Power",
+        "Toxic Spikes"
       ],
       "nature": "Timid",
-      "item": "Life Orb"
+      "item": "Focus Sash"
     }
   },
   "Buzzwole": {
@@ -18945,7 +18877,7 @@ var SETDEX_EISENTREE = {
         "High Horsepower"
       ],
       "nature": "Brave",
-      "item": "Iron Ball"
+      "item": "Macho Brace"
     },
     "Buzzwole-2": {
       "level": 50,
@@ -18973,40 +18905,10 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Close Combat",
         "Lunge",
-        "Drill Run",
-        "Ice Beam"
-      ],
-      "nature": "Naughty",
-      "item": "Focus Sash"
-    },
-    "Pheromosa-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Close Combat",
-        "Lunge",
         "Poison Jab",
-        "Ice Beam"
+        "Triple Axel"
       ],
-      "nature": "Naughty",
-      "item": "Focus Sash"
-    },
-    "Pheromosa-1c": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Close Combat",
-        "Lunge",
-        "Throat Chop",
-        "Ice Beam"
-      ],
-      "nature": "Naughty",
+      "nature": "Adamant",
       "item": "Focus Sash"
     },
     "Pheromosa-2": {
@@ -19016,10 +18918,25 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
+        "Focus Blast",
+        "Bug Buzz",
+        "Ice Beam",
+        "Coaching"
+      ],
+      "nature": "Timid",
+      "item": "Fightinium Z"
+    },
+    "Pheromosa-3": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
         "High Jump Kick",
         "Poison Jab",
         "U-turn",
-        "Coaching"
+        "Quick Guard"
       ],
       "nature": "Jolly",
       "item": "Life Orb"
@@ -19035,8 +18952,8 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Thunderbolt",
         "Dazzling Gleam",
-        "Tail Glow",
-        "Substitute"
+        "Hidden Power",
+        "Tail Glow"
       ],
       "nature": "Modest",
       "item": "Sitrus Berry"
@@ -19048,37 +18965,7 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Thunderbolt",
-        "Dazzling Gleam",
-        "Hidden Power Fire",
-        "Hypnosis"
-      ],
-      "nature": "Timid",
-      "item": "Psychium Z"
-    },
-    "Xurkitree-3": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Thunder",
-        "Dazzling Gleam",
-        "Hidden Power Water",
-        "Rain Dance"
-      ],
-      "nature": "Timid",
-      "item": "Waterium Z"
-    },
-    "Xurkitree-4": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Thunderbolt",
+        "Rising Voltage",
         "Dazzling Gleam",
         "Energy Ball",
         "Electric Terrain"
@@ -19086,17 +18973,18 @@ var SETDEX_EISENTREE = {
       "nature": "Timid",
       "item": "Electrium Z"
     },
-    "Xurkitree-5": {
+    "Xurkitree-3": {
       "level": 50,
       "evs": {
-        "hp": 252,
-        "sp": 252
+        "hp": 168,
+        "sa": 168,
+        "sp": 168
       },
       "moves": [
         "Thunder",
-        "Dazzling Gleam",
-        "Hidden Power Ice",
-        "Tail Glow"
+        "Hidden Power",
+        "Tail Glow",
+        "Rain Dance"
       ],
       "nature": "Timid",
       "item": "Air Balloon"
@@ -19112,62 +19000,14 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Heavy Slam",
+        "Flamethrower",
         "Leech Seed",
-        "Substitute",
         "Wide Guard"
       ],
-      "nature": "Careful",
-      "item": "Leftovers"
-    },
-    "Celesteela-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "df": 168,
-        "sd": 168
-      },
-      "moves": [
-        "Heavy Slam",
-        "Leech Seed",
-        "Substitute",
-        "Flamethrower"
-      ],
-      "nature": "Careful",
+      "nature": "Relaxed",
       "item": "Leftovers"
     },
     "Celesteela-2": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "df": 168,
-        "sd": 168
-      },
-      "moves": [
-        "Heavy Slam",
-        "Flamethrower",
-        "Leech Seed",
-        "Wide Guard"
-      ],
-      "nature": "Sassy",
-      "item": "Rocky Helmet"
-    },
-    "Celesteela-2b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "df": 168,
-        "sd": 168
-      },
-      "moves": [
-        "Heavy Slam",
-        "Flamethrower",
-        "Leech Seed",
-        "Iron Defense"
-      ],
-      "nature": "Sassy",
-      "item": "Rocky Helmet"
-    },
-    "Celesteela-3": {
       "level": 50,
       "evs": {
         "sa": 252,
@@ -19176,11 +19016,27 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Flash Cannon",
         "Air Slash",
-        "Flamethrower",
+        "Meteor Beam",
         "Autotomize"
       ],
       "nature": "Modest",
-      "item": "Weakness Policy"
+      "item": "Power Herb"
+    },
+    "Celesteela-3": {
+      "level": 50,
+      "evs": {
+        "hp": 168,
+        "df": 168,
+        "sd": 168
+      },
+      "moves": [
+        "Heavy Slam",
+        "Flame Charge",
+        "Leech Seed",
+        "Iron Defense"
+      ],
+      "nature": "Careful",
+      "item": "Rocky Helmet"
     },
     "Celesteela-4": {
       "level": 50,
@@ -19189,22 +19045,7 @@ var SETDEX_EISENTREE = {
         "sa": 252
       },
       "moves": [
-        "Heavy Slam",
-        "Air Slash",
-        "Flamethrower",
-        "Giga Drain"
-      ],
-      "nature": "Quiet",
-      "item": "Assault Vest"
-    },
-    "Celesteela-5": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "sa": 252
-      },
-      "moves": [
-        "Heavy Slam",
+        "Steel Beam",
         "Air Slash",
         "Flamethrower",
         "Giga Drain"
@@ -19253,59 +19094,26 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Leaf Blade",
         "Sacred Sword",
+        "Substitute",
+        "Swords Dance"
+      ],
+      "nature": "Adamant",
+      "item": "Aguav Berry"
+    },
+    "Kartana-4": {
+      "level": 50,
+      "evs": {
+        "sd": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Leaf Blade",
+        "Sacred Sword",
         "Night Slash",
         "Psycho Cut"
       ],
       "nature": "Jolly",
       "item": "Scope Lens"
-    },
-    "Kartana-4": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "sd": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Leaf Blade",
-        "Sacred Sword",
-        "Substitute",
-        "Tailwind"
-      ],
-      "nature": "Jolly",
-      "item": "Aguav Berry"
-    },
-    "Kartana-4b": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "sd": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Leaf Blade",
-        "Sacred Sword",
-        "Substitute",
-        "Tailwind"
-      ],
-      "nature": "Jolly",
-      "item": "Grassium Z"
-    },
-    "Kartana-4c": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "sd": 168,
-        "sp": 168
-      },
-      "moves": [
-        "Leaf Blade",
-        "Sacred Sword",
-        "Substitute",
-        "Tailwind"
-      ],
-      "nature": "Jolly",
-      "item": "Fightinium Z"
     }
   },
   "Guzzlord": {
@@ -19318,26 +19126,11 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Dragon Pulse",
         "Dark Pulse",
-        "Flamethrower",
+        "Heat Crash",
         "Heavy Slam"
       ],
       "nature": "Quiet",
       "item": "Assault Vest"
-    },
-    "Guzzlord-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sd": 252
-      },
-      "moves": [
-        "Dragon Pulse",
-        "Dark Pulse",
-        "Flamethrower",
-        "Wide Guard"
-      ],
-      "nature": "Quiet",
-      "item": "Aguav Berry"
     },
     "Guzzlord-2": {
       "level": 50,
@@ -19353,7 +19146,70 @@ var SETDEX_EISENTREE = {
         "Heavy Slam"
       ],
       "nature": "Brave",
+      "item": "Roseli Berry"
+    },
+    "Guzzlord-3": {
+      "level": 50,
+      "evs": {
+        "df": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Dragon Tail",
+        "Belch",
+        "Stockpile",
+        "Wide Guard"
+      ],
+      "nature": "Sassy",
       "item": "Aguav Berry"
+    }
+  },
+  "Necrozma": {
+    "Necrozma-1": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Photon Geyser",
+        "Meteor Beam",
+        "Earth Power",
+        "Trick Room"
+      ],
+      "nature": "Timid",
+      "item": "Power Herb"
+    },
+    "Necrozma-2": {
+      "level": 50,
+      "evs": {
+        "hp": 168,
+        "df": 168,
+        "sd": 168
+      },
+      "moves": [
+        "Stored Power",
+        "Iron Defense",
+        "Calm Mind",
+        "Moonlight"
+      ],
+      "nature": "Bold",
+      "item": "Weakness Policy"
+    },
+    "Necrozma-3": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Photon Geyser",
+        "Rock Slide",
+        "X-Scissor",
+        "Dragon Dance"
+      ],
+      "nature": "Jolly",
+      "item": "Colbur Berry"
     }
   },
   "Marshadow": {
@@ -19364,28 +19220,13 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
+        "Poltergeist",
         "Close Combat",
-        "Spectral Thief",
-        "Rock Tomb",
-        "Shadow Sneak"
-      ],
-      "nature": "Jolly",
-      "item": "Focus Sash"
-    },
-    "Marshadow-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Close Combat",
-        "Spectral Thief",
-        "Hidden Power Ice",
+        "Hidden Power",
         "Shadow Sneak"
       ],
       "nature": "Naive",
-      "item": "Focus Sash"
+      "item": "Clear Amulet"
     },
     "Marshadow-2": {
       "level": 50,
@@ -19400,7 +19241,7 @@ var SETDEX_EISENTREE = {
         "Feint"
       ],
       "nature": "Jolly",
-      "item": "Marshadium Z"
+      "item": "Ghostium Z"
     }
   },
   "Naganadel": {
@@ -19417,7 +19258,7 @@ var SETDEX_EISENTREE = {
         "Tailwind"
       ],
       "nature": "Timid",
-      "item": "Focus Sash"
+      "item": "Covert Cloak"
     },
     "Naganadel-2": {
       "level": 50,
@@ -19426,25 +19267,10 @@ var SETDEX_EISENTREE = {
         "sp": 252
       },
       "moves": [
-        "Dragon Pulse",
-        "Sludge Bomb",
+        "Draco Meteor",
+        "Sludge Wave",
         "Fire Blast",
-        "Tailwind"
-      ],
-      "nature": "Modest",
-      "item": "Poisonium Z"
-    },
-    "Naganadel-2b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Dragon Pulse",
-        "Sludge Bomb",
-        "Fire Blast",
-        "Tailwind"
+        "Ally Switch"
       ],
       "nature": "Modest",
       "item": "Dragonium Z"
@@ -19455,45 +19281,15 @@ var SETDEX_EISENTREE = {
       "level": 50,
       "evs": {
         "hp": 252,
-        "at": 252
+        "sd": 252
       },
       "moves": [
         "Gyro Ball",
-        "High Horsepower",
-        "Heat Crash",
+        "Body Press",
+        "Wide Guard",
         "Trick Room"
       ],
-      "nature": "Brave",
-      "item": "Groundium Z"
-    },
-    "Stakataka-1b": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Gyro Ball",
-        "Stone Edge",
-        "Heat Crash",
-        "Trick Room"
-      ],
-      "nature": "Brave",
-      "item": "Rockium Z"
-    },
-    "Stakataka-1c": {
-      "level": 50,
-      "evs": {
-        "hp": 252,
-        "at": 252
-      },
-      "moves": [
-        "Gyro Ball",
-        "High Horsepower",
-        "Heat Crash",
-        "Trick Room"
-      ],
-      "nature": "Brave",
+      "nature": "Relaxed",
       "item": "Chople Berry"
     },
     "Stakataka-2": {
@@ -19505,7 +19301,7 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Gyro Ball",
         "Rock Slide",
-        "Wide Guard",
+        "Heat Crash",
         "Trick Room"
       ],
       "nature": "Brave",
@@ -19520,11 +19316,26 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Gyro Ball",
         "Rock Slide",
-        "Heat Crash",
+        "High Horsepower",
         "Trick Room"
       ],
       "nature": "Brave",
-      "item": "Air Balloon"
+      "item": "Groundium Z"
+    },
+    "Stakataka-3": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sd": 252
+      },
+      "moves": [
+        "Heavy Slam",
+        "Body Press",
+        "Iron Defense",
+        "Stealth Rock"
+      ],
+      "nature": "Careful",
+      "item": "Leftovers"
     }
   },
   "Blacephalon": {
@@ -19536,21 +19347,6 @@ var SETDEX_EISENTREE = {
       },
       "moves": [
         "Mind Blown",
-        "Shadow Ball",
-        "After You",
-        "Trick"
-      ],
-      "nature": "Timid",
-      "item": "Choice Scarf"
-    },
-    "Blacephalon-1b": {
-      "level": 50,
-      "evs": {
-        "sa": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Heat Wave",
         "Shadow Ball",
         "After You",
         "Trick"
@@ -19572,6 +19368,21 @@ var SETDEX_EISENTREE = {
       ],
       "nature": "Timid",
       "item": "Charcoal"
+    },
+    "Blacephalon-3": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Shadow Claw",
+        "Rock Blast",
+        "Zen Headbutt",
+        "Overheat"
+      ],
+      "nature": "Naive",
+      "item": "Loaded Dice"
     }
   },
   "Zeraora": {
@@ -19588,7 +19399,7 @@ var SETDEX_EISENTREE = {
         "Taunt"
       ],
       "nature": "Jolly",
-      "item": "Sitrus Berry"
+      "item": "Covert Cloak"
     },
     "Zeraora-1b": {
       "level": 50,
@@ -19614,23 +19425,8 @@ var SETDEX_EISENTREE = {
       "moves": [
         "Fake Out",
         "Plasma Fists",
-        "Play Rough",
-        "Electroweb"
-      ],
-      "nature": "Jolly",
-      "item": "Assault Vest"
-    },
-    "Zeraora-2b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Fake Out",
-        "Plasma Fists",
-        "Play Rough",
-        "Snarl"
+        "Close Combat",
+        "Play Rough"
       ],
       "nature": "Jolly",
       "item": "Assault Vest"
@@ -19638,17 +19434,18 @@ var SETDEX_EISENTREE = {
     "Zeraora-3": {
       "level": 50,
       "evs": {
-        "at": 252,
-        "sp": 252
+        "hp": 168,
+        "sa": 168,
+        "sp": 168
       },
       "moves": [
-        "Fake Out",
-        "Plasma Fists",
-        "Knock Off",
-        "Close Combat"
+        "Rising Voltage",
+        "Snarl",
+        "Aura Sphere",
+        "Electric Terrain"
       ],
-      "nature": "Jolly",
-      "item": "Eject Button"
+      "nature": "Timid",
+      "item": "Electric Seed"
     }
   }
 }

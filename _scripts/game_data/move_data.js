@@ -157,7 +157,7 @@ var MOVES_RBY = {
 		"type": "Psychic",
 		"category": "Special",
 		"percentHealed": 1/2,
-		"acc": 0x1000
+		"acc": 100
 	},
 	"Drill Peck": {
 		"bp": 80,
@@ -508,7 +508,7 @@ var MOVES_RBY = {
 		"type": "Ground"
 	},
 	"Seismic Toss": {
-		"bp": 100,
+		"bp": 1,
 		"type": "Fighting",
 		"category": "Physical",
 		"makesContact": true,
@@ -891,6 +891,7 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		"bp": 80,
 		"type": "Psychic",
 		"category": "Special",
+		"bypassesProtect": true,
 		"acc": 100
 	},
 	"Giga Drain": {
@@ -1420,6 +1421,7 @@ var MOVES_ADV = $.extend(true, {}, MOVES_GSC, {
 		"bp": 120,
 		"type": "Steel",
 		"category": "Special",
+		"bypassesProtect": true,
 		"acc": 100
 	},
 	"Dragon Claw": {
@@ -1810,7 +1812,7 @@ var MOVES_ADV = $.extend(true, {}, MOVES_GSC, {
 		"type": "Normal"
 	},
 	"Smelling Salts": {
-		"bp": 70,
+		"bp": 60,
 		"type": "Normal",
 		"category": "Physical",
 		"makesContact": true
@@ -2792,13 +2794,7 @@ var MOVES_BW = $.extend(true, {}, MOVES_DPP, {
 		"category": "Special",
 		"acc": 100
 	},
-	"Fire Pledge (Grass Pledge Boosted)": {
-		"bp": 150,
-		"type": "Fire",
-		"category": "Special",
-		"acc": 100
-	},
-	"Fire Pledge (Water Pledge Boosted)": {
+	"Fire Pledge (Pledge Boosted)": {
 		"bp": 150,
 		"type": "Fire",
 		"category": "Special",
@@ -2877,13 +2873,7 @@ var MOVES_BW = $.extend(true, {}, MOVES_DPP, {
 		"category": "Special",
 		"acc": 100
 	},
-	"Grass Pledge (Fire Pledge Boosted)": {
-		"bp": 150,
-		"type": "Grass",
-		"category": "Special",
-		"acc": 100
-	},
-	"Grass Pledge (Water Pledge Boosted)": {
+	"Grass Pledge (Pledge Boosted)": {
 		"bp": 150,
 		"type": "Grass",
 		"category": "Special",
@@ -2917,7 +2907,8 @@ var MOVES_BW = $.extend(true, {}, MOVES_DPP, {
 		"bp": 1,
 		"type": "Fire",
 		"category": "Physical",
-		"makesContact": true
+		"makesContact": true,
+		"acc": 100
 	},
 	"Heavy Slam": {
 		"bp": 1,
@@ -3233,13 +3224,7 @@ var MOVES_BW = $.extend(true, {}, MOVES_DPP, {
 		"category": "Special",
 		"acc": 100
 	},
-	"Water Pledge (Fire Pledge Boosted)": {
-		"bp": 150,
-		"type": "Water",
-		"category": "Special",
-		"acc": 100
-	},
-	"Water Pledge (Grass Pledge Boosted)": {
+	"Water Pledge (Pledge Boosted)": {
 		"bp": 150,
 		"type": "Water",
 		"category": "Special",
@@ -3327,6 +3312,7 @@ var MOVES_XY = $.extend(true, {}, MOVES_BW, {
 	"Disarming Voice": {
 		"bp": 40,
 		"type": "Fairy",
+		"category": "Special",
 		"isSound": true,
 		"acc": 100
 	},
@@ -3360,7 +3346,6 @@ var MOVES_XY = $.extend(true, {}, MOVES_BW, {
 		"type": "Electric"
 	},
 	"Energy Ball": {"bp": 90},
-	"Facade": {"ignoresBurn": true},
 	"Fairy Wind": {
 		"bp": 40,
 		"type": "Fairy",
@@ -3598,6 +3583,7 @@ var MOVES_XY = $.extend(true, {}, MOVES_BW, {
 		"bp": 0,
 		"type": "Grass"
 	},
+	"Smelling Salts": {"bp": 70},
 	"Snore": {"bp": 50},
 	"Steam Eruption": {
 		"bp": 110,
@@ -3652,40 +3638,7 @@ var MOVES_XY = $.extend(true, {}, MOVES_BW, {
 	}
 });
 
-var ZMOVES_TYPING = {
-	"Bug": "Savage Spin-Out",
-	"Dark": "Black Hole Eclipse",
-	"Dragon": "Devastating Drake",
-	"Electric": "Gigavolt Havoc",
-	"Fairy": "Twinkle Tackle",
-	"Fighting": "All-Out Pummeling",
-	"Fire": "Inferno Overdrive",
-	"Flying": "Supersonic Skystrike",
-	"Ghost": "Never-Ending Nightmare",
-	"Grass": "Bloom Doom",
-	"Ground": "Tectonic Rage",
-	"Ice": "Subzero Slammer",
-	"Normal": "Breakneck Blitz",
-	"Poison": "Acid Downpour",
-	"Psychic": "Shattered Psyche",
-	"Rock": "Continental Crush",
-	"Steel": "Corkscrew Crash",
-	"Water": "Hydro Vortex"
-};
-
 var MOVES_SM = $.extend(true, {}, MOVES_XY, {
-	"10,000,000 Volt Thunderbolt": {
-		"bp": 195,
-		"type": "Electric",
-		"category": "Special",
-		"isZ": true
-	},
-	"Acid Downpour": {
-		"bp": 1,
-		"type": "Poison",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Acid Spray": {"zp": 100},
 	"Accelerock": {
 		"bp": 40,
@@ -3701,12 +3654,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Aeroblast": {"zp": 180},
 	"Air Cutter": {"zp": 120},
 	"Air Slash": {"zp": 140},
-	"All-Out Pummeling": {
-		"bp": 1,
-		"type": "Fighting",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Anchor Shot": {
 		"bp": 80,
 		"type": "Steel",
@@ -3745,29 +3692,11 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	},
 	"Belch": {"zp": 190},
 	"Bite": {"zp": 120},
-	"Black Hole Eclipse": {
-		"bp": 1,
-		"type": "Dark",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Blast Burn": {"zp": 200},
 	"Blaze Kick": {"zp": 160},
 	"Blizzard": {"zp": 185},
-	"Bloom Doom": {
-		"bp": 1,
-		"type": "Grass",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Blue Flare": {"zp": 195},
 	"Brave Bird": {"zp": 190},
-	"Breakneck Blitz": {
-		"bp": 1,
-		"type": "Normal",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Brine": {"zp": 120},
 	"Body Slam": {"zp": 160},
 	"Bolt Strike": {"zp": 195},
@@ -3799,13 +3728,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"zp": 195,
 		"acc": 130
 	},
-	"Catastropika": {
-		"bp": 210,
-		"type": "Electric",
-		"category": "Physical",
-		"isZ": true,
-		"makesContact": true
-	},
 	"Charge Beam": {"zp": 100},
 	"Chatter": {"zp": 120},
 	"Chip Away": {"zp": 140},
@@ -3819,23 +3741,8 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"zp": 185,
 		"acc": 100
 	},
-	"Clangorous Soulblaze": {
-		"bp": 185,
-		"type": "Dragon",
-		"category": "Special",
-		"isSound": true,
-		"isSpread": true,
-		"hasSecondaryEffect": true,
-		"isZ": true
-	},
 	"Clear Smog": {"zp": 100},
 	"Close Combat": {"zp": 190},
-	"Continental Crush": {
-		"bp": 1,
-		"type": "Rock",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Core Enforcer": {
 		"bp": 100,
 		"type": "Dragon",
@@ -3843,12 +3750,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"isSpread": true,
 		"zp": 140,
 		"acc": 140
-	},
-	"Corkscrew Crash": {
-		"bp": 1,
-		"type": "Steel",
-		"category": "Physical",
-		"isZ": true
 	},
 	"Covet": {"zp": 120},
 	"Crabhammer": {"zp": 180},
@@ -3881,12 +3782,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	},
 	"Draining Kiss": {"zp": 100},
 	"Drill Peck": {"zp": 160},
-	"Devastating Drake": {
-		"bp": 1,
-		"type": "Dragon",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Doom Desire": {"zp": 200},
 	"Double-Edge": {"zp": 190},
 	"Double Hit": {"zp": 140},
@@ -3978,31 +3873,13 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Fusion Flare": {"zp": 180},
 	"Future Sight": {"zp": 190},
 	"Gear Grind": {"zp": 180},
-	"Genesis Supernova": {
-		"bp": 185,
-		"type": "Psychic",
-		"category": "Special",
-		"isZ": true
-	},
 	"Giga Drain": {"zp": 140},
 	"Giga Impact": {"zp": 200},
-	"Gigavolt Havoc": {
-		"bp": 1,
-		"type": "Electric",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Glaciate": {"zp": 120},
 	"Grass Knot": {"zp": 160},
 	"Grass Pledge": {"zp": 160},
 	"Gunk Shot": {"zp": 190},
 	"Gust": {"zp": 100},
-	"Guardian of Alola": {
-		"bp": 1,
-		"type": "Fairy",
-		"category": "Special",
-		"isZ": true
-	},
 	"Gyro Ball": {"zp": 160},
 	"Hammer Arm": {"zp": 180},
 	"Headbutt": {"zp": 140},
@@ -4041,12 +3918,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Hurricane": {"zp": 185},
 	"Hydro Cannon": {"zp": 200},
 	"Hydro Pump": {"zp": 185},
-	"Hydro Vortex": {
-		"bp": 1,
-		"type": "Water",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Hyper Beam": {"zp": 200},
 	"Hyper Voice": {"zp": 175},
 	"Hyperspace Fury": {"zp": 180},
@@ -4070,12 +3941,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Icy Wind": {"zp": 100},
 	"Incinerate": {"zp": 120},
 	"Inferno": {"zp": 180},
-	"Inferno Overdrive": {
-		"bp": 1,
-		"type": "Fire",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Infestation": {"zp": 100},
 	"Instruct": {
 		"bp": 0,
@@ -4100,21 +3965,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Leaf Storm": {"zp": 195},
 	"Leaf Tornado": {"zp": 120},
 	"Leech Life": {"bp": 80, "zp": 160},
-	"Let's Snuggle Forever": {
-		"bp": 190,
-		"type": "Fairy",
-		"category": "Physical",
-		"makesContact": true,
-		"isZ": true
-	},
 	"Light of Ruin": {"zp": 200},
-	"Light That Burns the Sky": {
-		"bp": 200,
-		"type": "Psychic",
-		"category": "Special",
-		"usesHighestAttackStat": true,
-		"isZ": true
-	},
 	"Liquidation": {
 		"bp": 85,
 		"type": "Water",
@@ -4140,20 +3991,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Magical Leaf": {"zp": 120},
 	"Magma Storm": {"zp": 180},
 	"Magnet Bomb": {"zp": 120},
-	"Malicious Moonsault": {
-		"bp": 180,
-		"type": "Dark",
-		"category": "Physical",
-		"makesContact": true,
-		"isZ": true
-	},
 	"Megahorn": {"zp": 190},
-	"Menacing Moonraze Maelstrom": {
-		"bp": 200,
-		"type": "Ghost",
-		"category": "Special",
-		"isZ": true
-	},
 	"Metal Claw": {"zp": 100},
 	"Meteor Mash": {"zp": 175},
 	"Mind Blown": {
@@ -4172,6 +4010,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"bp": 100,
 		"type": "Ghost",
 		"category": "Special",
+		"negateAbility": true,
 		"zp": 180,
 		"acc": 100
 	},
@@ -4197,23 +4036,11 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"acc": 90
 	},
 	"Needle Arm": {"zp": 120},
-	"Never-Ending Nightmare": {
-		"bp": 1,
-		"type": "Ghost",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Night Daze": {"zp": 160},
 	"Night Shade": {"zp": 100},
 	"Night Slash": {"zp": 140},
 	"Nuzzle": {"zp": 100},
 	"Oblivion Wing": {"zp": 160},
-	"Oceanic Operetta": {
-		"bp": 195,
-		"type": "Water",
-		"category": "Special",
-		"isZ": true
-	},
 	"Ominous Wind": {"zp": 120},
 	"Origin Pulse": {"zp": 185},
 	"Outrage": {"zp": 190},
@@ -4287,13 +4114,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Psycho Cut": {"zp": 140},
 	"Psyshock": {"zp": 160},
 	"Psystrike": {"zp": 180},
-	"Pulverizing Pancake": {
-		"bp": 210,
-		"type": "Normal",
-		"category": "Physical",
-		"makesContact": true,
-		"isZ": true
-	},
 	"Punishment": {"zp": 160},
 	"Pursuit": {"zp": 100},
 	"Quick Attack": {"zp": 100},
@@ -4325,21 +4145,8 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Sacred Fire": {"zp": 180},
 	"Sacred Sword": {"zp": 175},
 	"Sand Tomb": {"zp": 100},
-	"Savage Spin-Out": {
-		"bp": 1,
-		"type": "Bug",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Scald": {"zp": 160},
 	"Searing Shot": {"zp": 180},
-	"Searing Sunraze Smash": {
-		"bp": 200,
-		"type": "Steel",
-		"category": "Physical",
-		"makesContact": true,
-		"isZ": true
-	},
 	"Secret Power": {"zp": 140},
 	"Secret Sword": {"zp": 160},
 	"Seed Bomb": {"zp": 160},
@@ -4350,12 +4157,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Shadow Force": {"zp": 190},
 	"Shadow Sneak": {"zp": 100},
 	"Shadow Strike": {"zp": 160},
-	"Shattered Psyche": {
-		"bp": 1,
-		"type": "Psychic",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Shadow Ball": {"zp": 160},
 	"Shadow Bone": {
 		"bp": 85,
@@ -4397,12 +4198,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	},
 	"Signal Beam": {"zp": 140},
 	"Silver Wind": {"zp": 120},
-	"Sinister Arrow Raid": {
-		"bp": 180,
-		"type": "Ghost",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Skull Bash": {"zp": 195},
 	"Sky Attack": {"zp": 200},
 	"Sky Drop": {"zp": 120},
@@ -4432,12 +4227,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"zp": 190,
 		"acc": 100
 	},
-	"Soul-Stealing 7-Star Strike": {
-		"bp": 195,
-		"type": "Ghost",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Spacial Rend": {"zp": 180},
 	"Spark": {"zp": 120},
 	"Sparkling Aria": {
@@ -4465,22 +4254,9 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"zp": 160,
 		"acc": 100
 	},
-	"Splintered Stormshards": {
-		"bp": 190,
-		"type": "Rock",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Steam Eruption": {"zp": 185},
 	"Steamroller": {"zp": 120},
 	"Steel Wing": {"zp": 140},
-	"Stoked Sparksurfer": {
-		"bp": 175,
-		"type": "Electric",
-		"category": "Special",
-		"hasSecondaryEffect": true,
-		"isZ": true
-	},
 	"Stomp": {"zp": 120},
 	"Stomping Tantrum": {
 		"bp": 75,
@@ -4499,29 +4275,18 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	},
 	"Struggle Bug": {"zp": 100},
 	"Submission": {"zp": 160},
-	"Subzero Slammer": {
-		"bp": 1,
-		"type": "Ice",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Sucker Punch": {"bp": 70, "zp": 140},
 	"Sunsteel Strike": {
 		"bp": 100,
 		"type": "Steel",
 		"category": "Physical",
 		"makesContact": true,
+		"negateAbility": true,
 		"zp": 180,
 		"acc": 100
 	},
 	"Super Fang": {"zp": 100},
 	"Superpower": {"zp": 190},
-	"Supersonic Skystrike": {
-		"bp": 1,
-		"type": "Flying",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Surf": {"zp": 175},
 	"Swift": {"zp": 120},
 	"Synchronoise": {"zp": 190},
@@ -4533,12 +4298,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"type": "Normal"
 	},
 	"Techno Blast": {"zp": 190},
-	"Tectonic Rage": {
-		"bp": 1,
-		"type": "Ground",
-		"category": "Physical",
-		"isZ": true
-	},
 	"Thief": {"zp": 120},
 	"Thousand Arrows": {"zp": 180},
 	"Thousand Waves": {"zp": 175},
@@ -4567,12 +4326,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"acc": 100
 	},
 	"Twineedle": {"zp": 100},
-	"Twinkle Tackle": {
-		"bp": 1,
-		"type": "Fairy",
-		"category": "Physical",
-		"isZ": true
-	},
 	"U-turn": {"zp": 140},
 	"Uproar": {"zp": 175},
 	"V-create": {"zp": 220},
@@ -4613,6 +4366,14 @@ var MOVES_EISENTREE = $.extend(true, {}, MOVES_SM, {
 	"Rapid Spin": {"bp": 50},
 	"Multi-Attack": {"bp": 120},
 
+	"Body Press": {
+		"bp": 80,
+		"type": "Fighting",
+		"makesContact": true,
+		"category": "Physical",
+		"acc": 100,
+		"zp": 160
+	},
 	"Breaking Swipe": {
 		"bp": 60,
 		"type": "Dragon",
@@ -4632,9 +4393,45 @@ var MOVES_EISENTREE = $.extend(true, {}, MOVES_SM, {
 		"isTwoHit": true,
 		"zp": 100
 	},
+	"Expanding Force": {
+		"bp": 80,
+		"type": "Psychic",
+		"category": "Special",
+		"acc": 100,
+		"zp": 160
+	},
+	"Flip Turn": {
+		"bp": 60,
+		"type": "Water",
+		"category": "Physical",
+		"makesContact": true,
+		"acc": 100,
+		"zp": 120
+	},
 	"Life Dew": {
 		"bp": 0,
 		"type": "Water"
+	},
+	"Meteor Beam": {
+		"bp": 120,
+		"type": "Rock",
+		"category": "Special",
+		"acc": 90,
+		"zp": 190
+	},
+	"Poltergeist": {
+		"bp": 110,
+		"type": "Ghost",
+		"category": "Physical",
+		"acc": 90,
+		"zp": 185
+	},
+	"Rising Voltage": {
+		"bp": 70,
+		"type": "Electric",
+		"category": "Special",
+		"acc": 100,
+		"zp": 140
 	},
 	"Scorching Sands": {
 		"bp": 70,
@@ -4652,7 +4449,33 @@ var MOVES_EISENTREE = $.extend(true, {}, MOVES_SM, {
 		"acc": 90,
 		"zp": 140
 	},
+	"Steel Beam": {
+		"bp": 140,
+		"type": "Steel",
+		"category": "Special",
+		"hasRecoil": true,
+		"acc": 95,
+		"zp": 200
+	},
+	"Triple Axel": {
+		"bp": 20,
+		"type": "Ice",
+		"category": "Physical",
+		"makesContact": true,
+		"maxMultiHits": 3,
+		"acc": 90,
+		"zp": 100
+	},
 
+	"Alluring Voice": {
+		"bp": 80,
+		"type": "Fairy",
+		"category": "Special",
+		"isSound": true,
+		"hasSecondaryEffect": true,
+		"acc": 100,
+		"zp": 160
+	},
 	"Aqua Cutter": {
 		"bp": 70,
 		"type": "Water",
@@ -4660,6 +4483,14 @@ var MOVES_EISENTREE = $.extend(true, {}, MOVES_SM, {
 		"isSlicing": true,
 		"acc": 100,
 		"zp": 140
+	},
+	"Barb Barrage": {
+		"bp": 60,
+		"type": "Poison",
+		"category": "Physical",
+		"hasSecondaryEffect": true,
+		"acc": 100,
+		"zp": 120
 	},
 	"Bleakwind Storm": {
 		"bp": 100,
@@ -4679,6 +4510,16 @@ var MOVES_EISENTREE = $.extend(true, {}, MOVES_SM, {
 		"acc": 100,
 		"zp": 100
 	},
+	"Chilly Reception": {
+		"bp": 0,
+		"type": "Ice"
+	},
+	"Comeuppance": {
+		"bp": 1,
+		"type": "Dark",
+		"makesContact": true,
+		"zp": 100
+	},
 	"Headlong Rush": {
 		"bp": 120,
 		"type": "Ground",
@@ -4695,6 +4536,43 @@ var MOVES_EISENTREE = $.extend(true, {}, MOVES_SM, {
 		"acc": 100,
 		"zp": 160
 	},
+	"Lunar Blessing": {
+		"bp": 0,
+		"type": "Psychic"
+	},
+	"Mystical Power": {
+		"bp": 70,
+		"type": "Psychic",
+		"category": "Special",
+		"hasSecondaryEffect": true,
+		"acc": 90,
+		"zp": 140
+	},
+	"Pounce": {
+		"bp": 50,
+		"type": "Bug",
+		"category": "Physical",
+		"hasSecondaryEffect": true,
+		"makesContact": true,
+		"acc": 100,
+		"zp": 100
+	},
+	"Raging Bull": {
+		"bp": 90,
+		"type": "Normal",
+		"category": "Physical",
+		"makesContact": true,
+		"acc": 100,
+		"zp": 175
+	},
+	"Raging Fury": {
+		"bp": 120,
+		"type": "Fire",
+		"category": "Physical",
+		"makesContact": true,
+		"acc": 100,
+		"zp": 190
+	},
 	"Sandsear Storm": {
 		"bp": 100,
 		"type": "Ground",
@@ -4704,6 +4582,39 @@ var MOVES_EISENTREE = $.extend(true, {}, MOVES_SM, {
 		"hasSecondaryEffect": true,
 		"acc": 80,
 		"zp": 180
+	},
+	"Scale Shot": {
+		"bp": 25,
+		"type": "Dragon",
+		"category": "Physical",
+		"acc": 90,
+		"maxMultiHits": 5,
+		"zp": 100
+	},
+	"Snowscape": {
+		"bp": 0,
+		"type": "Ice"
+	},
+	"Supercell Slam": {
+		"bp": 100,
+		"type": "Electric",
+		"category": "Physical",
+		"makesContact": true,
+		"hasRecoil": "crash",
+		"acc": 95,
+		"zp": 180
+	},
+	"Take Heart": {
+		"bp": 0,
+		"type": "Psychic"
+	},
+	"Temper Flare": {
+		"bp": 75,
+		"type": "Fire",
+		"category": "Physical",
+		"makesContact": true,
+		"acc": 100,
+		"zp": 140
 	},
 	"Trailblaze": {
 		"bp": 50,
@@ -4746,14 +4657,6 @@ var MOVES_SS = $.extend(true, {}, MOVES_SM, {
 		"hasSecondaryEffect": true,
 		"acc": 100
 	},
-	"Heat Crash": {
-		"bp": 1,
-		"acc": 100,
-		"type": "Fire",
-		"category": "Physical",
-		"makesContact": true,
-		"acc": 100
-	},
 	"Dynamax Cannon": {
 		"bp": 100,
 		"type": "Dragon",
@@ -4771,6 +4674,7 @@ var MOVES_SS = $.extend(true, {}, MOVES_SM, {
 		"type": "Dark",
 		"category": "Physical",
 		"makesContact": true,
+		"isBite": true,
 		"acc": 100
 	},
 	"Dragon Darts": {
@@ -4860,13 +4764,6 @@ var MOVES_SS = $.extend(true, {}, MOVES_SM, {
 		"hasSecondaryEffect": true,
 		"acc": 100
 	},
-	"Aura Wheel (Dark)": {
-		"bp": 110,
-		"type": "Dark",
-		"category": "Physical",
-		"hasSecondaryEffect": true,
-		"acc": 100
-	},
 	"Breaking Swipe": {
 		"bp": 60,
 		"type": "Dragon",
@@ -4943,6 +4840,7 @@ var MOVES_SS = $.extend(true, {}, MOVES_SM, {
 		"bp": 140,
 		"type": "Steel",
 		"category": "Special",
+		"hasRecoil": true,
 		"acc": 95
 	},
 	"Stuff Cheeks": {
@@ -4984,78 +4882,6 @@ var MOVES_SS = $.extend(true, {}, MOVES_SM, {
 	"Obstruct": {
 		"bp": 0,
 		"type": "Dark"
-	},
-	"Max Strike": {
-		"type": "Normal",
-		"acc": 101
-	},
-	"Max Flare": {
-		"type": "Fire",
-		"acc": 101
-	},
-	"Max Hailstorm": {
-		"type": "Ice",
-		"acc": 101
-	},
-	"Max Geyser": {
-		"type": "Water",
-		"acc": 101
-	},
-	"Max Lightning": {
-		"type": "Electric",
-		"acc": 101
-	},
-	"Max Knuckle": {
-		"type": "Fighting",
-		"acc": 101
-	},
-	"Max Overgrowth": {
-		"type": "Grass",
-		"acc": 101
-	},
-	"Max Mindstorm": {
-		"type": "Psychic",
-		"acc": 101
-	},
-	"Max Flutterby": {
-		"type": "Bug",
-		"acc": 101
-	},
-	"Max Ooze": {
-		"type": "Poison",
-		"acc": 101
-	},
-	"Max Airstream": {
-		"type": "Flying",
-		"acc": 101
-	},
-	"Max Wyrmwind": {
-		"type": "Dragon",
-		"acc": 101
-	},
-	"Max Rockfall": {
-		"type": "Rock",
-		"acc": 101
-	},
-	"Max Quake": {
-		"type": "Ground",
-		"acc": 101
-	},
-	"Max Steelspike": {
-		"type": "Steel",
-		"acc": 101
-	},
-	"Max Starfall": {
-		"type": "Fairy",
-		"acc": 101
-	},
-	"Max Phantasm": {
-		"type": "Ghost",
-		"acc": 101
-	},
-	"Max Darkness": {
-		"type": "Dark",
-		"acc": 101
 	},
 	"Multi-Attack": {"bp": 120},
 	"Rapid Spin": {"bp": 50},
@@ -5312,13 +5138,6 @@ var MOVES_SV = $.extend(true, {}, MOVES_SS, {
 		"isSlicing": true,
 		"acc": 100
 	},
-	"Blazing Torque": {
-		"bp": 80,
-		"type": "Fire",
-		"category": "Physical",
-		"hasSecondaryEffect": true,
-		"acc": 100
-	},
 	"Chilling Water": {
 		"bp": 50,
 		"type": "Water",
@@ -5337,15 +5156,8 @@ var MOVES_SV = $.extend(true, {}, MOVES_SS, {
 		"makesContact": true,
 		"acc": 100
 	},
-	"Combat Torque": {
-		"bp": 100,
-		"type": "Fighting",
-		"category": "Physical",
-		"hasSecondaryEffect": true,
-		"acc": 100
-	},
 	"Comeuppance": {
-		"bp": 0,
+		"bp": 1,
 		"type": "Dark",
 		"makesContact": true
 	},
@@ -5412,7 +5224,6 @@ var MOVES_SV = $.extend(true, {}, MOVES_SS, {
 		"category": "Physical",
 		"makesContact": true,
 		"isPunch": true,
-		"hasSecondaryEffect": true, // No actual effect, but is affected by Sheer Force
 		"hasPriority": true,
 		"acc": 100
 	},
@@ -5437,13 +5248,6 @@ var MOVES_SV = $.extend(true, {}, MOVES_SS, {
 		"hasSecondaryEffect": true,
 		"acc": 100
 	},
-	"Magical Torque": {
-		"bp": 100,
-		"type": "Fairy",
-		"category": "Physical",
-		"hasSecondaryEffect": true,
-		"acc": 100
-	},
 	"Make It Rain": {
 		"bp": 120,
 		"type": "Steel",
@@ -5457,13 +5261,6 @@ var MOVES_SV = $.extend(true, {}, MOVES_SS, {
 		"category": "Physical",
 		"hasSecondaryEffect": true,
 		"makesContact": true,
-		"acc": 100
-	},
-	"Noxious Torque": {
-		"bp": 100,
-		"type": "Poison",
-		"category": "Physical",
-		"hasSecondaryEffect": true,
 		"acc": 100
 	},
 	"Order Up": {
@@ -5584,14 +5381,7 @@ var MOVES_SV = $.extend(true, {}, MOVES_SS, {
 		"isTwoHit": true,
 		"acc": 100
 	},
-	"Wicked Torque": {
-		"bp": 80,
-		"type": "Dark",
-		"category": "Physical",
-		"hasSecondaryEffect": true,
-		"acc": 100
-	},
-	"Grassy Glide": {"bp": 60},
+	"Grassy Glide": {"bp": 55},
 	"Wicked Blow": {"bp": 75},
 	"Glacial Lance": {"bp": 120},
 	"Barb Barrage": {
@@ -5775,17 +5565,556 @@ var MOVES_SV = $.extend(true, {}, MOVES_SS, {
 		"type": "Water",
 		"category": "Special",
 		"acc": 100
-	}
+	},
+
+	"Blood Moon": {
+		"bp": 140,
+		"type": "Normal",
+		"category": "Special",
+		"acc": 100
+	},
+	"Ivy Cudgel": {
+		"bp": 100,
+		"type": "Grass",
+		"category": "Physical",
+		"acc": 100
+	},
+	"Matcha Gotcha": {
+		"bp": 80,
+		"type": "Grass",
+		"category": "Special",
+		"hasSecondaryEffect": true,
+		"percentHealed": 1/2,
+		"acc": 90
+	},
+	"Syrup Bomb": {
+		"bp": 60,
+		"type": "Grass",
+		"category": "Special",
+		"isBullet": true,
+		"acc": 85
+	},
+
+	"Alluring Voice": {
+		"bp": 80,
+		"type": "Fairy",
+		"category": "Special",
+		"isSound": true,
+		"hasSecondaryEffect": true,
+		"acc": 100
+	},
+	"Electro Shot": {
+		"bp": 130,
+		"type": "Electric",
+		"category": "Special",
+		"hasSecondaryEffect": true,
+		"acc": 100
+	},
+	"Fickle Beam": {
+		"bp": 80,
+		"type": "Dragon",
+		"category": "Special",
+		"acc": 100
+	},
+	"Hard Press": {
+		"bp": 1,
+		"type": "Steel",
+		"category": "Physical",
+		"makesContact": true,
+		"acc": 100
+	},
+	"Malignant Chain": {
+		"bp": 100,
+		"type": "Poison",
+		"category": "Special",
+		"hasSecondaryEffect": true,
+		"acc": 100
+	},
+	"Mighty Cleave": {
+		"bp": 95,
+		"type": "Rock",
+		"category": "Physical",
+		"makesContact": true,
+		"isSlicing": true,
+		"bypassesProtect": true,
+		"acc": 100
+	},
+	"Psychic Noise": {
+		"bp": 75,
+		"type": "Psychic",
+		"category": "Special",
+		"isSound": true,
+		"hasSecondaryEffect": true,
+		"acc": 100
+	},
+	"Supercell Slam": {
+		"bp": 100,
+		"type": "Electric",
+		"category": "Physical",
+		"makesContact": true,
+		"hasRecoil": "crash",
+		"acc": 95
+	},
+	"Tachyon Cutter": {
+		"bp": 50,
+		"type": "Steel",
+		"category": "Special",
+		"isSlicing": true,
+		"isTwoHit": true,
+		"acc": 101
+	},
+	"Temper Flare": {
+		"bp": 75,
+		"type": "Fire",
+		"category": "Physical",
+		"makesContact": true,
+		"acc": 100
+	},
+	"Tera Starstorm": {
+		"bp": 120,
+		"type": "Normal",
+		"category": "Special",
+		"acc": 100
+	},
+	"Thunderclap": {
+		"bp": 70,
+		"type": "Electric",
+		"category": "Special",
+		"hasPriority": true,
+		"acc": 100
+	},
+	"Upper Hand": {
+		"bp": 65,
+		"type": "Fighting",
+		"category": "Physical",
+		"hasPriority": true,
+		"makesContact": true,
+		"hasSecondaryEffect": true,
+		"acc": 100
+	},
+	"Luster Purge": {"bp": 95},
+	"Mist Ball": {"bp": 95}
 });
 
-var MAXMOVES_LOOKUP = {
-	"Normal": "Max Strike", "Fire": "Max Flare", "Water": "Max Geyser",
-	"Electric": "Max Lightning", "Grass": "Max Overgrowth", "Ghost": "Max Phantasm",
-	"Dark": "Max Darkness", "Psychic": "Max Mindstorm", "Fighting": "Max Knuckle",
-	"Steel": "Max Steelspike", "Ice": "Max Hailstorm", "Ground": "Max Quake",
-	"Rock": "Max Rockfall", "Bug": "Max Flutterby", "Fairy": "Max Starfall",
-	"Flying": "Max Airstream", "Dragon": "Max Wyrmwind", "Poison": "Max Ooze"
+
+var ZMOVES_LOOKUP = {
+	"Bug": "Savage Spin-Out",
+	"Dark": "Black Hole Eclipse",
+	"Dragon": "Devastating Drake",
+	"Electric": "Gigavolt Havoc",
+	"Fairy": "Twinkle Tackle",
+	"Fighting": "All-Out Pummeling",
+	"Fire": "Inferno Overdrive",
+	"Flying": "Supersonic Skystrike",
+	"Ghost": "Never-Ending Nightmare",
+	"Grass": "Bloom Doom",
+	"Ground": "Tectonic Rage",
+	"Ice": "Subzero Slammer",
+	"Normal": "Breakneck Blitz",
+	"Poison": "Acid Downpour",
+	"Psychic": "Shattered Psyche",
+	"Rock": "Continental Crush",
+	"Steel": "Corkscrew Crash",
+	"Water": "Hydro Vortex"
 };
+
+var EXCLUSIVE_ZMOVES_LOOKUP = {
+	"Kommonium Z": {
+		"zMoveName": "Clangorous Soulblaze",
+		"baseMove": "Clanging Scales"
+	},
+	"Incinium Z": {
+		"zMoveName": "Malicious Moonsault",
+		"baseMove": "Darkest Lariat"
+	},
+	"Snorlium Z": {
+		"zMoveName": "Pulverizing Pancake",
+		"baseMove": "Giga Impact"
+	},
+	"Lunalium Z": {
+		"zMoveName": "Menacing Moonraze Maelstrom",
+		"baseMove": "Moongeist Beam"
+	},
+	"Ultranecrozium Z": {
+		"zMoveName": "Light That Burns the Sky",
+		"baseMove": "Photon Geyser"
+	},
+	"Mimikium Z": {
+		"zMoveName": "Let\'s Snuggle Forever",
+		"baseMove": "Play Rough"
+	},
+	"Mewnium Z": {
+		"zMoveName": "Genesis Supernova",
+		"baseMove": "Psychic"
+	},
+	"Primarium Z": {
+		"zMoveName": "Oceanic Operetta",
+		"baseMove": "Sparkling Aria"
+	},
+	"Marshadium Z": {
+		"zMoveName": "Soul-Stealing 7-Star Strike",
+		"baseMove": "Spectral Thief"
+	},
+	"Decidium Z": {
+		"zMoveName": "Sinister Arrow Raid",
+		"baseMove": "Spirit Shackle"
+	},
+	"Lycanium Z": {
+		"zMoveName": "Splintered Stormshards",
+		"baseMove": "Stone Edge"
+	},
+	"Solganium Z": {
+		"zMoveName": "Searing Sunraze Smash",
+		"baseMove": "Sunsteel Strike"
+	},
+	"Aloraichium Z": {
+		"zMoveName": "Stoked Sparksurfer",
+		"baseMove": "Thunderbolt"
+	},
+	"Pikashunium Z": {
+		"zMoveName": "10,000,000 Volt Thunderbolt",
+		"baseMove": "Thunderbolt"
+	},
+	"Pikanium Z": {
+		"zMoveName": "Catastropika",
+		"baseMove": "Volt Tackle"
+	},
+	"Tapunium Z": {
+		"zMoveName": "Nature\'s Madness",
+		"baseMove": "Guardian of Alola"
+	}
+};
+
+var EXCLUSIVE_ZMOVES = {
+	"10,000,000 Volt Thunderbolt": {
+		"bp": 195,
+		"type": "Electric",
+		"category": "Special"
+	},
+	"Catastropika": {
+		"bp": 210,
+		"type": "Electric",
+		"category": "Physical",
+		"makesContact": true
+	},
+	"Clangorous Soulblaze": {
+		"bp": 185,
+		"type": "Dragon",
+		"category": "Special",
+		"isSound": true,
+		"isSpread": true,
+		"hasSecondaryEffect": true
+	},
+	"Genesis Supernova": {
+		"bp": 185,
+		"type": "Psychic",
+		"category": "Special"
+	},
+	"Guardian of Alola": {
+		"bp": 1,
+		"type": "Fairy",
+		"category": "Special"
+	},
+	"Let's Snuggle Forever": {
+		"bp": 190,
+		"type": "Fairy",
+		"category": "Physical",
+		"makesContact": true
+	},
+	"Light That Burns the Sky": {
+		"bp": 200,
+		"type": "Psychic",
+		"category": "Special",
+		"usesHighestAttackStat": true,
+		"negateAbility": true
+	},
+	"Malicious Moonsault": {
+		"bp": 180,
+		"type": "Dark",
+		"category": "Physical",
+		"makesContact": true
+	},
+	"Menacing Moonraze Maelstrom": {
+		"bp": 200,
+		"type": "Ghost",
+		"category": "Special",
+		"negateAbility": true
+	},
+	"Oceanic Operetta": {
+		"bp": 195,
+		"type": "Water",
+		"category": "Special"
+	},
+	"Pulverizing Pancake": {
+		"bp": 210,
+		"type": "Normal",
+		"category": "Physical",
+		"makesContact": true
+	},
+	"Searing Sunraze Smash": {
+		"bp": 200,
+		"type": "Steel",
+		"category": "Physical",
+		"makesContact": true,
+		"negateAbility": true
+	},
+	"Sinister Arrow Raid": {
+		"bp": 180,
+		"type": "Ghost",
+		"category": "Physical"
+	},
+	"Soul-Stealing 7-Star Strike": {
+		"bp": 195,
+		"type": "Ghost",
+		"category": "Physical"
+	},
+	"Splintered Stormshards": {
+		"bp": 190,
+		"type": "Rock",
+		"category": "Physical"
+	},
+	"Stoked Sparksurfer": {
+		"bp": 175,
+		"type": "Electric",
+		"category": "Special",
+		"hasSecondaryEffect": true
+	}
+};
+
+var MAXMOVES_LOOKUP = {
+	"Normal": "Max Strike",
+	"Fire": "Max Flare",
+	"Water": "Max Geyser",
+	"Electric": "Max Lightning",
+	"Grass": "Max Overgrowth",
+	"Ghost": "Max Phantasm",
+	"Dark": "Max Darkness",
+	"Psychic": "Max Mindstorm",
+	"Fighting": "Max Knuckle",
+	"Steel": "Max Steelspike",
+	"Ice": "Max Hailstorm",
+	"Ground": "Max Quake",
+	"Rock": "Max Rockfall",
+	"Bug": "Max Flutterby",
+	"Fairy": "Max Starfall",
+	"Flying": "Max Airstream",
+	"Dragon": "Max Wyrmwind",
+	"Poison": "Max Ooze"
+};
+
+var MAXMOVES_POWER = {
+	// Fighting
+	"Final Gambit": 100,
+	"Focus Punch": 100,
+	"Low Kick": 100,
+	"Meteor Assault": 100,
+	"Reversal": 100,
+	"Close Combat": 95,
+	"Focus Blast": 95,
+	"High Jump Kick": 95,
+	"Superpower": 95,
+	"Aura Sphere": 90,
+	"Body Press": 90,
+	"Brick Break": 90,
+	"Cross Chop": 90,
+	"Drain Punch": 90,
+	"Dynamic Punch": 90,
+	"Flying Press": 90,
+	"Hammer Arm": 90,
+	"Sacred Sword": 90,
+	"Secret Sword": 90,
+	"Submission": 90,
+	"Thunderous Kick": 90,
+	"Low Sweep": 85,
+	"Vital Throw": 85,
+	"Circle Throw": 80,
+	"Double Kick": 80,
+	"Force Palm": 80,
+	"Revenge": 80,
+	"Storm Throw": 80,
+	"Triple Kick": 80,
+	"Counter": 75,
+	"Seismic Toss": 75,
+	"Arm Thrust": 70,
+	"Mach Punch": 70,
+	"Power-Up Punch": 70,
+	"Rock Smash": 70,
+	"Vacuum Wave": 70,
+	// Poison
+	"Belch": 95,
+	"Gunk Shot": 95,
+	"Poison Jab": 90,
+	"Shell Side Arm": 90,
+	"Sludge Bomb": 90,
+	"Sludge Wave": 90,
+	"Cross Poison": 85,
+	"Sludge": 85,
+	"Venoshock": 85,
+	"Clear Smog": 75,
+	"Poison Fang": 75,
+	"Poison Tail": 75,
+	"Acid": 70,
+	"Acid Spray": 70,
+	"Poison Sting": 70,
+	"Smog": 70,
+
+	"Multi-Attack": 95,
+	"Triple Axel": 140,
+	"Crush Grip": 140,
+	"Double Iron Bash": 140,
+	"Rising Voltage": 140,
+	"Lash Out (Doubled)": 130,
+	"Scale Shot": 130,
+	"Dual Wingbeat": 130,
+	"Terrain Pulse": 130,
+	"Bolt Beak (Doubled)": 130,
+	"Fishious Rend (Doubled)": 130,
+	"Pin Missile": 130,
+	"Power Trip": 130,
+	"Dragon Darts": 130,
+	"Dual Chop": 130,
+	"Electro Ball": 130,
+	"Heat Crash": 130,
+	"Bullet Seed": 130,
+	"Grass Knot": 130,
+	"Bonemerang": 130,
+	"Bone Rush": 130,
+	"Fissure": 130,
+	"Icicle Spear": 130,
+	"Sheer Cold": 130,
+	"Weather Ball": 130,
+	"Tail Slap": 130,
+	"Guillotine": 130,
+	"Horn Drill": 130,
+	"Flail": 130,
+	"Endeavor": 130,
+	"Stored Power": 130,
+	"Rock Blast": 130,
+	"Gear Grind": 130,
+	"Gyro Ball": 130,
+	"Heavy Slam": 130,
+	"Double Hit": 120,
+	"Avalanche (Doubled)": 110,
+	"Revenge (Doubled)": 110,
+	"Fling": 100,
+	"Nature\'s Madness": 100,
+	"Night Shade": 100,
+	"Fury Swipes": 100,
+	"Super Fang": 100,
+	"Spit Up": 100,
+	"Mirror Coat": 100,
+	"Metal Burst": 100
+}
+
+// SwSh Dexited moves
+delete MOVES_SS["Assist"];
+delete MOVES_SS["Barrage"];
+delete MOVES_SS["Barrier"];
+delete MOVES_SS["Beak Blast"];
+delete MOVES_SS["Bestow"];
+delete MOVES_SS["Bide"];
+delete MOVES_SS["Bone Club"];
+delete MOVES_SS["Bubble"];
+delete MOVES_SS["Camouflage"];
+delete MOVES_SS["Captivate"];
+delete MOVES_SS["Chatter"];
+delete MOVES_SS["Chip Away"];
+delete MOVES_SS["Clamp"];
+delete MOVES_SS["Comet Punch"];
+delete MOVES_SS["Constrict"];
+delete MOVES_SS["Dark Void"];
+delete MOVES_SS["Dizzy Punch"];
+delete MOVES_SS["Double Slap"];
+delete MOVES_SS["Dragon Rage"];
+delete MOVES_SS["Egg Bomb"];
+delete MOVES_SS["Embargo"];
+delete MOVES_SS["Feint Attack"];
+delete MOVES_SS["Flame Burst"];
+delete MOVES_SS["Flash"];
+delete MOVES_SS["Foresight"];
+delete MOVES_SS["Frustration"];
+delete MOVES_SS["Grass Whistle"];
+delete MOVES_SS["Heal Block"];
+delete MOVES_SS["Heal Order"];
+delete MOVES_SS["Heart Stamp"];
+delete MOVES_SS["Heart Swap"];
+delete MOVES_SS["Hidden Power"];
+delete MOVES_SS["Hidden Power Bug"];
+delete MOVES_SS["Hidden Power Dark"];
+delete MOVES_SS["Hidden Power Dragon"];
+delete MOVES_SS["Hidden Power Electric"];
+delete MOVES_SS["Hidden Power Fighting"];
+delete MOVES_SS["Hidden Power Fire"];
+delete MOVES_SS["Hidden Power Flying"];
+delete MOVES_SS["Hidden Power Ghost"];
+delete MOVES_SS["Hidden Power Grass"];
+delete MOVES_SS["Hidden Power Ground"];
+delete MOVES_SS["Hidden Power Ice"];
+delete MOVES_SS["Hidden Power Poison"];
+delete MOVES_SS["Hidden Power Psychic"];
+delete MOVES_SS["Hidden Power Rock"];
+delete MOVES_SS["Hidden Power Steel"];
+delete MOVES_SS["Hidden Power Water"];
+delete MOVES_SS["Hyper Fang"];
+delete MOVES_SS["Ice Ball"];
+delete MOVES_SS["Ice Hammer"];
+delete MOVES_SS["Ion Deluge"];
+delete MOVES_SS["Judgment"];
+delete MOVES_SS["Jump Kick"];
+delete MOVES_SS["Karate Chop"];
+delete MOVES_SS["Light of Ruin"];
+delete MOVES_SS["Lucky Chant"];
+delete MOVES_SS["Magnet Bomb"];
+delete MOVES_SS["Magnitude"];
+delete MOVES_SS["Me First"];
+delete MOVES_SS["Meditate"];
+delete MOVES_SS["Miracle Eye"];
+delete MOVES_SS["Mirror Move"];
+delete MOVES_SS["Mirror Shot"];
+delete MOVES_SS["Mud Bomb"];
+delete MOVES_SS["Mud Sport"];
+delete MOVES_SS["Natural Gift"];
+delete MOVES_SS["Needle Arm"];
+delete MOVES_SS["Nightmare"];
+delete MOVES_SS["Odor Sleuth"];
+delete MOVES_SS["Ominous Wind"];
+delete MOVES_SS["Powder"];
+delete MOVES_SS["Psycho Boost"];
+delete MOVES_SS["Psywave"];
+delete MOVES_SS["Punishment"];
+delete MOVES_SS["Pursuit"];
+delete MOVES_SS["Rage"];
+delete MOVES_SS["Razor Wind"];
+delete MOVES_SS["Refresh"];
+delete MOVES_SS["Return"];
+delete MOVES_SS["Revelation Dance"];
+delete MOVES_SS["Rock Climb"];
+delete MOVES_SS["Rolling Kick"];
+delete MOVES_SS["Rototiller"];
+delete MOVES_SS["Secret Power"];
+delete MOVES_SS["Seed Flare"];
+delete MOVES_SS["Sharpen"];
+delete MOVES_SS["Signal Beam"];
+delete MOVES_SS["Silver Wind"];
+delete MOVES_SS["Sketch"];
+delete MOVES_SS["Sky Drop"];
+delete MOVES_SS["Sky Uppercut"];
+delete MOVES_SS["Smelling Salts"];
+delete MOVES_SS["Snatch"];
+delete MOVES_SS["Sonic Boom"];
+delete MOVES_SS["Spider Web"];
+delete MOVES_SS["Spike Cannon"];
+delete MOVES_SS["Spotlight"];
+delete MOVES_SS["Steamroller"];
+delete MOVES_SS["Synchronoise"];
+delete MOVES_SS["Tail Glow"];
+delete MOVES_SS["Telekinesis"];
+delete MOVES_SS["Toxic Thread"];
+delete MOVES_SS["Trump Card"];
+delete MOVES_SS["Twineedle"];
+delete MOVES_SS["Wake-Up Slap"];
+delete MOVES_SS["Water Sport"];
+delete MOVES_SS["Wring Out"];
 
 // SV Dexited moves
 delete MOVES_SV["Karate Chop"];
@@ -5819,14 +6148,9 @@ delete MOVES_SV["Psywave"];
 delete MOVES_SV["Bonemerang"];
 delete MOVES_SV["Hyper Fang"];
 delete MOVES_SV["Sharpen"];
-delete MOVES_SV["Conversion"];
-delete MOVES_SV["Sketch"];
-delete MOVES_SV["Triple Kick"];
 delete MOVES_SV["Spider Web"];
 delete MOVES_SV["Mind Reader"];
 delete MOVES_SV["Nightmare"];
-delete MOVES_SV["Conversion 2"];
-delete MOVES_SV["Aeroblast"];
 delete MOVES_SV["Feint Attack"];
 delete MOVES_SV["Octazooka"];
 delete MOVES_SV["Foresight"];
@@ -5865,9 +6189,6 @@ delete MOVES_SV["Grudge"];
 delete MOVES_SV["Snatch"];
 delete MOVES_SV["Secret Power"];
 delete MOVES_SV["Camouflage"];
-delete MOVES_SV["Tail Glow"];
-delete MOVES_SV["Luster Purge"];
-delete MOVES_SV["Mist Ball"];
 delete MOVES_SV["Mud Sport"];
 delete MOVES_SV["Ice Ball"];
 delete MOVES_SV["Needle Arm"];
@@ -5878,8 +6199,6 @@ delete MOVES_SV["Grass Whistle"];
 delete MOVES_SV["Signal Beam"];
 delete MOVES_SV["Sky Uppercut"];
 delete MOVES_SV["Water Sport"];
-delete MOVES_SV["Doom Desire"];
-delete MOVES_SV["Psycho Boost"];
 delete MOVES_SV["Miracle Eye"];
 delete MOVES_SV["Wake-Up Slap"];
 delete MOVES_SV["Natural Gift"];
@@ -5894,14 +6213,10 @@ delete MOVES_SV["Punishment"];
 delete MOVES_SV["Mud Bomb"];
 delete MOVES_SV["Mirror Shot"];
 delete MOVES_SV["Rock Climb"];
-delete MOVES_SV["Rock Wrecker"];
 delete MOVES_SV["Magnet Bomb"];
 delete MOVES_SV["Captivate"];
 delete MOVES_SV["Chatter"];
 delete MOVES_SV["Heal Order"];
-delete MOVES_SV["Crush Grip"];
-delete MOVES_SV["Dark Void"];
-delete MOVES_SV["Seed Flare"];
 delete MOVES_SV["Ominous Wind"];
 delete MOVES_SV["Autotomize"];
 delete MOVES_SV["Telekinesis"];
@@ -5918,20 +6233,10 @@ delete MOVES_SV["Head Charge"];
 delete MOVES_SV["Gear Grind"];
 delete MOVES_SV["Searing Shot"];
 delete MOVES_SV["Techno Blast"];
-delete MOVES_SV["Secret Sword"];
-delete MOVES_SV["Glaciate"];
-delete MOVES_SV["Bolt Strike"];
-delete MOVES_SV["Blue Flare"];
-delete MOVES_SV["Freeze Shock"];
-delete MOVES_SV["Ice Burn"];
-delete MOVES_SV["Fusion Flare"];
-delete MOVES_SV["Fusion Bolt"];
 delete MOVES_SV["Mat Block"];
 delete MOVES_SV["Rototiller"];
 delete MOVES_SV["Trick-or-Treat"];
 delete MOVES_SV["Ion Deluge"];
-delete MOVES_SV["Forest's Curse"];
-delete MOVES_SV["Topsy-Turvy"];
 delete MOVES_SV["Crafty Shield"];
 delete MOVES_SV["Flower Shield"];
 delete MOVES_SV["Electrify"];
@@ -5945,95 +6250,26 @@ delete MOVES_SV["Thousand Arrows"];
 delete MOVES_SV["Thousand Waves"];
 delete MOVES_SV["Land's Wrath"];
 delete MOVES_SV["Light of Ruin"];
-delete MOVES_SV["Breakneck Blitz"];
-delete MOVES_SV["All-Out Pummeling"];
-delete MOVES_SV["Supersonic Skystrike"];
-delete MOVES_SV["Acid Downpour"];
-delete MOVES_SV["Tectonic Rage"];
-delete MOVES_SV["Continental Crush"];
-delete MOVES_SV["Savage Spin-Out"];
-delete MOVES_SV["Never-Ending Nightmare"];
-delete MOVES_SV["Corkscrew Crash"];
-delete MOVES_SV["Inferno Overdrive"];
-delete MOVES_SV["Hydro Vortex"];
-delete MOVES_SV["Bloom Doom"];
-delete MOVES_SV["Gigavolt Havoc"];
-delete MOVES_SV["Shattered Psyche"];
-delete MOVES_SV["Subzero Slammer"];
-delete MOVES_SV["Devastating Drake"];
-delete MOVES_SV["Black Hole Eclipse"];
-delete MOVES_SV["Twinkle Tackle"];
-delete MOVES_SV["Catastropika"];
-delete MOVES_SV["Sparkling Aria"];
-delete MOVES_SV["Floral Healing"];
 delete MOVES_SV["Spotlight"];
-delete MOVES_SV["Toxic Thread"];
 delete MOVES_SV["Laser Focus"];
 delete MOVES_SV["Gear Up"];
 delete MOVES_SV["Anchor Shot"];
 delete MOVES_SV["Purify"];
 delete MOVES_SV["Core Enforcer"];
-delete MOVES_SV["Beak Blast"];
-delete MOVES_SV["Clanging Scales"];
-delete MOVES_SV["Dragon Hammer"];
-delete MOVES_SV["Sinister Arrow Raid"];
-delete MOVES_SV["Malicious Moonsault"];
-delete MOVES_SV["Oceanic Operetta"];
-delete MOVES_SV["Guardian of Alola"];
-delete MOVES_SV["Soul-Stealing 7-Star Strike"];
-delete MOVES_SV["Stoked Sparksurfer"];
-delete MOVES_SV["Pulverizing Pancake"];
-delete MOVES_SV["Extreme Evoboost"];
-delete MOVES_SV["Genesis Supernova"];
 delete MOVES_SV["Shell Trap"];
 delete MOVES_SV["Shadow Bone"];
-delete MOVES_SV["Prismatic Laser"];
 delete MOVES_SV["Spectral Thief"];
-delete MOVES_SV["Sunsteel Strike"];
-delete MOVES_SV["Moongeist Beam"];
 delete MOVES_SV["Nature's Madness"];
 delete MOVES_SV["Multi-Attack"];
-delete MOVES_SV["10,000,000 Volt Thunderbolt"];
 delete MOVES_SV["Mind Blown"];
 delete MOVES_SV["Plasma Fists"];
-delete MOVES_SV["Photon Geyser"];
-delete MOVES_SV["Light That Burns the Sky"];
-delete MOVES_SV["Searing Sunraze Smash"];
-delete MOVES_SV["Menacing Moonraze Maelstrom"];
-delete MOVES_SV["Let's Snuggle Forever"];
-delete MOVES_SV["Splintered Stormshards"];
-delete MOVES_SV["Clangorous Soulblaze"];
 delete MOVES_SV["Double Iron Bash"];
-delete MOVES_SV["Max Guard"];
 delete MOVES_SV["Octolock"];
 delete MOVES_SV["Bolt Beak"];
 delete MOVES_SV["Bolt Beak (Doubled)"];
 delete MOVES_SV["Fishious Rend"];
 delete MOVES_SV["Fishious Rend (Doubled)"];
-delete MOVES_SV["Max Flare"];
-delete MOVES_SV["Max Flutterby"];
-delete MOVES_SV["Max Lightning"];
-delete MOVES_SV["Max Strike"];
-delete MOVES_SV["Max Knuckle"];
-delete MOVES_SV["Max Phantasm"];
-delete MOVES_SV["Max Hailstorm"];
-delete MOVES_SV["Max Ooze"];
-delete MOVES_SV["Max Geyser"];
-delete MOVES_SV["Max Airstream"];
-delete MOVES_SV["Max Starfall"];
-delete MOVES_SV["Max Wyrmwind"];
-delete MOVES_SV["Max Mindstorm"];
-delete MOVES_SV["Max Rockfall"];
-delete MOVES_SV["Max Quake"];
-delete MOVES_SV["Max Darkness"];
-delete MOVES_SV["Max Overgrowth"];
-delete MOVES_SV["Max Steelspike"];
-delete MOVES_SV["Clangorous Soul"];
-delete MOVES_SV["Decorate"];
 delete MOVES_SV["Snap Trap"];
-delete MOVES_SV["Aura Wheel"];
-delete MOVES_SV["Strange Steam"];
 delete MOVES_SV["Obstruct"];
 delete MOVES_SV["Meteor Assault"];
 delete MOVES_SV["Eternabeam"];
-delete MOVES_SV["Take Heart"]

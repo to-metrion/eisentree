@@ -8,6 +8,7 @@ var ITEMS_GSC = [
 	"Gold Berry",
 	"Hard Stone",
 	"King's Rock",
+	"Leek",
 	"Leftovers",
 	"Light Ball",
 	"Magnet",
@@ -149,35 +150,19 @@ var ITEMS_BW = ITEMS_DPP.concat([
 	"Absorb Bulb",
 	"Air Balloon",
 	"Binding Band",
-	"Bug Gem",
 	"Burn Drive",
 	"Cell Battery",
 	"Chill Drive",
-	"Dark Gem",
-	"Dragon Gem",
 	"Douse Drive",
 	"Eject Button",
-	"Electric Gem",
 	"Eviolite",
-	"Fighting Gem",
-	"Fire Gem",
 	"Float Stone",
-	"Flying Gem",
-	"Ghost Gem",
-	"Grass Gem",
-	"Ground Gem",
-	"Ice Gem",
 	"Icy Rock",
 	"Normal Gem",
-	"Poison Gem",
-	"Psychic Gem",
 	"Red Card",
 	"Ring Target",
-	"Rock Gem",
 	"Rocky Helmet",
-	"Shock Drive",
-	"Steel Gem",
-	"Water Gem"
+	"Shock Drive"
 ]);
 
 var ITEMS_XY = ITEMS_BW.concat([
@@ -200,23 +185,6 @@ ITEMS_XY.splice(ITEMS_XY.indexOf("NeverMeltIce"), 1, "Never-Melt Ice");
 ITEMS_XY.splice(ITEMS_XY.indexOf("SilverPowder"), 1, "Silver Powder");
 ITEMS_XY.splice(ITEMS_XY.indexOf("TwistedSpoon"), 1, "Twisted Spoon");
 ITEMS_XY.splice(ITEMS_XY.indexOf("BrightPowder"), 1, "Bright Powder");
-ITEMS_XY.splice(ITEMS_XY.indexOf("Bug Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Dark Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Dragon Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Electric Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Fighting Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Fire Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Flying Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Ghost Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Grass Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Ground Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Ice Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Poison Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Psychic Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Rock Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Steel Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Water Gem"), 1);
-ITEMS_XY.splice(ITEMS_XY.indexOf("Soul Dew"), 1);
 
 var ITEMS_SM = ITEMS_XY.concat([
 	"Adrenaline Orb",
@@ -230,24 +198,59 @@ var ITEMS_SM = ITEMS_XY.concat([
 	"Electric Seed",
 	"Psychic Seed",
 	"Misty Seed",
-	"Grassy Seed",
-	"Bug Memory",
-	"Dark Memory",
-	"Dragon Memory",
-	"Electric Memory",
-	"Fairy Memory",
-	"Fighting Memory",
-	"Fire Memory",
-	"Flying Memory",
-	"Ghost Memory",
-	"Grass Memory",
-	"Ground Memory",
-	"Ice Memory",
-	"Poison Memory",
-	"Psychic Memory",
-	"Rock Memory",
-	"Steel Memory",
-	"Water Memory",
+	"Grassy Seed"
+]);
+
+// Big Nugget is 130 Fling BP without the side effects of Heavy Ball.
+// It also consolidates Overheat and Leaf Storm TR items.
+var ITEMS_SS = ITEMS_SM.concat([
+	"Big Nugget",
+	"Blunder Policy",
+	"Eject Pack",
+	"Heavy-Duty Boots",
+	"Room Service",
+	"Throat Spray",
+	"Utility Umbrella"
+]);
+
+var ITEMS_SV = ITEMS_SS.concat([
+	"Booster Energy",
+	"Ability Shield",
+	"Clear Amulet",
+	"Mirror Herb",
+	"Punching Glove",
+	"Covert Cloak",
+	"Loaded Dice",
+	"Griseous Core",
+	"Adamant Crystal",
+	"Lustrous Globe",
+	"Fairy Feather",
+	"Wellspring Mask",
+	"Hearthflame Mask",
+	"Cornerstone Mask"
+]);
+
+
+var NON_NORMAL_GEMS = [
+	"Bug Gem",
+	"Dark Gem",
+	"Dragon Gem",
+	"Electric Gem",
+	"Fighting Gem",
+	"Fire Gem",
+	"Flying Gem",
+	"Ghost Gem",
+	"Grass Gem",
+	"Ground Gem",
+	"Ice Gem",
+	"Poison Gem",
+	"Psychic Gem",
+	"Rock Gem",
+	"Steel Gem",
+	"Water Gem"
+];
+
+var Z_CRYSTALS = [
 	"Normalium Z",
 	"Grassium Z",
 	"Firium Z",
@@ -269,7 +272,9 @@ var ITEMS_SM = ITEMS_XY.concat([
 	"Decidium Z",
 	"Incinium Z",
 	"Primarium Z",
+	"Snorlium Z",
 	"Aloraichium Z",
+	"Mewnium Z",
 	"Tapunium Z",
 	"Mimikium Z",
 	"Ultranecrozium Z",
@@ -278,28 +283,18 @@ var ITEMS_SM = ITEMS_XY.concat([
 	"Lycanium Z",
 	"Kommonium Z",
 	"Marshadium Z"
-]);
+];
 
-var ITEMS_SS = ITEMS_SM.concat([
-	"Blunder Policy",
-	"Eject Pack",
-	"Heavy-Duty Boots",
-	"Leek",
-	"Room Service",
-	"Rusted Shield",
-	"Rusted Sword",
+ITEMS_BW = ITEMS_BW.concat(NON_NORMAL_GEMS);
+
+ITEMS_SM = ITEMS_SM.concat(Z_CRYSTALS);
+
+var ITEMS_EISENTREE = ITEMS_SM.concat([
+	"Big Nugget",
 	"Throat Spray",
-	"Utility Umbrella"
-]);
-
-var ITEMS_SV = ITEMS_SS.concat([
-	"Booster Energy",
-	"Ability Shield",
 	"Clear Amulet",
-	"Mirror Herb",
-	"Punching Glove",
 	"Covert Cloak",
-	"Loaded Dice"
+	"Loaded Dice",
 ]);
 
 function getTechnoBlast(item) {
@@ -313,7 +308,7 @@ function getTechnoBlast(item) {
 	case "Shock Drive":
 		return "Electric";
 	default:
-		return "";
+		return "Normal";
 	}
 }
 
@@ -356,6 +351,7 @@ function getItemBoostType(item) {
 	case "Twisted Spoon":
 		return "Psychic";
 	case "Pixie Plate":
+	case "Fairy Feather":
 		return "Fairy";
 	case "Sky Plate":
 	case "Sharp Beak":
@@ -431,18 +427,52 @@ function getBerryResistType(berry) {
 }
 
 function getFlingPower(item) {
-	return item === "Iron Ball" ? 130 :
-		item === "Hard Stone" ? 100 :
-			item.indexOf("Plate") !== -1 || ["Deep Sea Tooth", "Thick Club"].indexOf(item) !== -1 ? 90 :
-				["Assault Vest", "Weakness Policy"].indexOf(item) !== -1 ? 80 :
-					["Poison Barb", "Dragon Fang"].indexOf(item) !== -1 ? 70 :
-						["Adamant Orb", "Lustrous Orb", "Macho Brace", "Stick"].indexOf(item) !== -1 ? 60 :
-							item === "Sharp Beak" ? 50 :
-								item === "Eviolite" ? 40 :
-									["Black Belt", "Black Sludge", "Black Glasses", "Charcoal", "Deep Sea Scale", "Flame Orb", "King's Rock",
-										"Life Orb", "Light Ball", "Magnet", "Metal Coat", "Miracle Seed", "Mystic Water", "Never-Melt Ice",
-										"Razor Fang", "Soul Dew", "Spell Tag", "Toxic Orb", "Twisted Spoon"].indexOf(item) !== -1 ? 30 :
-										10;
+	if (item.includes("Plate")) {
+		return 90;
+	}
+	switch (item) {
+		case "Iron Ball":
+		case "Big Nugget":
+			return 130;
+		case "Hard Stone":
+		case "Room Service":
+			return 100;
+		case "DeepSeaTooth":
+		case "Deep Sea Tooth":
+		case "Grip Claw":
+		case "Thick Club":
+			return 90;
+		case "Assault Vest":
+		case "Blunder Policy":
+		case "Heavy-Duty Boots":
+		case "Quick Claw":
+		case "Razor Claw":
+		case "Safety Goggles":
+		case "Sticky Barb":
+		case "Weakness Policy":
+			return 80;
+		case "Dragon Fang":
+		case "Poison Barb":
+			return 70;
+		case "Adamant Orb":
+		case "Damp Rock":
+		case "Griseous Orb":
+		case "Heat Rock":
+		case "Leek":
+		case "Lustrous Orb":
+		case "Macho Brace":
+		case "Rocky Helmet":
+		case "Terrain Extender":
+		case "Utility Umbrella":
+			return 60;
+		case "Toxic Orb":
+		case "Flame Orb":
+		case "Light Ball":
+		case "King's Rock":
+		case "Razor Fang":
+			return 30;
+	}
+	return 10;
 }
 
 function getNaturalGift(item) {
@@ -496,45 +526,4 @@ function getNaturalGift(item) {
 		return gift;
 	}
 	return {"t": "Normal", "p": 1};
-}
-
-function getMultiAttack(item) {
-	switch (item) {
-	case "Bug Memory":
-		return "Bug";
-	case "Dark Memory":
-		return "Dark";
-	case "Dragon Memory":
-		return "Dragon";
-	case "Electric Memory":
-		return "Electric";
-	case "Fairy Memory":
-		return "Fairy";
-	case "Fighting Memory":
-		return "Fighting";
-	case "Fire Memory":
-		return "Fire";
-	case "Flying Memory":
-		return "Flying";
-	case "Ghost Memory":
-		return "Ghost";
-	case "Grass Memory":
-		return "Grass";
-	case "Ground Memory":
-		return "Ground";
-	case "Ice Memory":
-		return "Ice";
-	case "Poison Memory":
-		return "Poison";
-	case "Psychic Memory":
-		return "Psychic";
-	case "Rock Memory":
-		return "Rock";
-	case "Steel Memory":
-		return "Steel";
-	case "Water Memory":
-		return "Water";
-	default:
-		return "";
-	}
 }

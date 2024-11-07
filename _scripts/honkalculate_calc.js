@@ -62,9 +62,24 @@ $.fn.dataTableExt.oSort['damage48-desc'] = function (a, b) {
 	return parseInt(b) - parseInt(a);
 };
 
-function MassPokemon(speciesName, setName, autoLevel) {
+$(".ability").bind("change", function () {
+	let ability = $(this).val();
+	if (ability in checkboxAbilities && checkboxAbilities[ability].mass) {
+		$("#p1 .isActivated").prop("checked", true);
+	}
+});
+
+// empty calculate() so that shared_calc functions don't have to have a special exception in mass calc mode.
+function calculate() {}
+
+function MassPokemon(speciesName, setName) {
 	let pokemon = pokedex[speciesName];
 	let set = setdex[speciesName][setName];
+	let formeNum = getFormeNum(setName, speciesName);
+	if (formeNum != 0) {
+		pokemon = pokedex[pokemon.formes[formeNum]];
+	}
+	let autoLevel = 50;//parseInt(localStorage.getItem("autolevelGen" + gen));
 	let massPoke = {
 		"name": speciesName,
 		"setName": setName,
@@ -78,8 +93,10 @@ function MassPokemon(speciesName, setName, autoLevel) {
 		"HPEVs": set.evs && typeof set.evs.hp !== "undefined" ? set.evs.hp : 0,
 		"nature": set.nature,
 		"ability": set.ability && typeof set.ability !== "undefined" ? set.ability :
-		(pokemon.ab && typeof pokemon.ab !== "undefined" ? pokemon.ab : ""),
-		"item": set.item && typeof set.item !== "undefined" && (set.item === "Eviolite" || !set.item.endsWith("ite")) ? set.item : "",
+		(pokemon.ab && typeof pokemon.ab !== "undefined" ? pokemon.ab :
+		(pokemon.abilities && pokemon.abilities.length == 1 ? pokemon.abilities[0] : "")),
+		"item": set.item && typeof set.item !== "undefined" &&
+		(set.item === "Eviolite" || !(set.item.endsWith("ite") && set.item.endsWith("ite X") && set.item.endsWith("ite Y"))) ? set.item : "",
 		"status": "Healthy",
 		"toxicCounter": 0,
 		"moves": [],
@@ -87,19 +104,29 @@ function MassPokemon(speciesName, setName, autoLevel) {
 		"weight": pokemon.w,
 		"tier": set.tier,
 		"hasType": function (type) { return this.type1 === type || this.type2 === type; },
+		// Reset this mon's stat stages to 0 and clear the stats.
 		"revertStats": function () {
 			Object.keys(this.boosts).forEach(stat => { this.boosts[stat] = 0; });
 			this.stats = [];
-		}
+		},
+		// Reset this mon's current ability subject to Neutralizing Gas
+		// This is designed to be called once before calcs and after calcing each move as defender. Do not call this in MassPokemon object creation
+		"resetCurAbility": function () { this.curAbility = (isNeutralizingGas && this.item !== "Ability Shield") ? "" : this.ability }
 	};
 	// maxHP
-	let autoIVs = gen == 4 ? parseInt($("#autoivs-box").val()) : (gen <= 7 ? parseInt($('#autoivs-select').find(":selected").val()) : 31);
+	let autoIVs = gen == 4 ? parseInt($("#autoivs-center #autoivs-box").val()) : (gen <= 7 ? parseInt($("#autoivs-center #autoivs-select").find(":selected").val()) : 31);
+	if (isNaN(autoIVs)) {
+		autoIVs = 31;
+	}
 	if (pokemon.bs.hp === 1) {
 		massPoke.maxHP = 1;
 	} else {
 		let HPIVs = set.ivs && typeof set.ivs.hp !== "undefined" ? set.ivs.hp : autoIVs;
 		// ~~ is used as a faster Math.floor() for positive numbers
 		massPoke.maxHP = ~~((pokemon.bs.hp * 2 + HPIVs + ~~(massPoke.HPEVs / 4)) * massPoke.level / 100) + massPoke.level + 10;
+		if (set.startDmax) {
+			massPoke.maxHP *= 2;
+		}
 	}
 	// curHP
 	massPoke.curHP = massPoke.maxHP;
@@ -117,32 +144,44 @@ function MassPokemon(speciesName, setName, autoLevel) {
 	for (let n = 0; n < 4; n++) {
 		let moveName = set.moves[n];
 		let defaultDetails = moves[moveName] || moves["(No Move)"];
-		massPoke.moves.push($.extend({}, defaultDetails, {
-			"name": moveName,
-			"bp": defaultDetails.bp,
-			"type": defaultDetails.type,
-			"category": defaultDetails.category,
-			"isCrit": !!defaultDetails.alwaysCrit,
-			"acc": defaultDetails.acc,
-			"hits": defaultDetails.maxMultiHits ? (massPoke.ability === "Skill Link" || moveName === "Population Bomb" || moveName === "Triple Axel" ? defaultDetails.maxMultiHits : (massPoke.item === "Loaded Dice" ? 4 : 3)) : defaultDetails.isThreeHit ? 3 : defaultDetails.isTwoHit ? 2 : 1,
-			"usedTimes": 1
-		}));
+		if (gen == 7 && defaultDetails.zp && defaultDetails.type && defaultDetails.type !== "None" &&
+			massPoke.item.endsWith(" Z") && massPoke.item.startsWith(defaultDetails.type.substring(0, defaultDetails.type.length - 1))) {
+			massPoke.moves.push(getZMove(moveName, massPoke, defaultDetails));
+		} else if (gen == 8 && set.startDmax) {
+			massPoke.moves.push(getMaxMove(moveName, massPoke, defaultDetails));
+		} else {
+			massPoke.moves.push($.extend({}, defaultDetails, {
+				"name": moveName,
+				"bp": defaultDetails.bp,
+				"type": defaultDetails.type,
+				"category": defaultDetails.category,
+				"isCrit": !!defaultDetails.alwaysCrit,
+				"acc": defaultDetails.acc,
+				"hits": defaultDetails.maxMultiHits ? (massPoke.ability === "Skill Link" || moveName === "Population Bomb" || moveName === "Triple Axel" ? defaultDetails.maxMultiHits : (massPoke.item === "Loaded Dice" ? 4 : 3)) : defaultDetails.isThreeHit ? 3 : defaultDetails.isTwoHit ? 2 : 1,
+				"usedTimes": 1
+			}));
+		}
 	}
+	// isAbilityActivated
+	// use the same default state as the user's Pokemon's checkbox
+	massPoke.isAbilityActivated = checkboxAbilities[massPoke.ability] ? checkboxAbilities[massPoke.ability].mass : false;
 
 	return massPoke;
 }
 
 function performCalculations() {
 	var attacker, defender, setPoke, setTier;
-	//var selectedTier = getSelectedTier(); // selectedTier can be: All, threshold, Hall, HallR10, Tower, RS, SM, DM.  *SM and DM are Singles and Doubles Master
+	var selectedTier = getSelectedTier(); // selectedTier can be: All, threshold, Hall, HallR10, Tower, RS, SM, DM.  *SM and DM are Singles and Doubles Master
 	var dataSet = [];
 	var userPoke = new Pokemon($("#p1"));
 	userPoke.startingBoosts = [];
+	// after each MassPokemon is calc'd against, reset the user's mon's stat stages to what the user set them to and clear the stats
 	STATS.forEach(stat => { userPoke.startingBoosts[stat] = userPoke.boosts[stat]; });
 	userPoke.revertStats = function () {
 		Object.keys(this.boosts).forEach(stat => { this.boosts[stat] = this.startingBoosts[stat] });
 		this.stats = [];
 	};
+	let userNeutralizingGas = userPoke.ability === "Neutralizing Gas";
 	if (mode === "one-vs-all") {
 		attacker = userPoke;
 	} else {
@@ -150,70 +189,86 @@ function performCalculations() {
 	}
 	var field = new Field();
 	var startingWeather = field.getWeather();
-	for (let i = 0; i < setsArray.length; i++) {
-		setPoke = setsArray[i];
-		// as of now there's no tiers for eisentree
-		/*setTier = setPoke.tier; // setPoke.tier can be: 50, Hall, HallR10, 28, 40, Tower, RS, SM, DM, SMDM. A set might not have a tier key.
-		if (gen == 4 && selectedTier === "All" && setTier && setTier.indexOf("Hall") != -1) {
-			continue;
-		} else if (selectedTier === "All" || (setTier && setTier.indexOf(selectedTier) != -1) || (selectedTier == "threshold" && parseInt(setTier))) {
-			// let set be calculated
-		} else {
-			continue;
-		}*/
 
-		if (mode === "one-vs-all") {
-			defender = setPoke;
-		} else {
-			attacker = setPoke;
-		}
-		if (attacker.ability === "Rivalry") {
-			attacker.gender = "N";
-		}
-		if (defender.ability === "Rivalry") {
-			defender.gender = "N";
-		}
-		var damageResults = calculateMovesOfAttacker(attacker, defender, field);
-		var result, minDamage, maxDamage, minPercentage, maxPercentage, minPixels, maxPixels;
-		var highestDamage = -1;
-		var data = [setPoke.setName];
-		for (let n = 0; n < 4; n++) {
-			result = damageResults[n];
-			attackerMove = attacker.moves[n];
-			minDamage = result.damage[0] * (attackerMove.name === "Triple Axel" ? 1 : attackerMove.hits); // Triple Axel already handles its extra hit(s) in the damage script
-			maxDamage = result.damage[result.damage.length - 1] * (attackerMove.name === "Triple Axel" ? 1 : attackerMove.hits);
-			// If any piece of the calculation is a string and not a number ie. Pokemon.level, stats will concatinate into strings, and the below will eval to 0.
-			// I want to be very sure that everything is using the correct types, so I want this behavior. Shoutouts to writing code w/o tests.
-			minPercentage = Math.round(minDamage * 1000 / defender.maxHP) / 10;
-			maxPercentage = Math.round(maxDamage * 1000 / defender.maxHP) / 10;
-			if (maxDamage > highestDamage) {
-				highestDamage = maxDamage;
-				while (data.length > 1) {
-					data.pop();
-				}
-				data.push(highestDamage <= 0 ? "(No Move)" : attackerMove.name.replace("Hidden Power", "HP"));
-				data.push(minPercentage + " - " + maxPercentage + "%");
-				setKOChanceText(result, attackerMove, attacker, defender, field.getSide(~~(mode === "one-vs-all")));
-				if (attackerMove.bp === 0) {
-					data.push("nice move");
-				} else {
-					data.push(result.koChanceText ? result.koChanceText : "Did not get koChanceText");
+	let setSpecies = Object.keys(setdex);
+	let ohkoCount = 0;
+	for (let speciesName of setSpecies) {
+		let setNames = Object.keys(setdex[speciesName]);
+		for (let setName of setNames) {
+			setPoke = MassPokemon(speciesName, setName);
+			// as of now there's no tiers for eisentree
+			/*setTier = setPoke.tier; // setPoke.tier can be: 50, Open, Hall, HallR10, 28, 40, Tower, RS, SM, DM, SMDM. A set might not have a tier key.
+			if (gen == 3 && selectedTier === "threshold" && setTier === "Open" && $("#autolevel-box").val() !== "50") {
+				// let set be calculated for open level
+				// threshold checks for 50+
+			} else if (gen == 4 && selectedTier === "All" && setTier && setTier.includes("Hall")) {
+				continue;
+			} else if (selectedTier === "All" || (setTier && setTier.includes(selectedTier)) || (selectedTier === "threshold" && parseInt(setTier))) {
+				// let set be calculated
+			} else {
+				continue;
+			}*/
+
+			if (mode === "one-vs-all") {
+				defender = setPoke;
+			} else {
+				attacker = setPoke;
+			}
+			// apply Neutralizing Gas if applicable
+			isNeutralizingGas = userNeutralizingGas || setPoke.ability === "Neutralizing Gas";
+			userPoke.resetCurAbility();
+			setPoke.resetCurAbility();
+
+			let damageResults = calculateMovesOfAttacker(attacker, defender, field);
+			let result;
+			let maxDamage;
+			let highestDamage = 0;
+			let highestN = 0;
+			let data = { setName: setName, move: "(No Move)", percentRange: "0 - 0%", koChance: "nice move" };
+			if (mode === "one-vs-all") {
+				data.type1 = defender.type1;
+				data.type2 = defender.type2 ? defender.type2 : "";
+			} else {
+				data.type1 = attacker.type1;
+				data.type2 = attacker.type2 ? attacker.type2 : "";
+			}
+			for (let n = 0; n < 4; n++) {
+				result = damageResults[n];
+				let moveHits = result.childDamage ? 2 : attacker.moves[n].hits; // this is placeholder.
+				maxDamage = moveHits * (result.firstHitDamage ? result.firstHitDamage[result.firstHitDamage.length - 1] : result.damage[result.damage.length - 1]);
+				if (maxDamage > highestDamage) {
+					highestDamage = maxDamage;
+					highestN = n;
 				}
 			}
-		}
-		data.push((mode === "one-vs-all") ? defender.type1 : attacker.type1);
-		data.push(((mode === "one-vs-all") ? defender.type2 : attacker.type2) || "");
-		dataSet.push(data);
+			if (highestDamage) {
+				result = damageResults[highestN];
+				let move = attacker.moves[highestN];
+				let moveHits = result.childDamage ? 2 : move.hits; // this is placeholder.
+				let mainDamageInfo = DamageInfo(result, moveHits);
+				let firstHitDamageInfo = result.firstHitDamage ? DamageInfo(result, moveHits, true) : mainDamageInfo;
+				setKOChanceText(result, move, moveHits, attacker, defender, field.getSide(~~(mode === "one-vs-all")), mainDamageInfo, firstHitDamageInfo);
+				data.koChance = result.koChanceText ? result.koChanceText : "Did not get koChanceText";
+				let minPercentage = Math.round(firstHitDamageInfo.min * 1000 / defender.maxHP) / 10;
+				let maxPercentage = Math.round(firstHitDamageInfo.max * 1000 / defender.maxHP) / 10;
+				data.percentRange = minPercentage + " - " + maxPercentage + "%";
+				data.move = move.name.replace("Hidden Power", "HP");
+				// let setKOChanceText() do the math of whether something got the OHKO after hazards etc.
+				if (data.koChance === "guaranteed OHKO") {
+					ohkoCount++;
+				}
+			}
 
-		// fields in the boosts and stats objects should be the only things that get changed in the Pokemon object during mass calc
-		attacker.revertStats();
-		defender.revertStats();
-		// the only Field object "property" that can be modified is weather
-		field.setWeather(startingWeather);
+			dataSet.push(data);
+			// fields in the boosts and stats objects should be the only things that get changed in the Pokemon object during mass calc
+			attacker.revertStats();
+			defender.revertStats();
+			// the only Field object "property" that can be modified is weather
+			field.setWeather(startingWeather);
+		}
 	}
-	var pokemon = mode === "one-vs-all" ? attacker : defender;
 	table.rows.add(dataSet).draw();
-	return dataSet.length;
+	return { setsCount: dataSet.length, ohkoCount: ohkoCount };
 }
 
 function getSelectedTier() {
@@ -221,7 +276,6 @@ function getSelectedTier() {
 }
 
 var calculateMovesOfAttacker = CALCULATE_MOVES_OF_ATTACKER_MODERN;
-var setsArray;
 /*$(".gen").change(function () {
 	//$(".tiers input").prop("checked", false); // since tiers is a radio button now, don't uncheck it
 	adjustTierBorderRadius();
@@ -258,23 +312,11 @@ var setsArray;
 		break;
 	}
 	$(defaultChecked).prop("checked", true);
+	$("#ohkoCounter").text("");
 	if ($.fn.DataTable.isDataTable("#holder-2")) {
 		table.clear();
 		constructDataTable();
 		placeBsBtn();
-	}
-
-	// set up the list of MassPokemon
-	let autoLevel = parseInt(localStorage.getItem("autolevelGen" + gen));
-	let setSpecies = Object.keys(gen == 3 && $("#autolevel-box").val() == 50 ? SETDEX_EM : setdex);
-	setsArray = [];
-	for (let i = 0; i < setSpecies.length; i++) {
-		let speciesName = setSpecies[i];
-		let setNames = Object.keys(setdex[speciesName]);
-		for (let j = 0; j < setNames.length; j++) {
-			let setName = setNames[j];
-			setsArray.push(MassPokemon(speciesName, setName, autoLevel));
-		}
 	}
 });*/
 
@@ -311,19 +353,18 @@ function constructDataTable() {
 	table = $("#holder-2").DataTable({
 		destroy: true,
 		columnDefs: [
-			{ // remove the type columns
-				targets: [4, 5],
-				visible: false,
-				searchable: false
-			},
-			{
-				targets: [2],
-				type: 'damage100'
-			},
 			{ // Sort KO Chance by damage% instead
-				targets: [3],
-				iDataSort: 2
+				"orderData": [2], // percentRange = col 2
+				"targets": 3 // koChance = col 3
 			}
+		],
+		columns: [
+			{ data: 'setName' },
+			{ data: "move" },
+			{ data: 'percentRange', type: "damage100" }, // type specifies that this column is sorted via the damage100 functions
+			{ data: 'koChance' },
+			{ data: 'type1', visible: false, searchable: false },
+			{ data: 'type2', visible: false, searchable: false }
 		],
 		dom: 'frti',
 		/*colVis: { The options that allows selection of which columns to include in the table
@@ -349,10 +390,11 @@ function placeBsBtn() {
 	$("#holder-2_wrapper").prepend(honkalculator);
 	$("#honkalculate").click(function () {
 		table.clear();
-		var startTime = performance.now();
-		var setCount = performCalculations();
-		var endTime = performance.now();
-		console.log("honkalculated " + setCount + " sets in " + Math.round(endTime - startTime) + "ms");
+		let startTime = performance.now();
+		let massCalcInfo = performCalculations();
+		let endTime = performance.now();
+		console.log("honkalculated " + massCalcInfo.setsCount + " sets in " + Math.round(endTime - startTime) + "ms");
+		$("#ohkoCounter").text("OHKOs: " + Math.round(massCalcInfo.ohkoCount * 100 / massCalcInfo.setsCount) + "% (" + massCalcInfo.ohkoCount + "/" + massCalcInfo.setsCount + ")");
 	});
 }
 
@@ -407,11 +449,7 @@ function setLevel(lvl) {
 }
 
 $(".set-selector").change(function (e) {
-	var genWasChanged;
 	var format = getSelectedTier();
-	if (genWasChanged) {
-		genWasChanged = false;
-	}
 });
 
 function calcDTDimensions() {
@@ -427,6 +465,10 @@ function calcDTDimensions() {
 function getBottomOffset(obj) {
 	return obj.offset().top + obj.outerHeight();
 }
+
+$(".isActivated").bind("change", function () {
+	getFinalSpeedHonk();
+});
 
 function getFinalSpeedHonk() {
 	var speed = getModifiedStat($(".sp .total").text(), $(".sp .boost").val());
@@ -446,12 +488,19 @@ function getFinalSpeedHonk() {
 	} else if (item === "Macho Brace" || item === "Iron Ball") {
 		speed = Math.floor(speed / 2);
 	}
+
+	if ($(".status").val() === "Paralyzed" && ability !== "Quick Feet") {
+		speed = Math.floor(speed / (gen <= 6 ? 4 : 2));
+	}
+
 	if (ability === "Chlorophyll" && weather.indexOf("Sun") > -1 && item !== "Utility Umbrella" ||
 		ability === "Sand Rush" && weather === "Sand" ||
 		ability === "Swift Swim" && weather.indexOf("Rain") > -1 && item !== "Utility Umbrella" ||
 		ability === "Slush Rush" && (weather.indexOf("Hail") > -1 || weather === "Snow") ||
 		ability === "Surge Surfer" && terrain === "Electric") {
 		speed *= 2;
+	} else if (ability === "Quick Feet" && ($(".status").val() !== "Healthy" || $(".isActivated").prop("checked"))) {
+		speed = Math.floor(speed * 1.5);
 	}
 	$(".totalMod").text(speed);
 }
@@ -482,24 +531,4 @@ $(document).ready(function () {
 
 	$(".calc-trigger").bind("change keyup", getFinalSpeedHonk);
 	getFinalSpeedHonk();
-
-
-	//genchange stuff
-	if ($.fn.DataTable.isDataTable("#holder-2")) {
-		table.clear();
-		constructDataTable();
-		placeBsBtn();
-	}
-	// set up the list of MassPokemon
-	let autoLevel = 50;//parseInt(localStorage.getItem("autolevelGen" + gen));
-	let setSpecies = Object.keys(setdex);//Object.keys(gen == 3 && $("#autolevel-box").val() == 50 ? SETDEX_EM : setdex);
-	setsArray = [];
-	for (let i = 0; i < setSpecies.length; i++) {
-		let speciesName = setSpecies[i];
-		let setNames = Object.keys(setdex[speciesName]);
-		for (let j = 0; j < setNames.length; j++) {
-			let setName = setNames[j];
-			setsArray.push(MassPokemon(speciesName, setName, autoLevel));
-		}
-	}
 });
