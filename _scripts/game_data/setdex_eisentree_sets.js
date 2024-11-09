@@ -18507,7 +18507,7 @@ var SETDEX_EISENTREE =
     "Kommo-o-4": {
       "level": 50,
       "evs": {
-        "sa": 252,
+        "at": 252,
         "sp": 252
       },
       "moves": [
