@@ -1263,7 +1263,7 @@ var SETDEX_EISENTREE =
       "nature": "Brave",
       "item": "Figy Berry"
     },
-    "Golem-Alola-b": {
+    "Golem-Alola-1b": {
       "level": 50,
       "evs": {
         "hp": 252,
