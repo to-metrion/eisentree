@@ -405,7 +405,7 @@ var SETDEX_EISENTREE =
       "nature": "Modest",
       "item": "Electrium Z"
     },
-    "Raichu-Alola-b": {
+    "Raichu-Alola-2b": {
       "level": 50,
       "evs": {
         "sa": 252,
