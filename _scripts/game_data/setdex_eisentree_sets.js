@@ -3230,7 +3230,7 @@ var SETDEX_EISENTREE =
         "Earth Power"
       ],
       "nature": "Timid",
-      "item": "Psychium Z"
+      "item": "Mewnium Z"
     }
   },
   "Mewtwo": {
@@ -16284,38 +16284,6 @@ var SETDEX_EISENTREE =
       "item": "Black Glasses"
     }
   },
-  "Zygarde-10%": {
-    "Zygarde-10%-1": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Thousand Arrows",
-        "Outrage",
-        "Iron Tail",
-        "Extreme Speed"
-      ],
-      "nature": "Jolly",
-      "item": "Choice Band"
-    },
-    "Zygarde-10%-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Thousand Arrows",
-        "Scale Shot",
-        "Iron Tail",
-        "Extreme Speed"
-      ],
-      "nature": "Jolly",
-      "item": "Choice Band"
-    }
-  },
   "Zygarde": {
     "Zygarde-1": {
       "level": 50,
@@ -16346,6 +16314,38 @@ var SETDEX_EISENTREE =
       ],
       "nature": "Adamant",
       "item": "Choice Band"
+    },
+    "Zygarde-10%-1": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Thousand Arrows",
+        "Outrage",
+        "Iron Tail",
+        "Extreme Speed"
+      ],
+      "nature": "Jolly",
+      "item": "Choice Band",
+      "forme": "Zygarde-10%"
+    },
+    "Zygarde-10%-1b": {
+      "level": 50,
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Thousand Arrows",
+        "Scale Shot",
+        "Iron Tail",
+        "Extreme Speed"
+      ],
+      "nature": "Jolly",
+      "item": "Choice Band",
+      "forme": "Zygarde-10%"
     }
   },
   "Diancie": {
@@ -16508,7 +16508,7 @@ var SETDEX_EISENTREE =
         "Tailwind"
       ],
       "nature": "Adamant",
-      "item": "Ghostium Z"
+      "item": "Decidium Z" // maybe?
     },
     "Decidueye-1b": {
       "level": 50,
@@ -16668,7 +16668,7 @@ var SETDEX_EISENTREE =
         "Aqua Jet"
       ],
       "nature": "Modest",
-      "item": "Waterium Z"
+      "item": "Waterium Z" // maybe?
     },
     "Primarina-4": {
       "level": 50,
@@ -18312,7 +18312,7 @@ var SETDEX_EISENTREE =
         "Trick Room"
       ],
       "nature": "Brave",
-      "item": "Fairium Z"
+      "item": "Mimikium Z"
     },
     "Mimikyu-3": {
       "level": 50,
@@ -18471,7 +18471,7 @@ var SETDEX_EISENTREE =
         "Flash Cannon"
       ],
       "nature": "Modest",
-      "item": "Dragonium Z"
+      "item": "Kommonium Z"
     },
     "Kommo-o-2": {
       "level": 50,
@@ -19241,7 +19241,7 @@ var SETDEX_EISENTREE =
         "Feint"
       ],
       "nature": "Jolly",
-      "item": "Ghostium Z"
+      "item": "Marshadium Z"
     }
   },
   "Naganadel": {
