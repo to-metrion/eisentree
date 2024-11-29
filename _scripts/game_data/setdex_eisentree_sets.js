@@ -4783,7 +4783,7 @@ var SETDEX_EISENTREE =
         "Spikes",
         "Whirlwind"
       ],
-      "nature": "Bold",
+      "nature": "Impish",
       "item": "Red Card"
     }
   },
@@ -5815,6 +5815,21 @@ var SETDEX_EISENTREE =
         "Moonblast",
         "Mystical Fire",
         "Will-O-Wisp",
+        "Trick Room"
+      ],
+      "nature": "Quiet",
+      "item": "Iron Ball"
+    },
+    "Gardevoir-4": {
+      "level": 50,
+      "evs": {
+        "hp": 252,
+        "sa": 252
+      },
+      "moves": [
+        "Moonblast",
+        "Psychic",
+        "Mystical Fire",
         "Trick Room"
       ],
       "nature": "Quiet",
