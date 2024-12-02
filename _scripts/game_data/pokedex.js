@@ -12404,7 +12404,7 @@ var POKEDEX_SM = $.extend(true, {}, POKEDEX_XY, {
 			"sp": 115
 		},
 		"w": 33.0,
-		"abilities": ["Pickup", "Technician"]//eisentree
+		"abilities": ["Fur Coat", "Technician"]//eisentree
 	},
 	"Raichu-Alola": {
 		"t1": "Electric",
