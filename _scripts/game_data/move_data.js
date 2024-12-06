@@ -651,6 +651,10 @@ var MOVES_RBY = {
 		"hasRecoil": 1/4,
 		"acc": 85
 	},
+	"Teleport": {
+		"bp": 0,
+		"type": "Psychic"
+	},
 	"Thrash": {
 		"bp": 90,
 		"type": "Normal",
@@ -4472,7 +4476,6 @@ var MOVES_EISENTREE = $.extend(true, {}, MOVES_SM, {
 		"type": "Fairy",
 		"category": "Special",
 		"isSound": true,
-		"hasSecondaryEffect": true,
 		"acc": 100,
 		"zp": 160
 	},
@@ -4556,6 +4559,14 @@ var MOVES_EISENTREE = $.extend(true, {}, MOVES_SM, {
 		"makesContact": true,
 		"acc": 100,
 		"zp": 100
+	},
+	"Psychic Noise": {
+		"bp": 75,
+		"type": "Psychic",
+		"category": "Special",
+		"isSound": true,
+		"hasSecondaryEffect": true,
+		"acc": 100
 	},
 	"Raging Bull": {
 		"bp": 90,
@@ -5594,13 +5605,12 @@ var MOVES_SV = $.extend(true, {}, MOVES_SS, {
 		"isBullet": true,
 		"acc": 85
 	},
-
 	"Alluring Voice": {
 		"bp": 80,
 		"type": "Fairy",
 		"category": "Special",
-		"isSound": true,
 		"hasSecondaryEffect": true,
+		"isSound": true,
 		"acc": 100
 	},
 	"Electro Shot": {
