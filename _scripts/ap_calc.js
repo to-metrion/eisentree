@@ -126,12 +126,14 @@ $(".result-move").change(function () {
 	updateDamageText($(this));
 });
 
-var MAX_GROUP_COUNT = 14;
-var MAX_UNGROUPED_COUNT = MAX_GROUP_COUNT + 4;
+const MAX_GROUP_COUNT = 14;
+const MAX_UNGROUPED_COUNT = MAX_GROUP_COUNT + 4;
 function damageMapAsGroups(damageInfo) {
 	// This takes in a damage map and puts its damage values into groups with the probability of that group occuring.
 	// This is to display something smaller and simpler for the complete calculation of multi-hit moves.
-	let valuesCount = damageInfo.sortedDamageValues.length;
+	let sortedDamageValues = Array.from(damageInfo.damageMap.keys());
+	sortedDamageValues.sort((a, b) => a - b);
+	let valuesCount = sortedDamageValues.length;
 	let groupCount = Math.min(valuesCount, MAX_GROUP_COUNT);
 	// make an array that stores how many damage values are in each group, evenly distributed
 	let groupSizes = new Array(groupCount);
@@ -151,14 +153,14 @@ function damageMapAsGroups(damageInfo) {
 	let groupDamageResult = "[";
 	for (let i = 0; i < groupCount; i++) {
 		let groupSize = groupSizes[i];
-		let group = damageInfo.sortedDamageValues[valueIndex]
+		let group = sortedDamageValues[valueIndex]
 		if (groupSize > 1) {
-			group += "-" + damageInfo.sortedDamageValues[valueIndex + groupSize - 1];
+			group += "-" + sortedDamageValues[valueIndex + groupSize - 1];
 		}
 		let groupCountTotal = 0;
 		// get the total number of combinations the group has
 		for (let j = valueIndex; j < valueIndex + groupSize; j++) {
-			groupCountTotal += damageInfo.damageMap.get(damageInfo.sortedDamageValues[j]);
+			groupCountTotal += damageInfo.damageMap.get(sortedDamageValues[j]);
 		}
 		let percent = Math.round(groupCountTotal / damageInfo.mapCombinations * 1000) / 10;
 		if (percent == 0) {
@@ -180,43 +182,13 @@ function setDamageText(result, attacker, defender, move, fieldSide, resultLocati
 		console.log(move.name + " from " + attacker.name + " (" + attacker.ability + ") vs. " + defender.name + " (" + defender.ability + ")");
 		return;
 	}
-	let moveHits = 1;
-	if (move.isThreeHit) {
-		moveHits = 3;
-	} else if (move.isTwoHit || result.childDamage) {
-		moveHits = 2;
-	} else if (move.hits) {
-		moveHits = move.hits;
-	}
+	let moveHits = move.hits ? move.hits : 1;
 
-	// assembledDamageMap is the damage map of all moveHits number of hits. Resist berry is not applied
-	// firstHitMap is the same as assembledDamageMap, but with resist berry applied if applicable. On multi hit moves the berry only applies to the first strike of the multihit.
-	// firstHitMap is the basis for the ranges and percentages displayed for the user, and is the same as assembledDamageMap if there is no resist berry.
+	// mainDamageInfo contains the damage map of all moveHits number of hits. Resist berry is not applied
+	// firstHit is the same as mainDamageInfo, but with resist berry applied if applicable. On multi hit moves the berry only applies to the first strike of the multihit.
+	// firstHit is the basis for the ranges and percentages displayed for the user, and is the same as mainDamageInfo if there is no resist berry.
 	let mainDamageInfo = DamageInfo(result, moveHits);
 	let firstHitDamageInfo = result.firstHitDamage ? DamageInfo(result, moveHits, true) : mainDamageInfo;
-
-	// put together the primary hit information based on the first hit map
-	if (mainDamageInfo.damageMap) {
-		if (firstHitDamageInfo.mapCombinations > MAX_UNGROUPED_COUNT) {
-			result.multiHitPercents = moveHits + " hits: " + damageMapAsGroups(firstHitDamageInfo);
-		}
-
-		if (result.childDamage) {
-			result.hitDamageValues = "(First hit: " + (result.firstHitDamage ? result.firstHitDamage : result.damage).join(", ") +
-			"; Second hit: " + result.childDamage.join(", ") + ")";
-			if (result.firstHitDamage) {
-				result.hitDamageValues += "; Other parent hits: (" + result.damage.join(", ") + ")";
-			}
-		} else if (result.tripleAxelDamage) {
-			result.hitDamageValues = "(First hit: " + (result.firstHitDamage ? result.firstHitDamage : result.tripleAxelDamage[0]).join(", ") +
-			"; Second hit: " + result.tripleAxelDamage[1].join(", ") +
-			(moveHits > 2 ? "; Third hit: " + result.tripleAxelDamage[2].join(", ") : "") + ")";
-		} else if (result.firstHitDamage) {
-			result.hitDamageValues = "(First hit: " + result.firstHitDamage.join(", ") + "; Other hits: " + result.damage.join(", ") + ")";
-		} else {
-			result.hitDamageValues = "(" + result.damage.join(", ") + ")";
-		}
-	}
 
 	let minPercent = Math.round(firstHitDamageInfo.min * 1000 / defender.maxHP) / 10;
 	let maxPercent = Math.round(firstHitDamageInfo.max * 1000 / defender.maxHP) / 10;
@@ -225,23 +197,71 @@ function setDamageText(result, attacker, defender, move, fieldSide, resultLocati
 		result.koChanceText = "nice move";
 	} else if (move.isMLG) {
 		result.koChanceText = "<a href = 'https://www.youtube.com/watch?v=iD92h-M474g'>it's a one-hit KO!</a>";
+	} else if (move.noKOChance) {
+		result.koChanceText = "";
+		result.noKOChance = true;
 	} else {
 		setKOChanceText(result, move, moveHits, attacker, defender, fieldSide, mainDamageInfo, firstHitDamageInfo);
 	}
+	// put together the primary hit information based on the first hit map
+	setUpDamageRangeText(result, moveHits, mainDamageInfo, firstHitDamageInfo);
 	setUpRecoilRecoveryText(result, attacker, defender, move, firstHitDamageInfo.min, firstHitDamageInfo.max);
-	let recoilRecovery = "";
+	if (result.koChanceText.includes("OHKO")) {
+		// don't remove "first strike only" text from the description
+		// it's both difficult to determine when it needs to be removed and comes up very rarely
+		result.description = result.description.replaceAll(FIRST_HIT_ONLY_TEXT, "").replaceAll(FIRST_ATTACK_ONLY_TEXT, "");
+	}
+	let damageText = minPercent + " - " + maxPercent + "%";
 	// intentionally does not display both recoil and recovery text on the same line
 	if (result.recoilPercent) {
-		recoilRecovery = " (" + result.recoilPercent + "% " + result.recoilType + " damage)";
+		damageText += " (" + result.recoilPercent + "% " + result.recoilType + " damage)";
 	} else if (result.recoveryPercent) {
-		recoilRecovery = " (recovers " + result.recoveryPercent + "%)";
+		damageText += " (recovers " + result.recoveryPercent + "%)";
 	}
 	$(resultLocation.move + " + label").text(move.name.replace("Hidden Power", "HP"));
-	$(resultLocation.damage).text(minPercent + " - " + maxPercent + "%" + recoilRecovery);
+	$(resultLocation.damage).text(damageText);
 	/*if (maxPercent > highestMaxPercent) {
 		highestMaxPercent = maxPercent;
 		bestResult = $(resultLocations[1][i].move);
 	}*/
+}
+
+function setUpDamageRangeText(result, moveHits, mainDamageInfo, firstHitDamageInfo) {
+	if (!mainDamageInfo.damageMap) {
+		return;
+	}
+
+	if (firstHitDamageInfo.mapCombinations > MAX_UNGROUPED_COUNT) {
+		result.multiHitPercents = moveHits + " hits: " + damageMapAsGroups(firstHitDamageInfo);
+		if (result.firstHitDamage && !(result.koChanceText && result.koChanceText.endsWith("OHKO"))) {
+			result.multiHitPercents = "First attack " + result.multiHitPercents +
+				"<br />Other attacks " + moveHits + " hits: " + damageMapAsGroups(mainDamageInfo);
+		}
+	}
+
+	if (result.childDamage) {
+		result.hitDamageValues = "(First hit: " + (result.firstHitDamage ? result.firstHitDamage : result.damage).join(", ") +
+		"; Second hit: " + result.childDamage.join(", ") + ")";
+		if (result.firstHitDamage) {
+			result.hitDamageValues += "; Other parent hits: (" + result.damage.join(", ") + ")";
+		}
+	} else if (result.tripleAxelDamage) {
+		let damageArrays = result.teraShellDamage ? result.teraShellDamage : result.tripleAxelDamage;
+		result.hitDamageValues = "(First hit: " + (result.firstHitDamage ? result.firstHitDamage : damageArrays[0]).join(", ") +
+		"; Second hit: " + damageArrays[1].join(", ") +
+		(moveHits > 2 ? "; Third hit: " + damageArrays[2].join(", ") : "") + ")";
+	} else if (result.firstHitDamage) {
+		let qualifier = "hit";
+		let firstQualifier = qualifier;
+		if (moveHits > 1 && (result.teraShellDamage || result.gemFirstAttack)) {
+			qualifier = "attack " + qualifier;
+			firstQualifier = qualifier + "s";
+		}
+		result.hitDamageValues = "(First " + firstQualifier + ": " + result.firstHitDamage.join(", ") +
+			"; Other " + qualifier + "s: " + result.damage.join(", ") + ")";
+	} else {
+		result.hitDamageValues = "(" + result.damage.join(", ") + ")";
+	}
 }
 
 function setUpRecoilRecoveryText(result, attacker, defender, move, minDamage, maxDamage) {
@@ -368,12 +388,15 @@ function setUpRecoilRecoveryText(result, attacker, defender, move, minDamage, ma
 var mainResult = "";
 function updateDamageText(resultMoveObj) {
 	if (damageResults) {
-		var result = findDamageResult(resultMoveObj);
+		let result = findDamageResult(resultMoveObj);
 		if (result) {
 			let recoilText = result.recoilRange ? ("; " + result.recoilType + " damage: " + result.recoilRange + " (" + result.recoilPercent + "%)") : "";
 			let recoveryText = result.recoveryRange ? ("; recovers " + result.recoveryRange + " (" + result.recoveryPercent + "%)") : "";
-			let koChanceText = result.koChanceText ? (result.koChanceText + (result.afterText ? result.afterText : "")) : "Did not get koChanceText";
-			mainResult = result.description + ": " + result.damageText + recoilText + recoveryText + " -- " + koChanceText;
+			mainResult = result.description + ": " + result.damageText + recoilText + recoveryText;
+			if (!result.noKOChance) {
+				let koChanceText = result.koChanceText ? (result.koChanceText + (result.afterText ? result.afterText : "")) : "Did not get koChanceText";
+				mainResult += " -- " + koChanceText;
+			}
 			$("#mainResult").html(mainResult);
 			$("#afterAcc").html(result.afterAccText ? result.afterAccText : "");
 			$("#damageValues").html(result.hitDamageValues + (result.multiHitPercents ? "<br />" + result.multiHitPercents : ""));

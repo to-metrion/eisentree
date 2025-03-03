@@ -79,7 +79,7 @@ function MassPokemon(speciesName, setName) {
 	if (formeNum != 0) {
 		pokemon = pokedex[pokemon.formes[formeNum]];
 	}
-	let autoLevel = 50;//parseInt(localStorage.getItem("autolevelGen" + gen));
+	let autoLevel = 50;//eisentree parseInt(localStorage.getItem("autolevelGen" + gen));
 	let massPoke = {
 		"name": speciesName,
 		"setName": setName,
@@ -157,12 +157,11 @@ function MassPokemon(speciesName, setName) {
 				"category": defaultDetails.category,
 				"isCrit": !!defaultDetails.alwaysCrit,
 				"acc": defaultDetails.acc,
-				"hits": defaultDetails.maxMultiHits ? (massPoke.ability === "Skill Link" || moveName === "Population Bomb" || moveName === "Triple Axel" ? defaultDetails.maxMultiHits : (massPoke.item === "Loaded Dice" ? 4 : 3)) : defaultDetails.isThreeHit ? 3 : defaultDetails.isTwoHit ? 2 : 1,
+				"hits": defaultDetails.isThreeHit ? 3 : defaultDetails.isTwoHit ? 2 : getDefaultMultiHits(moveName, massPoke.ability, massPoke.item),
 				"usedTimes": 1
 			}));
 		}
 	}
-	// isAbilityActivated
 	// use the same default state as the user's Pokemon's checkbox
 	massPoke.isAbilityActivated = checkboxAbilities[massPoke.ability] ? checkboxAbilities[massPoke.ability].mass : false;
 
@@ -182,6 +181,7 @@ function performCalculations() {
 		this.stats = [];
 	};
 	let userNeutralizingGas = userPoke.ability === "Neutralizing Gas";
+	let autoLevel = $("#autolevel-box").val();
 	if (mode === "one-vs-all") {
 		attacker = userPoke;
 	} else {
@@ -198,7 +198,7 @@ function performCalculations() {
 			setPoke = MassPokemon(speciesName, setName);
 			// as of now there's no tiers for eisentree
 			/*setTier = setPoke.tier; // setPoke.tier can be: 50, Open, Hall, HallR10, 28, 40, Tower, RS, SM, DM, SMDM. A set might not have a tier key.
-			if (gen == 3 && selectedTier === "threshold" && setTier === "Open" && $("#autolevel-box").val() !== "50") {
+			if (gen == 3 && selectedTier === "threshold" && setTier === "Open" && autoLevel !== "50") {
 				// let set be calculated for open level
 				// threshold checks for 50+
 			} else if (gen == 4 && selectedTier === "All" && setTier && setTier.includes("Hall")) {
@@ -237,10 +237,8 @@ function performCalculations() {
 			for (let n = 0; n < 4; n++) {
 				result = damageResults[n];
 				let moveHits = attacker.moves[n].hits;
-				maxDamage = moveHits * (result.firstHitDamage ? result.firstHitDamage[result.firstHitDamage.length - 1] : result.damage[result.damage.length - 1]) +
-					(result.childDamage ? result.childDamage[result.childDamage.length - 1] : 0);
-				minDamage = moveHits * (result.firstHitDamage ? result.firstHitDamage[0] : result.damage[0]) +
-					(result.childDamage ? result.childDamage[0] : 0);
+				minDamage = getMinMaxDamage(result, moveHits);
+				maxDamage = getMinMaxDamage(result, moveHits, true);
 				// four cases (without expanding to include <=/>=):
 				// > min, > max (better move)
 				// < min, > max (I guess multihits? This would also come up if s toss was the max and min)
@@ -264,9 +262,13 @@ function performCalculations() {
 				let moveHits = result.childDamage ? 2 : move.hits; // this is placeholder.
 				let mainDamageInfo = DamageInfo(result, moveHits);
 				let firstHitDamageInfo = result.firstHitDamage ? DamageInfo(result, moveHits, true) : mainDamageInfo;
-				// do not want to pass child damage as 2 hits here, at least for now until KO text can figure out parental bond damage
-				setKOChanceText(result, move, move.hits, attacker, defender, field.getSide(~~(mode === "one-vs-all")), mainDamageInfo, firstHitDamageInfo);
-				data.koChance = result.koChanceText ? result.koChanceText : "Did not get koChanceText";
+				if (move.noKOChance) {
+					data.koChance = "-";
+				} else {
+					// do not want to pass child damage as 2 hits here, at least for now until KO text can figure out parental bond damage
+					setKOChanceText(result, move, move.hits, attacker, defender, field.getSide(~~(mode === "one-vs-all")), mainDamageInfo, firstHitDamageInfo);
+					data.koChance = result.koChanceText ? result.koChanceText : "Did not get koChanceText";
+				}
 				let minPercentage = Math.round(firstHitDamageInfo.min * 1000 / defender.maxHP) / 10;
 				let maxPercentage = Math.round(firstHitDamageInfo.max * 1000 / defender.maxHP) / 10;
 				data.percentRange = minPercentage + " - " + maxPercentage + "%";
@@ -287,6 +289,30 @@ function performCalculations() {
 	}
 	table.rows.add(dataSet).draw();
 	return { setsCount: dataSet.length, ohkoCount: ohkoCount };
+}
+
+function getMinMaxDamage(result, moveHits, getMax = false) {
+	let total = 0;
+	if (result.tripleAxelDamage) {
+		for (let i = 0; i < result.tripleAxelDamage.length; i++) {
+			let damageArray = result.tripleAxelDamage[i];
+			total += damageArray[getMax ? (damageArray.length - 1) : 0];
+		}
+		return total;
+	}
+
+	if (result.firstHitDamage) {
+		total += result.firstHitDamage[getMax ? (result.firstHitDamage.length - 1) : 0];
+	} else {
+		total += result.damage[getMax ? (result.damage.length - 1) : 0];
+	}
+	total *= moveHits;
+
+	if (result.childDamage) {
+		total += result.childDamage[getMax ? (result.childDamage.length - 1) : 0];
+	}
+
+	return total;
 }
 
 function getSelectedTier() {
