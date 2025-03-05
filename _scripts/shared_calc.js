@@ -1215,7 +1215,7 @@ function getMoveDetails(moveInfo, attacker) {
 	let moveName = moveInfo.find("select.move-selector").val();
 	let defaultDetails = moves[moveName];
 
-	if (gen == 7 && moveInfo.find("input.move-z").prop("checked") && moveName !== "Struggle" && "zp" in defaultDetails) {
+	if (genEisenTree == 7 && moveInfo.find("input.move-z").prop("checked") && moveName !== "Struggle" && "zp" in defaultDetails) {
 		return getZMove(moveName, attacker, defaultDetails, moveInfo);
 	}
 	/*if (gen == 8 && moveInfo.find("input.move-max").prop("checked") && moveName !== "Struggle") { eisentree
