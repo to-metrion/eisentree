@@ -1495,14 +1495,20 @@ function Side(format, terrain, weather, isAuraFairy, isAuraDark, isAuraBreak, is
 }
 
 // note that this function only checks values against the current gen.
-// This means that the passed in setdex should match the currently selected gen.
 function validateSetdex() {
+	let failedValidation = false;
 	for (const [speciesName, speciesSets] of Object.entries(setdex)) {
 		if (!(speciesName in pokedex)) {
+			failedValidation = true;
 			console.log(speciesName + " is not a species in the pokedex");
 			continue;
 		}
 		let pokedexEntry = pokedex[speciesName];
+		if (pokedexEntry.hasBaseForme) {
+			failedValidation = true;
+			console.log(speciesName + " is listed as a species, but is a forme in the pokedex");
+			continue;
+		}
 		for (const [setName, setObj] of Object.entries(speciesSets)) {
 			let outputText = [];
 			if (setObj.item && items.indexOf(setObj.item) == -1) {
@@ -1525,9 +1531,13 @@ function validateSetdex() {
 				outputText.push("no moves found");
 			}
 			if (outputText.length > 0) {
+				failedValidation = true;
 				console.log(setName + ": " + outputText.join("; "));
 			}
 		}
+	}
+	if (!failedValidation) {
+		console.log("No validation issues found.");
 	}
 }
 
