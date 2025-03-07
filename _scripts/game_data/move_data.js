@@ -5507,6 +5507,41 @@ var MOVES_EISENTREE = $.extend(true, {}, MOVES_SM, {
 	"Luster Purge": MOVES_SV["Luster Purge"],
 	"Mist Ball": MOVES_SV["Mist Ball"]
 });
+MOVES_EISENTREE["Body Press"].zp = 160;
+MOVES_EISENTREE["Breaking Swipe"].zp = 120;
+MOVES_EISENTREE["Dual Wingbeat"].zp = 100;
+MOVES_EISENTREE["Expanding Force"].zp = 160;
+MOVES_EISENTREE["Flip Turn"].zp = 120;
+MOVES_EISENTREE["Meteor Beam"].zp = 190;
+MOVES_EISENTREE["Poltergeist"].zp = 185;
+MOVES_EISENTREE["Rising Voltage"].zp = 140;
+MOVES_EISENTREE["Scorching Sands"].zp = 140;
+MOVES_EISENTREE["Skitter Smack"].zp = 140;
+MOVES_EISENTREE["Steel Beam"].zp = 200;
+MOVES_EISENTREE["Triple Axel"].zp = 100;
+MOVES_EISENTREE["Alluring Voice"].zp = 160;
+MOVES_EISENTREE["Aqua Cutter"].zp = 140;
+MOVES_EISENTREE["Barb Barrage"].zp = 120;
+MOVES_EISENTREE["Bleakwind Storm"].zp = 180;
+MOVES_EISENTREE["Chilling Water"].zp = 100;
+MOVES_EISENTREE["Comeuppance"].zp = 100;
+MOVES_EISENTREE["Headlong Rush"].zp = 190;
+MOVES_EISENTREE["Ice Spinner"].zp = 160;
+MOVES_EISENTREE["Mystical Power"].zp = 140;
+MOVES_EISENTREE["Pounce"].zp = 100;
+MOVES_EISENTREE["Psychic Noise"].zp = 100;
+MOVES_EISENTREE["Raging Bull"].zp = 175;
+MOVES_EISENTREE["Raging Fury"].zp = 190;
+MOVES_EISENTREE["Sandsear Storm"].zp = 180;
+MOVES_EISENTREE["Scale Shot"].zp = 100;
+MOVES_EISENTREE["Supercell Slam"].zp = 180;
+MOVES_EISENTREE["Temper Flare"].zp = 140;
+MOVES_EISENTREE["Trailblaze"].zp = 100;
+MOVES_EISENTREE["Wave Crash"].zp = 190;
+MOVES_EISENTREE["Wildbolt Storm"].zp = 180;
+MOVES_EISENTREE["Multi-Attack"].zp = 190;
+MOVES_EISENTREE["Luster Purge"].zp = 175;
+MOVES_EISENTREE["Mist Ball"].zp = 175;
 
 var ZMOVES_LOOKUP = {
 	"Bug": "Savage Spin-Out",
