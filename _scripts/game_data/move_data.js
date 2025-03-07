@@ -152,6 +152,12 @@ var MOVES_RBY = {
 		"hasSecondaryEffect": true,
 		"acc": 100
 	},
+	"Dragon Rage": {
+		"bp": 1,
+		"type": "Dragon",
+		"category": "Special",
+		"acc": 100
+	},
 	"Dream Eater": {
 		"bp": 100,
 		"type": "Psychic",
@@ -369,6 +375,13 @@ var MOVES_RBY = {
 		"bp": 0,
 		"type": "Normal"
 	},
+	"Magnitude": {
+		"bp": 150,
+		"type": "Ground",
+		"category": "Physical",
+		"acc": 100,
+		"noKOChance": true
+	},
 	"Mega Drain": {
 		"bp": 40,
 		"type": "Grass",
@@ -562,6 +575,12 @@ var MOVES_RBY = {
 		"bp": 0,
 		"type": "Normal"
 	},
+	"Sonic Boom": {
+		"bp": 1,
+		"type": "Normal",
+		"category": "Special",
+		"acc": 90
+	},
 	"Spore": {
 		"bp": 0,
 		"type": "Grass"
@@ -609,10 +628,12 @@ var MOVES_RBY = {
 		"type": "Normal"
 	},
 	"Super Fang": {
-		"bp": 0,
+		"bp": 1,
+		"category": "Physical",
 		"type": "Normal",
 		"makesContact": true,
-		"acc": 90
+		"acc": 90,
+		"noKOChance": true
 	},
 	"Surf": {
 		"bp": 95,
@@ -650,10 +671,6 @@ var MOVES_RBY = {
 		"makesContact": true,
 		"hasRecoil": 1/4,
 		"acc": 85
-	},
-	"Teleport": {
-		"bp": 0,
-		"type": "Psychic"
 	},
 	"Thrash": {
 		"bp": 90,
@@ -1119,6 +1136,13 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		"bp": 0,
 		"type": "Normal"
 	},
+	"Psywave": {
+		"bp": 1,
+		"type": "Psychic",
+		"category": "Special",
+		"acc": 80,
+		"noKOChance": true
+	},
 	"Pursuit": {
 		"bp": 40,
 		"type": "Dark",
@@ -1275,6 +1299,14 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		"acc": 100
 	},
 	"Tri Attack": {"hasSecondaryEffect": true},
+	"Triple Kick": {
+		"bp": 10,
+		"type": "Fighting",
+		"category": "Physical",
+		"makesContact": true,
+		"maxMultiHits": 3,
+		"acc": 90
+	},
 	"Twister": {
 		"bp": 40,
 		"type": "Dragon",
@@ -2072,7 +2104,8 @@ var MOVES_DPP = $.extend(true, {}, MOVES_ADV, {
 		"type": "Normal",
 		"category": "Physical",
 		"makesContact": true,
-		"acc": 100
+		"acc": 100,
+		"noKOChance": true
 	},
 	"Dark Pulse": {
 		"bp": 80,
@@ -2633,7 +2666,8 @@ var MOVES_DPP = $.extend(true, {}, MOVES_ADV, {
 		"type": "Normal",
 		"category": "Special",
 		"makesContact": true,
-		"acc": 100
+		"acc": 100,
+		"noKOChance": true
 	},
 	"X-Scissor": {
 		"bp": 80,
@@ -3581,6 +3615,7 @@ var MOVES_XY = $.extend(true, {}, MOVES_BW, {
 		"bp": 0,
 		"type": "Psychic"
 	},
+	"Psywave": {"acc": 100},
 	"Rock Tomb": {"bp": 60},
 	"Skull Bash": {"bp": 130},
 	"Spiky Shield": {
@@ -3794,6 +3829,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Dragon Ascent": {"zp": 190},
 	"Dragon Claw": {"zp": 160},
 	"Dragon Pulse": {"zp": 160},
+	"Dragon Rage": {"zp": 100},
 	"Dragon Rush": {"zp": 180},
 	"Dragon Tail": {"zp": 120},
 	"Drain Punch": {"zp": 140},
@@ -3995,6 +4031,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Magical Leaf": {"zp": 120},
 	"Magma Storm": {"zp": 180},
 	"Magnet Bomb": {"zp": 120},
+	"Magnitude": {"zp": 140},
 	"Megahorn": {"zp": 190},
 	"Metal Claw": {"zp": 100},
 	"Meteor Mash": {"zp": 175},
@@ -4037,7 +4074,8 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"type": "Fairy",
 		"category": "Special",
 		"zp": 100,
-		"acc": 90
+		"acc": 90,
+		"noKOChance": true
 	},
 	"Needle Arm": {"zp": 120},
 	"Night Daze": {"zp": 160},
@@ -4049,7 +4087,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Origin Pulse": {"zp": 185},
 	"Outrage": {"zp": 190},
 	"Overheat": {"zp": 195},
-	"Paleo Wave": {"zp": 160},
 	"Parabolic Charge": {"bp": 65, "zp": 120},
 	"Payback": {"zp": 100},
 	"Petal Dance": {"zp": 190},
@@ -4118,6 +4155,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Psycho Cut": {"zp": 140},
 	"Psyshock": {"zp": 160},
 	"Psystrike": {"zp": 180},
+	"Psywave": {"zp": 100},
 	"Punishment": {"zp": 160},
 	"Pursuit": {"zp": 100},
 	"Quick Attack": {"zp": 100},
@@ -4231,6 +4269,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"zp": 190,
 		"acc": 100
 	},
+	"Sonic Boom": {"zp": 100},
 	"Spacial Rend": {"zp": 180},
 	"Spark": {"zp": 120},
 	"Sparkling Aria": {
@@ -4320,6 +4359,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	"Thunder Fang": {"zp": 120},
 	"Thunder Punch": {"zp": 140},
 	"Tri Attack": {"zp": 160},
+	"Triple Kick": {"zp": 120},
 	"Trop Kick": {
 		"bp": 70,
 		"type": "Grass",
@@ -4363,297 +4403,6 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 		"makesContact": true,
 		"zp": 160,
 		"acc": 100
-	}
-});
-
-var MOVES_EISENTREE = $.extend(true, {}, MOVES_SM, {
-	"Rapid Spin": {"bp": 50},
-	"Multi-Attack": {"bp": 120},
-
-	"Body Press": {
-		"bp": 80,
-		"type": "Fighting",
-		"makesContact": true,
-		"category": "Physical",
-		"acc": 100,
-		"zp": 160
-	},
-	"Breaking Swipe": {
-		"bp": 60,
-		"type": "Dragon",
-		"category": "Physical",
-		"isSpread": true,
-		"zp": 120
-	},
-	"Coaching": {
-		"bp": 0,
-		"type": "Fighting"
-	},
-	"Dual Wingbeat": {
-		"bp": 40,
-		"type": "Flying",
-		"category": "Physical",
-		"acc": 90,
-		"isTwoHit": true,
-		"zp": 100
-	},
-	"Expanding Force": {
-		"bp": 80,
-		"type": "Psychic",
-		"category": "Special",
-		"acc": 100,
-		"zp": 160
-	},
-	"Flip Turn": {
-		"bp": 60,
-		"type": "Water",
-		"category": "Physical",
-		"makesContact": true,
-		"acc": 100,
-		"zp": 120
-	},
-	"Life Dew": {
-		"bp": 0,
-		"type": "Water"
-	},
-	"Meteor Beam": {
-		"bp": 120,
-		"type": "Rock",
-		"category": "Special",
-		"acc": 90,
-		"zp": 190
-	},
-	"Poltergeist": {
-		"bp": 110,
-		"type": "Ghost",
-		"category": "Physical",
-		"acc": 90,
-		"zp": 185
-	},
-	"Rising Voltage": {
-		"bp": 70,
-		"type": "Electric",
-		"category": "Special",
-		"acc": 100,
-		"zp": 140
-	},
-	"Scorching Sands": {
-		"bp": 70,
-		"type": "Ground",
-		"category": "Special",
-		"hasSecondaryEffect": true,
-		"acc": 100,
-		"zp": 140
-	},
-	"Skitter Smack": {
-		"bp": 70,
-		"type": "Bug",
-		"category": "Physical",
-		"hasSecondaryEffect": true,
-		"acc": 90,
-		"zp": 140
-	},
-	"Steel Beam": {
-		"bp": 140,
-		"type": "Steel",
-		"category": "Special",
-		"hasRecoil": true,
-		"acc": 95,
-		"zp": 200
-	},
-	"Triple Axel": {
-		"bp": 20,
-		"type": "Ice",
-		"category": "Physical",
-		"makesContact": true,
-		"maxMultiHits": 3,
-		"acc": 90,
-		"zp": 100
-	},
-
-	"Alluring Voice": {
-		"bp": 80,
-		"type": "Fairy",
-		"category": "Special",
-		"isSound": true,
-		"acc": 100,
-		"zp": 160
-	},
-	"Aqua Cutter": {
-		"bp": 70,
-		"type": "Water",
-		"category": "Physical",
-		"isSlicing": true,
-		"acc": 100,
-		"zp": 140
-	},
-	"Barb Barrage": {
-		"bp": 60,
-		"type": "Poison",
-		"category": "Physical",
-		"hasSecondaryEffect": true,
-		"acc": 100,
-		"zp": 120
-	},
-	"Bleakwind Storm": {
-		"bp": 100,
-		"type": "Flying",
-		"category": "Special",
-		"isSpread": true,
-		"isWind": true,
-		"hasSecondaryEffect": true,
-		"acc": 80,
-		"zp": 180
-	},
-	"Chilling Water": {
-		"bp": 50,
-		"type": "Water",
-		"category": "Special",
-		"hasSecondaryEffect": true,
-		"acc": 100,
-		"zp": 100
-	},
-	"Chilly Reception": {
-		"bp": 0,
-		"type": "Ice"
-	},
-	"Comeuppance": {
-		"bp": 1,
-		"type": "Dark",
-		"makesContact": true,
-		"zp": 100
-	},
-	"Headlong Rush": {
-		"bp": 120,
-		"type": "Ground",
-		"category": "Physical",
-		"makesContact": true,
-		"acc": 100,
-		"zp": 190
-	},
-	"Ice Spinner": {
-		"bp": 80,
-		"type": "Ice",
-		"category": "Physical",
-		"makesContact": true,
-		"acc": 100,
-		"zp": 160
-	},
-	"Lunar Blessing": {
-		"bp": 0,
-		"type": "Psychic"
-	},
-	"Mystical Power": {
-		"bp": 70,
-		"type": "Psychic",
-		"category": "Special",
-		"hasSecondaryEffect": true,
-		"acc": 90,
-		"zp": 140
-	},
-	"Pounce": {
-		"bp": 50,
-		"type": "Bug",
-		"category": "Physical",
-		"hasSecondaryEffect": true,
-		"makesContact": true,
-		"acc": 100,
-		"zp": 100
-	},
-	"Psychic Noise": {
-		"bp": 75,
-		"type": "Psychic",
-		"category": "Special",
-		"isSound": true,
-		"hasSecondaryEffect": true,
-		"acc": 100
-	},
-	"Raging Bull": {
-		"bp": 90,
-		"type": "Normal",
-		"category": "Physical",
-		"makesContact": true,
-		"acc": 100,
-		"zp": 175
-	},
-	"Raging Fury": {
-		"bp": 120,
-		"type": "Fire",
-		"category": "Physical",
-		"makesContact": true,
-		"acc": 100,
-		"zp": 190
-	},
-	"Sandsear Storm": {
-		"bp": 100,
-		"type": "Ground",
-		"category": "Special",
-		"isSpread": true,
-		"isWind": true,
-		"hasSecondaryEffect": true,
-		"acc": 80,
-		"zp": 180
-	},
-	"Scale Shot": {
-		"bp": 25,
-		"type": "Dragon",
-		"category": "Physical",
-		"acc": 90,
-		"maxMultiHits": 5,
-		"zp": 100
-	},
-	"Snowscape": {
-		"bp": 0,
-		"type": "Ice"
-	},
-	"Supercell Slam": {
-		"bp": 100,
-		"type": "Electric",
-		"category": "Physical",
-		"makesContact": true,
-		"hasRecoil": "crash",
-		"acc": 95,
-		"zp": 180
-	},
-	"Take Heart": {
-		"bp": 0,
-		"type": "Psychic"
-	},
-	"Temper Flare": {
-		"bp": 75,
-		"type": "Fire",
-		"category": "Physical",
-		"makesContact": true,
-		"acc": 100,
-		"zp": 140
-	},
-	"Trailblaze": {
-		"bp": 50,
-		"type": "Grass",
-		"category": "Physical",
-		"makesContact": true,
-		"hasSecondaryEffect": true,
-		"acc": 100,
-		"zp": 100
-	},
-	"Wave Crash": {
-		"bp": 120,
-		"type": "Water",
-		"category": "Physical",
-		"makesContact": true,
-		"hasRecoil": 1/3,
-		"acc": 100,
-		"zp": 190
-	},
-	"Wildbolt Storm": {
-		"bp": 100,
-		"type": "Electric",
-		"category": "Special",
-		"isSpread": true,
-		"isWind": true,
-		"hasSecondaryEffect": true,
-		"acc": 80,
-		"zp": 180
 	}
 });
 
@@ -5318,8 +5067,11 @@ var MOVES_SV = $.extend(true, {}, MOVES_SS, {
 		"type": "Normal"
 	},
 	"Ruination": {
-		"bp": 0,
-		"type": "Dark"
+		"bp": 1,
+		"category": "Special",
+		"type": "Dark",
+		"acc": 90,
+		"noKOChance": true
 	},
 	"Salt Cure": {
 		"bp": 40,
@@ -5605,12 +5357,13 @@ var MOVES_SV = $.extend(true, {}, MOVES_SS, {
 		"isBullet": true,
 		"acc": 85
 	},
+
 	"Alluring Voice": {
 		"bp": 80,
 		"type": "Fairy",
 		"category": "Special",
-		"hasSecondaryEffect": true,
 		"isSound": true,
+		"hasSecondaryEffect": true,
 		"acc": 100
 	},
 	"Electro Shot": {
@@ -5706,6 +5459,89 @@ var MOVES_SV = $.extend(true, {}, MOVES_SS, {
 	"Mist Ball": {"bp": 95}
 });
 
+var MOVES_EISENTREE = $.extend(true, {}, MOVES_SM, {
+	"Body Press": MOVES_SS["Body Press"],
+	"Breaking Swipe": MOVES_SS["Breaking Swipe"],
+	"Coaching": MOVES_SS["Coaching"],
+	"Dual Wingbeat": MOVES_SS["Dual Wingbeat"],
+	"Expanding Force": MOVES_SS["Expanding Force"],
+	"Flip Turn": MOVES_SS["Flip Turn"],
+	"Life Dew": MOVES_SS["Life Dew"],
+	"Meteor Beam": MOVES_SS["Meteor Beam"],
+	"Poltergeist": MOVES_SS["Poltergeist"],
+	"Rising Voltage": MOVES_SS["Rising Voltage"],
+	"Scorching Sands": MOVES_SS["Scorching Sands"],
+	"Skitter Smack": MOVES_SS["Skitter Smack"],
+	"Steel Beam": MOVES_SS["Steel Beam"],
+	"Triple Axel": MOVES_SS["Triple Axel"],
+
+	"Alluring Voice": MOVES_SV["Alluring Voice"],
+	"Aqua Cutter": MOVES_SV["Aqua Cutter"],
+	"Barb Barrage": MOVES_SV["Barb Barrage"],
+	"Bleakwind Storm": MOVES_SV["Bleakwind Storm"],
+	"Chilling Water": MOVES_SV["Chilling Water"],
+	"Chilly Reception": MOVES_SV["Chilly Reception"],
+	"Comeuppance": MOVES_SV["Comeuppance"],
+	"Headlong Rush": MOVES_SV["Headlong Rush"],
+	"Ice Spinner": MOVES_SV["Ice Spinner"],
+	"Lunar Blessing": MOVES_SV["Lunar Blessing"],
+	"Mystical Power": MOVES_SV["Mystical Power"],
+	"Pounce": MOVES_SV["Pounce"],
+	"Psychic Noise": MOVES_SV["Psychic Noise"],
+	"Raging Bull": MOVES_SV["Raging Bull"],
+	"Raging Fury": MOVES_SV["Raging Fury"],
+	"Sandsear Storm": MOVES_SV["Sandsear Storm"],
+	"Scale Shot": MOVES_SV["Scale Shot"],
+	"Snowscape": MOVES_SV["Snowscape"],
+	"Supercell Slam": MOVES_SV["Supercell Slam"],
+	"Take Heart": MOVES_SV["Take Heart"],
+	"Temper Flare": MOVES_SV["Temper Flare"],
+	"Trailblaze": MOVES_SV["Trailblaze"],
+	"Wave Crash": MOVES_SV["Wave Crash"],
+	"Wildbolt Storm": MOVES_SV["Wildbolt Storm"],
+
+	// moves with changed stats
+	"Rapid Spin": MOVES_SS["Rapid Spin"],
+	"Multi-Attack": MOVES_SS["Multi-Attack"],
+
+	"Luster Purge": MOVES_SV["Luster Purge"],
+	"Mist Ball": MOVES_SV["Mist Ball"]
+});
+MOVES_EISENTREE["Body Press"].zp = 160;
+MOVES_EISENTREE["Breaking Swipe"].zp = 120;
+MOVES_EISENTREE["Dual Wingbeat"].zp = 100;
+MOVES_EISENTREE["Expanding Force"].zp = 160;
+MOVES_EISENTREE["Flip Turn"].zp = 120;
+MOVES_EISENTREE["Meteor Beam"].zp = 190;
+MOVES_EISENTREE["Poltergeist"].zp = 185;
+MOVES_EISENTREE["Rising Voltage"].zp = 140;
+MOVES_EISENTREE["Scorching Sands"].zp = 140;
+MOVES_EISENTREE["Skitter Smack"].zp = 140;
+MOVES_EISENTREE["Steel Beam"].zp = 200;
+MOVES_EISENTREE["Triple Axel"].zp = 100;
+MOVES_EISENTREE["Alluring Voice"].zp = 160;
+MOVES_EISENTREE["Aqua Cutter"].zp = 140;
+MOVES_EISENTREE["Barb Barrage"].zp = 120;
+MOVES_EISENTREE["Bleakwind Storm"].zp = 180;
+MOVES_EISENTREE["Chilling Water"].zp = 100;
+MOVES_EISENTREE["Comeuppance"].zp = 100;
+MOVES_EISENTREE["Headlong Rush"].zp = 190;
+MOVES_EISENTREE["Ice Spinner"].zp = 160;
+MOVES_EISENTREE["Mystical Power"].zp = 140;
+MOVES_EISENTREE["Pounce"].zp = 100;
+MOVES_EISENTREE["Psychic Noise"].zp = 100;
+MOVES_EISENTREE["Raging Bull"].zp = 175;
+MOVES_EISENTREE["Raging Fury"].zp = 190;
+MOVES_EISENTREE["Sandsear Storm"].zp = 180;
+MOVES_EISENTREE["Scale Shot"].zp = 100;
+MOVES_EISENTREE["Supercell Slam"].zp = 180;
+MOVES_EISENTREE["Temper Flare"].zp = 140;
+MOVES_EISENTREE["Trailblaze"].zp = 100;
+MOVES_EISENTREE["Wave Crash"].zp = 190;
+MOVES_EISENTREE["Wildbolt Storm"].zp = 180;
+MOVES_EISENTREE["Multi-Attack"].zp = 190;
+MOVES_EISENTREE["Luster Purge"].zp = 175;
+MOVES_EISENTREE["Mist Ball"].zp = 175;
 
 var ZMOVES_LOOKUP = {
 	"Bug": "Savage Spin-Out",
@@ -5790,8 +5626,8 @@ var EXCLUSIVE_ZMOVES_LOOKUP = {
 		"baseMove": "Volt Tackle"
 	},
 	"Tapunium Z": {
-		"zMoveName": "Nature\'s Madness",
-		"baseMove": "Guardian of Alola"
+		"zMoveName": "Guardian of Alola",
+		"baseMove": "Nature\'s Madness"
 	}
 };
 
@@ -5823,7 +5659,8 @@ var EXCLUSIVE_ZMOVES = {
 	"Guardian of Alola": {
 		"bp": 1,
 		"type": "Fairy",
-		"category": "Special"
+		"category": "Special",
+		"noKOChance": true
 	},
 	"Let's Snuggle Forever": {
 		"bp": 190,

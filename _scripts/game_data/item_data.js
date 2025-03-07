@@ -2,7 +2,7 @@ var ITEMS_GSC = [
 	"Berry",
 	"Berry Juice",
 	"Black Belt",
-	"BlackGlasses",
+	"Black Glasses",
 	"Charcoal",
 	"Dragon Fang",
 	"Gold Berry",
@@ -11,42 +11,47 @@ var ITEMS_GSC = [
 	"Leek",
 	"Leftovers",
 	"Light Ball",
+	"Lucky Punch",
 	"Magnet",
 	"Metal Coat",
 	"Metal Powder",
 	"Miracle Seed",
 	"Mystic Water",
-	"NeverMeltIce",
+	"Never-Melt Ice",
 	"Pink Bow",
 	"Poison Barb",
 	"Polkadot Bow",
 	"Sharp Beak",
-	"SilverPowder",
+	"Silver Powder",
 	"Soft Sand",
 	"Spell Tag",
 	"Stick",
 	"Thick Club",
-	"TwistedSpoon"
+	"Twisted Spoon"
 ];
 
 var ITEMS_ADV = ITEMS_GSC.concat([
+	"Aguav Berry",
 	"Apicot Berry",
 	"Aspear Berry",
-	"BrightPowder",
+	"Bright Powder",
 	"Cheri Berry",
 	"Chesto Berry",
 	"Choice Band",
-	"DeepSeaScale",
-	"DeepSeaTooth",
+	"Deep Sea Scale",
+	"Deep Sea Tooth",
 	"Enigma Berry",
+	"Figy Berry",
 	"Focus Band",
 	"Ganlon Berry",
+	"Iapapa Berry",
 	"Lansat Berry",
 	"Lax Incense",
 	"Leppa Berry",
 	"Liechi Berry",
 	"Lum Berry",
 	"Macho Brace",
+	"Mago Berry",
 	"Mental Herb",
 	"Quick Claw",
 	"Oran Berry",
@@ -62,13 +67,33 @@ var ITEMS_ADV = ITEMS_GSC.concat([
 	"Sitrus Berry",
 	"Soul Dew",
 	"Starf Berry",
-	"White Herb"
+	"White Herb",
+	"Wiki Berry"
 ]);
 
 ITEMS_ADV.splice(ITEMS_ADV.indexOf("Berry"), 1);
 ITEMS_ADV.splice(ITEMS_ADV.indexOf("Gold Berry"), 1);
 ITEMS_ADV.splice(ITEMS_ADV.indexOf("Pink Bow"), 1);
 ITEMS_ADV.splice(ITEMS_ADV.indexOf("Polkadot Bow"), 1);
+
+var PLATES = [
+	"Fist Plate",
+	"Sky Plate",
+	"Toxic Plate",
+	"Earth Plate",
+	"Stone Plate",
+	"Insect Plate",
+	"Spooky Plate",
+	"Iron Plate",
+	"Flame Plate",
+	"Splash Plate",
+	"Meadow Plate",
+	"Zap Plate",
+	"Mind Plate",
+	"Icicle Plate",
+	"Draco Plate",
+	"Dread Plate"
+];
 
 var ITEMS_DPP = ITEMS_ADV.concat([
 	"Adamant Orb",
@@ -85,24 +110,18 @@ var ITEMS_DPP = ITEMS_ADV.concat([
 	"Colbur Berry",
 	"Custap Berry",
 	"Damp Rock",
-	"Draco Plate",
-	"Dread Plate",
+	"Destiny Knot",
 	"Durin Berry",
-	"Earth Plate",
 	"Expert Belt",
-	"Fist Plate",
 	"Flame Orb",
-	"Flame Plate",
 	"Focus Sash",
+	"Full Incense",
 	"Grip Claw",
 	"Griseous Orb",
 	"Haban Berry",
 	"Heat Rock",
-	"Icicle Plate",
 	"Icy Rock",
-	"Insect Plate",
 	"Iron Ball",
-	"Iron Plate",
 	"Jaboca Berry",
 	"Kasib Berry",
 	"Kebia Berry",
@@ -110,15 +129,15 @@ var ITEMS_DPP = ITEMS_ADV.concat([
 	"Life Orb",
 	"Light Clay",
 	"Lustrous Orb",
-	"Meadow Plate",
 	"Metronome",
 	"Micle Berry",
-	"Mind Plate",
 	"Muscle Band",
 	"Occa Berry",
 	"Odd Incense",
 	"Passho Berry",
 	"Payapa Berry",
+	"Power Herb",
+	"Quick Powder",
 	"Razor Claw",
 	"Razor Fang",
 	"Rindo Berry",
@@ -127,24 +146,19 @@ var ITEMS_DPP = ITEMS_ADV.concat([
 	"Rowap Berry",
 	"Shed Shell",
 	"Shuca Berry",
-	"Sky Plate",
 	"Smooth Rock",
-	"Splash Plate",
-	"Spooky Plate",
 	"Sticky Barb",
-	"Stone Plate",
 	"Tanga Berry",
 	"Toxic Orb",
-	"Toxic Plate",
 	"Wacan Berry",
 	"Watmel Berry",
 	"Wave Incense",
 	"Wide Lens",
 	"Wise Glasses",
 	"Yache Berry",
-	"Zap Plate",
 	"Zoom Lens"
-]);
+],
+PLATES);
 
 var ITEMS_BW = ITEMS_DPP.concat([
 	"Absorb Bulb",
@@ -170,31 +184,17 @@ var ITEMS_XY = ITEMS_BW.concat([
 	"Kee Berry",
 	"Luminous Moss",
 	"Maranga Berry",
-	"Pixie Plate",
-	"Power Herb",
 	"Roseli Berry",
 	"Safety Goggles",
 	"Snowball",
 	"Weakness Policy"
 ]);
-
-ITEMS_XY.splice(ITEMS_XY.indexOf("BlackGlasses"), 1, "Black Glasses");
-ITEMS_XY.splice(ITEMS_XY.indexOf("DeepSeaScale"), 1, "Deep Sea Scale");
-ITEMS_XY.splice(ITEMS_XY.indexOf("DeepSeaTooth"), 1, "Deep Sea Tooth");
-ITEMS_XY.splice(ITEMS_XY.indexOf("NeverMeltIce"), 1, "Never-Melt Ice");
-ITEMS_XY.splice(ITEMS_XY.indexOf("SilverPowder"), 1, "Silver Powder");
-ITEMS_XY.splice(ITEMS_XY.indexOf("TwistedSpoon"), 1, "Twisted Spoon");
-ITEMS_XY.splice(ITEMS_XY.indexOf("BrightPowder"), 1, "Bright Powder");
+[ITEMS_XY, PLATES].forEach(itemSet => { itemSet.push("Pixie Plate"); });
 
 var ITEMS_SM = ITEMS_XY.concat([
 	"Adrenaline Orb",
 	"Protective Pads",
 	"Terrain Extender",
-	"Figy Berry",
-	"Iapapa Berry",
-	"Wiki Berry",
-	"Aguav Berry",
-	"Mago Berry",
 	"Electric Seed",
 	"Psychic Seed",
 	"Misty Seed",
@@ -294,8 +294,17 @@ var ITEMS_EISENTREE = ITEMS_SM.concat([
 	"Throat Spray",
 	"Clear Amulet",
 	"Covert Cloak",
-	"Loaded Dice",
+	"Loaded Dice"
 ]);
+
+// Remove Plates from an item array.
+for (let itemSet of [ITEMS_SS]) {
+	for (let plate of PLATES) {
+		itemSet.splice(itemSet.indexOf(plate), 1);
+	}
+}
+
+ITEMS_SS.push("Pixie Plate"); // SwSh specially includes only the Pixie Plate.
 
 function getTechnoBlast(item) {
 	switch (item) {
@@ -318,7 +327,6 @@ function getItemBoostType(item) {
 	case "Dragon Fang":
 		return "Dragon";
 	case "Dread Plate":
-	case "BlackGlasses":
 	case "Black Glasses":
 		return "Dark";
 	case "Earth Plate":
@@ -331,11 +339,9 @@ function getItemBoostType(item) {
 	case "Charcoal":
 		return "Fire";
 	case "Icicle Plate":
-	case "NeverMeltIce":
 	case "Never-Melt Ice":
 		return "Ice";
 	case "Insect Plate":
-	case "SilverPowder":
 	case "Silver Powder":
 		return "Bug";
 	case "Iron Plate":
@@ -347,7 +353,6 @@ function getItemBoostType(item) {
 		return "Grass";
 	case "Mind Plate":
 	case "Odd Incense":
-	case "TwistedSpoon":
 	case "Twisted Spoon":
 		return "Psychic";
 	case "Pixie Plate":
@@ -437,7 +442,6 @@ function getFlingPower(item) {
 		case "Hard Stone":
 		case "Room Service":
 			return 100;
-		case "DeepSeaTooth":
 		case "Deep Sea Tooth":
 		case "Grip Claw":
 		case "Thick Club":
@@ -475,50 +479,56 @@ function getFlingPower(item) {
 	return 10;
 }
 
+var NATURAL_GIFT_STATS = {
+	"Apicot Berry": {"t": "Ground", "p": 100},
+	"Aspear Berry": {"t": "Ice", "p": 80},
+	"Babiri Berry": {"t": "Steel", "p": 80},
+	"Belue Berry": {"t": "Electric", "p": 100},
+	"Charti Berry": {"t": "Rock", "p": 80},
+	"Cheri Berry": {"t": "Fire", "p": 80},
+	"Chesto Berry": {"t": "Water", "p": 80},
+	"Chilan Berry": {"t": "Normal", "p": 80},
+	"Chople Berry": {"t": "Fighting", "p": 80},
+	"Coba Berry": {"t": "Flying", "p": 80},
+	"Colbur Berry": {"t": "Dark", "p": 80},
+	"Custap Berry": {"t": "Ghost", "p": 100},
+	"Durin Berry": {"t": "Water", "p": 100},
+	"Enigma Berry": {"t": "Bug", "p": 100},
+	"Ganlon Berry": {"t": "Ice", "p": 100},
+	"Haban Berry": {"t": "Dragon", "p": 80},
+	"Jaboca Berry": {"t": "Dragon", "p": 100},
+	"Kasib Berry": {"t": "Ghost", "p": 80},
+	"Kebia Berry": {"t": "Poison", "p": 80},
+	"Kee Berry": {"t": "Fairy", "p": 100},
+	"Lansat Berry": {"t": "Flying", "p": 100},
+	"Leppa Berry": {"t": "Fighting", "p": 80},
+	"Liechi Berry": {"t": "Grass", "p": 100},
+	"Lum Berry": {"t": "Flying", "p": 80},
+	"Maranga Berry": {"t": "Dark", "p": 100},
+	"Micle Berry": {"t": "Rock", "p": 100},
+	"Occa Berry": {"t": "Fire", "p": 80},
+	"Oran Berry": {"t": "Poison", "p": 80},
+	"Passho Berry": {"t": "Water", "p": 80},
+	"Payapa Berry": {"t": "Psychic", "p": 80},
+	"Pecha Berry": {"t": "Electric", "p": 80},
+	"Persim Berry": {"t": "Ground", "p": 80},
+	"Petaya Berry": {"t": "Poison", "p": 100},
+	"Rawst Berry": {"t": "Grass", "p": 80},
+	"Rindo Berry": {"t": "Grass", "p": 80},
+	"Roseli Berry": {"t": "Fairy", "p": 80},
+	"Rowap Berry": {"t": "Dark", "p": 100},
+	"Salac Berry": {"t": "Fighting", "p": 100},
+	"Shuca Berry": {"t": "Ground", "p": 80},
+	"Sitrus Berry": {"t": "Psychic", "p": 80},
+	"Starf Berry": {"t": "Psychic", "p": 100},
+	"Tanga Berry": {"t": "Bug", "p": 80},
+	"Wacan Berry": {"t": "Electric", "p": 80},
+	"Watmel Berry": {"t": "Fire", "p": 100},
+	"Yache Berry": {"t": "Ice", "p": 80}
+};
+
 function getNaturalGift(item) {
-	var gift = {
-		"Apicot Berry": {"t": "Ground", "p": 100},
-		"Babiri Berry": {"t": "Steel", "p": 80},
-		"Belue Berry": {"t": "Electric", "p": 100},
-		"Charti Berry": {"t": "Rock", "p": 80},
-		"Chesto Berry": {"t": "Water", "p": 80},
-		"Chilan Berry": {"t": "Normal", "p": 80},
-		"Chople Berry": {"t": "Fighting", "p": 80},
-		"Coba Berry": {"t": "Flying", "p": 80},
-		"Colbur Berry": {"t": "Dark", "p": 80},
-		"Custap Berry": {"t": "Ghost", "p": 100},
-		"Durin Berry": {"t": "Water", "p": 100},
-		"Enigma Berry": {"t": "Bug", "p": 100},
-		"Ganlon Berry": {"t": "Ice", "p": 100},
-		"Haban Berry": {"t": "Dragon", "p": 80},
-		"Jaboca Berry": {"t": "Dragon", "p": 100},
-		"Kasib Berry": {"t": "Ghost", "p": 80},
-		"Kebia Berry": {"t": "Poison", "p": 80},
-		"Kee Berry": {"t": "Fairy", "p": 100},
-		"Lansat Berry": {"t": "Flying", "p": 100},
-		"Leppa Berry": {"t": "Fighting", "p": 80},
-		"Liechi Berry": {"t": "Grass", "p": 100},
-		"Lum Berry": {"t": "Flying", "p": 80},
-		"Maranga Berry": {"t": "Dark", "p": 100},
-		"Micle Berry": {"t": "Rock", "p": 100},
-		"Occa Berry": {"t": "Fire", "p": 80},
-		"Oran Berry": {"t": "Poison", "p": 80},
-		"Passho Berry": {"t": "Water", "p": 80},
-		"Payapa Berry": {"t": "Psychic", "p": 80},
-		"Petaya Berry": {"t": "Poison", "p": 100},
-		"Rawst Berry": {"t": "Grass", "p": 80},
-		"Rindo Berry": {"t": "Grass", "p": 80},
-		"Roseli Berry": {"t": "Fairy", "p": 80},
-		"Rowap Berry": {"t": "Dark", "p": 100},
-		"Salac Berry": {"t": "Fighting", "p": 100},
-		"Shuca Berry": {"t": "Ground", "p": 80},
-		"Sitrus Berry": {"t": "Psychic", "p": 80},
-		"Starf Berry": {"t": "Psychic", "p": 100},
-		"Tanga Berry": {"t": "Bug", "p": 80},
-		"Wacan Berry": {"t": "Electric", "p": 80},
-		"Watmel Berry": {"t": "Fire", "p": 100},
-		"Yache Berry": {"t": "Ice", "p": 80}
-	}[item];
+	let gift = structuredClone(NATURAL_GIFT_STATS[item]);
 	if (gift) {
 		if (gen < 6) {
 			gift.p -= 20;

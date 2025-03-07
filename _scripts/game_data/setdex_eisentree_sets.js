@@ -3,6 +3,7 @@ var SETDEX_EISENTREE =
   "Venusaur": {
     "Venusaur-1": {
       "level": 50,
+      "forme": "Mega Venusaur",
       "evs": {
         "hp": 168,
         "sa": 168,
@@ -14,11 +15,11 @@ var SETDEX_EISENTREE =
         "Leech Seed",
         "Substitute"
       ],
-      "nature": "Modest",
-      "item": "Venusaurite"
+      "nature": "Modest"
     },
     "Venusaur-1b": {
       "level": 50,
+      "forme": "Mega Venusaur",
       "evs": {
         "hp": 168,
         "sa": 168,
@@ -30,8 +31,7 @@ var SETDEX_EISENTREE =
         "Earth Power",
         "Leech Seed"
       ],
-      "nature": "Modest",
-      "item": "Venusaurite"
+      "nature": "Modest"
     },
     "Venusaur-2": {
       "level": 50,
@@ -52,6 +52,7 @@ var SETDEX_EISENTREE =
   "Charizard": {
     "Charizard-1": {
       "level": 50,
+      "forme": "Mega Charizard Y",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -62,11 +63,11 @@ var SETDEX_EISENTREE =
         "Focus Blast",
         "Tailwind"
       ],
-      "nature": "Timid",
-      "item": "Charizardite Y"
+      "nature": "Timid"
     },
     "Charizard-2": {
       "level": 50,
+      "forme": "Mega Charizard X",
       "evs": {
         "hp": 168,
         "at": 168,
@@ -78,8 +79,7 @@ var SETDEX_EISENTREE =
         "Rock Slide",
         "Tailwind"
       ],
-      "nature": "Adamant",
-      "item": "Charizardite X"
+      "nature": "Adamant"
     },
     "Charizard-3": {
       "level": 50,
@@ -100,6 +100,7 @@ var SETDEX_EISENTREE =
   "Blastoise": {
     "Blastoise-1": {
       "level": 50,
+      "forme": "Mega Blastoise",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -110,8 +111,7 @@ var SETDEX_EISENTREE =
         "Dark Pulse",
         "Ice Beam"
       ],
-      "nature": "Modest",
-      "item": "Blastoisinite"
+      "nature": "Modest"
     },
     "Blastoise-2": {
       "level": 50,
@@ -179,6 +179,7 @@ var SETDEX_EISENTREE =
   "Beedrill": {
     "Beedrill-1": {
       "level": 50,
+      "forme": "Mega Beedrill",
       "evs": {
         "at": 252,
         "sp": 252
@@ -189,11 +190,11 @@ var SETDEX_EISENTREE =
         "Drill Run",
         "Tailwind"
       ],
-      "nature": "Jolly",
-      "item": "Beedrillite"
+      "nature": "Jolly"
     },
     "Beedrill-2": {
       "level": 50,
+      "forme": "Mega Beedrill",
       "evs": {
         "hp": 252,
         "df": 252
@@ -204,8 +205,7 @@ var SETDEX_EISENTREE =
         "Pursuit",
         "Iron Defense"
       ],
-      "nature": "Impish",
-      "item": "Beedrillite"
+      "nature": "Impish"
     },
     "Beedrill-3": {
       "level": 50,
@@ -226,6 +226,7 @@ var SETDEX_EISENTREE =
   "Pidgeot": {
     "Pidgeot-1": {
       "level": 50,
+      "forme": "Mega Pidgeot",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -236,8 +237,7 @@ var SETDEX_EISENTREE =
         "Substitute",
         "Tailwind"
       ],
-      "nature": "Timid",
-      "item": "Pidgeotite"
+      "nature": "Timid"
     },
     "Pidgeot-2": {
       "level": 50,
@@ -1045,6 +1045,7 @@ var SETDEX_EISENTREE =
   "Alakazam": {
     "Alakazam-1": {
       "level": 50,
+      "forme": "Mega Alakazam",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -1055,11 +1056,11 @@ var SETDEX_EISENTREE =
         "Shadow Ball",
         "Focus Blast"
       ],
-      "nature": "Timid",
-      "item": "Alakazite"
+      "nature": "Timid"
     },
     "Alakazam-1b": {
       "level": 50,
+      "forme": "Mega Alakazam",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -1070,8 +1071,7 @@ var SETDEX_EISENTREE =
         "Shadow Ball",
         "Substitute"
       ],
-      "nature": "Timid",
-      "item": "Alakazite"
+      "nature": "Timid"
     },
     "Alakazam-2": {
       "level": 50,
@@ -1314,6 +1314,7 @@ var SETDEX_EISENTREE =
   "Slowbro": {
     "Slowbro-1": {
       "level": 50,
+      "forme": "Mega Slowbro",
       "evs": {
         "hp": 252,
         "sa": 252
@@ -1324,11 +1325,11 @@ var SETDEX_EISENTREE =
         "Ice Beam",
         "Trick Room"
       ],
-      "nature": "Quiet",
-      "item": "Slowbronite"
+      "nature": "Quiet"
     },
     "Slowbro-1b": {
       "level": 50,
+      "forme": "Mega Slowbro",
       "evs": {
         "hp": 252,
         "sa": 252
@@ -1339,8 +1340,7 @@ var SETDEX_EISENTREE =
         "Body Press",
         "Trick Room"
       ],
-      "nature": "Quiet",
-      "item": "Slowbronite"
+      "nature": "Quiet"
     },
     "Slowbro-2": {
       "level": 50,
@@ -1603,6 +1603,7 @@ var SETDEX_EISENTREE =
   "Gengar": {
     "Gengar-1": {
       "level": 50,
+      "forme": "Mega Gengar",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -1613,11 +1614,11 @@ var SETDEX_EISENTREE =
         "Focus Blast",
         "Substitute"
       ],
-      "nature": "Timid",
-      "item": "Gengarite"
+      "nature": "Timid"
     },
     "Gengar-1b": {
       "level": 50,
+      "forme": "Mega Gengar",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -1628,8 +1629,7 @@ var SETDEX_EISENTREE =
         "Focus Blast",
         "Thunderbolt"
       ],
-      "nature": "Timid",
-      "item": "Gengarite"
+      "nature": "Timid"
     },
     "Gengar-2": {
       "level": 50,
@@ -1663,6 +1663,7 @@ var SETDEX_EISENTREE =
     },
     "Gengar-3": {
       "level": 50,
+      "forme": "Mega Gengar",
       "evs": {
         "hp": 252,
         "sp": 252
@@ -1673,8 +1674,7 @@ var SETDEX_EISENTREE =
         "Perish Song",
         "Protect"
       ],
-      "nature": "Calm",
-      "item": "Gengarite"
+      "nature": "Calm"
     }
   },
   "Hypno": {
@@ -1946,8 +1946,9 @@ var SETDEX_EISENTREE =
       "nature": "Jolly",
       "item": "Thick Club"
     },
-    "Marowak-Totem-1": {
+    "Marowak-Alola-Totem-1": {
       "level": 50,
+      "forme": "Marowak-Alola-Totem",
       "evs": {
         "hp": 252,
         "at": 252
@@ -1961,8 +1962,9 @@ var SETDEX_EISENTREE =
       "nature": "Brave",
       "item": "Thick Club"
     },
-    "Marowak-Totem-2": {
+    "Marowak-Alola-Totem-2": {
       "level": 50,
+      "forme": "Marowak-Alola-Totem",
       "evs": {
         "at": 252,
         "sp": 252
@@ -2157,6 +2159,7 @@ var SETDEX_EISENTREE =
   "Kangaskhan": {
     "Kangaskhan-1": {
       "level": 50,
+      "forme": "Mega Kangaskhan",
       "evs": {
         "at": 252,
         "sp": 252
@@ -2167,11 +2170,11 @@ var SETDEX_EISENTREE =
         "Drain Punch",
         "Sucker Punch"
       ],
-      "nature": "Jolly",
-      "item": "Kangaskhanite"
+      "nature": "Jolly"
     },
     "Kangaskhan-2": {
       "level": 50,
+      "forme": "Mega Kangaskhan",
       "evs": {
         "hp": 252,
         "sp": 252
@@ -2182,8 +2185,7 @@ var SETDEX_EISENTREE =
         "Headbutt",
         "Bite"
       ],
-      "nature": "Careful",
-      "item": "Kangaskhanite"
+      "nature": "Careful"
     },
     "Kangaskhan-3": {
       "level": 50,
@@ -2202,6 +2204,7 @@ var SETDEX_EISENTREE =
     },
     "Kangaskhan-4": {
       "level": 50,
+      "forme": "Mega Kangaskhan",
       "evs": {
         "hp": 168,
         "at": 168,
@@ -2213,11 +2216,11 @@ var SETDEX_EISENTREE =
         "Seismic Toss",
         "Sucker Punch"
       ],
-      "nature": "Adamant",
-      "item": "Kangaskhanite"
+      "nature": "Adamant"
     },
     "Kangaskhan-5": {
       "level": 50,
+      "forme": "Mega Kangaskhan",
       "evs": {
         "at": 252,
         "sp": 252
@@ -2228,8 +2231,7 @@ var SETDEX_EISENTREE =
         "Drain Punch",
         "Sucker Punch"
       ],
-      "nature": "Jolly",
-      "item": "Kangaskhanite"
+      "nature": "Jolly"
     }
   },
   "Seaking": {
@@ -2402,8 +2404,7 @@ var SETDEX_EISENTREE =
         "Close Combat",
         "Tailwind"
       ],
-      "nature": "Jolly",
-      "item": "None"
+      "nature": "Jolly"
     }
   },
   "Jynx": {
@@ -2475,6 +2476,7 @@ var SETDEX_EISENTREE =
   "Pinsir": {
     "Pinsir-1": {
       "level": 50,
+      "forme": "Mega Pinsir",
       "evs": {
         "at": 252,
         "sp": 252
@@ -2485,8 +2487,7 @@ var SETDEX_EISENTREE =
         "Rock Slide",
         "Feint"
       ],
-      "nature": "Jolly",
-      "item": "Pinsirite"
+      "nature": "Jolly"
     },
     "Pinsir-2": {
       "level": 50,
@@ -2555,6 +2556,7 @@ var SETDEX_EISENTREE =
   "Gyarados": {
     "Gyarados-1": {
       "level": 50,
+      "forme": "Mega Gyarados",
       "evs": {
         "at": 252,
         "sp": 252
@@ -2565,8 +2567,7 @@ var SETDEX_EISENTREE =
         "Ice Fang",
         "Power Whip"
       ],
-      "nature": "Jolly",
-      "item": "Gyaradosite"
+      "nature": "Jolly"
     },
     "Gyarados-2": {
       "level": 50,
@@ -2888,6 +2889,7 @@ var SETDEX_EISENTREE =
   "Aerodactyl": {
     "Aerodactyl-1": {
       "level": 50,
+      "forme": "Mega Aerodactyl",
       "evs": {
         "at": 252,
         "sp": 252
@@ -2898,8 +2900,7 @@ var SETDEX_EISENTREE =
         "Psychic Fangs",
         "Tailwind"
       ],
-      "nature": "Jolly",
-      "item": "Aerodactylite"
+      "nature": "Jolly"
     },
     "Aerodactyl-2": {
       "level": 50,
@@ -3236,6 +3237,7 @@ var SETDEX_EISENTREE =
   "Mewtwo": {
     "Mewtwo-1": {
       "level": 50,
+      "forme": "Mega Mewtwo Y",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -3246,11 +3248,11 @@ var SETDEX_EISENTREE =
         "Ice Beam",
         "Fire Blast"
       ],
-      "nature": "Timid",
-      "item": "Mewtwonite Y"
+      "nature": "Timid"
     },
     "Mewtwo-2": {
       "level": 50,
+      "forme": "Mega Mewtwo X",
       "evs": {
         "at": 252,
         "sp": 252
@@ -3261,8 +3263,7 @@ var SETDEX_EISENTREE =
         "Rock Slide",
         "Bulk Up"
       ],
-      "nature": "Jolly",
-      "item": "Mewtwonite X"
+      "nature": "Jolly"
     },
     "Mewtwo-3": {
       "level": 50,
@@ -3579,8 +3580,7 @@ var SETDEX_EISENTREE =
         "U-turn",
         "Tailwind"
       ],
-      "nature": "Jolly",
-      "item": "None"
+      "nature": "Jolly"
     }
   },
   "Lanturn": {
@@ -3684,6 +3684,7 @@ var SETDEX_EISENTREE =
   "Ampharos": {
     "Ampharos-1": {
       "level": 50,
+      "forme": "Mega Ampharos",
       "evs": {
         "hp": 252,
         "sa": 252
@@ -3694,8 +3695,7 @@ var SETDEX_EISENTREE =
         "Focus Blast",
         "Power Gem"
       ],
-      "nature": "Quiet",
-      "item": "Ampharosite"
+      "nature": "Quiet"
     },
     "Ampharos-2": {
       "level": 50,
@@ -4295,6 +4295,7 @@ var SETDEX_EISENTREE =
   "Steelix": {
     "Steelix-1": {
       "level": 50,
+      "forme": "Mega Steelix",
       "evs": {
         "hp": 252,
         "at": 252
@@ -4305,8 +4306,7 @@ var SETDEX_EISENTREE =
         "Body Press",
         "Sandstorm"
       ],
-      "nature": "Brave",
-      "item": "Steelixite"
+      "nature": "Brave"
     },
     "Steelix-2": {
       "level": 50,
@@ -4406,6 +4406,7 @@ var SETDEX_EISENTREE =
   "Scizor": {
     "Scizor-1": {
       "level": 50,
+      "forme": "Mega Scizor",
       "evs": {
         "hp": 168,
         "at": 168,
@@ -4417,8 +4418,7 @@ var SETDEX_EISENTREE =
         "Swords Dance",
         "Roost"
       ],
-      "nature": "Adamant",
-      "item": "Scizorite"
+      "nature": "Adamant"
     },
     "Scizor-2": {
       "level": 50,
@@ -4452,6 +4452,7 @@ var SETDEX_EISENTREE =
     },
     "Scizor-4": {
       "level": 50,
+      "forme": "Mega Scizor",
       "evs": {
         "hp": 252,
         "at": 252
@@ -4462,8 +4463,7 @@ var SETDEX_EISENTREE =
         "Superpower",
         "Knock Off"
       ],
-      "nature": "Adamant",
-      "item": "Scizorite"
+      "nature": "Adamant"
     }
   },
   "Shuckle": {
@@ -4501,6 +4501,7 @@ var SETDEX_EISENTREE =
   "Heracross": {
     "Heracross-1": {
       "level": 50,
+      "forme": "Mega Heracross",
       "evs": {
         "hp": 252,
         "at": 252
@@ -4511,8 +4512,7 @@ var SETDEX_EISENTREE =
         "Rock Blast",
         "Bullet Seed"
       ],
-      "nature": "Adamant",
-      "item": "Heracronite"
+      "nature": "Adamant"
     },
     "Heracross-2": {
       "level": 50,
@@ -4790,6 +4790,7 @@ var SETDEX_EISENTREE =
   "Houndoom": {
     "Houndoom-1": {
       "level": 50,
+      "forme": "Mega Houndoom",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -4800,8 +4801,7 @@ var SETDEX_EISENTREE =
         "Sludge Bomb",
         "Nasty Plot"
       ],
-      "nature": "Timid",
-      "item": "Houndoominite"
+      "nature": "Timid"
     },
     "Houndoom-2": {
       "level": 50,
@@ -5327,6 +5327,7 @@ var SETDEX_EISENTREE =
   "Tyranitar": {
     "Tyranitar-1": {
       "level": 50,
+      "forme": "Mega Tyranitar",
       "evs": {
         "at": 252,
         "sp": 252
@@ -5337,8 +5338,7 @@ var SETDEX_EISENTREE =
         "Low Kick",
         "Dragon Dance"
       ],
-      "nature": "Jolly",
-      "item": "Tyranitarite"
+      "nature": "Jolly"
     },
     "Tyranitar-2": {
       "level": 50,
@@ -5406,6 +5406,7 @@ var SETDEX_EISENTREE =
   "Sceptile": {
     "Sceptile-1": {
       "level": 50,
+      "forme": "Mega Sceptile",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -5416,8 +5417,7 @@ var SETDEX_EISENTREE =
         "Focus Blast",
         "Substitute"
       ],
-      "nature": "Modest",
-      "item": "Sceptilite"
+      "nature": "Modest"
     },
     "Sceptile-2": {
       "level": 50,
@@ -5438,6 +5438,7 @@ var SETDEX_EISENTREE =
   "Blaziken": {
     "Blaziken-1": {
       "level": 50,
+      "forme": "Mega Blaziken",
       "evs": {
         "at": 252,
         "sp": 252
@@ -5448,8 +5449,7 @@ var SETDEX_EISENTREE =
         "Rock Slide",
         "Thunder Punch"
       ],
-      "nature": "Adamant",
-      "item": "Blazikenite"
+      "nature": "Adamant"
     },
     "Blaziken-2": {
       "level": 50,
@@ -5500,6 +5500,7 @@ var SETDEX_EISENTREE =
   "Swampert": {
     "Swampert-1": {
       "level": 50,
+      "forme": "Mega Swampert",
       "evs": {
         "at": 252,
         "sp": 252
@@ -5510,8 +5511,7 @@ var SETDEX_EISENTREE =
         "Ice Punch",
         "Rain Dance"
       ],
-      "nature": "Adamant",
-      "item": "Swampertite"
+      "nature": "Adamant"
     },
     "Swampert-2": {
       "level": 50,
@@ -5776,6 +5776,7 @@ var SETDEX_EISENTREE =
   "Gardevoir": {
     "Gardevoir-1": {
       "level": 50,
+      "forme": "Mega Gardevoir",
       "evs": {
         "hp": 168,
         "sa": 168,
@@ -5787,8 +5788,7 @@ var SETDEX_EISENTREE =
         "Psyshock",
         "Vacuum Wave"
       ],
-      "nature": "Modest",
-      "item": "Gardevoirite"
+      "nature": "Modest"
     },
     "Gardevoir-2": {
       "level": 50,
@@ -6158,6 +6158,7 @@ var SETDEX_EISENTREE =
   "Sableye": {
     "Sableye-1": {
       "level": 50,
+      "forme": "Mega Sableye",
       "evs": {
         "hp": 252,
         "sd": 252
@@ -6168,8 +6169,7 @@ var SETDEX_EISENTREE =
         "Will-O-Wisp",
         "Recover"
       ],
-      "nature": "Relaxed",
-      "item": "Sablenite"
+      "nature": "Relaxed"
     },
     "Sableye-2": {
       "level": 50,
@@ -6220,6 +6220,7 @@ var SETDEX_EISENTREE =
   "Mawile": {
     "Mawile-1": {
       "level": 50,
+      "forme": "Mega Mawile",
       "evs": {
         "hp": 252,
         "at": 252
@@ -6230,8 +6231,7 @@ var SETDEX_EISENTREE =
         "Sucker Punch",
         "Swords Dance"
       ],
-      "nature": "Brave",
-      "item": "Mawilite"
+      "nature": "Brave"
     },
     "Mawile-2": {
       "level": 50,
@@ -6250,6 +6250,7 @@ var SETDEX_EISENTREE =
     },
     "Mawile-3": {
       "level": 50,
+      "forme": "Mega Mawile",
       "evs": {
         "hp": 252,
         "at": 252
@@ -6260,13 +6261,13 @@ var SETDEX_EISENTREE =
         "Crunch",
         "Rock Slide"
       ],
-      "nature": "Brave",
-      "item": "Mawilite"
+      "nature": "Brave"
     }
   },
   "Aggron": {
     "Aggron-1": {
       "level": 50,
+      "forme": "Mega Aggron",
       "evs": {
         "hp": 252,
         "at": 252
@@ -6277,11 +6278,11 @@ var SETDEX_EISENTREE =
         "Body Press",
         "Curse"
       ],
-      "nature": "Brave",
-      "item": "Aggronite"
+      "nature": "Brave"
     },
     "Aggron-1b": {
       "level": 50,
+      "forme": "Mega Aggron",
       "evs": {
         "hp": 252,
         "at": 252
@@ -6292,8 +6293,7 @@ var SETDEX_EISENTREE =
         "Avalanche",
         "Fire Punch"
       ],
-      "nature": "Brave",
-      "item": "Aggronite"
+      "nature": "Brave"
     },
     "Aggron-2": {
       "level": 50,
@@ -6314,6 +6314,7 @@ var SETDEX_EISENTREE =
   "Medicham": {
     "Medicham-1": {
       "level": 50,
+      "forme": "Mega Medicham",
       "evs": {
         "at": 252,
         "sp": 252
@@ -6324,11 +6325,11 @@ var SETDEX_EISENTREE =
         "Psycho Cut",
         "Ice Punch"
       ],
-      "nature": "Jolly",
-      "item": "Medichamite"
+      "nature": "Jolly"
     },
     "Medicham-1b": {
       "level": 50,
+      "forme": "Mega Medicham",
       "evs": {
         "at": 252,
         "sp": 252
@@ -6339,8 +6340,7 @@ var SETDEX_EISENTREE =
         "Psycho Cut",
         "Ice Punch"
       ],
-      "nature": "Jolly",
-      "item": "Medichamite"
+      "nature": "Jolly"
     },
     "Medicham-2": {
       "level": 50,
@@ -6361,6 +6361,7 @@ var SETDEX_EISENTREE =
   "Manectric": {
     "Manectric-1": {
       "level": 50,
+      "forme": "Mega Manectric",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -6371,11 +6372,11 @@ var SETDEX_EISENTREE =
         "Snarl",
         "Light Screen"
       ],
-      "nature": "Timid",
-      "item": "Manectite"
+      "nature": "Timid"
     },
     "Manectric-1b": {
       "level": 50,
+      "forme": "Mega Manectric",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -6386,8 +6387,7 @@ var SETDEX_EISENTREE =
         "Snarl",
         "Hidden Power Ice"
       ],
-      "nature": "Timid",
-      "item": "Manectite"
+      "nature": "Timid"
     },
     "Manectric-2": {
       "level": 50,
@@ -6540,6 +6540,7 @@ var SETDEX_EISENTREE =
   "Sharpedo": {
     "Sharpedo-1": {
       "level": 50,
+      "forme": "Mega Sharpedo",
       "evs": {
         "at": 252,
         "sp": 252
@@ -6550,8 +6551,7 @@ var SETDEX_EISENTREE =
         "Ice Fang",
         "Psychic Fangs"
       ],
-      "nature": "Jolly",
-      "item": "Sharpedonite"
+      "nature": "Jolly"
     },
     "Sharpedo-2": {
       "level": 50,
@@ -6634,6 +6634,7 @@ var SETDEX_EISENTREE =
   "Camerupt": {
     "Camerupt-1": {
       "level": 50,
+      "forme": "Mega Camerupt",
       "evs": {
         "hp": 252,
         "sa": 252
@@ -6644,11 +6645,11 @@ var SETDEX_EISENTREE =
         "Earth Power",
         "Ancient Power"
       ],
-      "nature": "Quiet",
-      "item": "Cameruptite"
+      "nature": "Quiet"
     },
     "Camerupt-1b": {
       "level": 50,
+      "forme": "Mega Camerupt",
       "evs": {
         "hp": 252,
         "sa": 252
@@ -6659,11 +6660,11 @@ var SETDEX_EISENTREE =
         "Earth Power",
         "Nature Power"
       ],
-      "nature": "Quiet",
-      "item": "Cameruptite"
+      "nature": "Quiet"
     },
     "Camerupt-2": {
       "level": 50,
+      "forme": "Mega Camerupt",
       "evs": {
         "hp": 252,
         "sa": 252
@@ -6674,8 +6675,7 @@ var SETDEX_EISENTREE =
         "Rock Slide",
         "Curse"
       ],
-      "nature": "Brave",
-      "item": "Cameruptite"
+      "nature": "Brave"
     }
   },
   "Torkoal": {
@@ -6841,6 +6841,7 @@ var SETDEX_EISENTREE =
   "Altaria": {
     "Altaria-1": {
       "level": 50,
+      "forme": "Mega Altaria",
       "evs": {
         "hp": 168,
         "sa": 168,
@@ -6852,11 +6853,11 @@ var SETDEX_EISENTREE =
         "Sing",
         "Tailwind"
       ],
-      "nature": "Modest",
-      "item": "Altarianite"
+      "nature": "Modest"
     },
     "Altaria-2": {
       "level": 50,
+      "forme": "Mega Altaria",
       "evs": {
         "at": 252,
         "sp": 252
@@ -6867,8 +6868,7 @@ var SETDEX_EISENTREE =
         "Iron Tail",
         "Dragon Dance"
       ],
-      "nature": "Jolly",
-      "item": "Altarianite"
+      "nature": "Jolly"
     },
     "Altaria-3": {
       "level": 50,
@@ -7335,6 +7335,7 @@ var SETDEX_EISENTREE =
   "Banette": {
     "Banette-1": {
       "level": 50,
+      "forme": "Mega Banette",
       "evs": {
         "hp": 252,
         "at": 252
@@ -7345,11 +7346,11 @@ var SETDEX_EISENTREE =
         "Shadow Sneak",
         "Will-O-Wisp"
       ],
-      "nature": "Adamant",
-      "item": "Banettite"
+      "nature": "Adamant"
     },
     "Banette-2": {
       "level": 50,
+      "forme": "Mega Banette",
       "evs": {
         "hp": 252,
         "df": 252
@@ -7360,8 +7361,7 @@ var SETDEX_EISENTREE =
         "Encore",
         "Trick Room"
       ],
-      "nature": "Relaxed",
-      "item": "Banettite"
+      "nature": "Relaxed"
     }
   },
   "Dusclops": {
@@ -7463,6 +7463,7 @@ var SETDEX_EISENTREE =
   "Absol": {
     "Absol-1": {
       "level": 50,
+      "forme": "Mega Absol",
       "evs": {
         "at": 252,
         "sp": 252
@@ -7473,8 +7474,7 @@ var SETDEX_EISENTREE =
         "Ice Beam",
         "Flamethrower"
       ],
-      "nature": "Naive",
-      "item": "Absolite"
+      "nature": "Naive"
     },
     "Absol-2": {
       "level": 50,
@@ -7495,6 +7495,7 @@ var SETDEX_EISENTREE =
   "Glalie": {
     "Glalie-1": {
       "level": 50,
+      "forme": "Mega Glalie",
       "evs": {
         "at": 252,
         "sp": 252
@@ -7505,8 +7506,7 @@ var SETDEX_EISENTREE =
         "Freeze-Dry",
         "Ice Shard"
       ],
-      "nature": "Naughty",
-      "item": "Glalitite"
+      "nature": "Naughty"
     },
     "Glalie-2": {
       "level": 50,
@@ -7660,6 +7660,7 @@ var SETDEX_EISENTREE =
   "Salamence": {
     "Salamence-1": {
       "level": 50,
+      "forme": "Mega Salamence",
       "evs": {
         "at": 168,
         "sa": 168,
@@ -7671,11 +7672,11 @@ var SETDEX_EISENTREE =
         "Heat Wave",
         "Substitute"
       ],
-      "nature": "Hasty",
-      "item": "Salamencite"
+      "nature": "Hasty"
     },
     "Salamence-2": {
       "level": 50,
+      "forme": "Mega Salamence",
       "evs": {
         "at": 252,
         "sp": 252
@@ -7686,11 +7687,11 @@ var SETDEX_EISENTREE =
         "Draco Meteor",
         "Tailwind"
       ],
-      "nature": "Naive",
-      "item": "Salamencite"
+      "nature": "Naive"
     },
     "Salamence-3": {
       "level": 50,
+      "forme": "Mega Salamence",
       "evs": {
         "hp": 252,
         "sp": 252
@@ -7701,8 +7702,7 @@ var SETDEX_EISENTREE =
         "Roost",
         "Dragon Dance"
       ],
-      "nature": "Jolly",
-      "item": "Salamencite"
+      "nature": "Jolly"
     },
     "Salamence-4": {
       "level": 50,
@@ -7721,6 +7721,7 @@ var SETDEX_EISENTREE =
     },
     "Salamence-5": {
       "level": 50,
+      "forme": "Mega Salamence",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -7731,11 +7732,11 @@ var SETDEX_EISENTREE =
         "Dragon Pulse",
         "Tailwind"
       ],
-      "nature": "Timid",
-      "item": "Salamencite"
+      "nature": "Timid"
     },
     "Salamence-6": {
       "level": 50,
+      "forme": "Mega Salamence",
       "evs": {
         "at": 252,
         "sp": 252
@@ -7746,13 +7747,13 @@ var SETDEX_EISENTREE =
         "Earthquake",
         "Dragon Dance"
       ],
-      "nature": "Jolly",
-      "item": "Salamencite"
+      "nature": "Jolly"
     }
   },
   "Metagross": {
     "Metagross-1": {
       "level": 50,
+      "forme": "Mega Metagross",
       "evs": {
         "at": 252,
         "sp": 252
@@ -7763,11 +7764,11 @@ var SETDEX_EISENTREE =
         "Thunder Punch",
         "Bullet Punch"
       ],
-      "nature": "Jolly",
-      "item": "Metagrossite"
+      "nature": "Jolly"
     },
     "Metagross-2": {
       "level": 50,
+      "forme": "Mega Metagross",
       "evs": {
         "at": 168,
         "df": 168,
@@ -7779,8 +7780,7 @@ var SETDEX_EISENTREE =
         "Ice Punch",
         "Light Screen"
       ],
-      "nature": "Adamant",
-      "item": "Metagrossite"
+      "nature": "Adamant"
     },
     "Metagross-3": {
       "level": 50,
@@ -7829,6 +7829,7 @@ var SETDEX_EISENTREE =
     },
     "Metagross-6": {
       "level": 50,
+      "forme": "Mega Metagross",
       "evs": {
         "at": 252,
         "sp": 252
@@ -7839,8 +7840,7 @@ var SETDEX_EISENTREE =
         "Ice Punch",
         "Bullet Punch"
       ],
-      "nature": "Jolly",
-      "item": "Metagrossite"
+      "nature": "Jolly"
     }
   },
   "Regirock": {
@@ -7957,6 +7957,7 @@ var SETDEX_EISENTREE =
     },
     "Latias-2": {
       "level": 50,
+      "forme": "Mega Latias",
       "evs": {
         "hp": 168,
         "sa": 168,
@@ -7968,8 +7969,7 @@ var SETDEX_EISENTREE =
         "Calm Mind",
         "Recover"
       ],
-      "nature": "Timid",
-      "item": "Latiasite"
+      "nature": "Timid"
     },
     "Latias-3": {
       "level": 50,
@@ -8005,6 +8005,7 @@ var SETDEX_EISENTREE =
     },
     "Latios-2": {
       "level": 50,
+      "forme": "Mega Latios",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -8015,8 +8016,7 @@ var SETDEX_EISENTREE =
         "Tailwind",
         "Roost"
       ],
-      "nature": "Modest",
-      "item": "Latiosite"
+      "nature": "Modest"
     },
     "Latios-3": {
       "level": 50,
@@ -8049,6 +8049,22 @@ var SETDEX_EISENTREE =
       "item": "Dragonium Z"
     }
   },
+  "Kyogre-Primal": {
+    "Kyogre-Primal-1": {
+      "level": 50,
+      "evs": {
+        "sa": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Origin Pulse",
+        "Ice Beam",
+        "Thunder",
+        "Calm Mind"
+      ],
+      "nature": "Timid"
+    }
+  },
   "Kyogre": {
     "Kyogre-1": {
       "level": 50,
@@ -8066,21 +8082,21 @@ var SETDEX_EISENTREE =
       "item": "Choice Scarf"
     }
   },
-  "Kyogre-Primal": {
-    "Kyogre-Primal-1": {
+  "Groudon-Primal": {
+    "Groudon-Primal-1": {
       "level": 50,
       "evs": {
-        "sa": 252,
-        "sp": 252
+        "hp": 168,
+        "at": 168,
+        "sa": 168
       },
       "moves": [
-        "Origin Pulse",
-        "Ice Beam",
-        "Thunder",
-        "Calm Mind"
+        "Precipice Blades",
+        "Overheat",
+        "Solar Beam",
+        "Stealth Rock"
       ],
-      "nature": "Timid",
-      //"item": "Blue Orb"
+      "nature": "Brave"
     }
   },
   "Groudon": {
@@ -8098,24 +8114,6 @@ var SETDEX_EISENTREE =
       ],
       "nature": "Jolly",
       "item": "Clear Amulet"
-    }
-  },
-  "Groudon-Primal": {
-    "Groudon-Primal-1": {
-      "level": 50,
-      "evs": {
-        "hp": 168,
-        "at": 168,
-        "sa": 168
-      },
-      "moves": [
-        "Precipice Blades",
-        "Overheat",
-        "Solar Beam",
-        "Stealth Rock"
-      ],
-      "nature": "Brave",
-      //"item": "Red Orb"
     }
   },
   "Jirachi": {
@@ -8739,8 +8737,8 @@ var SETDEX_EISENTREE =
       "item": "Aguav Berry"
     }
   },
-  "Wormadam-Trash": {
-    "Wormadam-Trash-1": {
+  "Wormadam-S": {
+    "Wormadam-S-1": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -8756,8 +8754,8 @@ var SETDEX_EISENTREE =
       "item": "Focus Sash"
     }
   },
-  "Wormadam-Sand": {
-    "Wormadam-Sand-1": {
+  "Wormadam-G": {
+    "Wormadam-G-1": {
       "level": 50,
       "evs": {
         "hp": 252,
@@ -9099,6 +9097,7 @@ var SETDEX_EISENTREE =
   "Lopunny": {
     "Lopunny-1": {
       "level": 50,
+      "forme": "Mega Lopunny",
       "evs": {
         "at": 252,
         "sp": 252
@@ -9109,11 +9108,11 @@ var SETDEX_EISENTREE =
         "Close Combat",
         "Encore"
       ],
-      "nature": "Jolly",
-      "item": "Lopunnite"
+      "nature": "Jolly"
     },
     "Lopunny-2": {
       "level": 50,
+      "forme": "Mega Lopunny",
       "evs": {
         "at": 252,
         "sp": 252
@@ -9124,8 +9123,7 @@ var SETDEX_EISENTREE =
         "",
         ""
       ],
-      "nature": "Jolly",
-      "item": "Lopunnite"
+      "nature": "Jolly"
     },
     "Lopunny-3": {
       "level": 50,
@@ -9476,6 +9474,7 @@ var SETDEX_EISENTREE =
     },
     "Garchomp-3": {
       "level": 50,
+      "forme": "Mega Garchomp",
       "evs": {
         "at": 252,
         "sa": 252
@@ -9486,8 +9485,7 @@ var SETDEX_EISENTREE =
         "Flamethrower",
         "Draco Meteor"
       ],
-      "nature": "Mild",
-      "item": "Garchompite"
+      "nature": "Mild"
     },
     "Garchomp-4": {
       "level": 50,
@@ -9542,6 +9540,7 @@ var SETDEX_EISENTREE =
   "Lucario": {
     "Lucario-1": {
       "level": 50,
+      "forme": "Mega Lucario",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -9552,8 +9551,7 @@ var SETDEX_EISENTREE =
         "Ice Punch",
         "Extreme Speed"
       ],
-      "nature": "Hasty",
-      "item": "Lucarionite"
+      "nature": "Hasty"
     },
     "Lucario-2": {
       "level": 50,
@@ -9572,6 +9570,7 @@ var SETDEX_EISENTREE =
     },
     "Lucario-3": {
       "level": 50,
+      "forme": "Mega Lucario",
       "evs": {
         "at": 252,
         "sa": 252
@@ -9582,8 +9581,7 @@ var SETDEX_EISENTREE =
         "Extreme Speed",
         "Feint"
       ],
-      "nature": "Brave",
-      "item": "Lucarionite"
+      "nature": "Brave"
     }
   },
   "Hippowdon": {
@@ -9765,6 +9763,7 @@ var SETDEX_EISENTREE =
   "Abomasnow": {
     "Abomasnow-1": {
       "level": 50,
+      "forme": "Mega Abomasnow",
       "evs": {
         "hp": 168,
         "at": 168,
@@ -9776,11 +9775,11 @@ var SETDEX_EISENTREE =
         "Earth Power",
         "Ice Shard"
       ],
-      "nature": "Quiet",
-      "item": "Abomasite"
+      "nature": "Quiet"
     },
     "Abomasnow-1b": {
       "level": 50,
+      "forme": "Mega Abomasnow",
       "evs": {
         "hp": 252,
         "sa": 252
@@ -9791,8 +9790,7 @@ var SETDEX_EISENTREE =
         "Ice Shard",
         "Aurora Veil"
       ],
-      "nature": "Quiet",
-      "item": "Abomasite"
+      "nature": "Quiet"
     },
     "Abomasnow-2": {
       "level": 50,
@@ -10524,6 +10522,7 @@ var SETDEX_EISENTREE =
   "Gallade": {
     "Gallade-1": {
       "level": 50,
+      "forme": "Mega Gallade",
       "evs": {
         "at": 252,
         "sp": 252
@@ -10534,11 +10533,11 @@ var SETDEX_EISENTREE =
         "Knock Off",
         "Ice Punch"
       ],
-      "nature": "Jolly",
-      "item": "Galladite"
+      "nature": "Jolly"
     },
     "Gallade-2": {
       "level": 50,
+      "forme": "Mega Gallade",
       "evs": {
         "hp": 252,
         "df": 252
@@ -10549,8 +10548,7 @@ var SETDEX_EISENTREE =
         "Shadow Sneak",
         "Swords Dance"
       ],
-      "nature": "Adamant",
-      "item": "Galladite"
+      "nature": "Adamant"
     },
     "Gallade-3": {
       "level": 50,
@@ -12026,6 +12024,7 @@ var SETDEX_EISENTREE =
   "Audino": {
     "Audino-1": {
       "level": 50,
+      "forme": "Mega Audino",
       "evs": {
         "hp": 252,
         "sa": 252
@@ -12036,8 +12035,7 @@ var SETDEX_EISENTREE =
         "Calm Mind",
         "Trick Room"
       ],
-      "nature": "Quiet",
-      "item": "Audinite"
+      "nature": "Quiet"
     },
     "Audino-2": {
       "level": 50,
@@ -12376,7 +12374,7 @@ var SETDEX_EISENTREE =
     }
   },
   "Basculin": {
-    "Basculin-Red-1": {
+    "Basculin-1": {
       "level": 50,
       "evs": {
         "at": 252,
@@ -12390,7 +12388,9 @@ var SETDEX_EISENTREE =
       ],
       "nature": "Jolly",
       "item": "Waterium Z"
-    },
+    }
+  },
+  "Basculin-Blue": {
     "Basculin-Blue-1": {
       "level": 50,
       "evs": {
@@ -16300,6 +16300,38 @@ var SETDEX_EISENTREE =
     }
   },
   "Zygarde": {
+    "Zygarde-10%-1": {
+      "level": 50,
+      "forme": "Zygarde-10%",
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Thousand Arrows",
+        "Outrage",
+        "Iron Tail",
+        "Extreme Speed"
+      ],
+      "nature": "Jolly",
+      "item": "Choice Band"
+    },
+    "Zygarde-10%-1b": {
+      "level": 50,
+      "forme": "Zygarde-10%",
+      "evs": {
+        "at": 252,
+        "sp": 252
+      },
+      "moves": [
+        "Thousand Arrows",
+        "Scale Shot",
+        "Iron Tail",
+        "Extreme Speed"
+      ],
+      "nature": "Jolly",
+      "item": "Choice Band"
+    },
     "Zygarde-1": {
       "level": 50,
       "evs": {
@@ -16329,43 +16361,12 @@ var SETDEX_EISENTREE =
       ],
       "nature": "Adamant",
       "item": "Choice Band"
-    },
-    "Zygarde-10%-1": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Thousand Arrows",
-        "Outrage",
-        "Iron Tail",
-        "Extreme Speed"
-      ],
-      "nature": "Jolly",
-      "item": "Choice Band",
-      "forme": "Zygarde-10%"
-    },
-    "Zygarde-10%-1b": {
-      "level": 50,
-      "evs": {
-        "at": 252,
-        "sp": 252
-      },
-      "moves": [
-        "Thousand Arrows",
-        "Scale Shot",
-        "Iron Tail",
-        "Extreme Speed"
-      ],
-      "nature": "Jolly",
-      "item": "Choice Band",
-      "forme": "Zygarde-10%"
     }
   },
   "Diancie": {
     "Diancie-1": {
       "level": 50,
+      "forme": "Mega Diancie",
       "evs": {
         "at": 252,
         "sp": 252
@@ -16376,8 +16377,7 @@ var SETDEX_EISENTREE =
         "Mystical Fire",
         "Earth Power"
       ],
-      "nature": "Naive",
-      "item": "Diancite"
+      "nature": "Naive"
     },
     "Diancie-2": {
       "level": 50,
@@ -16523,7 +16523,7 @@ var SETDEX_EISENTREE =
         "Tailwind"
       ],
       "nature": "Adamant",
-      "item": "Decidium Z" // maybe?
+      "item": "Decidium Z"
     },
     "Decidueye-1b": {
       "level": 50,
@@ -16683,7 +16683,7 @@ var SETDEX_EISENTREE =
         "Aqua Jet"
       ],
       "nature": "Modest",
-      "item": "Waterium Z" // maybe?
+      "item": "Primarium Z"
     },
     "Primarina-4": {
       "level": 50,
@@ -16830,6 +16830,7 @@ var SETDEX_EISENTREE =
     },
     "Vikavolt-Totem-1": {
       "level": 50,
+      "forme": "Vikavolt-Totem",
       "evs": {
         "hp": 252,
         "sa": 252
@@ -16845,6 +16846,7 @@ var SETDEX_EISENTREE =
     },
     "Vikavolt-Totem-2": {
       "level": 50,
+      "forme": "Vikavolt-Totem",
       "evs": {
         "hp": 252,
         "sa": 252
@@ -17040,6 +17042,7 @@ var SETDEX_EISENTREE =
     },
     "Ribombee-Totem-1": {
       "level": 50,
+      "forme": "Ribombee-Totem",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -17055,6 +17058,7 @@ var SETDEX_EISENTREE =
     },
     "Ribombee-Totem-2": {
       "level": 50,
+      "forme": "Ribombee-Totem",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -17068,8 +17072,9 @@ var SETDEX_EISENTREE =
       "nature": "Modest",
       "item": "Pixie Plate"
     },
-    "Ribombee-T-3": {
+    "Ribombee-Totem-3": {
       "level": 50,
+      "forme": "Ribombee-Totem",
       "evs": {
         "hp": 252,
         "df": 252
@@ -17327,6 +17332,7 @@ var SETDEX_EISENTREE =
     },
     "Araquanid-Totem-1": {
       "level": 50,
+      "forme": "Araquanid-Totem",
       "evs": {
         "hp": 252,
         "at": 252
@@ -17342,6 +17348,7 @@ var SETDEX_EISENTREE =
     },
     "Araquanid-Totem-2": {
       "level": 50,
+      "forme": "Araquanid-Totem",
       "evs": {
         "hp": 252,
         "at": 252
@@ -17357,6 +17364,7 @@ var SETDEX_EISENTREE =
     },
     "Araquanid-Totem-3": {
       "level": 50,
+      "forme": "Araquanid-Totem",
       "evs": {
         "hp": 252,
         "at": 252
@@ -17372,6 +17380,7 @@ var SETDEX_EISENTREE =
     },
     "Araquanid-Totem-4": {
       "level": 50,
+      "forme": "Araquanid-Totem",
       "evs": {
         "hp": 252,
         "at": 252
@@ -17419,6 +17428,7 @@ var SETDEX_EISENTREE =
     },
     "Lurantis-Totem-1": {
       "level": 50,
+      "forme": "Lurantis-Totem",
       "evs": {
         "hp": 252,
         "at": 252
@@ -17434,6 +17444,7 @@ var SETDEX_EISENTREE =
     },
     "Lurantis-Totem-2": {
       "level": 50,
+      "forme": "Lurantis-Totem",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -17528,6 +17539,7 @@ var SETDEX_EISENTREE =
     },
     "Salazzle-Totem-1": {
       "level": 50,
+      "forme": "Salazzle-Totem",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -17543,6 +17555,7 @@ var SETDEX_EISENTREE =
     },
     "Salazzle-Totem-2": {
       "level": 50,
+      "forme": "Salazzle-Totem",
       "evs": {
         "sa": 252,
         "sp": 252
@@ -17558,6 +17571,7 @@ var SETDEX_EISENTREE =
     },
     "Salazzle-Totem-3": {
       "level": 50,
+      "forme": "Salazzle-Totem",
       "evs": {
         "hp": 252,
         "sp": 252
@@ -17981,8 +17995,7 @@ var SETDEX_EISENTREE =
         "Parting Shot",
         "Tailwind"
       ],
-      "nature": "Jolly",
-      "item": "Ghost Memory"
+      "nature": "Jolly"
     }
   },
   "Silvally-Ground": {
@@ -17998,8 +18011,7 @@ var SETDEX_EISENTREE =
         "Parting Shot",
         "Tailwind"
       ],
-      "nature": "Jolly",
-      "item": "Ground Memory"
+      "nature": "Jolly"
     }
   },
   "Silvally-Fairy": {
@@ -18015,8 +18027,7 @@ var SETDEX_EISENTREE =
         "Flamethrower",
         "Tailwind"
       ],
-      "nature": "Naive",
-      "item": "Fairy Memory"
+      "nature": "Naive"
     }
   },
   "Silvally-Steel": {
@@ -18032,8 +18043,7 @@ var SETDEX_EISENTREE =
         "Flamethrower",
         "Tailwind"
       ],
-      "nature": "Jolly",
-      "item": "Steel Memory"
+      "nature": "Jolly"
     }
   },
   "Silvally-Electric": {
@@ -18049,8 +18059,7 @@ var SETDEX_EISENTREE =
         "Parting Shot",
         "Tailwind"
       ],
-      "nature": "Naive",
-      "item": "Electric Memory"
+      "nature": "Naive"
     }
   },
   "Silvally-Fire": {
@@ -18066,8 +18075,7 @@ var SETDEX_EISENTREE =
         "Thunder Fang",
         "Tailwind"
       ],
-      "nature": "Naive",
-      "item": "Fire Memory"
+      "nature": "Naive"
     }
   },
   "Silvally-Water": {
@@ -18083,8 +18091,7 @@ var SETDEX_EISENTREE =
         "Fire Fang",
         "Tailwind"
       ],
-      "nature": "Adamant",
-      "item": "Water Memory"
+      "nature": "Adamant"
     }
   },
   "Silvally-Dragon": {
@@ -18100,8 +18107,7 @@ var SETDEX_EISENTREE =
         "Iron Head",
         "Parting Shot"
       ],
-      "nature": "Quiet",
-      "item": "Dragon Memory"
+      "nature": "Quiet"
     }
   },
   "Silvally-Ice": {
@@ -18117,8 +18123,7 @@ var SETDEX_EISENTREE =
         "Flamethrower",
         "Snowscape"
       ],
-      "nature": "Naive",
-      "item": "Ice Memory"
+      "nature": "Naive"
     }
   },
   "Silvally-Rock": {
@@ -18134,8 +18139,7 @@ var SETDEX_EISENTREE =
         "Flamethrower",
         "Sandstorm"
       ],
-      "nature": "Hasty",
-      "item": "Rock Memory"
+      "nature": "Hasty"
     }
   },
   "Minior": {
@@ -18268,6 +18272,7 @@ var SETDEX_EISENTREE =
     },
     "Togedemaru-Totem-1": {
       "level": 50,
+      "forme": "Togedemaru-Totem",
       "evs": {
         "at": 252,
         "sp": 252
@@ -18283,6 +18288,7 @@ var SETDEX_EISENTREE =
     },
     "Togedemaru-Totem-2": {
       "level": 50,
+      "forme": "Togedemaru-Totem",
       "evs": {
         "sd": 252,
         "sp": 252
@@ -18372,7 +18378,7 @@ var SETDEX_EISENTREE =
         "Substitute"
       ],
       "nature": "Jolly",
-      "item": "Fairium Z"
+      "item": "Mimikium Z"
     }
   },
   "Bruxish": {

@@ -213,11 +213,12 @@ function getAutoIVValue(side) {
 
 function isCustomSet(pokeName) {
 	// pokeName should be the name as displayed in the sets list: speciesName (setName)
-	if (!pokeName) {
+	if (typeof pokeName != "string") {
 		return false;
 	}
+	let setName = pokeName.substring(pokeName.indexOf("(") + 1, pokeName.length - 1);
 	let speciesSets = SETDEX_CUSTOM[pokeName.substring(0, pokeName.indexOf(" ("))];
-	return (speciesSets && (pokeName.substring(pokeName.indexOf("(") + 1, pokeName.length - 1) in speciesSets));
+	return speciesSets !== undefined && setName in speciesSets;
 }
 
 $("#format").change(function () {
@@ -739,7 +740,7 @@ function getDefaultMultiHits(moveName, ability, item) {
 	if (!move || !move.maxMultiHits) {
 		return 1;
 	}
-	if (ability === "Skill Link" || moveName === "Population Bomb" || moveName === "Triple Axel") {
+	if (ability === "Skill Link" || ["Triple Kick", "Triple Axel", "Population Bomb"].includes(moveName)) {
 		return move.maxMultiHits;
 	} else if (item === "Loaded Dice") {
 		return 4;
@@ -783,6 +784,16 @@ $(".move-selector").change(function () {
 		moveGroupObj.children(".move-z").prop(".move-max", false);
 	}
 });
+
+var oldItemNames = {
+	"BlackGlasses": "Black Glasses",
+	"DeepSeaScale": "Deep Sea Scale",
+	"DeepSeaTooth": "Deep Sea Tooth",
+	"NeverMeltIce": "Never-Melt Ice",
+	"SilverPowder": "Silver Powder",
+	"TwistedSpoon": "Twisted Spoon",
+	"BrightPowder": "Bright Powder"
+};
 
 // auto-update set details on select
 $(".set-selector").bind("change", function () {
@@ -864,7 +875,7 @@ $(".set-selector").bind("change", function () {
 		setSelectValueIfValid(pokeObj.find(".nature"), set.nature, "Hardy");
 		setSelectValueIfValid(abilityObj, set.ability ? set.ability : (abilityList && abilityList.length == 1 ? abilityList[0] : pokemon.ab), "");
 		setSelectValueIfValid(pokeObj.find(".tera-type"), set.teraType, pokemon.t1);
-		setSelectValueIfValid(itemObj, set.item, "");
+		setSelectValueIfValid(itemObj, set.item && oldItemNames[set.item] ? oldItemNames[set.item] : set.item, "");
 		for (i = 0; i < 4; i++) {
 			moveObj = pokeObj.find(".move" + (i + 1) + " select.move-selector");
 			setSelectValueIfValid(moveObj, set.moves[i], "(No Move)");
@@ -957,8 +968,9 @@ function showFormes(formeObj, setName, pokemonName, pokemon) {
 	formeObj.show();
 }
 
+const BLANK_SET = "Blank Set";
 function getFormeNum(setName, pokemonName) {
-	if (setName === "Blank Set") {
+	if (setName === BLANK_SET) {
 		return 0;
 	}
 	let set = setdexAll[pokemonName][setName];
@@ -1005,7 +1017,7 @@ $(".forme").change(function () {
 	prependSpeciesAbilities(abilityList, container.parent().parent().prop("id"), container.find(".ability"));
 
 	if (pokemonName && setdexAll && setdexAll[pokemonName] && setdexAll[pokemonName][setName] &&
-		setName !== "Blank Set" && abilities.includes(setdexAll[pokemonName][setName].ability)) {
+		setName !== BLANK_SET && abilities.includes(setdexAll[pokemonName][setName].ability)) {
 		container.find(".ability").val(setdexAll[pokemonName][setName].ability);
 	} else if (abilityList && abilityList.length == 1) {
 		container.find(".ability").val(abilityList[0]);
@@ -1108,8 +1120,6 @@ var stickyMoves = (function () {
 
 function Pokemon(pokeInfo) {
 	// pokeInfo is a jquery object
-	let setName = pokeInfo.find("input.set-selector").val();
-	let speciesName = setName.substring(0, setName.indexOf(" ("));
 	let poke = {
 		"type1": pokeInfo.find(".type1").val(),
 		"type2": pokeInfo.find(".type2").val(),
@@ -1139,12 +1149,16 @@ function Pokemon(pokeInfo) {
 		"resetCurAbility": function () { this.curAbility = (isNeutralizingGas && this.item !== "Ability Shield") ? "" : this.ability }
 	};
 	// name
+	let selectorName = pokeInfo.find("input.set-selector").val();
+	let speciesName = selectorName.substring(0, selectorName.indexOf(" ("));
 	let dexEntry = pokedex[speciesName];
-	if (!setName.includes("(")) {
-		poke.name = setName;
+	if (!selectorName.includes("(")) {
+		poke.name = selectorName;
+		poke.setName = "";
 	} else {
+		poke.setName = selectorName.substring(selectorName.indexOf("(") + 1, selectorName.length - 1);
 		let currentForme = pokeInfo.find(".forme").val();
-		if (dexEntry.formes && currentForme != null) {
+		if (currentForme && dexEntry && dexEntry.formes) {
 			poke.name = currentForme;
 			dexEntry = pokedex[currentForme];
 		} else {
@@ -1175,7 +1189,7 @@ function Pokemon(pokeInfo) {
 	let move2 = pokeInfo.find(".move2");
 	let move3 = pokeInfo.find(".move3");
 	let move4 = pokeInfo.find(".move4");
-	let setdexPoke = setdex[speciesName] ? setdex[speciesName][setName.substring(speciesName.length + 2, setName.length - 1)] : false;
+	let setdexPoke = speciesName in setdex && poke.setName in setdex[speciesName] ? setdex[speciesName][poke.setName] : false;
 	poke.baseMoveNames = [ // baseMoveNames is used in set export
 		setdexPoke ? setdexPoke.moves[0] : move1.find("select.move-selector").val(),
 		setdexPoke ? setdexPoke.moves[1] : move2.find("select.move-selector").val(),
@@ -1200,12 +1214,8 @@ function Pokemon(pokeInfo) {
 function getMoveDetails(moveInfo, attacker) {
 	let moveName = moveInfo.find("select.move-selector").val();
 	let defaultDetails = moves[moveName];
-	if (!defaultDetails) {
-		console.log("Error from " + moveName);
-		console.log(~~moveInfo.find(".move-bp").val());
-	}
 
-	if (moveInfo.find("input.move-z").prop("checked") && moveName !== "Struggle" && "zp" in defaultDetails) {
+	if (genEisenTree == 7 && moveInfo.find("input.move-z").prop("checked") && moveName !== "Struggle" && "zp" in defaultDetails) {
 		return getZMove(moveName, attacker, defaultDetails, moveInfo);
 	}
 	/*if (gen == 8 && moveInfo.find("input.move-max").prop("checked") && moveName !== "Struggle") { eisentree
@@ -1484,108 +1494,174 @@ function Side(format, terrain, weather, isAuraFairy, isAuraDark, isAuraBreak, is
 	this.isRuinBeads = isRuinBeads;
 }
 
+// note that this function only checks values against the current gen.
+function validateSetdex() {
+	let failedValidation = false;
+	for (const [speciesName, speciesSets] of Object.entries(setdex)) {
+		if (!(speciesName in pokedex)) {
+			failedValidation = true;
+			console.log(speciesName + " is not a species in the pokedex");
+			continue;
+		}
+		let pokedexEntry = pokedex[speciesName];
+		if (pokedexEntry.hasBaseForme) {
+			failedValidation = true;
+			console.log(speciesName + " is listed as a species, but is a forme in the pokedex");
+			continue;
+		}
+		for (const [setName, setObj] of Object.entries(speciesSets)) {
+			let outputText = [];
+			if (setObj.item && items.indexOf(setObj.item) == -1) {
+				outputText.push("item " + setObj.item);
+			}
+			if (pokedexEntry.abilities && setObj.ability && pokedexEntry.abilities.indexOf(setObj.ability) == -1) {
+				outputText.push("ability " + setObj.ability);
+			}
+			if (setObj.nature && !(setObj.nature in NATURES)) {
+				outputText.push("nature " + setObj.nature);
+			}
+			if (setObj.moves) {
+				for (let i = 0; i < setObj.length; i++) {
+					let moveName = setObj[i];
+					if (moveName && !(moveName in moves)) {
+						outputText.push("move " + moveName);
+					}
+				}
+			} else {
+				outputText.push("no moves found");
+			}
+			if (outputText.length > 0) {
+				failedValidation = true;
+				console.log(setName + ": " + outputText.join("; "));
+			}
+		}
+	}
+	if (!failedValidation) {
+		console.log("No validation issues found.");
+	}
+}
+
 // Damage map functions
-function mapFromArray(array) {
+function damageInfoFromArray(array) {
 	let map = new Map();
 	for (let i = 0; i < array.length; i++) {
 		mapAddKey(map, array[i], 1);
 	}
-	return map;
+	return {
+		damageMap: map,
+		min: array[0],
+		max: array[array.length - 1]
+	};
 }
 
 function mapAddKey(map, key, value) {
 	map.set(key, map.has(key) ? map.get(key) + value : value);
 }
 
-function combineDuplicateDamageMaps(damageMap) {
+function combineDuplicateDamageInfo(damageInfo) {
 	// for combining two damage maps that have the same kv-pairs, thus just one arg
-	let returnDamageMap = new Map();
-	let damageValues = Array.from(damageMap.keys());
+	let combinedMap = new Map();
+	let damageValues = Array.from(damageInfo.damageMap.keys());
 	let valuesLength = damageValues.length;
 	for (let i = 0; i < valuesLength; i++) {
 		let iDamage = damageValues[i];
-		let iCount = damageMap.get(iDamage);
-		mapAddKey(returnDamageMap, iDamage + iDamage, iCount * iCount);
+		let iCount = damageInfo.damageMap.get(iDamage);
+		mapAddKey(combinedMap, iDamage + iDamage, iCount * iCount);
 		for (let j = i + 1; j < valuesLength; j++) {
 			let jDamage = damageValues[j];
-			let jCount = damageMap.get(jDamage);
-			mapAddKey(returnDamageMap, iDamage + jDamage, 2 * iCount * jCount);
+			let jCount = damageInfo.damageMap.get(jDamage);
+			mapAddKey(combinedMap, iDamage + jDamage, 2 * iCount * jCount);
 		}
 	}
-	return returnDamageMap;
+	return {
+		damageMap: combinedMap,
+		min: 2 * damageInfo.min,
+		max: 2 * damageInfo.max
+	};
 }
 
-function combineDamageMaps(iDamageMap, jDamageMap) {
-	let returnDamageMap = new Map();
-	for (const [iDamage, iCount] of iDamageMap) {
-		for (const [jDamage, jCount] of jDamageMap) {
-			mapAddKey(returnDamageMap, iDamage + jDamage, iCount * jCount);
+function combineDamageInfo(iDamageInfo, jDamageInfo) {
+	let combinedMap = new Map();
+	let minDamage = -1;
+	let maxDamage = -1;
+	for (const [iDamage, iCount] of iDamageInfo.damageMap) {
+		for (const [jDamage, jCount] of jDamageInfo.damageMap) {
+			mapAddKey(combinedMap, iDamage + jDamage, iCount * jCount);
 		}
 	}
-	return returnDamageMap;
+	return {
+		damageMap: combinedMap,
+		min: iDamageInfo.min + jDamageInfo.min,
+		max: iDamageInfo.max + jDamageInfo.max
+	};
 }
 
-function recurseDamageMaps(damageMap, numHits) {
-	// this function can be optimized a few ways, but with numHits <= 10, it won't do anything.
+function recurseDamageInfo(damageInfo, numHits) {
+	// this function can be optimized a few ways, but with numHits <= 10, it won't do much.
 	if (numHits == 1) {
-		return damageMap;
+		return damageInfo;
 	}
 	if (numHits % 2 == 0) {
-		return combineDuplicateDamageMaps(recurseDamageMaps(damageMap, numHits / 2));
+		return combineDuplicateDamageInfo(recurseDamageInfo(damageInfo, numHits / 2));
 	} else {
-		return combineDamageMaps(damageMap, recurseDamageMaps(damageMap, numHits - 1));
+		return combineDamageInfo(damageInfo, recurseDamageInfo(damageInfo, numHits - 1));
 	}
 }
 
-var MAP_SQUASH_CONSTANT = 2 ** 13;
-function squashDamageMap(damageMap, mapCombinations) {
-	let divisor = mapCombinations / MAP_SQUASH_CONSTANT;
-	for (const [key, value] of damageMap) {
-		damageMap.set(key, value / divisor);
+const MAP_SQUASH_CONSTANT = 2 ** 13;
+function squashDamageInfo(damageInfo) {
+	if (damageInfo.mapCombinations <= MAP_SQUASH_CONSTANT) {
+		return;
 	}
-	return mapCombinations / divisor;
+	// damageMap numbers use integral numbers, except in this case.
+	// To avoid exceeding Number.MAX_SAFE_INTEGER (2 ** 53 - 1) and avoid needing BigNums, divide all values by the same factor.
+	// Since damage maps are (currently) only used for the first 4 hits when calcing an nHKO, dividing all values by (mapCombinations / (2 ** 13)) works.
+	let divisor = damageInfo.mapCombinations / MAP_SQUASH_CONSTANT;
+	for (const [key, value] of damageInfo.damageMap) {
+		damageInfo.damageMap.set(key, value / divisor);
+	}
+	damageInfo.mapCombinations = MAP_SQUASH_CONSTANT;
 }
 
-function getAssembledDamageMap(result, resultDamageMap, moveHits, considerReducedDamage) {
+function getAssembledDamageInfo(result, moveHits, isFirstHit) {
 	if (result.damage.length == 1) {
-		//result.hitDamageValues = "(" + result.damage[0] + ")";
-		return new Map([[result.damage[0], 1]]);
-	} else if (result.tripleAxelDamage) {
-		// result.tripleAxelDamage[0] goes unused, it should be the non-resist berry first hit.
-		let assembledDamageMap = combineDamageMaps((considerReducedDamage ? mapFromArray(result.firstHitDamage) : resultDamageMap), mapFromArray(result.tripleAxelDamage[1]));
-		if (moveHits == 3) {
-			return combineDamageMaps(assembledDamageMap, mapFromArray(result.tripleAxelDamage[2]));
+		let singletonValue = result.damage[0];
+		return {
+			damageMap: new Map([[singletonValue, 1]]),
+			min: singletonValue,
+			max: singletonValue
+		};
+	}
+	if (result.tripleAxelDamage) {
+		let damageArrays = isFirstHit && result.teraShellDamage ? result.teraShellDamage : result.tripleAxelDamage;
+		let assembledDamageInfo = combineDamageInfo(damageInfoFromArray(isFirstHit ? result.firstHitDamage : damageArrays[0]), damageInfoFromArray(damageArrays[1]));
+		if (damageArrays.length == 3) {
+			return combineDamageInfo(assembledDamageInfo, damageInfoFromArray(damageArrays[2]));
 		}
 		return assembledDamageMap;
-	} else if (result.childDamage) {
-		return combineDamageMaps((considerReducedDamage ? mapFromArray(result.firstHitDamage) : resultDamageMap), mapFromArray(result.childDamage));
-	} else if (moveHits > 1) {
-		if (considerReducedDamage) {
-			return combineDamageMaps(recurseDamageMaps(resultDamageMap, moveHits - 1), mapFromArray(result.firstHitDamage));
+	}
+	let resultDamageInfo = damageInfoFromArray(result.damage);
+	if (result.childDamage) {
+		return combineDamageInfo((isFirstHit ? damageInfoFromArray(result.firstHitDamage) : resultDamageInfo), damageInfoFromArray(result.childDamage));
+	}
+	if (moveHits > 1) {
+		if (!isFirstHit) {
+			return recurseDamageInfo(resultDamageInfo, moveHits);
 		}
-		return recurseDamageMaps(resultDamageMap, moveHits);
+		if (result.teraShellDamage || result.gemFirstAttack) {
+			return recurseDamageInfo(damageInfoFromArray(result.firstHitDamage), moveHits);
+		}
+		return combineDamageInfo(recurseDamageInfo(resultDamageInfo, moveHits - 1), damageInfoFromArray(result.firstHitDamage));
 	}
 
-	return considerReducedDamage ? mapFromArray(result.firstHitDamage) : resultDamageMap;
+	return isFirstHit ? damageInfoFromArray(result.firstHitDamage) : resultDamageInfo;
 }
 
 function DamageInfo(result, moveHits, isFirstHit = false) {
-	let damage = {
-		// mapFromArray is of a single hit (not sum of multi hits), no resist berry
-		"damageMap": getAssembledDamageMap(result, mapFromArray(result.damage), moveHits, isFirstHit),
-		"mapCombinations": result.damage.length ** moveHits
-	};
-	damage.sortedDamageValues = Array.from(damage.damageMap.keys())
-	damage.sortedDamageValues.sort((a, b) => a - b);
-	damage.min = damage.sortedDamageValues[0];
-	damage.max = damage.sortedDamageValues[damage.sortedDamageValues.length - 1];
-	// damageMap numbers use integral numbers, except in this if statement.
-	// To avoid exceeding Number.MAX_SAFE_INTEGER (2 ** 53 - 1) and avoid needing BigNums, divide all values by the same factor
-	// Since damage maps are (currently) only used for the first 4 hits when calcing an nHKO, dividing all values by (mapCombinations / (2 ** 13)) works.
-	if (damage.mapCombinations > MAP_SQUASH_CONSTANT) {
-		damage.mapCombinations = squashDamageMap(damage.damageMap, damage.mapCombinations);
-	}
-	return damage;
+	let damageInfo = getAssembledDamageInfo(result, moveHits, isFirstHit);
+	damageInfo.mapCombinations = result.damage.length ** moveHits;
+	squashDamageInfo(damageInfo);
+	return damageInfo;
 }
 // End damage map functions
 
@@ -1606,123 +1682,48 @@ const IVS_OTHER = [31, 27, 23, 19];
 
 var genEisenTree = 7; // goofy way to keep some parts of code using gen 7 stuff and let others use gen 9
 var gen = 9;
-var pokedex = POKEDEX_SM;
-var setdex = SETDEX_EISENTREE;
-var setdexAll = joinDexes([setdex, SETDEX_CUSTOM]);
+
+var pokedex, setdex, setdexAll, moves, abilities, items;
 var typeChart = TYPE_CHART_XY;
-var moves = MOVES_EISENTREE;
-var items = ITEMS_EISENTREE;
-var abilities = ABILITIES_SM;
 var calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
 var STATS = STATS_GSC;
 var calcHP = CALC_HP_ADV;
 var calcStat = CALC_STAT_ADV;
-/*$(".gen").change(function () {
-	gen = ~~$(this).val();
-	switch (gen) {
-	case 3:
-		pokedex = POKEDEX_ADV;
-		setdex = SETDEX_EM;
-		typeChart = TYPE_CHART_GSC;
-		moves = MOVES_ADV;
-		items = ITEMS_ADV;
-		abilities = ABILITIES_ADV;
-		calculateAllMoves = CALCULATE_ALL_MOVES_ADV;
-		$(".autoivs-select").find("option").remove().end().append(getSelectOptions(IVS_GEN3));
-		forumLink = "https://www.smogon.com/forums/threads/gen-iii-battle-frontier-discussion-and-records.3648697/";
-		break;
-	case 4:
-		pokedex = POKEDEX_DPP;
-		setdex = SETDEX_PHGSS;
-		typeChart = TYPE_CHART_GSC;
-		moves = MOVES_DPP;
-		items = ITEMS_DPP;
-		abilities = ABILITIES_DPP;
-		calculateAllMoves = CALCULATE_ALL_MOVES_PTHGSS;
-		forumLink = "https://www.smogon.com/forums/threads/4th-generation-battle-facilities-discussion-and-records.3663294/";
-		break;
-	case 5:
-		pokedex = POKEDEX_BW;
-		setdex = SETDEX_GEN5;
-		typeChart = TYPE_CHART_GSC;
-		moves = MOVES_BW;
-		items = ITEMS_BW;
-		abilities = ABILITIES_BW;
-		calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
-		$("#autoivs-center #autoivs-select").find("option").remove().end().append(getSelectOptions(IVS_OTHER));
-		forumLink = "https://www.smogon.com/forums/threads/black-white-battle-subway-records-now-with-gen-4-records.102593/";
-		break;
-	case 6:
-		pokedex = POKEDEX_XY;
-		setdex = SETDEX_GEN6;
-		typeChart = TYPE_CHART_XY;
-		moves = MOVES_XY;
-		items = ITEMS_XY;
-		abilities = ABILITIES_XY;
-		calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
-		$("#autoivs-center #autoivs-select").find("option").remove().end().append(getSelectOptions(IVS_OTHER));
-		forumLink = "https://www.smogon.com/forums/threads/battle-maison-discussion-records.3492706/";
-		break;
+$(".gen").change(function () {
+	genEisenTree = ~~$(this).val();
+	switch (genEisenTree) {
 	case 7:
 		$(".evo_img1").attr("src", "_images/eevee.png");
 		$(".evo_img2").attr("src", "_images/eevium.png");
 		pokedex = POKEDEX_SM;
-		setdex = SETDEX_GEN7;
-		typeChart = TYPE_CHART_XY;
-		moves = MOVES_SM;
-		items = ITEMS_SM;
+		setdex = SETDEX_EISENTREE;
+		moves = MOVES_EISENTREE;
+		items = ITEMS_EISENTREE;
 		abilities = ABILITIES_SM;
-		calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
-		$("#autoivs-center #autoivs-select").find("option").remove().end().append(getSelectOptions(IVS_OTHER));
-		forumLink = "https://www.smogon.com/forums/threads/battle-tree-discussion-and-records.3587215/";
-		break;
-	case 8:
-		pokedex = POKEDEX_SS;
-		setdex = SETDEX_GEN8;
-		typeChart = TYPE_CHART_XY;
-		moves = MOVES_SS;
-		items = ITEMS_SS;
-		abilities = ABILITIES_SS;
-		calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
-		forumLink = "https://www.smogon.com/forums/threads/swsh-battle-facilities-discussion-records.3656190/";
-		$("#startGimmick-label").text("Start Dynamaxed");
-		$("#startGimmick-label").prop("title", "This custom set starts Dynamaxed when loaded");
-		break;
-	case 80:
-		pokedex = POKEDEX_BDSP;
-		setdex = SETDEX_GEN80;
-		typeChart = TYPE_CHART_XY;
-		moves = MOVES_SS;
-		items = ITEMS_SS;
-		abilities = ABILITIES_SS;
-		calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
-		forumLink = "https://www.smogon.com/forums/threads/bdsp-battle-tower-discussion-records.3693739/";
 		break;
 	case 9:
 		$(".evo_img1").attr("src", "_images/dozo.png");
 		$(".evo_img2").attr("src", "_images/giri.png");
 		pokedex = POKEDEX_SV;
-		setdex = [];//SV
-		typeChart = TYPE_CHART_XY;
+		setdex = SETDEX_EISENBERRY;
 		moves = MOVES_SV;
 		items = ITEMS_SV;
 		abilities = ABILITIES_SV;
-		calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
 		$("#startGimmick-label").text("Start Terastallized");
 		$("#startGimmick-label").prop("title", "This custom set starts Terastallized when loaded");
 	}
-	//localStorage.setItem("selectedGen", gen);
+	localStorage.setItem("eisentree-selectedGen", genEisenTree);
 	$("#autolevel-title").text((gen == 4 ? "AI " : "") + "Auto-Level to:");
 	setdexAll = joinDexes([setdex, SETDEX_CUSTOM]);
-	$("#midimg").parent().prop("href", forumLink);
+	//eisentree$("#midimg").parent().prop("href", forumLink);
 	clearField();
-	$(".gen-specific.g" + gen).show();
-	$(".gen-specific").not(".g" + gen).hide();
+	$(".gen-specific.g" + genEisenTree).show();
+	$(".gen-specific").not(".g" + genEisenTree).hide();
 	let typeOptions = getSelectOptions(Object.keys(typeChart));
 	$("select.type1").find("option").remove().end().append(typeOptions);
 	$("select.type2").find("option").remove().end().append("<option value=\"\">(none)</option>" + typeOptions);
 	$("select.move-type").find("option").remove().end().append("<option value=\"None\">None</option>" + typeOptions);
-	if (gen == 9) {
+	if (genEisenTree == 9) {
 		$("select.tera-type").find("option").remove().end().append(typeOptions + "<option value=\"Stellar\">Stellar</option>");
 	}
 	var moveOptions = getSelectOptions(Object.keys(moves), true);
@@ -1740,7 +1741,7 @@ var calcStat = CALC_STAT_ADV;
 
 	$(".set-selector").val(getSetOptions()[1].id); // load the first set after the unselectable species name
 	$(".set-selector").change();
-});*/
+});
 
 function joinDexes(components) {
 	var joinedDex = {};
@@ -1865,9 +1866,9 @@ function getSetOptions() {
 		}
 		setOptions.push({
 			"pokemon": pokeName,
-			"set": "Blank Set",
-			"text": pokeName + " (Blank Set)",
-			"id": pokeName + " (Blank Set)"
+			"set": BLANK_SET,
+			"text": pokeName + " (" + BLANK_SET + ")",
+			"id": pokeName + " (" + BLANK_SET + ")"
 		});
 	});
 
@@ -1899,42 +1900,12 @@ function getSelectOptions(arr, sort, defaultIdx) {
 }
 
 $(document).ready(function () {
-	/*if (localStorage.getItem("selectedGen") != null) {
-		switch (localStorage.getItem("selectedGen") + "") {
-
-		case "3":
-			$("#gen3").prop("checked", true);
-			$("#gen3").change();
-			break;
-
-		case "4":
-			$("#gen4").prop("checked", true);
-			$("#gen4").change();
-			break;
-
-		case "5":
-			$("#gen5").prop("checked", true);
-			$("#gen5").change();
-			break;
-
-		case "6":
-			$("#gen6").prop("checked", true);
-			$("#gen6").change();
-			break;
+	if (localStorage.getItem("eisentree-selectedGen") != null) {
+		switch (localStorage.getItem("eisentree-selectedGen") + "") {
 
 		case "7":
 			$("#gen7").prop("checked", true);
 			$("#gen7").change();
-			break;
-
-		case "8":
-			$("#gen8").prop("checked", true);
-			$("#gen8").change();
-			break;
-				
-		case "80": // BDSP
-			$("#gen80").prop("checked", true);
-			$("#gen80").change();
 			break;
 				
 		case "9":
@@ -1949,32 +1920,7 @@ $(document).ready(function () {
 	} else {
 		$("#gen9").prop("checked", true);
 		$("#gen9").change();
-	}*/
-
-	// Instead of performing a genchange, do that stuff on document load
-	//$("#autoivs-select").find("option").remove().end().append(getSelectOptions(IVS_OTHER));
-	//localStorage.setItem("selectedGen", gen);
-	$("#autolevel-title").text((gen == 4 ? "AI " : "") + "Auto-Level to:");
-	//setdexAll = joinDexes([setdex, SETDEX_CUSTOM]);
-	//$("#midimg").parent().prop("href", forumLink);
-	clearField();
-	$(".gen-specific.g" + gen).show();
-	$(".gen-specific").not(".g" + genEisenTree).hide();
-	let typeOptions = getSelectOptions(Object.keys(typeChart));
-	$("select.type1" + (gen == 9 ? ", select.tera-type" : "")).find("option").remove().end().append(typeOptions);
-	$("select.type2").find("option").remove().end().append("<option value=\"\">(none)</option>" + typeOptions);
-	$("select.move-type").find("option").remove().end().append("<option value=\"None\">None</option>" + typeOptions);
-	var moveOptions = getSelectOptions(Object.keys(moves), true);
-	$("select.move-selector").find("option").remove().end().append(moveOptions);
-	var abilityOptions = getSelectOptions(abilities, true);
-	$("select.ability").find("option").remove().end().append("<option value=\"\">(other)</option><option disabled>--</option>" + abilityOptions);
-	p1AbilityCount = 0;
-	p2AbilityCount = 0;
-	var itemOptions = getSelectOptions(items, true);
-	$("select.item").find("option").remove().end().append("<option value=\"\">(none)</option>" + itemOptions);
-	$(".set-selector").val(getSetOptions()[1].id); // load the first set after the unselectable species name
-	$(".set-selector").change();
-
+	}
 	//$(".terrain-trigger").bind("change keyup", getTerrainEffects);
 	//$(".calc-trigger").bind("change keyup", calculate);
 	$(".set-selector").select2({

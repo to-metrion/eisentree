@@ -15,7 +15,6 @@ var ABILITIES_ADV = [
 	"Effect Spore",
 	"Flame Body",
 	"Flash Fire",
-	"Flash Fire (activated)",
 	"Forecast",
 	"Guts",
 	"Huge Power",
@@ -44,6 +43,7 @@ var ABILITIES_ADV = [
 	"Pressure",
 	"Pure Power",
 	"Rain Dish",
+	"Rock Head",
 	"Rough Skin",
 	"Sand Stream",
 	"Sand Veil",
@@ -98,6 +98,7 @@ var ABILITIES_DPP = ABILITIES_ADV.concat([
 	"No Guard",
 	"Normalize",
 	"Poison Heal",
+	"Quick Feet",
 	"Reckless",
 	"Rivalry",
 	"Scrappy",
@@ -304,5 +305,8 @@ var ABILITIES_SV = ABILITIES_SS.concat([
 	"Well-Baked Body",
 	"Wind Power",
 	"Wind Rider",
-	"Zero to Hero"
+	"Zero to Hero",
+	"Mind's Eye",
+	"Embody Aspect",
+	"Tera Shell"
 ]);
