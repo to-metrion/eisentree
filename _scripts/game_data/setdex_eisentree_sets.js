@@ -1,4 +1,4 @@
-var SETDEX_EISENTREE = 
+var SETDEX_EISENTREE =
 {
   "Venusaur": {
     "Venusaur-1": {
@@ -12374,7 +12374,7 @@ var SETDEX_EISENTREE =
     }
   },
   "Basculin": {
-    "Basculin-Red-1": {
+    "Basculin-1": {
       "level": 50,
       "evs": {
         "at": 252,

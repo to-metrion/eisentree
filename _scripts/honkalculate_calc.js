@@ -320,9 +320,9 @@ function getSelectedTier() {
 }
 
 var calculateMovesOfAttacker = CALCULATE_MOVES_OF_ATTACKER_MODERN;
-/*$(".gen").change(function () {
+$(".gen").change(function () {
 	//$(".tiers input").prop("checked", false); // since tiers is a radio button now, don't uncheck it
-	adjustTierBorderRadius();
+	/*eisentree adjustTierBorderRadius();
 	let defaultChecked = "#All";
 	let thresholdLabel = "";
 	calculateMovesOfAttacker = CALCULATE_MOVES_OF_ATTACKER_MODERN;
@@ -352,17 +352,17 @@ var calculateMovesOfAttacker = CALCULATE_MOVES_OF_ATTACKER_MODERN;
 	default:
 		break;
 	}
-	$(defaultChecked).prop("checked", true);
+	eisentree$(defaultChecked).prop("checked", true);
 	if (thresholdLabel) {
 		$("#threshold").next("label").text(thresholdLabel);
-	}
+	}eisentree*/
 	$("#ohkoCounter").text("");
 	if ($.fn.DataTable.isDataTable("#holder-2")) {
 		table.clear();
 		constructDataTable();
 		placeBsBtn();
 	}
-});*/
+});
 
 /*function adjustTierBorderRadius() {
 	 // Used to round the tier buttons to appear like the gens or mode buttons

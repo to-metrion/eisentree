@@ -1682,123 +1682,48 @@ const IVS_OTHER = [31, 27, 23, 19];
 
 var genEisenTree = 7; // goofy way to keep some parts of code using gen 7 stuff and let others use gen 9
 var gen = 9;
-var pokedex = POKEDEX_SM;
-var setdex = SETDEX_EISENTREE;
-var setdexAll = joinDexes([setdex, SETDEX_CUSTOM]);
+
+var pokedex, setdex, setdexAll, moves, abilities, items;
 var typeChart = TYPE_CHART_XY;
-var moves = MOVES_EISENTREE;
-var items = ITEMS_EISENTREE;
-var abilities = ABILITIES_SM;
 var calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
 var STATS = STATS_GSC;
 var calcHP = CALC_HP_ADV;
 var calcStat = CALC_STAT_ADV;
-/*$(".gen").change(function () {
-	gen = ~~$(this).val();
-	switch (gen) {
-	case 3:
-		pokedex = POKEDEX_ADV;
-		setdex = SETDEX_EM;
-		typeChart = TYPE_CHART_GSC;
-		moves = MOVES_ADV;
-		items = ITEMS_ADV;
-		abilities = ABILITIES_ADV;
-		calculateAllMoves = CALCULATE_ALL_MOVES_ADV;
-		$(".autoivs-select").find("option").remove().end().append(getSelectOptions(IVS_GEN3));
-		forumLink = "https://www.smogon.com/forums/threads/gen-iii-battle-frontier-discussion-and-records.3648697/";
-		break;
-	case 4:
-		pokedex = POKEDEX_DPP;
-		setdex = SETDEX_PHGSS;
-		typeChart = TYPE_CHART_GSC;
-		moves = MOVES_DPP;
-		items = ITEMS_DPP;
-		abilities = ABILITIES_DPP;
-		calculateAllMoves = CALCULATE_ALL_MOVES_PTHGSS;
-		forumLink = "https://www.smogon.com/forums/threads/4th-generation-battle-facilities-discussion-and-records.3663294/";
-		break;
-	case 5:
-		pokedex = POKEDEX_BW;
-		setdex = SETDEX_GEN5;
-		typeChart = TYPE_CHART_GSC;
-		moves = MOVES_BW;
-		items = ITEMS_BW;
-		abilities = ABILITIES_BW;
-		calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
-		$("#autoivs-center #autoivs-select").find("option").remove().end().append(getSelectOptions(IVS_OTHER));
-		forumLink = "https://www.smogon.com/forums/threads/black-white-battle-subway-records-now-with-gen-4-records.102593/";
-		break;
-	case 6:
-		pokedex = POKEDEX_XY;
-		setdex = SETDEX_GEN6;
-		typeChart = TYPE_CHART_XY;
-		moves = MOVES_XY;
-		items = ITEMS_XY;
-		abilities = ABILITIES_XY;
-		calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
-		$("#autoivs-center #autoivs-select").find("option").remove().end().append(getSelectOptions(IVS_OTHER));
-		forumLink = "https://www.smogon.com/forums/threads/battle-maison-discussion-records.3492706/";
-		break;
+$(".gen").change(function () {
+	genEisenTree = ~~$(this).val();
+	switch (genEisenTree) {
 	case 7:
 		$(".evo_img1").attr("src", "_images/eevee.png");
 		$(".evo_img2").attr("src", "_images/eevium.png");
 		pokedex = POKEDEX_SM;
-		setdex = SETDEX_GEN7;
-		typeChart = TYPE_CHART_XY;
-		moves = MOVES_SM;
-		items = ITEMS_SM;
+		setdex = SETDEX_EISENTREE;
+		moves = MOVES_EISENTREE;
+		items = ITEMS_EISENTREE;
 		abilities = ABILITIES_SM;
-		calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
-		$("#autoivs-center #autoivs-select").find("option").remove().end().append(getSelectOptions(IVS_OTHER));
-		forumLink = "https://www.smogon.com/forums/threads/battle-tree-discussion-and-records.3587215/";
-		break;
-	case 8:
-		pokedex = POKEDEX_SS;
-		setdex = SETDEX_GEN8;
-		typeChart = TYPE_CHART_XY;
-		moves = MOVES_SS;
-		items = ITEMS_SS;
-		abilities = ABILITIES_SS;
-		calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
-		forumLink = "https://www.smogon.com/forums/threads/swsh-battle-facilities-discussion-records.3656190/";
-		$("#startGimmick-label").text("Start Dynamaxed");
-		$("#startGimmick-label").prop("title", "This custom set starts Dynamaxed when loaded");
-		break;
-	case 80:
-		pokedex = POKEDEX_BDSP;
-		setdex = SETDEX_GEN80;
-		typeChart = TYPE_CHART_XY;
-		moves = MOVES_SS;
-		items = ITEMS_DPP;
-		abilities = ABILITIES_SS;
-		calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
-		forumLink = "https://www.smogon.com/forums/threads/bdsp-battle-tower-discussion-records.3693739/";
 		break;
 	case 9:
 		$(".evo_img1").attr("src", "_images/dozo.png");
 		$(".evo_img2").attr("src", "_images/giri.png");
 		pokedex = POKEDEX_SV;
-		setdex = [];//SV
-		typeChart = TYPE_CHART_XY;
+		setdex = SETDEX_EISENBERRY;
 		moves = MOVES_SV;
 		items = ITEMS_SV;
 		abilities = ABILITIES_SV;
-		calculateAllMoves = CALCULATE_ALL_MOVES_MODERN;
 		$("#startGimmick-label").text("Start Terastallized");
 		$("#startGimmick-label").prop("title", "This custom set starts Terastallized when loaded");
 	}
-	//localStorage.setItem("selectedGen", gen);
+	localStorage.setItem("eisentree-selectedGen", genEisenTree);
 	$("#autolevel-title").text((gen == 4 ? "AI " : "") + "Auto-Level to:");
 	setdexAll = joinDexes([setdex, SETDEX_CUSTOM]);
-	$("#midimg").parent().prop("href", forumLink);
+	//eisentree$("#midimg").parent().prop("href", forumLink);
 	clearField();
-	$(".gen-specific.g" + gen).show();
-	$(".gen-specific").not(".g" + gen).hide();
+	$(".gen-specific.g" + genEisenTree).show();
+	$(".gen-specific").not(".g" + genEisenTree).hide();
 	let typeOptions = getSelectOptions(Object.keys(typeChart));
 	$("select.type1").find("option").remove().end().append(typeOptions);
 	$("select.type2").find("option").remove().end().append("<option value=\"\">(none)</option>" + typeOptions);
 	$("select.move-type").find("option").remove().end().append("<option value=\"None\">None</option>" + typeOptions);
-	if (gen == 9) {
+	if (genEisenTree == 9) {
 		$("select.tera-type").find("option").remove().end().append(typeOptions + "<option value=\"Stellar\">Stellar</option>");
 	}
 	var moveOptions = getSelectOptions(Object.keys(moves), true);
@@ -1816,7 +1741,7 @@ var calcStat = CALC_STAT_ADV;
 
 	$(".set-selector").val(getSetOptions()[1].id); // load the first set after the unselectable species name
 	$(".set-selector").change();
-});*/
+});
 
 function joinDexes(components) {
 	var joinedDex = {};
@@ -1975,42 +1900,12 @@ function getSelectOptions(arr, sort, defaultIdx) {
 }
 
 $(document).ready(function () {
-	/*if (localStorage.getItem("selectedGen") != null) {
-		switch (localStorage.getItem("selectedGen") + "") {
-
-		case "3":
-			$("#gen3").prop("checked", true);
-			$("#gen3").change();
-			break;
-
-		case "4":
-			$("#gen4").prop("checked", true);
-			$("#gen4").change();
-			break;
-
-		case "5":
-			$("#gen5").prop("checked", true);
-			$("#gen5").change();
-			break;
-
-		case "6":
-			$("#gen6").prop("checked", true);
-			$("#gen6").change();
-			break;
+	if (localStorage.getItem("eisentree-selectedGen") != null) {
+		switch (localStorage.getItem("eisentree-selectedGen") + "") {
 
 		case "7":
 			$("#gen7").prop("checked", true);
 			$("#gen7").change();
-			break;
-
-		case "8":
-			$("#gen8").prop("checked", true);
-			$("#gen8").change();
-			break;
-				
-		case "80": // BDSP
-			$("#gen80").prop("checked", true);
-			$("#gen80").change();
 			break;
 				
 		case "9":
@@ -2025,32 +1920,7 @@ $(document).ready(function () {
 	} else {
 		$("#gen9").prop("checked", true);
 		$("#gen9").change();
-	}*/
-
-	// Instead of performing a genchange, do that stuff on document load
-	//$("#autoivs-select").find("option").remove().end().append(getSelectOptions(IVS_OTHER));
-	//localStorage.setItem("selectedGen", gen);
-	$("#autolevel-title").text((gen == 4 ? "AI " : "") + "Auto-Level to:");
-	//setdexAll = joinDexes([setdex, SETDEX_CUSTOM]);
-	//$("#midimg").parent().prop("href", forumLink);
-	clearField();
-	$(".gen-specific.g" + gen).show();
-	$(".gen-specific").not(".g" + genEisenTree).hide();
-	let typeOptions = getSelectOptions(Object.keys(typeChart));
-	$("select.type1" + (gen == 9 ? ", select.tera-type" : "")).find("option").remove().end().append(typeOptions);
-	$("select.type2").find("option").remove().end().append("<option value=\"\">(none)</option>" + typeOptions);
-	$("select.move-type").find("option").remove().end().append("<option value=\"None\">None</option>" + typeOptions);
-	var moveOptions = getSelectOptions(Object.keys(moves), true);
-	$("select.move-selector").find("option").remove().end().append(moveOptions);
-	var abilityOptions = getSelectOptions(abilities, true);
-	$("select.ability").find("option").remove().end().append("<option value=\"\">(other)</option><option disabled>--</option>" + abilityOptions);
-	p1AbilityCount = 0;
-	p2AbilityCount = 0;
-	var itemOptions = getSelectOptions(items, true);
-	$("select.item").find("option").remove().end().append("<option value=\"\">(none)</option>" + itemOptions);
-	$(".set-selector").val(getSetOptions()[1].id); // load the first set after the unselectable species name
-	$(".set-selector").change();
-
+	}
 	//$(".terrain-trigger").bind("change keyup", getTerrainEffects);
 	//$(".calc-trigger").bind("change keyup", calculate);
 	$(".set-selector").select2({
