@@ -2,7 +2,7 @@
 
 By [Eisenherz](https://www.smogon.com/forums/members/eisenherz.326390/) & SilverstarStream, based on the [BSS damage calculator](http://cantsay.github.io/) by cant say ([@jakecantsay](https://twitter.com/jakecantsay)) and [Lego](https://www.smogon.com/forums/members/188833/).
 
-This calculator is a branch of the [main eisencalc calculator](eisencalc.com), used for custom Eisen facilites (EisenTree and EisenBerry Academy).
+This calculator is a branch of the [main eisencalc calculator](https://eisencalc.com), used for custom Eisen facilites (EisenTree and EisenBerry Academy).
 
 Custom sets can be input within the calculator using the official Pokemon Showdown format.
 
