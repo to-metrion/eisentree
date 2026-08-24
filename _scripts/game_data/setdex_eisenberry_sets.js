@@ -750,7 +750,7 @@ SETDEX_EISENBERRY =
       "evs": {
         "hp": 244,
         "df": 252,
-        "sa": 14
+        "sa": 12
       },
       "ivs": {
         "at": 0,
@@ -1440,7 +1440,7 @@ SETDEX_EISENBERRY =
       "evs": {
         "hp": 252,
         "at": 4,
-        "df": 90,
+        "df": 88,
         "sd": 144,
         "sp": 20
       },
@@ -3476,7 +3476,7 @@ SETDEX_EISENBERRY =
     "Raikou-1": {
       "level": 50,
       "evs": {
-        "hp": 28,
+        "hp": 4,
         "sa": 252,
         "sp": 252
       },
@@ -3740,7 +3740,7 @@ SETDEX_EISENBERRY =
       },
       "moves": [
         "Leaf Storm",
-        "Rock Tomb\u003EFocus Blast",
+        "Focus Blast",
         "Endeavor",
         "Shed Tail"
       ],
@@ -4804,7 +4804,7 @@ SETDEX_EISENBERRY =
       "level": 50,
       "evs": {
         "hp": 252,
-        "df": 256,
+        "df": 156,
         "sd": 100
       },
       "moves": [
@@ -6920,7 +6920,6 @@ SETDEX_EISENBERRY =
       "evs": {
         "df": 4,
         "sa": 252,
-        "sd": 4,
         "sp": 252
       },
       "ivs": {
@@ -7502,7 +7501,7 @@ SETDEX_EISENBERRY =
       "evs": {
         "hp": 252,
         "df": 156,
-        "sd": 104
+        "sd": 100
       },
       "ivs": {
         "at": 1
@@ -8169,7 +8168,7 @@ SETDEX_EISENBERRY =
         "hp": 4,
         "at": 172,
         "df": 4,
-        "sd": 110,
+        "sd": 108,
         "sp": 220
       },
       "moves": [
@@ -8229,7 +8228,7 @@ SETDEX_EISENBERRY =
       "level": 50,
       "evs": {
         "hp": 244,
-        "df": 30,
+        "df": 28,
         "sd": 236
       },
       "ivs": {
@@ -8820,7 +8819,7 @@ SETDEX_EISENBERRY =
       "evs": {
         "hp": 236,
         "at": 252,
-        "sd": 36
+        "sd": 20
       },
       "ivs": {
         "sp": 0
@@ -9556,7 +9555,7 @@ SETDEX_EISENBERRY =
       "moves": [
         "Stomping Tantrum",
         "Stone Edge",
-        "Fly / Outrage",
+        "Fly",
         "U-turn"
       ],
       "nature": "Adamant",
@@ -11815,7 +11814,7 @@ SETDEX_EISENBERRY =
       },
       "moves": [
         "Draining Kiss",
-        "Giga Drain/Leech Seed",
+        "Giga Drain",
         "Floral Healing",
         "Trick Room"
       ],
@@ -12514,10 +12513,8 @@ SETDEX_EISENBERRY =
       "level": 50,
       "evs": {
         "hp": 244,
-        "df": 4,
         "sa": 172,
-        "sd": 92,
-        "sp": 52
+        "sd": 92
       },
       "ivs": {
         "at": 20
@@ -13249,7 +13246,7 @@ SETDEX_EISENBERRY =
       "level": 50,
       "evs": {
         "hp": 244,
-        "df": 150,
+        "df": 148,
         "sd": 116
       },
       "moves": [
@@ -15205,7 +15202,6 @@ SETDEX_EISENBERRY =
         "hp": 108,
         "df": 4,
         "sa": 252,
-        "sd": 4,
         "sp": 144
       },
       "moves": [
@@ -17640,7 +17636,7 @@ SETDEX_EISENBERRY =
       "evs": {
         "hp": 252,
         "at": 196,
-        "df": 20,
+        "df": 12,
         "sd": 4,
         "sp": 44
       },
@@ -17829,7 +17825,7 @@ SETDEX_EISENBERRY =
     "Iron Treads-1": {
       "level": 50,
       "evs": {
-        "hp": 28,
+        "hp": 4,
         "at": 244,
         "df": 4,
         "sd": 4,
@@ -18398,7 +18394,7 @@ SETDEX_EISENBERRY =
     "Chi-Yu-2": {
       "level": 50,
       "evs": {
-        "hp": 166,
+        "hp": 164,
         "df": 4,
         "sa": 84,
         "sd": 4,
@@ -18529,7 +18525,7 @@ SETDEX_EISENBERRY =
     "Okidogi-2": {
       "level": 50,
       "evs": {
-        "hp": 222,
+        "hp": 220,
         "at": 4,
         "df": 4,
         "sd": 188,
