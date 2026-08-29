@@ -199,7 +199,7 @@ function getDamageResult(attacker, defender, move, field) {
 	// If the move is a Max move, it already had its type changed in shared_calc (so that the move's name changes) and won't receive this boost. This is correct behavior.
 	// Z-Moves don't receive -ate type changes
 	if (!move.isZ && !move.isMax) {
-		let applicableNormalMove = moveType === "Normal" && move.name !== "Revelation Dance" && !(move.name === "Tera Blast" && attacker.isTerastal); // Raging Bull could be here
+		let applicableNormalMove = moveType === "Normal" && move.name !== "Revelation Dance" && !(move.name === "Tera Blast" && attacker.isTerastal);
 		if (applicableNormalMove && attacker.curAbility === "Aerilate") {
 			moveType = "Flying";
 			ateizeBoost = true;
@@ -233,12 +233,12 @@ function getDamageResult(attacker, defender, move, field) {
 		makesContact = false;
 	}
 
-	let scrappy = ["Scrappy", "Mind's Eye"].includes(attacker.curAbility);
-	let typeEffect1 = getMoveEffectiveness(move, moveType, defender.type1, scrappy, field, field.weather === "Strong Winds", description);
-	let typeEffect2 = defender.type2 ? getMoveEffectiveness(move, moveType, defender.type2, scrappy, field, field.weather === "Strong Winds", description) : 1;
+	let isScrappy = ["Scrappy", "Mind's Eye"].includes(attacker.curAbility);
+	let typeEffect1 = getMoveEffectiveness(move, moveType, defender.type1, isScrappy, field, field.weather === "Strong Winds", description);
+	let typeEffect2 = defender.type2 ? getMoveEffectiveness(move, moveType, defender.type2, isScrappy, field, field.weather === "Strong Winds", description) : 1;
 	let typeEffectiveness = typeEffect1 * typeEffect2;
 
-	// A Flying-type holding an Iron Ball or hit by Thousand Arrows treats Ground attacks as neutral.
+	// A Flying-type holding an Iron Ball or hit by Thousand Arrows treats Ground attacks as neutral, regardless of the other type.
 	// However, Gravity causes Ground attacks to calculate effectiveness as though Flying is 1x
 	if (moveType === "Ground" && defender.hasType("Flying") && (defenderGrounded || move.name === "Thousand Arrows")) {
 		if (field.isGravity) {
@@ -264,7 +264,8 @@ function getDamageResult(attacker, defender, move, field) {
 	let otherHitsTypeEffectiveness = typeEffectiveness; // save the original type effectiveness for calculating non-first hits
 	if (isTeraShell(defender, typeEffectiveness)) {
 		typeEffectiveness = 0.5;
-		description.defenderAbility = defender.curAbility + getFirstHitText(ATTACK_TEXT, move.hits);
+		description.defenderAbility = defender.curAbility;
+		description.defenderAbilityFirstHit = getFirstHitText(ATTACK_TEXT, move.hits);
 	}
 
 	if (typeEffectiveness === 0) {
@@ -279,7 +280,8 @@ function getDamageResult(attacker, defender, move, field) {
 		moveType === "Ground" && defender.curAbility === "Earth Eater" ||
 		move.isBullet && defender.curAbility === "Bulletproof" ||
 		move.isSound && defender.curAbility === "Soundproof" ||
-		move.isWind && defender.curAbility === "Wind Rider") {
+		move.isWind && defender.curAbility === "Wind Rider" ||
+		move.isMLG && defender.curAbility === "Sturdy") {
 		description.defenderAbility = defender.curAbility;
 		return {"damage": [0], "description": buildDescription(description)};
 	}
@@ -568,33 +570,17 @@ function calcBP(attacker, defender, move, field, description, ateizeBoost) {
 		attacker.curAbility === "Analytic" && attacker.isAbilityActivated ||
 		attacker.curAbility === "Tough Claws" && makesContact ||
 		gen == 6 && ateizeBoost ||
-		attacker.curAbility === "Punk Rock" && move.isSound) {
+		attacker.curAbility === "Punk Rock" && move.isSound ||
+		attacker.curAbility === "Sand Force" && field.weather === "Sand" && ["Rock", "Ground", "Steel"].includes(moveType)) {
 		bpMods.push(0x14CD);
 		description.attackerAbility = attacker.curAbility;
-	} else if (attacker.curAbility === "Sand Force" && field.weather === "Sand" && ["Rock", "Ground", "Steel"].indexOf(moveType) !== -1) {
-		bpMods.push(0x14CD);
-		description.attackerAbility = attacker.curAbility;
-		description.weather = field.weather;
 	}
 
 	if (attacker.curAbility === "Supreme Overlord" && field.faintedCount > 0) {
 		// modifies the base power https://www.smogon.com/forums/threads/scarlet-violet-battle-mechanics-research.3709545/post-9421520
-		let multiplier;
-		switch (field.faintedCount) {
-			case 1:
-				multiplier = 1.1;
-				break;
-			case 2:
-				multiplier = 1.2;
-				break;
-			case 3:
-				multiplier = 1.3;
-				break;
-			case 4:
-				multiplier = 1.4;
-				break;
-			default:
-				multiplier = 1.5;
+		let multiplier = [1.1, 1.2, 1.3, 1.4][field.faintedCount - 1];
+		if (!multiplier) {
+			multiplier = 1.5;
 		}
 		bpMods.push(Math.ceil(0x1000 * multiplier));
 		description.attackerAbility = attacker.curAbility + " (" + multiplier + "x BP)";
@@ -612,13 +598,14 @@ function calcBP(attacker, defender, move, field, description, ateizeBoost) {
 		attacker.curAbility === "Flare Boost" && attacker.status === "Burned" && moveCategory === "Special" ||
 		attacker.curAbility === "Toxic Boost" && (attacker.status === "Poisoned" || attacker.status === "Badly Poisoned") && moveCategory === "Physical" ||
 		attacker.curAbility === "Strong Jaw" && move.isBite ||
-		attacker.curAbility === "Mega Launcher" && move.isPulse) {
+		attacker.curAbility === "Mega Launcher" && move.isPulse ||
+		attacker.curAbility === "Sharpness" && move.isSlicing) {
 		bpMods.push(0x1800);
 		description.attackerAbility = attacker.curAbility;
 	}
 
 	// Heatproof was a power mod until gen 9; it is currently an attack mod https://www.smogon.com/forums/threads/bug-reports-v4-read-original-post-before-posting.3663703/post-9780607
-	if (defender.curAbility === "Heatproof" && moveType === "Fire" && (genEisenTree <= 8 || genEisenTree == 80)) {
+	if (defender.curAbility === "Heatproof" && moveType === "Fire" && genEisenTree <= 8) {
 		bpMods.push(0x800);
 		description.defenderAbility = defender.curAbility;
 	} else if (defender.curAbility === "Dry Skin" && moveType === "Fire") {
@@ -649,7 +636,8 @@ function calcBP(attacker, defender, move, field, description, ateizeBoost) {
 		description.attackerItem = attacker.item;
 	} else if (isFirstHit && applyGem(attacker, move)) {
 		bpMods.push(gen >= 6 ? 0x14CD : 0x1800);
-		description.attackerItem = attacker.item + getFirstHitText(ATTACK_TEXT, move.hits);
+		description.attackerItem = attacker.item;
+		description.attackerItemFirstHit = getFirstHitText(ATTACK_TEXT, move.hits);
 	}
 
 	if (["Solar Beam", "SolarBeam", "Solar Blade"].includes(move.name) &&
@@ -682,7 +670,8 @@ function calcBP(attacker, defender, move, field, description, ateizeBoost) {
 
 	if (move.name === "Facade" && ["Burned", "Paralyzed", "Poisoned", "Badly Poisoned"].includes(attacker.status) ||
 		move.name === "Brine" && defender.curHP <= defender.maxHP / 2 ||
-		(move.name === "Venoshock" || move.name === "Barb Barrage") && (defender.status === "Poisoned" || defender.status === "Badly Poisoned")) {
+		(move.name === "Venoshock" || move.name === "Barb Barrage") && (defender.status === "Poisoned" || defender.status === "Badly Poisoned") ||
+		move.name === "Smelling Salts" && defender.status === "Paralyzed") {
 		bpMods.push(0x2000);
 		description.moveBP = move.bp * 2;
 	}
@@ -693,6 +682,7 @@ function calcBP(attacker, defender, move, field, description, ateizeBoost) {
 		bpMods.push(0x800);
 		description.terrain = field.terrain;
 	}
+
 	if (attackerGrounded && (
 		field.terrain === "Electric" && moveType === "Electric" ||
 		field.terrain === "Grassy" && moveType == "Grass" ||
@@ -775,8 +765,7 @@ function calcAtk(attacker, defender, move, field, description) {
 		attacker.curAbility === "Gorilla Tactics" && moveCategory === "Physical" && !attacker.isDynamax ||
 		attacker.curAbility === "Transistor" && gen <= 8 && moveType === "Electric" ||
 		attacker.curAbility === "Dragon's Maw" && moveType === "Dragon" ||
-		attacker.curAbility === "Rocky Payload" && moveType === "Rock" ||
-		attacker.curAbility === "Sharpness" && move.isSlicing) {
+		attacker.curAbility === "Rocky Payload" && moveType === "Rock") {
 		atMods.push(0x1800);
 		description.attackerAbility = attacker.curAbility;
 	} else if (attacker.curAbility === "Flash Fire" && attacker.isAbilityActivated && moveType === "Fire" ||
@@ -801,7 +790,7 @@ function calcAtk(attacker, defender, move, field, description) {
 
 	// Heatproof was a power mod until gen 9 https://www.smogon.com/forums/threads/bug-reports-v4-read-original-post-before-posting.3663703/post-9780607
 	if (defender.curAbility === "Thick Fat" && (moveType === "Fire" || moveType === "Ice") ||
-		defender.curAbility === "Heatproof" && moveType === "Fire" && genEisenTree >= 9 && genEisenTree != 80 ||
+		defender.curAbility === "Heatproof" && moveType === "Fire" && genEisenTree >= 9 ||
 		defender.curAbility === "Water Bubble" && moveType === "Fire" ||
 		defender.curAbility === "Purifying Salt" && moveType === "Ghost") {
 		atMods.push(0x800);
@@ -813,7 +802,7 @@ function calcAtk(attacker, defender, move, field, description) {
 		attacker.item === "Choice Specs" && moveCategory === "Special" && !move.isZ && !attacker.isDynamax) {
 		atMods.push(0x1800);
 		description.attackerItem = attacker.item;
-	} else if (attacker.item === "Thick Club" && (attacker.name === "Cubone" || attacker.name === "Marowak" || attacker.name === "Marowak-Alola") && moveCategory === "Physical" ||
+	} else if (attacker.item === "Thick Club" && ["Cubone", "Marowak", "Marowak-Alola"].includes(attacker.name) && moveCategory === "Physical" ||
 		attacker.item === "Deep Sea Tooth" && attacker.name === "Clamperl" && moveCategory === "Special" ||
 		attacker.item === "Light Ball" && attacker.name === "Pikachu" && !move.isZ) {
 		atMods.push(0x2000);
@@ -954,6 +943,7 @@ function calcSTABMod(attacker, move, description) {
 			// return standard STAB when not calcing the first hit for Stellar hits - except Terapagos
 			return attacker.hasType(moveType) ? 0x1800 : 0x1000;
 		}
+		description.attackerTeraFirstHit = getFirstHitText(ATTACK_TEXT, move.hits);
 		return attacker.hasType(moveType) ? 0x2000 : 0x1333; // https://www.smogon.com/forums/threads/scarlet-violet-battle-mechanics-research.3709545/post-9894284
 	}
 	let stabMod = 0x1000;
@@ -1005,7 +995,8 @@ function calcFinalMods(attacker, defender, move, field, description, typeEffecti
 		defender.curAbility === "Punk Rock" && move.isSound ||
 		defender.curAbility === "Ice Scales" && moveCategory === "Special") {
 		finalMods.push(0x800);
-		description.defenderAbility = defender.ability + getFirstHitText(STRIKE_TEXT, move.hits);
+		description.defenderAbility = defender.ability;
+		description.defenderAbilityFirstHit = getFirstHitText(STRIKE_TEXT, move.hits);
 	}
 	if (field.isFriendGuard) {
 		finalMods.push(0xC00);
@@ -1026,20 +1017,21 @@ function calcFinalMods(attacker, defender, move, field, description, typeEffecti
 		finalMods.push(0x14CC);
 		description.attackerItem = attacker.item;
 	}
-	if (isFirstHit && activateResistBerry(attacker, defender, typeEffectiveness)) {
+	if (isFirstHit && activateResistBerry(attacker, defender.item, typeEffectiveness)) {
 		if (defender.curAbility === "Ripen") {
 			finalMods.push(0x400);
 			description.defenderAbility = defender.curAbility;
 		} else {
 			finalMods.push(0x800);
 		}
-		description.defenderItem = defender.item + getFirstHitText(STRIKE_TEXT, move.hits);
+		description.defenderItem = defender.item;
+		description.defenderItemFirstHit = getFirstHitText(STRIKE_TEXT, move.hits);
 	}
 	if (field.isMinimized && (["Astonish", "Body Slam", "Dragon Rush", "Extrasensory", "Flying Press", "Heat Crash", "Heavy Slam", "Malicious Moonsault", "Needle Arm", "Phantom Force", "Shadow Force", "Steamroller", "Stomp"].includes(move.name))) {
 		finalMods.push(0x2000);
 		description.isMinimized = true;
 	}
-	if ((move.name === "Dynamax Cannon" || move.name === "Behemoth Blade" || move.name === "Behemoth Bash") && defender.isDynamax) {
+	if (["Dynamax Cannon", "Behemoth Blade", "Behemoth Bash"].includes(move.name) && defender.isDynamax) {
 		finalMods.push(0x2000);
 	}
 	if (typeEffectiveness > 1 && (move.name === "Collision Course" || move.name === "Electro Drift")) {
@@ -1093,7 +1085,7 @@ function recalcOtherHits(attacker, defender, move, field, description, result,
 	// recalc final BP
 	let isGemApplied = applyGem(attacker, move);
 	if (isGemApplied) {
-		result.gemFirstAttack = true;
+		result.isFirstAttack = true;
 	}
 	if (isGemApplied || applyKnockOffBoost(attacker, defender, move, field.terrain)) {
 		isFirstHit = false;
@@ -1118,7 +1110,7 @@ function recalcOtherHits(attacker, defender, move, field, description, result,
 		isFirstHit = false;
 		defender.item = "";
 		if (description.defenderItem) {
-			description.defenderItem += getFirstHitText(STRIKE_TEXT, move.hits);
+			description.defenderItemFirstHit = getFirstHitText(STRIKE_TEXT, move.hits);
 		}
 		defense = calcDef(attacker, defender, move, field, {});
 	}
@@ -1133,12 +1125,13 @@ function recalcOtherHits(attacker, defender, move, field, description, result,
 	// recalc STAB mod
 	if (attacker.isTerastal && attacker.teraType === "Stellar" && !attacker.name.includes("Terapagos")) {
 		isFirstHit = false;
+		result.isFirstAttack = true;
 		stabMod = calcSTABMod(attacker, move, {});
 	}
 
 	// recalc final mods
 	if (recalcFinalMod ||
-		activateResistBerry(attacker, defender, typeEffectiveness) ||
+		activateResistBerry(attacker, originalDefenderItem, typeEffectiveness) ||
 		(["Multiscale"].includes(defender.curAbility) || (defender.ability == "Shadow Shield" && !isNeutralizingGas)) && defender.curHP === defender.maxHP) {
 		isFirstHit = false;
 		finalMod = calcFinalMods(attacker, defender, move, field, {}, otherHitsTypeEffectiveness, bypassProtect);
@@ -1209,27 +1202,28 @@ function getDescriptionPokemonName(pokemon) {
 	// if the setName ends with something in parens, remove the parens
 	let regexMatch = endsInParensRegex.exec(pokemon.setName);
 	let displaySetName = regexMatch ? pokemon.setName.substring(0, regexMatch.index) : pokemon.setName;
+	let setSuffix = displaySetName.substring(displaySetName.lastIndexOf("-"));
+	if (setSuffix.includes(",")) {
+		// BDSP has some sets of the form `speciesName-1,2,3`. Remove all set numbers except the first one.
+		setSuffix = setSuffix.substring(setSuffix.indexOf(","));
+		displaySetName = displaySetName.substring(0, displaySetName.length - setSuffix.length);
+	}
+	if (setSuffix.length > MAX_SET_SUFFIX_LENGTH) {
+		return pokemon.name;
+	}
 	if (pokemon.name in setdex && pokemon.setName in setdex[pokemon.name]) {
-		// the name and setName are straightforward. the setName isn't much longer than the name. setName can simply be returned.
-		if (displaySetName.length > pokemon.name.length + MAX_SET_SUFFIX_LENGTH) {
-			return pokemon.name;
-		}
+		// the name and setName are straightforward. the set name can simply be returned.
 		return displaySetName;
 	}
 	let nameDexEntry = pokedex[pokemon.name];
 	if (nameDexEntry && nameDexEntry.hasBaseForme && nameDexEntry.hasBaseForme in setdex && pokemon.setName in setdex[nameDexEntry.hasBaseForme]) {
 		// the pokemon is some forme. take the set suffix and put it at the end of the forme.
-		let setSuffix = displaySetName.substring(displaySetName.lastIndexOf("-"));
-		if (setSuffix.length > MAX_SET_SUFFIX_LENGTH) {
-			return pokemon.name;
-		}
 		return pokemon.name + setSuffix;
 	}
 	// don't print Gmax in the description
 	return pokemon.name.endsWith("-Gmax") ? pokemon.name.substring(0, pokemon.name.lastIndexOf("-Gmax")) : pokemon.name;
 }
 
-const VERSUS = "vs. ";
 function buildDescription(description) {
 	var output = "";
 	if (description.attackBoost) {
@@ -1240,6 +1234,7 @@ function buildDescription(description) {
 	}
 	output = appendIfSet(output, description.attackEVs);
 	output = appendIfSet(output, description.attackerItem);
+	output = appendIfSet(output, description.attackerItemFirstHit);
 	output = appendIfSet(output, description.attackerAbility);
 	if (description.isRuinAtk) {
 		output += "Ruin ";
@@ -1252,6 +1247,7 @@ function buildDescription(description) {
 	}
 	if (description.attackerTera) {
 		output += "Tera " + description.attackerTera + " ";
+		output = appendIfSet(output, description.attackerTeraFirstHit);
 	}
 	output += description.attackerName + " ";
 	if (description.isHelpingHand) {
@@ -1284,7 +1280,7 @@ function buildDescription(description) {
 	if (description.isSpread) {
 		output += "(spread) ";
 	}
-	output += VERSUS;
+	output += "vs. ";
 	if (description.defenseBoost) {
 		if (description.defenseBoost > 0) {
 			output += "+";
@@ -1296,7 +1292,9 @@ function buildDescription(description) {
 		output += "/ " + description.defenseEVs + " ";
 	}
 	output = appendIfSet(output, description.defenderItem);
+	output = appendIfSet(output, description.defenderItemFirstHit);
 	output = appendIfSet(output, description.defenderAbility);
+	output = appendIfSet(output, description.defenderAbilityFirstHit);
 	if (description.isMinimized) {
 		output += "Minimized ";
 	}
@@ -1401,12 +1399,12 @@ function getMoveEffectiveness(move, mType, defType, isGhostRevealed, field, isSt
 	} else if (mType === "None" || mType === "Stellar") {
 		// let the caller handle Stellar attacking a terastallized defender
 		return 1;
-	} else if (isGhostRevealed && defType === "Ghost" && (mType === "Normal" || mType === "Fighting")) {
+	} else if (isGhostRevealed && defType === "Ghost" && ["Normal", "Fighting"].some(type => type == mType)) {
 		return 1;
 	} else if (defType === "Flying" && mType === "Ground" && (defenderGrounded || move.name === "Thousand Arrows")) {
 		// let the caller handle the Iron Ball and Thousand Arrows cases
 		return 1;
-	} else if (isStrongWinds && defType === "Flying" && (mType === "Electric" || mType === "Ice" || mType === "Rock")) {
+	} else if (isStrongWinds && defType === "Flying" && ["Electric", "Ice", "Rock"].some(type => type == mType)) {
 		description.weather = "Strong Winds";
 		return 1;
 	} else if (move.name === "Freeze-Dry" && defType === "Water") {
@@ -1504,21 +1502,22 @@ function killsShedinja(attacker, defender, move, field = {}) {
 		return false;
 	}
 	let afflictable = defender.status === "Healthy" && !(field.terrain === "Misty" && isGrounded(defender, field));
-	let poisonable = afflictable && !defender.hasType("Poison") && !defender.hasType("Steel");
+	let poisonable = afflictable && !["Poison", "Steel"].some(type => defender.hasType(type));
 	let burnable = afflictable && !defender.hasType("Fire");
 
 	let weather = defender.item !== "Safety Goggles" &&
-	((move.name === "Sandstorm" && !defender.hasType("Rock") && !defender.hasType("Steel") && !defender.hasType("Ground")) || (move.name === "Hail" && !defender.hasType("Ice")));
+		((move.name === "Sandstorm" && !["Rock", "Steel", "Ground"].some(type => defender.hasType(type))) || (move.name === "Hail" && !defender.hasType("Ice")));
 	// akin to Sash, status berries should not be accounted for
 	let poison = (["Toxic", "Poison Gas", "Toxic Thread"].includes(move.name) || (move.name === "Poison Powder" && defender.item !== "Safety Goggles" && !defender.hasType("Grass"))) &&
-	(poisonable || (afflictable && attacker.curAbility === "Corrosion"));
+		(poisonable || (afflictable && attacker.curAbility === "Corrosion"));
 	let burn = move.name === "Will-O-Wisp" && burnable;
 	let dangerItem = (["Trick", "Switcheroo"].includes(move.name) || (move.name === "Bestow" && defender.item === "")) &&
-	(attacker.item === "Sticky Barb" || (attacker.item === "Toxic Orb" && poisonable) || (attacker.item === "Flame Orb" && burnable) ||
-	(attacker.item === "Black Sludge" && !defender.hasType("Poison")));
+		(attacker.item === "Sticky Barb" || (attacker.item === "Toxic Orb" && poisonable) || (attacker.item === "Flame Orb" && burnable) ||
+		(attacker.item === "Black Sludge" && !defender.hasType("Poison")));
 	let confusion = ["Confuse Ray", "Flatter", "Supersonic", "Swagger", "Sweet Kiss", "Teeter Dance"].includes(move.name);
 	let otherPassive = (move.name === "Leech Seed" && !defender.hasType("Grass")) || (move.name === "Curse" && attacker.hasType("Ghost"));
-	return weather || poison || burn || dangerItem || confusion || otherPassive;
+	let suppressAbility = ["Skill Swap", "Worry Seed", "Entrainment", "Simple Beam", "Gastro Acid"].includes(move.name) && defender.item !== "Ability Shield";
+	return weather || poison || burn || dangerItem || confusion || otherPassive || suppressAbility;
 }
 
 function getSingletonDamage(attacker, defender, move, field, description) {
@@ -1530,7 +1529,7 @@ function getSingletonDamage(attacker, defender, move, field, description) {
 			singletonDamageValue = attacker.level;
 			break;
 		case "Psywave":
-			singletonDamageValue = attacker.level * 150 / 100;
+			singletonDamageValue = Math.floor(attacker.level * 150 / 100);
 			break;
 		case "Sonic Boom":
 			singletonDamageValue = 20;
@@ -1544,14 +1543,15 @@ function getSingletonDamage(attacker, defender, move, field, description) {
 		return singletonDamageValue *= 2;
 	}
 
+	let effectiveCurHP = defender.isDynamax ? Math.floor(defender.curHP / 2) : defender.curHP;
 	switch (move.name) {
 		case "Super Fang":
 		case "Nature\'s Madness":
 		case "Ruination":
-			singletonDamageValue = Math.max(Math.floor(defender.curHP / 2), 1);
+			singletonDamageValue = Math.max(Math.floor(effectiveCurHP / 2), 1);
 			break;
 		case "Guardian of Alola":
-			singletonDamageValue = Math.max(Math.floor(defender.curHP * 3 / 4), 1);
+			singletonDamageValue = Math.max(Math.floor(effectiveCurHP * 3 / 4), 1);
 			if (field.isProtect) {
 				singletonDamageValue = Math.max(Math.floor(singletonDamageValue / 4), 1);
 				description.isQuarteredByProtect = true;
@@ -1571,8 +1571,8 @@ function getSingletonDamage(attacker, defender, move, field, description) {
 	return singletonDamageValue;
 }
 
-function activateResistBerry(attacker, defender, typeEffectiveness) {
-	return getBerryResistType(defender.item) === moveType && (typeEffectiveness > 1 || moveType === "Normal") && attacker.curAbility !== "Unnerve" && attacker.ability !== "As One";
+function activateResistBerry(attacker, defenderItem, typeEffectiveness) {
+	return getBerryResistType(defenderItem) === moveType && (typeEffectiveness > 1 || moveType === "Normal") && attacker.curAbility !== "Unnerve" && attacker.ability !== "As One";
 }
 
 function checkAirLock(pokemon, field) {
@@ -1635,7 +1635,7 @@ function canKnockOffItem(attacker, defender, terrain) {
 	return !(getEffectiveItem(defender, attacker, terrain) === "" ||
 	defender.item === "Lustrous Globe" && defender.name === "Palkia-O" ||
 	defender.item === "Adamant Crystal" && defender.name === "Dialga-O" ||
-	defender.item === "Griseous Orb" && (gen <= 8 || gen == 80) && defender.name === "Giratina-O" ||
+	defender.item === "Griseous Orb" && gen <= 8 && defender.name === "Giratina-O" ||
 	defender.item === "Griseous Core" && defender.name === "Giratina-O" ||
 	defender.item.endsWith("Plate") && defender.name.startsWith("Arceus") ||
 	defender.item.endsWith(" Z") ||

@@ -40,17 +40,29 @@ Different layouts can be used but they would have to be created separately.
 Aside from that, the repo should be fairly simple to navigate.
 
 #### Build Instructions
-1. Install [Ruby](https://www.ruby-lang.org/en/) ([Windows version](https://rubyinstaller.org/downloads/)) and [Bundler](https://bundler.io/).
-2. Double-click ``setup.bat`` (NOTE: This only needs to be done once!)
-3. Double-click ``run.bat`` to view your changes!
-4. NOTE: Changes to files will NOT automatically propagate to a running localhost because the site content the localhost uses is actually comes from the ``eisencalc`` folder. The ``eisencalc`` folder is then copied to the ``_site`` folder by Jekyll and used by the localhost. The most guaranteed way to propagate the changes is to end the localhost and run ``run.bat`` again between changes, since ``run.bat`` will copy the site content to ``eisencalc``.
+##### One-time setup:
+1. Install [Ruby](https://www.ruby-lang.org/en/) (use [RubyInstaller](https://rubyinstaller.org/downloads/) if on Windows)
+2. Double-click ``setup.bat`` if on Windows, or view the script's main content for the necessary commands.
+
+##### Running the calc:
+The site can be ran locally by double-clicking ``run.bat``.
+
+This will open a page in the default browser that will have a connection error. Wait for several seconds for the site to build (this can be seen from the terminal), then refresh the page.
+
+#### EisenTree configuration note:
+Changes to files will NOT automatically propagate to a running localhost because the site content the localhost uses actually comes from the ``eisencalc`` folder. The ``eisencalc`` folder is then copied to the ``_site`` folder by Jekyll and used by the localhost. The most guaranteed way to propagate the changes is to end the localhost and run ``run.bat`` again between changes, since ``run.bat`` will copy the site content to ``eisencalc``.
 
 #### Testing and PRing changes
 Please ensure your code passes our tests before submitting your PR!
 
+NOTE: Running the tests launches an instance of Firefox, and Firefox is required to be installed.
+
+As an alternative, Chrome can be used instead (must be installed). In this case, replace `Capybara.current_driver = :selenium_headless` with `Capybara.current_driver = :selenium_chrome_headless`.
+
 1. Double-click ``test.bat``.
-2. Fix any errors (``fix.bat`` could help with this!) turned up by the test!
-3. PR your changes!
+2. Fix any errors turned up by the test!
+3. If appropriate, consider adding a test to capture the changes' behavior.
+4. Create a pull request for your changes!
 
 ## Handy Links:
 

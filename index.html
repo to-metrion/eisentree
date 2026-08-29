@@ -314,6 +314,7 @@ title: EisenTree Calculator
 						<option value="Confused">Confused</option>
 					</select>
 					<select class="toxic-counter calc-trigger hide">
+						<option value="0">0/16</option>
 						<option value="1">1/16</option>
 						<option value="2">2/16</option>
 						<option value="3">3/16</option>
@@ -336,7 +337,7 @@ title: EisenTree Calculator
 				<label>Current HP</label>
 				<input class="current-hp calc-trigger" value="341" />/<span class="max-hp">341</span> (<input class="percent-hp calc-trigger" value="100" />%)
 				<div class="gen-specific g8">
-					<label>D-max Level</label>
+					<label>Dmax Level</label>
 					<select class="max-level calc-trigger">
 						<option value="0">0</option>
 						<option value="1">1</option>
@@ -439,8 +440,9 @@ title: EisenTree Calculator
 				</a>
 			</div>
 			<div style="width: 10.6em; margin: 0 auto 5px;" id="format" title="Select the battle format.">
-				<input class="btn-input calc-trigger" type="radio" name="format" value="Singles" id="singles" /><label class="btn btn-left" for="singles">Singles</label>
-				<input class="btn-input calc-trigger" type="radio" name="format" value="Doubles" id="doubles" checked="checked" /><label class="btn btn-right" for="doubles">Doubles</label>
+                <!-- no calc-trigger needed, calculate() is explicitly called by the change function bound to #format -->
+				<input class="btn-input" type="radio" name="format" value="Singles" id="singles" /><label class="btn btn-left" for="singles">Singles</label>
+				<input class="btn-input" type="radio" name="format" value="Doubles" id="doubles" checked="checked" /><label class="btn btn-right" for="doubles">Doubles</label>
 			</div>
 			<div class="gen-specific g6 g7 g8 g80 g9" style="width: 22.0em; margin: 5px auto;" title="Select the current terrain.">
 				<input class="btn-input terrain-trigger calc-trigger" type="radio" name="terrain" value="" id="noterrain" checked="checked" /><label class="btn btn-small btn-left" for="noterrain">None</label>
@@ -591,10 +593,10 @@ title: EisenTree Calculator
 				</div>
 			</div>
 			<div class="btn-group">
-				<div class="left" title="Is this Pokemon affected by Charge">
+				<div class="left" title="Is this Pokemon affected by Charge, Electromorphosis, or Wind Power?">
 					<input class="btn-input calc-trigger" type="checkbox" id="chargeL" /><label class="btn btn-xxwide" for="chargeL">Charge</label>
 				</div>
-				<div class="right" title="Is this Pokemon affected by Charge">
+				<div class="right" title="Is this Pokemon affected by Charge, Electromorphosis, or Wind Power?">
 					<input class="btn-input calc-trigger" type="checkbox" id="chargeR" /><label class="btn btn-xxwide" for="chargeR">Charge</label>
 				</div>
 			</div>
@@ -616,10 +618,10 @@ title: EisenTree Calculator
 			</div>
 			<div class="btn-group gen-specific g7">
 				<div class="left" title="Has this Pokemon used Z-Conversion or Clangorous Soulblaze?">
-					<input class="btn-input calc-trigger" type="checkbox" id="clangL" /><label class="btn btn-xwide" for="clangL"><img src="../_images/PZ.png"><img src="../_images/kommo.png"><br>+1 All</label>
+					<input class="btn-input calc-trigger" type="checkbox" id="clangL" /><label class="btn btn-xxwide" for="clangL"><img src="../_images/PZ.png"><img src="../_images/kommo.png"><br>+1 All</label>
 				</div>
 				<div class="right" title="Has this Pokemon used Z-Conversion or Clangorous Soulblaze?">
-					<input class="btn-input calc-trigger" type="checkbox" id="clangR" /><label class="btn btn-xwide" for="clangR"><img src="../_images/PZ.png"><img src="../_images/kommo.png"><br>+1 All</label>
+					<input class="btn-input calc-trigger" type="checkbox" id="clangR" /><label class="btn btn-xxwide" for="clangR"><img src="../_images/PZ.png"><img src="../_images/kommo.png"><br>+1 All</label>
 				</div>
 			</div>
             <div class="btn-group gen-specific g8 g9">
@@ -693,7 +695,7 @@ title: EisenTree Calculator
 				<br>
 				<script type="text/javascript" src="../_scripts/import_custom.js"></script>
 				<div>
-					<button type="button" onclick="savecustom()">Save</button> <button type="button" onclick="deletecustom()">Delete Custom Sets</button> <button id="migrate" type="button" onclick="migrateOldSets()">Migrate Old Sets</button>
+					<button type="button" onclick="savecustom()">Save</button> <button type="button" onclick="deletecustom()">Delete Custom Sets</button>
 					<input class="right gen-specific g8 g9" type="checkbox" id="startGimmick"><label class="right gen-specific g8 g9" for="startGimmick" id="startGimmick-label">Start</label>
 				</div>
 
@@ -966,6 +968,7 @@ title: EisenTree Calculator
 						<option value="Confused">Confused</option>
 					</select>
 					<select class="toxic-counter calc-trigger hide">
+						<option value="0">0/16</option>
 						<option value="1">1/16</option>
 						<option value="2">2/16</option>
 						<option value="3">3/16</option>
@@ -988,7 +991,7 @@ title: EisenTree Calculator
 				<label>Current HP</label>
 				<input class="current-hp calc-trigger" value="341" />/<span class="max-hp">341</span> (<input class="percent-hp calc-trigger" value="100" />%)
 				<div class="gen-specific g8">
-					<label>D-max Level</label>
+					<label>Dmax Level</label>
 					<select class="max-level calc-trigger">
 						<option value="0">0</option>
 						<option value="1">1</option>

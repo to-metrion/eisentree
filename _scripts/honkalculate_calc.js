@@ -125,7 +125,8 @@ function MassPokemon(speciesName, setName) {
 		// ~~ is used as a faster Math.floor() for positive numbers
 		massPoke.maxHP = ~~((pokemon.bs.hp * 2 + HPIVs + ~~(massPoke.HPEVs / 4)) * massPoke.level / 100) + massPoke.level + 10;
 		if (set.startDmax) {
-			massPoke.maxHP *= 2;
+			// assume a dynamax level of 0 for all AI mons
+			massPoke.maxHP = ~~(massPoke.maxHP * 1.5);
 		}
 	}
 	// curHP
@@ -244,13 +245,9 @@ function performCalculations() {
 				// < min, > max (I guess multihits? This would also come up if s toss was the max and min)
 				// > min, < max (s toss)
 				// < min, < max (worse move)
-				if (minDamage >= highestDamageMinRange && maxDamage > highestDamageMinRange) {
-					highestDamage = maxDamage;
-					highestDamageMinRange = minDamage;
-					highestN = n;
-				} else if (minDamage < highestDamageMinRange && maxDamage > highestDamageMinRange) {
-					// I think this case can be ignored
-				} else if (minDamage > highestDamageMinRange && maxDamage <= highestDamageMinRange) {
+				// I think the cases other than the two below can be ignored
+				if ((minDamage >= highestDamageMinRange && maxDamage > highestDamageMinRange) ||
+					(minDamage > highestDamageMinRange && maxDamage <= highestDamageMinRange)) {
 					highestDamage = maxDamage;
 					highestDamageMinRange = minDamage;
 					highestN = n;
@@ -274,7 +271,8 @@ function performCalculations() {
 				data.percentRange = minPercentage + " - " + maxPercentage + "%";
 				data.move = move.name.replace("Hidden Power", "HP");
 				// let setKOChanceText() do the math of whether something got the OHKO after hazards etc.
-				if (data.koChance === "guaranteed OHKO") {
+				if ((mode === "one-vs-all" && data.koChance === "guaranteed OHKO") ||
+					(mode === "all-vs-one" && data.koChance.includes("OHKO"))) {
 					ohkoCount++;
 				}
 			}
@@ -402,7 +400,7 @@ function constructDataTable() {
 				targets: 3 // koChance = col 3
 			},
 			{
-				width: "5%", // this makes the column as small as possible
+				width: "5%", // this gives the column a small width
 				targets: 4 // speed = col 4
 			}
 		],
