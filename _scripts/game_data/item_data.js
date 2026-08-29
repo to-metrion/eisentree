@@ -160,14 +160,18 @@ var ITEMS_DPP = ITEMS_ADV.concat([
 ],
 PLATES);
 
+var DRIVES = [
+	"Burn Drive",
+	"Chill Drive",
+	"Douse Drive",
+	"Shock Drive"
+];
+
 var ITEMS_BW = ITEMS_DPP.concat([
 	"Absorb Bulb",
 	"Air Balloon",
 	"Binding Band",
-	"Burn Drive",
 	"Cell Battery",
-	"Chill Drive",
-	"Douse Drive",
 	"Eject Button",
 	"Eviolite",
 	"Float Stone",
@@ -175,9 +179,9 @@ var ITEMS_BW = ITEMS_DPP.concat([
 	"Normal Gem",
 	"Red Card",
 	"Ring Target",
-	"Rocky Helmet",
-	"Shock Drive"
-]);
+	"Rocky Helmet"
+],
+DRIVES);
 
 var ITEMS_XY = ITEMS_BW.concat([
 	"Assault Vest",
@@ -189,7 +193,9 @@ var ITEMS_XY = ITEMS_BW.concat([
 	"Snowball",
 	"Weakness Policy"
 ]);
-[ITEMS_XY, PLATES].forEach(itemSet => { itemSet.push("Pixie Plate"); });
+
+const PIXIE_PLATE = "Pixie Plate";
+[ITEMS_XY, PLATES].forEach(itemSet => { itemSet.push(PIXIE_PLATE); });
 
 var ITEMS_SM = ITEMS_XY.concat([
 	"Adrenaline Orb",
@@ -213,6 +219,8 @@ var ITEMS_SS = ITEMS_SM.concat([
 	"Utility Umbrella"
 ]);
 
+var ITEMS_BDSP = ITEMS_DPP.concat(PIXIE_PLATE);
+
 var ITEMS_SV = ITEMS_SS.concat([
 	"Booster Energy",
 	"Ability Shield",
@@ -231,6 +239,7 @@ var ITEMS_SV = ITEMS_SS.concat([
 ]);
 
 
+// Gen-exclusive items
 var NON_NORMAL_GEMS = [
 	"Bug Gem",
 	"Dark Gem",
@@ -304,7 +313,14 @@ for (let itemSet of [ITEMS_SS]) {
 	}
 }
 
-ITEMS_SS.push("Pixie Plate"); // SwSh specially includes only the Pixie Plate.
+ITEMS_SS.push(PIXIE_PLATE); // SwSh specially includes only the Pixie Plate.
+
+// Remove Drives from an item array.
+for (let itemSet of [ITEMS_SV]) {
+	for (let drive of DRIVES) {
+		itemSet.splice(itemSet.indexOf(drive), 1);
+	}
+}
 
 function getTechnoBlast(item) {
 	switch (item) {

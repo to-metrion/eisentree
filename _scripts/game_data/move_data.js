@@ -247,6 +247,14 @@ var MOVES_RBY = {
 		"bp": 0,
 		"type": "Normal"
 	},
+	"Fury Attack": {
+		"bp": 15,
+		"type": "Normal",
+		"category": "Physical",
+		"makesContact": true,
+		"maxMultiHits": 5,
+		"acc": 85
+	},
 	"Fury Swipes": {
 		"bp": 18,
 		"type": "Normal",
@@ -344,6 +352,13 @@ var MOVES_RBY = {
 		"hasRecoil": "crash",
 		"acc": 95
 	},
+	"Karate Chop": {
+		"bp": 50,
+		"type": "Fighting",
+		"category": "Physical",
+		"makesContact": true,
+		"acc": 100
+	},
 	"Leech Life": {
 		"bp": 20,
 		"type": "Bug",
@@ -395,6 +410,13 @@ var MOVES_RBY = {
 		"category": "Physical",
 		"makesContact": true,
 		"acc": 75
+	},
+	"Mega Punch": {
+		"bp": 80,
+		"type": "Normal",
+		"category": "Physical",
+		"makesContact": true,
+		"acc": 85
 	},
 	"Mimic": {
 		"bp": 0,
@@ -473,7 +495,6 @@ var MOVES_RBY = {
 		"bp": 55,
 		"type": "Grass",
 		"category": "Physical",
-		"alwaysCrit": true,
 		"isSlicing": true,
 		"acc": 95
 	},
@@ -511,6 +532,14 @@ var MOVES_RBY = {
 		"type": "Rock",
 		"category": "Physical",
 		"acc": 90
+	},
+	"Rolling Kick": {
+		"bp": 60,
+		"type": "Fighting",
+		"category": "Physical",
+		"makesContact": true,
+		"hasSecondaryEffect": true,
+		"acc": 85
 	},
 	"Screech": {
 		"bp": 0,
@@ -552,11 +581,17 @@ var MOVES_RBY = {
 		"makesContact": true,
 		"acc": 100
 	},
+	"Slam": {
+		"bp": 80,
+		"type": "Normal",
+		"category": "Physical",
+		"makesContact": true,
+		"acc": 75
+	},
 	"Slash": {
 		"bp": 70,
 		"type": "Normal",
 		"category": "Physical",
-		"alwaysCrit": true,
 		"makesContact": true,
 		"isSlicing": true,
 		"acc": 100
@@ -729,6 +764,13 @@ var MOVES_RBY = {
 		"type": "Bug",
 		"isTwoHit": true,
 		"hasSecondaryEffect": true,
+		"acc": 100
+	},
+	"Vise Grip": {
+		"bp": 55,
+		"type": "Normal",
+		"category": "Physical",
+		"makesContact": true,
 		"acc": 100
 	},
 	"Waterfall": {
@@ -1166,7 +1208,6 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		"hasSecondaryEffect": true,
 		"acc": 100
 	},
-	"Razor Leaf": {"alwaysCrit": false},
 	"Return": {
 		"bp": 102,
 		"type": "Normal",
@@ -1223,7 +1264,6 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		"isBullet": true,
 		"acc": 100
 	},
-	"Slash": {"alwaysCrit": false},
 	"Sleep Talk": {
 		"bp": 0,
 		"type": "Normal"
@@ -1354,6 +1394,14 @@ var MOVES_ADV = $.extend(true, {}, MOVES_GSC, {
 		"isSlicing": true,
 		"isWind": true,
 		"acc": 95
+	},
+	"Arm Thrust": {
+		"bp": 15,
+		"type": "Fighting",
+		"category": "Physical",
+		"makesContact": true,
+		"maxMultiHits": 5,
+		"acc": 100
 	},
 	"Astonish": {
 		"bp": 30,
@@ -1777,7 +1825,7 @@ var MOVES_ADV = $.extend(true, {}, MOVES_GSC, {
 		"type": "Normal",
 		"category": "Physical",
 		"hasSecondaryEffect": true,
-		"acc": 90
+		"acc": 100
 	},
 	"Shadow Punch": {
 		"bp": 60,
@@ -1791,25 +1839,29 @@ var MOVES_ADV = $.extend(true, {}, MOVES_GSC, {
 		"bp": 1,
 		"type": "Ice",
 		"category": "Special",
-		"acc": 30
+		"acc": 30,
+		"isMLG": true
 	},
 	"Fissure": {
 		"bp": 1,
 		"type": "Ground",
 		"category": "Physical",
-		"acc": 30
+		"acc": 30,
+		"isMLG": true
 	},
 	"Horn Drill": {
 		"bp": 1,
 		"type": "Normal",
 		"category": "Physical",
-		"acc": 30
+		"acc": 30,
+		"isMLG": true
 	},
 	"Guillotine": {
 		"bp": 1,
 		"type": "Normal",
 		"category": "Physical",
-		"acc": 30
+		"acc": 30,
+		"isMLG": true
 	},
 	"Shock Wave": {
 		"bp": 60,
@@ -3293,14 +3345,6 @@ var MOVES_BW = $.extend(true, {}, MOVES_DPP, {
 
 var MOVES_XY = $.extend(true, {}, MOVES_BW, {
 	"Air Cutter": {"bp": 60},
-	"Arm Thrust": {
-		"bp": 15,
-		"type": "Fighting",
-		"category": "Physical",
-		"makesContact": true,
-		"maxMultiHits": 5,
-		"acc": 100
-	},
 	"Aromatic Mist": {
 		"bp": 0,
 		"type": "Fairy"
@@ -4210,20 +4254,16 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	},
 	"Shadow Punch": {"zp": 120},
 	"Sheer Cold": {
-		"zp": 180,
-		"isMLG": true
+		"zp": 180
 	},
 	"Fissure": {
-		"zp": 180,
-		"isMLG": true
+		"zp": 180
 	},
 	"Horn Drill": {
-		"zp": 180,
-		"isMLG": true
+		"zp": 180
 	},
 	"Guillotine": {
-		"zp": 180,
-		"isMLG": true
+		"zp": 180
 	},
 	"Shell Trap": {
 		"bp": 150,
@@ -4441,7 +4481,7 @@ var MOVES_SS = $.extend(true, {}, MOVES_SM, {
 		"bp": 50,
 		"type": "Dragon",
 		"category": "Physical",
-		"isTwoHit": true,
+		"maxMultiHits": 2,
 		"acc": 100
 	},
 	"Bolt Beak": {

@@ -309,6 +309,7 @@ title: EisenTree Mass Calculator
                             <option value="Confused">Confused</option>
                         </select>
                         <select class="toxic-counter calc-trigger hide">
+                            <option value="0">0/16</option>
                             <option value="1">1/16</option>
                             <option value="2">2/16</option>
                             <option value="3">3/16</option>
@@ -331,7 +332,7 @@ title: EisenTree Mass Calculator
                     <label>Current HP</label>
                     <input class="current-hp calc-trigger" value="341" />/<span class="max-hp">341</span> (<input class="percent-hp calc-trigger" value="100" />%)
                     <div class="gen-specific g8">
-                        <label>D-max Level</label>
+                        <label>Dmax Level</label>
                         <select class="max-level calc-trigger">
                             <option value="0">0</option>
                             <option value="1">1</option>
@@ -428,8 +429,9 @@ title: EisenTree Mass Calculator
             </div>
             <div class="panel-body">
                 <div style="width: 10.6em; margin: 0 auto 5px;" id="format" title="Select the battle format.">
-                    <input class="btn-input calc-trigger" type="radio" name="format" value="Singles" id="singles" /><label class="btn btn-left" for="singles">Singles</label>
-                    <input class="btn-input calc-trigger" type="radio" name="format" value="Doubles" id="doubles" checked="checked" /><label class="btn btn-right" for="doubles">Doubles</label>
+                    <!-- no calc-trigger needed, calculate() is explicitly called by the change function bound to #format -->
+                    <input class="btn-input" type="radio" name="format" value="Singles" id="singles" /><label class="btn btn-left" for="singles">Singles</label>
+                    <input class="btn-input" type="radio" name="format" value="Doubles" id="doubles" checked="checked" /><label class="btn btn-right" for="doubles">Doubles</label>
                 </div>
                 <div class="gen-specific g6 g7 g8 g80 g9" style="width: 22.0em; margin: 5px auto;" title="Select the current terrain.">
                     <input class="btn-input terrain-trigger calc-trigger" type="radio" name="terrain" value="" id="noterrain" checked="checked" /><label class="btn btn-small btn-left" for="noterrain">None</label>
@@ -580,10 +582,10 @@ title: EisenTree Mass Calculator
                     </div>
                 </div>
                 <div class="btn-group">
-                    <div class="left" title="Is this Pokemon affected by Charge?">
+                    <div class="left" title="Is this Pokemon affected by Charge, Electromorphosis, or Wind Power?">
                         <input class="btn-input calc-trigger" type="checkbox" id="chargeL" /><label class="btn btn-xxwide" for="chargeL">Charge</label>
                     </div>
-                    <div class="right" title="Is this Pokemon affected by Charge?">
+                    <div class="right" title="Is this Pokemon affected by Charge, Electromorphosis, or Wind Power?">
                         <input class="btn-input calc-trigger" type="checkbox" id="chargeR" /><label class="btn btn-xxwide" for="chargeR">Charge</label>
                     </div>
                 </div>
